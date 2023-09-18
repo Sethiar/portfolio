@@ -1,4 +1,3 @@
-
 import { afficherMessageAvecAnimation} from './message.js';
 import { afficherExplosion} from '../FX/explosions.js';
 
@@ -94,4 +93,4 @@ document.addEventListener("DOMContentLoaded", function () {
       launchMissile();
     }
   });
-});
+}); 
