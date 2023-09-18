@@ -181,27 +181,40 @@ h1 {
     /* Pour centrer la cible horizontalement */
     transform: translateX(-50%);
     display: none;
-    animation: moveDiagonal 2s linear forwards;
+    animation: rotateOscillation 4s forwards;
 }
 
-@keyframes moveDiagonal {
+@keyframes rotateOscillation {
   0% {
-    transform: translate(0, 0);
-    display: block;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(15vw, -15vh) rotate(30deg);
   }
   50% {
-    transform: translate(15vw, -15vh);
+    transform: translate(15vw, 13vh) rotate(-50deg);
+    display: block;
+  }
+  75% {
+    transform: translate(-20vw, -5vh) rotate(30deg);
   }
   100% {
-    transform: translate(20vw, 0);
+  transform: translate(30vw, -15vh) rotate(0deg);
   }
 }
-
 
 .item {
     display: none;
 }
 
+
+#cv-link {
+    position: absolute;
+    width:50vw;
+    height:50vh;
+    color: red;
+
+}
 .asteroid {
     position: absolute;
     width: 50px;
@@ -210,6 +223,9 @@ h1 {
     background-size: cover;
 }
 
+span {
+    display: none;
+ }
 
 /* Caractéristiques pour les petits écrans (par exemple, moins de 768px de largeur) */
 @media screen and (max-width: 768px) {
