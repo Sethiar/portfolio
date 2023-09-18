@@ -1,9 +1,13 @@
+
+import { afficherMessageAvecAnimation} from './message.js';
+import { afficherExplosion} from '../FX/explosions.js';
+
 document.addEventListener("DOMContentLoaded", function () {
   // Déclaration de la variable missile
-  const missile = document.querySelector(".missile");
+  const missile = document.getElementById("missile");
   const animationMissileSpeed = 65;
-  const missileWidth = parseFloat(getComputedStyle(missile).width);
-  const missileHeight = parseFloat(getComputedStyle(missile).height);
+  const missileWidth = 20;
+  const missileHeight = 30;
   const missileSpeed = 50;
 
   // Déclaration de la variable spaceship
@@ -52,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function detecterCollision() {
+    //const explosion = document.getElementById("explosion")
     const target = document.getElementById("target");
     const missile = document.getElementById("missile");
     const rectTarget = target.getBoundingClientRect();
@@ -66,24 +71,20 @@ document.addEventListener("DOMContentLoaded", function () {
       // Collision détectée
       console.log('Collision détectée');
       target.style.display = "none";
-      afficherExplosionEtPhoto();
+      afficherPhoto();
+      afficherExplosion();
+
+
+      // afficher le message
+      afficherMessageAvecAnimation();
     }
   }
 
-  function afficherExplosionEtPhoto() {
+  function afficherPhoto() {
     const photo = document.getElementById("photo");
-
-    // Ajout de la classe pour déclencher l'explosion
-    missile.classList.add("explosion");
-
     // Apparition et animation photo
     photo.style.display = "block";
 
-    // Une fois que l'animation de photo est terminée, afficher le cadre
-    photo.addEventListener("animationend", () => {
-      cadre.style.display = "block";
-      cadre.style.animationPlayState = "running";
-    });
   }
 
   document.addEventListener("keydown", function (event) {
