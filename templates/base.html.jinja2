@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{% block title %}Portfolio de Lefetey Arnaud{% endblock %}</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='CSS/home.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/home.css') }}">
 
     {% block head_content %}
 
     {% endblock %}
-
 </head>
 
 <body>
@@ -26,9 +25,9 @@
 </footer>
 
 <script type="module" src="../static/javascript/movements_navette/movements_navette.js"></script>
+<script type="module" src="../static/javascript/elements_interface/message.js"></script>
 <script type="module" src="../static/javascript/elements_interface/target_missile.js"></script>
 <script type="module" src="../static/javascript/FX/explosions.js"></script>
-
 <script src="{{ url_for('static', filename='javascript/main.js') }}"></script>
 
 </body>
