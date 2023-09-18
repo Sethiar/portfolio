@@ -17,17 +17,29 @@ h1 {
     padding-right: 15%;
     }
 
-.background {
+
+
+#background {
     height: 100vh;
     background-image: url('../images_site/image_background/image_front/front1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
     animation-name: moveBackgroundDown;
-    animation-duration: 20s; /* Durée totale de l'animation */
+    /* Durée totale de l'animation */
+    animation-duration: 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
  }
+
+@keyframes moveBackgroundDown {
+  0% {
+    background-position-y: 0vh;
+  }
+  100% {
+    background-position-y: 100vh;
+  }
+}
 
 
 .spaceship {
@@ -67,7 +79,7 @@ h1 {
     background-image: url('../images_site/images_spaceship/spritesheet_spaceship_left.png');
 }
 
-.missile {
+#missile {
     /* width et height de l'élément .missile en px */
     width: 10px;
     height: 20px;
@@ -81,34 +93,31 @@ h1 {
     transform: translateX(-50%);
     }
 
+#explosion {
+    display: none;
+    width: 60px;
+    height: 50px;
+    background-image: url('../images_site/images_explosion/explosion-spritesheet2.png');
+    background-size: 600% auto;
+    background:cover;
+    position: absolute;
+    /* Pour la positionner en haut au centre */
+    left: 50%;
+    top: 20vh;
+    /* Pour centrer la cible horizontalement */
+    transform: translateX(-50%);
+    animation-name : explosion;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation_timing-function: steps(8);
+}
+
 @keyframes explosion {
-    /* Position de la première image d'explosion */
-    0% {
-        background-position: 0px 0px;
+     /* Position de la première image d'explosion */
+    from { background-position: 0 0;
     }
-    12.5% {
-        background-position: 48px 0px;
-    }
-    25% {
-        background-position: 96px 0px;
-    }
-    37.5% {
-        background-position: 144px 0px;
-    }
-    50% {
-        background-position: 192px 0px;
-    }
-    62.5% {
-        background-position: 240px 0px;
-    }
-    75% {
-        background-position: 288px 0px;
-    }
-    87.5% {
-        background-position: 334px 0px;
-    }
-    100% {
-        background-position: 382px 0px;
+    to
+        { background-position: -382px 0px;
     }
 }
 
@@ -137,18 +146,32 @@ h1 {
     transform: translateX(-50%);
 }
 
-explosion {
+.message-container {
+    position: absolute;
     display: none;
-    background-image: url('../images_site/images_explosion/explosion-spritesheet.png');
-    animation: explosion 1s steps(8) forwards;
+    top: 40vh;
+    left: 2vw;
+    padding: 2%;
+    /* Fond semi-transparent pour la lisibilité */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 1px solid lightgrey;
+    animation: appear 10s ease forwards;
 }
 
-#message {
-    display: none;
-    padding-top: 6vh;
-    width: 10vh;
-    height: 10vh;
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
+#message-content p {
+    font-size: 32px;
+}
+
 
 #photo {
     width: 13vh;
@@ -179,35 +202,6 @@ explosion {
   }
 }
 
-#cadre {
-  width: 25vw;
-  height: 50vh;
-  background-color: transparent;
-  border: 2px solid red;
-  top: 10vh
-  display: none; /* Définissez-le initialement sur "none" pour le masquer */
-  animation: cadreRouge 5s linear forwards;
-}
-
-/* Animation du cadre rouge */
-@keyframes cadreRouge {
-  0% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: transparent;
-    opacity: 0.5; /* À mi-chemin de l'animation, l'opacité est de 0.5 */
-  }
-  100% {
-    border-color: red;
-    opacity: 1;
-  }
-}
-
-
-
-
-
 
 /* Caractéristiques pour les petits écrans (par exemple, moins de 768px de largeur) */
 @media screen and (max-width: 768px) {
@@ -218,9 +212,25 @@ explosion {
         min-height: 33px;
         background-size: 350% auto;
     }
-    .missile {
+    #missile {
         min-width: 5px;
         min-height: 10px;
     }
 
+    .message-container {
+        top: 50vh; /* Modifiez la position pour les petits écrans */
+        left: 5%; /* Modifiez la position pour les petits écrans */
+        padding: 1%; /* Modifiez la taille de la marge intérieure pour les petits écrans */
+        font-size: 14px; /* Modifiez la taille de la police pour les petits écrans */
+    }
+}
+
+/* Styles pour les écrans moyens (par exemple, entre 769px et 1024px de largeur) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .message-container {
+        top: 50vh; /* Modifiez la position pour les écrans moyens */
+        left: 3%; /* Modifiez la position pour les écrans moyens */
+        padding: 1.5%; /* Modifiez la taille de la marge intérieure pour les écrans moyens */
+        font-size: 16px; /* Modifiez la taille de la police pour les écrans moyens */
+    }
 }
