@@ -70,6 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
       // Collision détectée
       console.log('Collision détectée');
       target.style.display = "none";
+      missile.style.display = "none";
+      document.getElementById("cv-link").style.display = "block";
       afficherPhoto();
       afficherExplosion();
 
