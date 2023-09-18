@@ -1,0 +1,226 @@
+
+
+body, html {
+    height: 100%;
+    background-color: black;
+    margin: 0;
+    color: white;
+    }
+
+h1 {
+    color:red;
+    text-align: center;
+    }
+
+.important {
+    text-align: right;
+    padding-right: 15%;
+    }
+
+.background {
+    height: 100vh;
+    background-image: url('../images_site/image_background/image_front/front1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    animation-name: moveBackgroundDown;
+    animation-duration: 20s; /* Durée totale de l'animation */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+ }
+
+
+.spaceship {
+    /* width et height de l'élément .spaceship en unités relatives */
+    width: 48px;
+    height: 54px;
+
+    /* spécifie l'image de fond associé au spaceship */
+    background-image: url('../images_site/images_spaceship/spritesheet_spaceship.png');
+
+    /* Contrôle de la redimension de l'image de fond. */
+    background-size: 300% auto;
+    background-position: center bottom;
+    position: absolute;
+
+    bottom: 20%;
+    left: 50%;
+    /* Pour centrer la navette horizontalement */
+    transform: translateX(-50%);
+    }
+
+.move-right-animation {
+    /* spécifie le nom de l'animation */
+    animation-name: moveRight;
+    /* contrôle la durée de l'animation en secondes */
+    animation-duration: 0.5s;
+    /* remplace l'image de fond par une nouvelle image lorsque l'élément a la classe .move-right-animation */
+    background-image: url('../images_site/images_spaceship/spritesheet_spaceship_right.png');
+}
+
+.move-left-animation {
+    /* spécifie le nom de l'animation */
+    animation-name: moveLeft;
+    /* contrôle la durée de l'animation en secondes */
+    animation-duration: 0.5s;
+    /* remplace l'image de fond par une nouvelle image lorsque l'élément a la classe .move-right-animation */
+    background-image: url('../images_site/images_spaceship/spritesheet_spaceship_left.png');
+}
+
+.missile {
+    /* width et height de l'élément .missile en px */
+    width: 10px;
+    height: 20px;
+    /* chemin de l'image de fond associé au missile */
+    background-image: url('../images_site/images_weapons/spritesheet_rocket.png');
+    /* Contrôle de la redimension de l'image de fond. */
+    background-size: 950% auto;
+    background-position: center bottom;
+    position: absolute;
+    /* Pour centrer le missile horizontalement */
+    transform: translateX(-50%);
+    }
+
+@keyframes explosion {
+    /* Position de la première image d'explosion */
+    0% {
+        background-position: 0px 0px;
+    }
+    12.5% {
+        background-position: 48px 0px;
+    }
+    25% {
+        background-position: 96px 0px;
+    }
+    37.5% {
+        background-position: 144px 0px;
+    }
+    50% {
+        background-position: 192px 0px;
+    }
+    62.5% {
+        background-position: 240px 0px;
+    }
+    75% {
+        background-position: 288px 0px;
+    }
+    87.5% {
+        background-position: 334px 0px;
+    }
+    100% {
+        background-position: 382px 0px;
+    }
+}
+
+#target {
+    /* width et height de la cible #target */
+    width: 8vh;
+    height: 8vh;
+    /* chemin de l'image associée à l'élément */
+    background-image: url('../images_site/images_element/target1.png');
+    background-size: cover;
+    position: absolute;
+    /* Pour la positionner en haut au centre */
+    left: 50%;
+    top: 20vh;
+    /* Pour centrer la cible horizontalement */
+    transform: translateX(-50%);
+}
+
+#target-message {
+    width: 6.5vh;
+    position: absolute;
+    /* Pour la positionner en haut au centre */
+    left: 50%;
+    top: 10vh;
+    /* Pour centrer la cible horizontalement */
+    transform: translateX(-50%);
+}
+
+explosion {
+    display: none;
+    background-image: url('../images_site/images_explosion/explosion-spritesheet.png');
+    animation: explosion 1s steps(8) forwards;
+}
+
+#message {
+    display: none;
+    padding-top: 6vh;
+    width: 10vh;
+    height: 10vh;
+}
+
+#photo {
+    width: 13vh;
+    height: 13vh;
+    background-image: url('../images_site/images_element/photo1.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    /* Pour la positionner en haut au centre */
+    left: 50%;
+    top: 20vh;
+    /* Pour centrer la cible horizontalement */
+    transform: translateX(-50%);
+    display: none;
+    animation: moveDiagonal 2s linear forwards;
+}
+
+@keyframes moveDiagonal {
+  0% {
+    transform: translate(0, 0);
+    display: block;
+  }
+  50% {
+    transform: translate(15vw, -15vh);
+  }
+  100% {
+    transform: translate(20vw, 0);
+  }
+}
+
+#cadre {
+  width: 25vw;
+  height: 50vh;
+  background-color: transparent;
+  border: 2px solid red;
+  top: 10vh
+  display: none; /* Définissez-le initialement sur "none" pour le masquer */
+  animation: cadreRouge 5s linear forwards;
+}
+
+/* Animation du cadre rouge */
+@keyframes cadreRouge {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent;
+    opacity: 0.5; /* À mi-chemin de l'animation, l'opacité est de 0.5 */
+  }
+  100% {
+    border-color: red;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+/* Caractéristiques pour les petits écrans (par exemple, moins de 768px de largeur) */
+@media screen and (max-width: 768px) {
+    .spaceship {
+        width: 40px;
+        height: 50px;
+        min-width: 25px;
+        min-height: 33px;
+        background-size: 350% auto;
+    }
+    .missile {
+        min-width: 5px;
+        min-height: 10px;
+    }
+
+}

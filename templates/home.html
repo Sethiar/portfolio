@@ -1,0 +1,39 @@
+{% extends 'base.html.jinja2' %}
+
+{% block head_content %}
+<meta name="description" content="Mon portfolio professionnel avec mon curriculum vitae, mes compétences et mes projets personnels.">
+
+<script src="{{ url_for('static', filename='javascript/movements_navette/movements_navette.js') }}"></script>
+<script src="{{ url_for('static', filename='javascript/elements_interface/target_missile.js') }}"></script>
+
+
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="background">
+        <h1>Bienvenue sur mon portfolio</h1>
+    </div>
+
+    <div id="target">
+        <p id="target-message">Shoot Me !!</p>
+    </div>
+    <div id="photo">
+        <div id="cadre">
+            <div id="message">
+        Je suis Jojo's
+            </div>
+        </div>
+    </div>
+    <div class="spaceship">
+    </div>
+
+    <div id="missile" class="missile">
+    </div>
+
+    <div id="explosion">
+    </div>
+
+</main>
+
+{% endblock %}

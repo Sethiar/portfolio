@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Portfolio de Lefetey Arnaud{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/home.css') }}">
+
+    {% block head_content %}
+
+    {% endblock %}
+
+</head>
+
+<body>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        {% block footer %}
+    &ccopy: Copyright 2023 SethiarWorks
+        {% endblock %}
+</footer>
+
+</body>
+</html>
