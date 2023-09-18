@@ -21,35 +21,32 @@ function generateAsteroid() {
         if (currentTop > window.innerHeight) {
                     clearInterval(intervalId);
                     asteroid.remove();
+
         }
-    }, 50); // Rafraîchissement toutes les 50 ms
+
+        // Vérifiez la collision entre l'astéroïde et le missile à chaque mise à jour de position
+        detecterCollisionAsteroid(asteroid);
+    // Rafraîchissement toutes les 50 ms
+    }, 50);
 }
 
 // Générez aléatoirement des astéroïdes toutes les quelques secondes
 setInterval(generateAsteroid, 6000); // par exemple, toutes les 6 secondes
 
+function detecterCollisionAsteroid(asteroid) {
+  const missile = document.getElementById("missile");
+  const rectAsteroid = asteroid.getBoundingClientRect();
+  const rectMissile = missile.getBoundingClientRect();
 
-function isCollision(asteroid, missile) {
-    const rectAsteroid = asteroid.getBoundingClientRect();
-    const rectMissile = missile.getBoundingClientRect();
-
-    return (
-        rectAsteroid.left < rectMissile.right &&
-        rectAsteroid.right > rectMissile.left &&
-        rectAsteroid.top < rectMissile.bottom &&
-        rectAsteroid.bottom > rectMissile.top
-    );
+  if (
+    rectMissile.left < rectAsteroid.right &&
+    rectMissile.right > rectAsteroid.left &&
+    rectMissile.top < rectAsteroid.bottom &&
+    rectMissile.bottom > rectAsteroid.top
+  ) {
+    // Collision détectée entre l'astéroïde et le missile
+    // Supprime l'astéroïde
+    asteroid.remove();
+    missile.style.display = "none";
+  }
 }
-
-// Exemple d'utilisation
-const asteroid = document.querySelector('.asteroid');
-const missile = document.getElementById('missile'); // Assurez-vous d'avoir un élément avec l'id 'missile'
-
-setInterval(() => {
-    if (isCollision(asteroid, missile)) {
-        console.log('Collision détectée');
-        // Supprimez l'astéroïde en cas de collision
-        asteroid.remove();
-    }
-// Vérifiez la collision toutes les 50 ms
-}, 50);
