@@ -6,8 +6,18 @@
 
 {% endblock %}
 
+
+
+
 {% block content %}
 <main>
+    <ul>
+        <li id="cv-link"><a href="{{ url_for('static', filename='pdf/cv_arnaud.pdf') }}">CV Arnaud Lefetey</a></li>
+        <li id="attestation-link"><a href="{{ url_for('static', filename='pdf/Attestation_de_réussite_provisoire.pdf') }}">Attestation de réussite Studi</a></li>
+        <li id="releve-link"><a href="{{ url_for('static', filename='pdf/Relevé_note_M1.pdf') }}">Relevé de notes Master 1 Lophisc</a></li>
+        <li id="resultat-link"><a href="{{ url_for('static', filename='pdf/Résultats_FormationStudi.pdf') }}">Résultats de la formation Studi</a></li>
+    </ul>
+
     <div id="background">
         <h1>Bienvenue sur mon portfolio</h1>
     </div>
@@ -23,10 +33,6 @@
     <div class="message-container">
         <div id="message-content">
             <p class="titre">Je m'appelle Lefetey Arnaud et je suis <b>Concepteur, Développeur d'application spécialisé dans le langage Python</b></p>
-            <p class="item"><span id="cv-link"><a href="{{ url_for('static', filename='pdf/cv_arnaud.pdf') }}">CV Arnaud Lefetey</a></span></p>
-            <p class="item"><a href="{{ url_for('static', filename='pdf/Attestation_de_réussite_provisoire.pdf') }}">Attestation de réussite Studi</a></p>
-            <p class="item"><a href="{{ url_for('static', filename='pdf/Relevé_note_M1.pdf') }}">Relevé de notes Master 1 Lophisc</a></p>
-            <p class="item"><a href="{{ url_for('static', filename='pdf/Résultats_FormationStudi.pdf') }}">Résultats de la formation Studi</a></p>
         </div>
     </div>
     <div class="spaceship">
