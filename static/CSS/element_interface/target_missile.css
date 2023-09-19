@@ -1,0 +1,61 @@
+
+/* Styles gérant les éléments de l'interface target, missiles, photo, astéroïdes et leurs animations */
+
+
+#target {
+    /* width et height de la cible #target */
+    width: 8vh;
+    height: 8vh;
+    /* chemin de l'image associée à l'élément */
+    background-image: url('../../images_site/images_element/target1.png');
+    background-size: cover;
+    position: absolute;
+    /* Pour la positionner en haut au centre */
+    left: 50%;
+    top: 20vh;
+    /* Pour centrer la cible horizontalement */
+    transform: translateX(-50%);
+}
+
+#photo {
+    width: 13vh;
+    height: 13vh;
+    background-image: url('../../images_site/images_element/photo1.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    /* Pour la positionner en haut au centre */
+    left: 50%;
+    top: 20vh;
+    /* Pour centrer la cible horizontalement */
+    transform: translateX(-50%);
+    display: none;
+    animation: rotateOscillation 4s forwards;
+}
+
+@keyframes rotateOscillation {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(15vw, -15vh) rotate(30deg);
+  }
+  50% {
+    transform: translate(15vw, 13vh) rotate(-50deg);
+    display: block;
+  }
+  75% {
+    transform: translate(-20vw, -5vh) rotate(30deg);
+  }
+  100% {
+  transform: translate(30vw, -15vh) rotate(0deg);
+  }
+}
+
+.asteroid {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('../../images_site/images_element/asteroids/asteroid0.png');
+    background-size: cover;
+}
