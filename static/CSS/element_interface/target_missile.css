@@ -52,10 +52,29 @@
   }
 }
 
-.asteroid {
+.asteroid1 {
+    display: none;
     position: absolute;
     width: 50px;
     height: 50px;
     background-image: url('../../images_site/images_element/asteroids/asteroid0.png');
+    background-size: cover;
+}
+
+.asteroid2 {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('../../images_site/images_element/asteroids/asteroid4.png');
+    background-size: cover;
+}
+
+.asteroid3 {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('../../images_site/images_element/asteroids/asteroid3.png');
     background-size: cover;
 }
