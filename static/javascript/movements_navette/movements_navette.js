@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Déclaration de la variable spaceship
   const spaceship = document.querySelector(".spaceship");
   // Déclaration du pas du spaceship
-  const step = 5;
+  const step = 11;
   const animationSpaceshipSpeed = 125;
   const spaceshipWidth = 144;
   const spaceshipHeight = 52;
