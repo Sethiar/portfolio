@@ -2,22 +2,12 @@
 
 {% block head_content %}
 <meta name="description" content="Mon portfolio professionnel avec mon curriculum vitae, mes compétences et mes projets personnels.">
-
-
 {% endblock %}
 
+{% block header_content %}
+{% endblock %}
 
-
-
-{% block content %}
-<main>
-    <ul>
-        <li id="cv-link"><a href="{{ url_for('static', filename='pdf/cv_arnaud.pdf') }}">CV Arnaud Lefetey</a></li>
-        <li id="attestation-link"><a href="{{ url_for('static', filename='pdf/Attestation_de_réussite_provisoire.pdf') }}">Attestation de réussite Studi</a></li>
-        <li id="releve-link"><a href="{{ url_for('static', filename='pdf/Relevé_note_M1.pdf') }}">Relevé de notes Master 1 Lophisc</a></li>
-        <li id="resultat-link"><a href="{{ url_for('static', filename='pdf/Résultats_FormationStudi.pdf') }}">Résultats de la formation Studi</a></li>
-    </ul>
-
+{% block main_content %}
     <div id="background">
         <h1>Bienvenue sur mon portfolio</h1>
     </div>
@@ -39,9 +29,21 @@
     </div>
     <div id="missile">
     </div>
-    <div class="asteroid">
+    <div class="asteroid1">
+    </div>
+    <div id="arrow_cv">
+    </div>
+    <div class="asteroid2">
+    </div>
+    <div id="arrow_projets">
+    </div>
+    <div class="asteroid3">
+    </div>
+    <div id="arrow_competences">
     </div>
 
-</main>
+{% endblock %}
+{% block footer_content %}
 
 {% endblock %}
+
