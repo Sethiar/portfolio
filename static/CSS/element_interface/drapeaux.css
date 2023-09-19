@@ -1,0 +1,22 @@
+/* Styles pour les pancartes de direction */
+
+
+#flag_cv {
+    width: 4vh;
+    height: 5vh;
+    background-image: url("photo1.jpg");
+}
+
+#flag_projets {
+    width: 4vh;
+    height: 5vh;
+
+    display: none;
+}
+
+#flag_competences {
+    width: 4vh;
+    height: 5vh;
+    background-image: url("");
+    display: none;
+}
