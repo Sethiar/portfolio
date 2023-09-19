@@ -64,21 +64,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Fonction pour déplacer la navette en diagonale
             function moveDiagonal() {
-                const currentRight = parseFloat(getComputedStyle(spaceship).right) || 0;
+                const currentLeft = parseFloat(getComputedStyle(spaceship).left) || 0;
                 const currentTop = parseFloat(getComputedStyle(spaceship).top) || 0;
 
                 // Calculer la direction vers le point d'arrivée
-                const dx = targetX - currentRight;
+                const dx = targetX - currentLeft;
                 const dy = targetY - currentTop;
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
                 if (distance > animationSpeed) {
                     // Déplacer la navette en diagonale
                     const angle = Math.atan2(dy, dx);
-                    const newX = currentRight + animationSpeed * Math.cos(angle);
+                    const newX = currentLeft + animationSpeed * Math.cos(angle);
                     const newY = currentTop + animationSpeed * Math.sin(angle);
 
-                    spaceship.style.right = `${newX}px`;
+                    spaceship.style.left = `${newX}px`;
                     spaceship.style.top = `${newY}px`;
 
                     // Ajouter la classe d'animation lorsque la navette tourne vers la gauche
@@ -101,4 +101,56 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         autoMoveCompetences();
     });
+
+    function autoMoveProjets() {
+        if (!isAutoMoving) {
+            isAutoMoving = true;
+
+            // Point d'arrivée (xmax, fenêtre/2)
+            const targetX = window.innerWidth / 2;
+            const targetY = window.innerHeight / 2;
+
+            // Fonction pour déplacer la navette en diagonale
+            function moveDiagonal() {
+                const currentLeft = parseFloat(getComputedStyle(spaceship).left) || 0;
+                const currentTop = parseFloat(getComputedStyle(spaceship).top) || 0;
+
+                // Calculer la direction vers le point d'arrivée
+                const dx = targetX - currentLeft;
+                const dy = targetY - currentTop;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance > animationSpeed) {
+                    // Déplacer la navette en diagonale
+                    const angle = Math.atan2(dy, dx);
+                    const newX = currentLefet + animationSpeed * Math.cos(angle);
+                    const newY = currentTop + animationSpeed * Math.sin(angle);
+
+                    spaceship.style.left = `${newX}px`;
+                    spaceship.style.top = `${newY}px`;
+
+                    // Ajouter la classe d'animation lorsque la navette tourne vers la gauche
+                    spaceship.classList.add("move-right-animation");
+
+                    requestAnimationFrame(moveDiagonal);
+                } else {
+                    // Une fois arrivée à la destination, redirigez vers la page "cv"
+                    window.location.href = "home/projets";
+                }
+            }
+
+            // Démarrer le déplacement en diagonale
+            moveDiagonal();
+        }
+    }
+
+    const projetsLink = document.getElementById("projets-link");
+    projetsLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        autoMoveProjets();
+    });
+
+
+
+
 });
