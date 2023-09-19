@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Mopn curriculum vitae</title>
+    <title>Mon curriculum vitae et mon parcours</title>
 </head>
 <body>
+<ul>
+    <li id="item"><a href="{{ url_for('static', filename='pdf/cv_arnaud.pdf') }}">CV Arnaud Lefetey</a></li>
+    <li id="attestation-link"><a href="{{ url_for('static', filename='pdf/Attestation_de_réussite_provisoire.pdf') }}">Attestation de réussite Studi</a></li>
+    <li id="releve-link"><a href="{{ url_for('static', filename='pdf/Relevé_note_M1.pdf') }}">Relevé de notes Master 1 Lophisc</a></li>
+    <li id="resultat-link"><a href="{{ url_for('static', filename='pdf/Résultats_FormationStudi.pdf') }}">Résultats de la formation Studi</a></li>
+</ul>
+
 
 </body>
 </html>
