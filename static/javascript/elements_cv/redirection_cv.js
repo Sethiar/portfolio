@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fonction pour gérer le clic sur la souris
     earth.addEventListener("click", function () {
-        window.location.href = ""; // Remplacez par le lien vers le document de la Terre
+        window.location.href = "/home/cv"; // Remplacez par le lien vers le document cv
     });
 
     // Fonction pour gérer l'appui sur la touche Entrée
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     (event.target === earth)
                 )
             ) {
-                window.location.href = ""; // Redirection vers le document de la Terre
+                window.location.href = "/home/cv"; // Redirection vers le document cv
             }
         }
     });
