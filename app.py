@@ -1,6 +1,6 @@
 """Fichier app.py contenant toutes les routes de mon portfolio"""
 
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 
 import os
 import locale
@@ -29,14 +29,19 @@ def home():
     return render_template("home.html")
 
 # Mon curriculum vitae que je présente dans mon portfolio
-@app.route('/home/cv')
-def cv():
+@app.route('/home/cv_access')
+def cv_access():
     # Affichage de la date du jour
-    daydate = datetime.datetime.now().strftime('%A-%d-%m-%Y')
+    daydate = datetime.datetime.now().strftime('%A %d %B %Y')
     # Affichage de l'heure
     hour = datetime.datetime.now().strftime('%H:%m')
 
     return render_template("cv.html", hour=hour, daydate=daydate)
+
+
+@app.route('/home/cv')
+def cv():
+    return send_from_directory("static/pdf", "CV_arnaud.pdf")
 
 
 # Les projets personnels que je présente dans mon portfolio
