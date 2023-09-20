@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Point d'arrivée (xmax, fenêtre/2)
             const targetX = window.innerWidth / 2;
-            const targetY = window.innerHeight / 2;
+            const targetY = 0;
 
             // Fonction pour déplacer la navette en diagonale
             function moveDiagonal() {
@@ -123,34 +123,42 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (distance > animationSpeed) {
                     // Déplacer la navette en diagonale
                     const angle = Math.atan2(dy, dx);
-                    const newX = currentLefet + animationSpeed * Math.cos(angle);
+                    const newX = currentLeft + animationSpeed * Math.cos(angle);
                     const newY = currentTop + animationSpeed * Math.sin(angle);
 
                     spaceship.style.left = `${newX}px`;
                     spaceship.style.top = `${newY}px`;
 
-                    // Ajouter la classe d'animation lorsque la navette tourne vers la gauche
-                    spaceship.classList.add("move-right-animation");
-
-                    requestAnimationFrame(moveDiagonal);
+                     // Calculer l'angle en degrés pour déterminer la direction
+                const angleDegrees = (angle * 180) / Math.PI;
+                if (angleDegrees < 0) {
+                    // La navette tourne vers la gauche
+                    spaceship.classList.remove("move-right-animation");
+                    spaceship.classList.add("move-left-animation");
                 } else {
-                    // Une fois arrivée à la destination, redirigez vers la page "cv"
-                    window.location.href = "home/projets";
+                    // La navette tourne vers la droite
+                    spaceship.classList.remove("move-left-animation");
+                    spaceship.classList.add("move-right-animation");
                 }
+
+                spaceship.style.left = `${newX}px`;
+                spaceship.style.top = `${newY}px`;
+
+                requestAnimationFrame(moveDiagonal);
+            } else {
+                // Une fois arrivée à la destination, redirigez vers la page "projets"
+                window.location.href = "home/projets";
             }
-
-            // Démarrer le déplacement en diagonale
-            moveDiagonal();
         }
+
+        // Démarrer le déplacement en diagonale
+        moveDiagonal();
     }
+}
 
-    const projetsLink = document.getElementById("projets-link");
-    projetsLink.addEventListener("click", function (event) {
-        event.preventDefault();
-        autoMoveProjets();
-    });
-
-
-
-
+const projetsLink = document.getElementById("projets-link");
+projetsLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    autoMoveProjets();
+});
 });
