@@ -7,7 +7,6 @@ import locale
 import datetime
 
 
-
 app = Flask("Portfolio", template_folder="templates")
 
 
@@ -18,6 +17,10 @@ locale.setlocale(locale.LC_TIME, 'fr_FR.utf8')
 # Route vers la page 404 de mon site
 @app.route('/404')
 def page404():
+    """
+Access to 404 page.
+    :return:
+    """
     return render_template("404.html")
 
 # Ma page d'accueil
@@ -36,17 +39,16 @@ def cv():
     return render_template("cv.html", hour=hour, daydate=daydate)
 
 
-
 # Les projets personnels que je présente dans mon portfolio
 @app.route('/home/projets')
 def projet_perso():
     return render_template("projets.html")
 
+
 # Les compétences que je présente dans mon portfolio
 @app.route('/home/competences')
 def competences():
     return render_template("competences.html")
-
 
 
 port = int(os.environ.get("PORT", 5000))
