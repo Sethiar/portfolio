@@ -1,18 +1,52 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
+{% extends 'base.html.jinja2' %}
 
-    <title>Mon curriculum vitae et mon parcours</title>
-</head>
-<body>
-<ul>
-    <li id="item"><a href="{{ url_for('static', filename='pdf/cv_arnaud.pdf') }}">CV Arnaud Lefetey</a></li>
-    <li id="attestation-link"><a href="{{ url_for('static', filename='pdf/Attestation_de_réussite_provisoire.pdf') }}">Attestation de réussite Studi</a></li>
-    <li id="releve-link"><a href="{{ url_for('static', filename='pdf/Relevé_note_M1.pdf') }}">Relevé de notes Master 1 Lophisc</a></li>
-    <li id="resultat-link"><a href="{{ url_for('static', filename='pdf/Résultats_FormationStudi.pdf') }}">Résultats de la formation Studi</a></li>
-</ul>
+{% block head_content %}
+<title>{% block title %}Curriculum vitae et parcours{% endblock %}</title>
+<meta name="description" content="Mes documents attestant de mes formations, de mon expérience et des diplômes obtenus">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/cv.css') }}">
+{% endblock %}
+
+{% block header_content %}
+{% endblock %}
+
+{% block main_content %}
+    <div id="background_cv">
+        <h1>Bienvenue sur mon portfolio</h1>
+    </div>
+
+<div class="documents">
+    <ul>
+        <li id="item"><a href="{{ url_for('static', filename='pdf/cv_arnaud.pdf') }}">CV Arnaud Lefetey</a></li>
+        <li id="attestation-link"><a href="{{ url_for('static', filename='pdf/Attestation_de_réussite_provisoire.pdf') }}">Attestation de réussite Studi</a></li>
+        <li id="releve-link"><a href="{{ url_for('static', filename='pdf/Relevé_note_M1.pdf') }}">Relevé de notes Master 1 Lophisc</a></li>
+        <li id="resultat-link"><a href="{{ url_for('static', filename='pdf/Résultats_FormationStudi.pdf') }}">Résultats de la formation Studi</a></li>
+    </ul>
+</div>
+
+    <!-- Phase de la lune -->
+<div id="phase-lune">
+    <p>Phase de la lune : <span id="phase-lune-actuelle">{{ moon_phase }}</span></p>
+</div>
+
+        <!-- Date du jour -->
+<div id="date-jour">
+    <p>Date du jour : <span id="date-actuelle">{{ daydate }}</span></p>
+</div>
+
+<div id="heure">
+        <p>Heure : <span id="heure-actuelle">{{ hour }}</span></p>
+    </div>
+
+<div class="spaceship"></div>
+<div id="animated_earth" class="highlight"></div>
+<div id="animated_mars" class="hightlight"></div>
+<div id="planet1" class="highlight"></div>
 
 
-</body>
-</html>
+<script type="module" src="../static/javascript/elements_cv/redirection_cv.js"></script>
+<script type="module" src="../static/javascript/elements_cv/temps.js"></script>
+{% endblock %}
+{% block footer_content %}
+
+{% endblock %}
+
