@@ -24,7 +24,9 @@ nav li {
 nav a {
     color: lightgrey;
     border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
     padding-right: 8vw;
+    padding-left:8vw
 }
 
 nav a:hover {
@@ -40,13 +42,13 @@ nav a:hover {
 
 
 #cv-link {
-    display: inline;
+    display: none;
 }
 
 #competences-link {
-    display: inline;
+    display: none;
 }
 
 #projets-link{
-    display: inline;
+    display: none;
 }
