@@ -1,10 +1,19 @@
 """Fichier app.py contenant toutes les routes de mon portfolio"""
 
-import os
 from flask import Flask, render_template
+
+import os
+import locale
+import datetime
+
 
 
 app = Flask("Portfolio", template_folder="templates")
+
+
+# Définir la locale en français
+locale.setlocale(locale.LC_TIME, 'fr_FR.utf8')
+
 
 # Route vers la page 404 de mon site
 @app.route('/404')
@@ -19,7 +28,13 @@ def home():
 # Mon curriculum vitae que je présente dans mon portfolio
 @app.route('/home/cv')
 def cv():
-    return render_template("cv.html")
+    # Affichage de la date du jour
+    daydate = datetime.datetime.now().strftime('%A-%d-%m-%Y')
+    # Affichage de l'heure
+    hour = datetime.datetime.now().strftime('%H:%m')
+
+    return render_template("cv.html", hour=hour, daydate=daydate)
+
 
 
 # Les projets personnels que je présente dans mon portfolio
