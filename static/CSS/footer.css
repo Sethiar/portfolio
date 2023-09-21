@@ -1,0 +1,48 @@
+/* Caractéristiques des sections du footer */
+
+h3.footer_titre {
+  color: white;
+  text-decoration: none;
+  border: 1px solid gold;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex-basis: 23%;
+  margin-bottom: 3%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.reseaux li {
+  margin-bottom: 15%;
+}
+
+.gold {
+  color: gold
+}
+
+a {
+  text-decoration: none;
+  color: gold;
+}
+
+/* Caractéristiques du bas du footer */
+.footer-bottom {
+  margin-top: 2%;
+  text-align: center;
+  background-color: black;
+}
