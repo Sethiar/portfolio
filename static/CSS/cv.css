@@ -40,6 +40,19 @@ body, html {
     z-index: 999;
 }
 
+
+.highlight {
+    transition: box-shadow 0.3s; /* Ajout d'une transition pour un effet de fondu */
+}
+
+#animated_earth:hover,
+#animated_mars:hover,
+#planet1:hover,
+#planet2:hover {
+    box-shadow: 0 0 10px gold;
+}
+
+
 #animated_earth {
     width: 150px;
     height: 150px;
@@ -54,13 +67,6 @@ body, html {
     border-radius: 50%;
     border: 2px solid transparent;
 
-}
-
-.highlight {
-    transition: border-color 0.3s; /* Ajout d'une transition pour un effet de fondu */
-}
-#animated_earth:hover {
-    border-color: gold;
 }
 
 @keyframes earth_animation {
@@ -81,13 +87,6 @@ body, html {
     background-position: 0 0;
     border-radius: 50%;
     border: 2px solid transparent;
-}
-
-.highlight {
-    transition: border-color 0.3s; /* Ajout d'une transition pour un effet de fondu */
-}
-#animated_mars:hover {
-    border-color: gold;
 }
 
 @keyframes mars_animation {
@@ -111,14 +110,6 @@ body, html {
     border: 2px solid transparent;
 }
 
-.highlight {
-    transition: border-color 0.3s; /* Ajout d'une transition pour un effet de fondu */
-}
-
-#planet1:hover {
-    border-color: gold;
-}
-
 @keyframes planet1_animation {
     0% { background-position: 0 0; }
     100% { background-position: -1000px; }
@@ -139,13 +130,6 @@ body, html {
     border: 2px solid transparent;
 }
 
-.highlight {
-    transition: border-color 0.3s; /* Ajout d'une transition pour un effet de fondu */
-}
-
-#planet2:hover {
-    border-color: gold;
-}
 
 @keyframes planet2_animation {
     0% { background-position: 0 0; }
