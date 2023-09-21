@@ -2,8 +2,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/navette.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/footer.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images_site/favicon/favimage.ico') }}">
     {% block head_content %}
     {% endblock %}
 </head>
@@ -20,14 +23,47 @@
         {% endblock %}
     </main>
 
-    <footer>
-    &copy: Copyright 2023 SethiarWorks
+    <footer class="footer">
+        <div class="container">
+            <div class="row footer-content">
+                <div class="col-md-4">
+                    <h3 class="footer_titre">Informations</h3>
+                    <br>
+                    <p class="gold">Adresse : Caen, Calvados, France</p>
+                    <br>
+                    <p class="gold"><a class="retour" href="mailto:alefetey123@gmail.com">Email : alefetey123@gmail.com</a></p>
+                <br><br>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer_titre">Mentions Légales</h3>
+                    <br>
+                    <ul class="reseaux">
+                        <li><a href="{{ url_for('condition') }}">Conditions d'utilisation</a></li>
+                        <li><a href="/politique-confidentialité">Politique de confidentialité</a></li>
+                    </ul>
+                <br><br>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer_titre">Réseaux Sociaux</h3>
+                    <br>
+                    <ul class="reseaux">
+                        <li ><a href="https://www.facebook.com/profile.php?id=100095257672419" target="_blanck"><i class="fab fa-facebook"></i> Facebook</a></li>
+
+                        <li><a href="https://twitter.com/LefeteyA" target="_blanck"><i class="fab fa-twitter"></i> Twitter</a></li>
+
+                        <li><a href="https://www.instagram.com/lefeteya/" target="_blanck"><i class="fab fa-instagram" ></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy: Copyright 2023 SethiarWorks. Tous droits réservés.</p>
+        </div>
     {% block footer_content %}
-       {% endblock %}
+    {% endblock %}
     </footer>
 
 <script type="module" src="../static/javascript/movements_navette/movements_navette.js"></script>
-<script type="module" src="../static/javascript/movements_navette/movements_automatic.js"></script>
 <script src="{{ url_for('static', filename='javascript/main.js') }}"></script>
 
 </body>
