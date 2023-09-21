@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cette page renseigne sur l'utilisation des cookies.">
+    <meta property="og:title" content="PortFolio de Lefetey Arnaud">
+    <meta property="og:description" content="Ce site est mon portfolio, il présente mon curriculum vitae, mes compétences, mon parcours ainsi que mes projets personnels.">
+    <meta property="og:url" content="https://portfoliolefeteya-119a68814922.herokuapp.com">
+    <meta property="og:image"  content="{{ url_for('serve_image', photo2='photo2.jpg') }}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="PortFolio de Lefetey Arnaud">
+    <meta name="twitter:description" content="Ce site est mon portfolio, il présente mon curriculum vitae, mes compétences, mon parcours ainsi que mes projets personnels.">
+    <meta name="twitter:image" content="https://portfoliolefeteya-119a68814922.herokuapp.com/static/image/photo2.jpg">
+    <meta name="twitter:url" content="https://portfoliolefeteya-119a68814922.herokuapp.com">
+    <meta name="twitter:site" content="@LefeteyA">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/politique.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='image/favicon/favimage.ico') }}">
+    <title>Refus des cookies -- Avertissement</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5YHFVB4ZG"></script>
+</head>
+<body>
+
+<br><br>
+
+<div class="separation1">
+
+</div>
+
+<br>
+<br>
+<h2>Avertissement.</h2>
+<br>
+<br>
+<div class="encadre">
+    <div>
+        <p class="para">*
+            En refusant les cookies, vous ne consentez pas à l'utilisation des données du site afin d'améliorer sa lisibilité ainsi que ses performances.
+            Sachez que le site n'utilise aucune de vos données personnelles et que l'utilisation est exclusivement centrée sur la performance.
+        </p>
+    </div>
+    <div>
+        <p class="para"><a class="retour" href="{{url_for('modale') }}">Si vous désirez accepter les cookies, vous pouvez y accéder par ce lien. </a></p>
+        <p class="para"><a class="retour" href="{{url_for('accueil') }}">Sinon cliquez ici.</a></p>
+    </div>
+</div>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B5YHFVB4ZG');
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* Style de la modale */
+.modale {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Contenu de la modale */
+.contenu_modale {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+/* Boutons de la modale */
+button {
+    margin-top: 10px;
+}
+
+/* Caractérisques pour les petits écrans */
+@media screen and (max-width: 768px) {
+  body {
+    font-family: Arial, sans-serif;
+  }
+}

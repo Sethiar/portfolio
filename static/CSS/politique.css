@@ -1,0 +1,65 @@
+/* Définition d'une police pour tous les éléments de la page */
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Surligne le lien retour à l'accueil */
+.retour:hover {
+  color: orange;
+  border-bottom: 1px solid gold;
+}
+
+/* Séparation entre l'entête et le titre de la section */
+.separation1 {
+  border-bottom: 2px solid orange;
+}
+
+/* Caractéristiques du titre de la section */
+h2 {
+  marging-top: 20px;
+  border: 1px solid black;
+  background: orange;
+  font-size: 18px;
+  text-align: center;
+  color: black;
+  max-width: 800px;
+  margin: 0;
+  margin: auto;
+}
+
+.encadre {
+  border: 1px solid black;
+  padding: 30px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.date {
+  text-align: right;
+}
+
+.intro {
+  text-indent: 2em;
+  text-align: justify;
+}
+
+.para {
+  text-indent: 2em;
+  text-align: justify;
+}
+
+.outro {
+  text-align: right;
+}
+
+/* Caractérisques pour les petits écrans */
+@media screen and (max-width: 768px) {
+  body {
+    font-family: Arial, sans-serif;
+  }
+}
