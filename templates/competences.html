@@ -1,10 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html.jinja2' %}
 
-</body>
-</html>
+{% block head_content %}
+<meta name="description" content="Mes compétences acquises au travers de mon parcours professionnel, de mes expériences personelles et de mes formations">
+<title>{% block title %}Mes compétences à travers mon parcours{% endblock %}</title>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/competences.css') }}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/navette.css') }}">
+{% endblock %}
+
+{% block main_content %}
+<div id="background">
+    <div id="container">
+        <div class="spaceship"></div>
+        <div id="python" class="center">
+            <div id=tool1 class="tool"></div>
+            <div id=tool2 class="tool"></div>
+            <div id=tool3 class="tool"></div>
+            <div id=tool4 class="tool"></div>
+            <div id=tool5 class="tool"></div>
+            <div id=tool6 class="tool"></div>
+            <div id=tool7 class="tool"></div>
+            <div id=tool8 class="tool"></div>
+        </div>
+    </div>
+    <div id="container2">
+        <div id="gestion" class="center2">
+            <div id=tool2-1 class="toolg"></div>
+            <div id=tool2-2 class="toolg"></div>
+            <div id=tool2-3 class="toolg"></div>
+        </div>
+    </div>
+    <div id="container3">
+        <div id="techno" class="center3">
+            <div id=tool3-1 class="tool-tech"></div>
+            <div id=tool3-2 class="tool-tech"></div>
+            <div id=tool3-3 class="tool-tech"></div>
+        </div>
+    </div>
+    <div id="container4">
+        <div id="..." class="center4">
+            <div id=tool4-1 class="tool-..."></div>
+            <div id=tool4-2 class="tool-..."></div>
+            <div id=tool4-3 class="tool-..."></div>
+        </div>
+    </div>
+</div>
+<script type="module" src="../static/javascript/movements_navette/movements_navette.js"></script>
+{% endblock %}
+{% block footer_content %}
+
+{% endblock %}
