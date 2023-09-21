@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var rejectBtn = document.getElementById('rejectBtn');
 
     // Afficher la modale
+    console.log("Modal is displayed");
     modale.style.display = 'block';
 
     // Gérer les clics sur les boutons
