@@ -156,9 +156,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 }
 
-const projetsLink = document.getElementById("projets-link");
-projetsLink.addEventListener("click", function (event) {
-    event.preventDefault();
-    autoMoveProjets();
-});
+  const projetsLink = document.getElementById("projets-link");
+  projetsLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      autoMoveProjets();
+  });
 });
