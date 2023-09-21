@@ -1,0 +1,178 @@
+
+
+body, html {
+    background-color: black;
+
+}
+
+.spaceship {
+    position: absolute;
+    z-index: 999;
+}
+
+#background {
+    height: 100vh;
+    background-image: url('../images_site/image_background/background3/background3-3.jpg');
+    background-size: cover;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  /* Ajustez la taille de la div python selon la taille de votre image */
+  width: 50px; /* Ajustez la taille de la div python selon la taille de votre image */
+  height: 50px; /* Ajustez la taille de la div python selon la taille de votre image */
+  border: 2px solid white;
+  border-radius: 50%; /* Assurez-vous que l'image a également un bord arrondi */
+}
+
+.center img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool {
+    position: absolute;
+    width: 40px; /* Ajustez la taille de l'outil selon vos besoins */
+    height: 40px; /* Ajustez la taille de l'outil selon vos besoins */
+    border-radius: 50%;
+    animation: orbit 5s linear infinite; /* Ajustez la durée de l'animation selon vos besoins */
+    transform-origin: center center;
+}
+
+#tool1 {
+  /* Ajuste la position de l'outil 1 autour du cercle */
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  border: 2px solid blue;
+  animation-delay: 0s;
+  }
+
+#tool2 {
+  /* Ajustez la position de l'outil 2 autour du cercle */
+  top: 0;
+  border-radius: 50%;
+  border: 2px solid yellow;
+  animation-delay: 0.6s;
+  }
+
+#tool3 {
+  /* Ajustez la position de l'outil 3 autour du cercle */
+  top:0;
+  border-radius: 50%;
+  border: 2px solid red;
+  animation-delay: 1.2s;
+  }
+
+#tool4 {
+  /* Ajuste la position de l'outil 1 autour du cercle */
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  border: 2px solid darkgrey;
+  animation-delay: 1.8s;
+  }
+
+#tool5 {
+  /* Ajustez la position de l'outil 2 autour du cercle */
+  top: 0;
+  border-radius: 50%;
+  border: 2px solid green;
+  animation-delay: 2.4s;
+  }
+
+#tool6 {
+  /* Ajustez la position de l'outil 3 autour du cercle */
+  top:0;
+  border-radius: 50%;
+  border: 2px solid purple;
+  animation-delay: 3s;
+  }
+#tool7 {
+  /* Ajustez la position de l'outil 3 autour du cercle */
+  top:0;
+  border-radius: 50%;
+  border: 2px solid black;
+  animation-delay: 3.6s;
+  }
+
+#tool8 {
+  /* Ajustez la position de l'outil 3 autour du cercle */
+  top:0;
+  border-radius: 50%;
+  border: 2px solid white;
+  animation-delay: 4.2s;
+  }
+
+
+#container2 {
+
+}
+.center2 {
+  top:80%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  /* Ajustez la taille de la div python selon la taille de votre image */
+  width: 50px; /* Ajustez la taille de la div python selon la taille de votre image */
+  height: 50px; /* Ajustez la taille de la div python selon la taille de votre image */
+  border: 2px solid white;
+  border-radius: 50%; /* Assurez-vous que l'image a également un bord arrondi */
+}
+
+.center2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.toolg {
+    position: absolute;
+    width: 40px; /* Ajustez la taille de l'outil selon vos besoins */
+    height: 40px; /* Ajustez la taille de l'outil selon vos besoins */
+    border-radius: 50%;
+    animation: orbit 5s linear infinite; /* Ajustez la durée de l'animation selon vos besoins */
+    transform-origin: center center;
+}
+
+#tool2-1 {
+  /* Ajuste la position de l'outil 1 autour du cercle */
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  border: 2px solid blue;
+  animation-delay: 2s;
+  }
+
+#tool2-2 {
+  /* Ajustez la position de l'outil 2 autour du cercle */
+  top: 0;
+  border-radius: 50%;
+  border: 2px solid yellow;
+  animation-delay: 3.5s;
+  }
+
+#tool2-3 {
+  /* Ajustez la position de l'outil 3 autour du cercle */
+  top:0;
+  border-radius: 50%;
+  border: 2px solid red;
+  animation-delay: 5s;
+  }
+
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
