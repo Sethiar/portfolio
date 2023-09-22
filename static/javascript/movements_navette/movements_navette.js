@@ -50,9 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const newLeft = currentLeft + leftDelta;
     const newBottom = currentBottom + bottomDelta;
 
-    if (newLeft >= 0 && newLeft + spaceshipWidth <= screenWidth) {
+    if (newLeft >= 0 && newLeft <= screenWidth - spaceshipWidth / 5) {
       spaceship.style.left = `${newLeft}px`;
-    }
+}
 
     if (newBottom >= 0 && newBottom + spaceshipHeight <= screenHeight) {
       spaceship.style.bottom = `${newBottom}px`;
