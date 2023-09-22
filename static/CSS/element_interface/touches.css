@@ -1,0 +1,19 @@
+
+
+#touches {
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    border: 1px solid darkgrey;
+    opacity: 0.6;
+    z-index: 20;
+  }
+
+
+.direction {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: gold;
+}
