@@ -12,9 +12,71 @@
     position: absolute;
     /* Pour la positionner en haut au centre */
     left: 50%;
-    top: 20vh;
+    top: 30vh;
     /* Pour centrer la cible horizontalement */
     transform: translateX(-50%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px gold;
+    animation: target 2s linear infinite;
+}
+
+@keyframes target {
+    0% {
+    opacity: 1;
+    box-shadow: 0 0 20px orange;
+    }
+    25% {
+    opacity: 0.5;
+    box-shadow: 0 0 20px red;
+    }
+    50% {
+    opacity: 0;
+    }
+    75% {
+    opacity: 0.5;
+    box-shadow: 0 0 20px red;
+    }
+    100% {
+    opacity:1;
+    box-shadow: 0 0 20px orange;
+    }
+}
+
+#target-message {
+    z-index: 20;
+    position: absolute;
+    top: 40vh;
+    font-size: 28px;
+    animation: color 2s linear infinite;
+}
+
+@keyframes color {
+    0% {
+    color: orange;
+    opacity: 1;
+   }
+    25% {
+    color: red;
+    opacity: 0.5;
+   }
+    50% {
+    opacity: 0;
+   }
+    75% {
+    color: red;
+    opacity: 0.5;
+   }
+    100% {
+    color: orange;
+    opacity: 1;
+   }
+}
+
+#target-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #photo {
@@ -26,7 +88,7 @@
     position: absolute;
     /* Pour la positionner en haut au centre */
     left: 50%;
-    top: 20vh;
+    top: 30vh;
     /* Pour centrer la cible horizontalement */
     transform: translateX(-50%);
     display: none;
@@ -41,15 +103,54 @@
     transform: translate(15vw, -15vh) rotate(30deg);
   }
   50% {
-    transform: translate(15vw, 13vh) rotate(-50deg);
+    transform: translate(40vw, 13vh) rotate(-50deg);
     display: block;
   }
   75% {
     transform: translate(-20vw, -5vh) rotate(30deg);
   }
   100% {
-  transform: translate(30vw, -15vh) rotate(0deg);
+  transform: translate(-45vw, 0vh) rotate(0deg);
+  box-shadow: 0 0 20px red;
   }
+}
+
+
+#missile {
+    /* width et height de l'élément .missile en px */
+    width: 10px;
+    height: 20px;
+    /* chemin de l'image de fond associé au missile */
+    background-image: url('../../images_site/images_weapons/spritesheet_rocket.png');
+    /* Contrôle de la redimension de l'image de fond. */
+    background-size: 950% auto;
+    background-position: center bottom;
+    position: absolute;
+    /* Pour centrer le missile horizontalement */
+    transform: translateX(-50%);
+    }
+
+#explosion {
+    display: none;
+    width: 60px;
+    height: 50px;
+    background-image: url('../../images_site/images_explosion/explosion-spritesheet2.png');
+    background-size: 600% auto;
+    position: absolute;
+    /* Pour la positionner en haut au centre */
+    left: 50%;
+    top: 20vh;
+    /* Pour centrer la cible horizontalement */
+    transform: translateX(-50%);
+}
+
+@keyframes explosion {
+     /* Position de la première image d'explosion */
+    from { background-position: 0 0;
+    }
+    to
+        { background-position: -382px 0px;
+    }
 }
 
 .asteroid1 {
