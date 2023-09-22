@@ -5,6 +5,7 @@
     /* width et height de l'élément .spaceship en unités relatives */
     width: 48px;
     height: 54px;
+    z-index:5;
 
     /* spécifie l'image de fond associé au spaceship */
     background-image: url('../images_site/images_spaceship/spritesheet_spaceship.png');
@@ -14,7 +15,7 @@
     background-position: center bottom;
     position: absolute;
 
-    bottom: 20%;
+    bottom: 10%;
     left: 50%;
     /* Pour centrer la navette horizontalement */
     transform: translateX(-50%);
