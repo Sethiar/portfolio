@@ -1,300 +1,572 @@
-
-
-body, html {
-    background-color: black;
-
-}
-
-.spaceship {
-    position: absolute;
-    z-index: 999;
+* {
+  background-color: black;
 }
 
 #background {
-    height: 100vh;
+    height: 150vh;
     background-image: url('../images_site/image_background/background3/background3-3.jpg');
     background-size: cover;
+    position: relative; /* Ajoutez cette ligne pour que les éléments enfants soient positionnés relativement à ce conteneur */
 }
 
-#container-parent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#container-python {
-
+.spaceship {
+   border: none;
 }
 
 .center-python {
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 20%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
-    border: 2px solid white;
-    border-radius: 50%;
-}
-
-.center-python img {
-  width: 100%;
-  height: 100%;
-}
-
-.tool-python {
-    position: absolute;
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    animation: orbit 10s linear infinite;
-}
-
-#tool-python1 {
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    top: 0;
-    border-radius: 50%;
-    border: 2px solid blue;
-    animation-delay: 0s;
-  }
-
-#tool-python2 {
-    width: 70px;
-    height: 70px;
-    top: 0;
-    border-radius: 50%;
-    border: 2px solid yellow;
-    animation-delay: 0.6s;
-  }
-
-#tool-python3 {
-    width: 70px;
-    height: 70px;
-    top:0;
-    border-radius: 50%;
-    border: 2px solid red;
-    animation-delay: 1.2s;
-  }
-
-#tool-python4 {
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    top: 0;
-    border-radius: 50%;
-    border: 2px solid darkgrey;
-    animation-delay: 1.8s;
-  }
-
-#tool-python5 {
-    width: 70px;
-    height: 70px;
-    top: 0;
-    border-radius: 50%;
-    border: 2px solid green;
-    animation-delay: 2.4s;
-  }
-
-#tool-python6 {
-    width: 70px;
-    height: 70px;
-    top:0;
-    border-radius: 50%;
-    border: 2px solid purple;
-    animation-delay: 3s;
-  }
-#tool-python7 {
-    width: 70px;
-    height: 70px;
-    top:0;
-    border-radius: 50%;
-    border: 2px solid black;
-    animation-delay: 3.6s;
-  }
-
-#tool-python8 {
-    width: 70px;
-    height: 70px;
-    top:0;
-    border-radius: 50%;
-    border: 2px solid white;
-    animation-delay: 4.2s;
-  }
-
-
-#container-gestion {
-   position: flex;
-
-}
-
-.center-gestion {
-    top: 30%;
-    right: 20%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
+    background-image: url('../images_site/logo/logopyth/logoPython.png');
+    z-index: 1;
     border: 2px solid white;
     border-radius: 50%;
-}
-
-.center-gestion img {
-    width: 100%;
-    height: 100%;
-}
-
-.tool-gestion {
-    border-radius: 50%;
-    animation: orbit 5s linear infinite;
     transform-origin: 50% 50%;
 }
 
-#tool-gestion1 {
-    width: 70px;
-    height: 70px;
-    top: 0;
-    border-radius: 50%;
-    border: 2px solid blue;
-    animation-delay: 2s;
-  }
-
-#tool-gestion2 {
-    width: 70px;
-    height: 70px;
-    top: 0;
-    border-radius: 50%;
-    border: 2px solid yellow;
-    animation-delay: 3.5s;
-  }
-
-#tool-gestion3 {
-    width: 70px;
-    height: 70px;
-    top:0;
-    border-radius: 50%;
-    border: 2px solid red;
-    animation-delay: 5s;
-  }
-
-#container-parent2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#container-tech {
-   position: flex;
-
-}
-
-.center-tech {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    top:70%;
+.tool-python {
+    top: 20%;
     left: 20%;
-    transform: translate(-50%, -50%);
-    border: 2px solid white;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
     border-radius: 50%;
-}
-
-.center-tech img {
-    width: 100%;
-    height: 100%;
-}
-
-.tool-tech {
+    background-image: url('../images_site/logo/logopyth/logoseaborn.png');
+    animation: orbit 10s linear infinite;
     position: absolute;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    animation: orbit 5s linear infinite;
 }
-
-#tool-tech1 {
-    width: 70px;
-    height: 70px
-    top: 0;
-    border-radius: 50%;
-    border: 2px solid blue;
-    animation-delay: 2s;
-  }
-
-#tool-tech2 {
-    width: 70px;
-    height: 70px
-    top: 0;
-    border-radius: 50%;
-    border: 2px solid yellow;
-    animation-delay: 3.5s;
-  }
-
-#tool-tech3 {
-    width: 70px;
-    height: 70px
-    top: 0;
-    border-radius: 50%;
-    border: 2px solid red;
-    animation-delay: 5s;
-  }
-
-#container-restant {
-    position: flex;
+.tool-python p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: black;
 }
-
-
-.center-restant {
+.tool-python2 {
+    top: 20%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logopyth/logoflask.png');
+    animation: orbit 10s linear infinite;
     position: absolute;
-    width: 150px;
-    height: 150px;
-    top:70%;
+}
+
+.tool-python2 p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+.tool-python2 {
+    animation-delay: 1s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-python3 {
+    top: 20%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logopyth/logodjango.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-python3 p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.tool-python3 {
+    animation-delay: 2s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-python4 {
+    top: 20%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logopyth/logomathplotlib.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-python4 p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+.tool-python4 {
+    animation-delay: 3s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-python5 {
+    top: 20%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logopyth/logopanda.png');
+    background-size: cover;
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-python5 {
+    animation-delay: 4s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-python6 {
+    top: 20%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logopyth/logobokeh.png');
+    background-size: 120%;
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-python6 {
+    animation-delay: 5s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-python7 {
+    top: 20%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logopyth/logonumpy.png');
+    background-size: 100%;
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-python7 {
+    animation-delay: 6s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-python8 {
+    top: 20%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logopyth/logoRest.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-python8 {
+    animation-delay: 7s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+
+.tool-python9 {
+    top: 20%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logopyth/logostreamlit.png');
+    background-size: cover;
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-python9 {
+    animation-delay: 8s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-python10 {
+    top: 20%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logopyth/logotkinter.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-python10 p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.tool-python10{
+    animation-delay: 9s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.center-gestion {
+    position: absolute;
+    top: 20%;
     right: 20%;
-    transform: translate(-50%, -50%);
+    z-index: 1;
     border: 2px solid white;
     border-radius: 50%;
+    transform-origin: 50% 50%;
 }
 
-.center-restant img {
-    width: 100%;
-    height: 100%;
-}
-
-.tool-restant {
+.tool-gestion {
+    top: 20%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logogestion/logojira.png');
+    animation: orbit 10s linear infinite;
     position: absolute;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    animation: orbit 5s linear infinite;
 }
 
-#tool-restant1 {
-    width: 70px;
-    height: 70px
-    top: 0;
-    border-radius: 50%;
-    border: 2px solid blue;
-    animation-delay: 2s;
-  }
+.tool-gestion p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
 
-#tool-restant2 {
-    width: 70px;
-    height: 70px
-    top: 0;
-    border-radius: 50%;
-    border: 2px solid yellow;
-    animation-delay: 3.5s;
-  }
+.tool-gestion {
+    animation-delay: 1.25s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
 
-#tool-restant3 {
-    width: 70px;
-    height: 70px
-    top: 0;
+.tool-gestion2 {
+    top: 20%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
     border-radius: 50%;
-    border: 2px solid red;
-    animation-delay: 5s;
-  }
+    background-image: url('../images_site/logo/logobdd/logomongodb.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
 
+.tool-gestion2 {
+    animation-delay: 2.5s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-gestion3 {
+    top: 20%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logogestion/logoGantt.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-gestion3 p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+.tool-gestion3 {
+    animation-delay: 3.75s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-gestion4 {
+    top: 20%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logobdd/logoPostgresql.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-gestion4 {
+    animation-delay: 5s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+
+.tool-gestion5 {
+    top: 20%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logogestion/logoUML.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-gestion5 {
+    animation-delay: 6.25s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-gestion6 {
+    top: 20%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logobdd/logosql.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-gestion6 {
+    animation-delay: 7.5s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-gestion7 {
+    top: 20%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logogestion/logoKanban.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-gestion7 {
+    animation-delay: 8.75s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-gestion8 {
+    top: 20%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logogestion/logoTrello.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-gestion8 p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+.tool-gestion8 {
+    animation-delay: 10s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.center-editor {
+    position: absolute;
+    top: 65%;
+    right: 20%;
+    z-index: 1;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+}
+
+.tool-editor {
+    top: 65%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logoediteur/logopycharm.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-editor p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+.tool-editor {
+    animation-delay: 3s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-editor2 {
+    top: 65%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logoediteur/logoReplit.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-editor2 p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+.tool-editor2 {
+    animation-delay: 6s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-editor3 {
+    top: 65%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logoediteur/logovisualCodeS.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-editor3 p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.tool-editor3 {
+    animation-delay: 9s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.center_language {
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    z-index: 1;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+}
+
+.tool-language {
+    top: 65%;
+    left: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logolangage/logoPhp.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+
+.tool-language {
+    animation-delay: 2s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-language2 {
+    top: 65%;
+    left: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logolangage/logohtml.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-language2 {
+    animation-delay: 4s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-language3 {
+    top: 65%;
+    left: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logolangage/logojs.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-language3 {
+    animation-delay: 6s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+
+.tool-language4 {
+    top: 65%;
+    left: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logolangage/logocss.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+
+.tool-language4 {
+    animation-delay: 8s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
+.tool-language5 {
+    top: 65%;
+    left: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logolangage/logoPython.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+
+.tool-language5 {
+    animation-delay: 10s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+}
 @keyframes orbit {
   0% {
     transform: rotate(0deg) translateX(200px) rotate(0deg);
