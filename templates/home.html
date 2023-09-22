@@ -4,10 +4,13 @@
 <meta name="description" content="Mon portfolio professionnel avec mon curriculum vitae, mes compétences et mes projets personnels.">
 <title>{% block title %}Portfolio de Lefetey Arnaud{% endblock %}</title>
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/home.css') }}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/element_interface/target_missile.css') }}">
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/navette.css') }}">
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/navbars/navbars.css') }}">
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/message_titre.css') }}">
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/element_interface/target_missile.css') }}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/element_interface/touches.css') }}">
+<link href="https://fonts.google.com/specimen/Abril+Fatface?query=abr" rel="stylesheet">
+
 {% endblock %}
 
 {% block header_content %}
@@ -24,9 +27,10 @@
     <div id="background">
         <h1>Bienvenue sur mon portfolio</h1>
     </div>
-    <div id="target">
-        <p id="target-message">Shoot Me !!</p>
-    </div>
+<div id="target-container">
+    <div id="target"></div>
+    <div id="target-message">SHOOT ME !!</div>
+</div>
     <div id="explosion">
     </div>
     <div id="photo">
@@ -54,6 +58,13 @@
     </div>
     <div id="arrow_competences">
     </div>
+    <div id="touches">
+        <p class="direction">"Z" pour avancer</p>
+        <p class="direction">"Q" pour aller à gauche</p>
+        <p class="direction">"D" pour aller à droite</p>
+        <p class="direction">"S" pour reculer</p>
+        <p class="direction">"F" pour tirer</p>
+    </div>
 
 
 <script type="module" src="../static/javascript/movements_navette/movements_navette.js"></script>
@@ -63,6 +74,7 @@
 <script type="module" src="../static/javascript/FX/explosions.js"></script>
 <script type="module" src="../static/javascript/movements_navette/movements_automatic.js"></script>
 {% endblock %}
+
 {% block footer_content %}
 
 {% endblock %}
