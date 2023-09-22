@@ -2,27 +2,30 @@
 
 /* Styles gérant le message d'introduction du portfolio */
 
-#target-message {
-    width: 6.5vh;
-    position: absolute;
-    /* Pour la positionner en haut au centre */
-    left: 50%;
-    top: 10vh;
-    /* Pour centrer la cible horizontalement */
-    transform: translateX(-50%);
+
+@font-face {
+  font-family: 'AbrilFatface';
+  src: url('../font/AbrilFatface-Regular.ttf') format('ttf');
 }
 
 .message-container {
     position: absolute;
     display: none;
-    top: 40vh;
-    left: 2vw;
+    top: 50vh;
+    left: 5vw;
     padding: 2%;
     /* Fond semi-transparent pour la lisibilité */
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
+    z-index: 20;
     border: 1px solid lightgrey;
     animation: appear 10s ease forwards;
+}
+
+
+.message-container #message-content p {
+    font-size: 32px;
+    font-family: 'AbrilFatface', sans-serif;
 }
 
 @keyframes appear {
@@ -32,8 +35,4 @@
     100% {
         opacity: 1;
     }
-}
-
-#message-content p {
-    font-size: 32px;
 }
