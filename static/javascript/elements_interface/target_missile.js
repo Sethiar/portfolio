@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function detecterCollision() {
     //const explosion = document.getElementById("explosion")
     const target = document.getElementById("target");
+    const message = document.getElementById('target-message')
     const missile = document.getElementById("missile");
     const rectTarget = target.getBoundingClientRect();
     const rectMissile = missile.getBoundingClientRect();
@@ -70,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Collision détectée
       console.log('Collision détectée');
       target.style.display = "none";
+      message.style.display = "none"
       missile.style.display = "none";
       afficherPhoto();
       afficherExplosion();
