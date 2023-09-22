@@ -1,24 +1,42 @@
 /* Caractéristiques des sections du footer */
 
+
+.footer {
+    font-size: 16px;
+    margin-right: 10%;
+    margin-left: 10%;
+
+    color: orange;
+    box-shadow: 0px 0px 50px gold;
+    border: 1px solid gold;
+    margin-bottom: 5%;
+    opacity: 0.8;
+}
 h3.footer_titre {
   color: white;
-  text-decoration: none;
-  border: 1px solid gold;
+  box-shadow: 0 0 5px orange;
+  font-size: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
+  text-align: center;
+
 }
 
 .footer-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 90%;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .footer-section {
-  flex-basis: 23%;
-  margin-bottom: 3%;
-  margin-left: 4%;
-  margin-right: 4%;
+/*(33.33% - 2rem pour trois colonnes avec un espace de 2rem entre elles) */
+  flex-basis: calc(33.3% -2 rem);
+  margin-bottom: 1%;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 
@@ -32,7 +50,8 @@ ul {
 }
 
 .gold {
-  color: gold
+  color: gold;
+  padding-left: 20px;
 }
 
 a {
@@ -42,7 +61,7 @@ a {
 
 /* Caractéristiques du bas du footer */
 .footer-bottom {
-  margin-top: 2%;
+  margin-top: 1%;
   text-align: center;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
 }
