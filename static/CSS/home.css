@@ -9,11 +9,25 @@ body, html {
 
 h1 {
     position: absolute;
-    top: 20vh;
+    top: 15vh;
     transform: translateX(50%);
     color: orange;
     z-index: 20;
     }
+h3.explic {
+    position: absolute;
+    color: orange;
+    top: 20vh;
+    right: 10%;
+}
+
+h3.explic2 {
+    position: absolute;
+    color: orange;
+    top: 45vh;
+    left: 40%;
+}
+
 
 #background {
     height: 150vh;
