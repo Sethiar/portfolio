@@ -111,7 +111,7 @@
   }
   100% {
   transform: translate(-45vw, 0vh) rotate(0deg);
-  box-shadow: 0 0 20px red;
+  box-shadow: 0 0 50px blue;
   }
 }
 
