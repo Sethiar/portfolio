@@ -6,7 +6,7 @@
     height: 150vh;
     background-image: url('../images_site/image_background/background3/background3-3.jpg');
     background-size: cover;
-    position: relative; /* Ajoutez cette ligne pour que les éléments enfants soient positionnés relativement à ce conteneur */
+    position: relative;
 }
 
 .spaceship {
@@ -21,8 +21,8 @@
     height: 100px;
     background-image: url('../images_site/logo/logopyth/logoPython.png');
     z-index: 1;
-    border: 2px solid white;
     border-radius: 50%;
+    box-shadow: 0 0 20px white;
     transform-origin: 50% 50%;
 }
 
@@ -38,12 +38,14 @@
     animation: orbit 10s linear infinite;
     position: absolute;
 }
+
 .tool-python p {
     background-color: rgba(0, 0, 0, 0);
     text-align: center;
     font-size: 18px;
     color: black;
 }
+
 .tool-python2 {
     top: 20%;
     left: 20%;
@@ -64,7 +66,7 @@
 }
 
 .tool-python2 {
-    animation-delay: 1s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 1s;
 }
 
 .tool-python3 {
@@ -79,15 +81,8 @@
     position: absolute;
 }
 
-.tool-python3 p {
-    background-color: rgba(0, 0, 0, 0);
-    text-align: center;
-    font-size: 18px;
-    color: white;
-}
-
 .tool-python3 {
-    animation-delay: 2s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 2s;
 }
 
 .tool-python4 {
@@ -110,7 +105,7 @@
 }
 
 .tool-python4 {
-    animation-delay: 3s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 3s;
 }
 
 .tool-python5 {
@@ -127,7 +122,7 @@
 }
 
 .tool-python5 {
-    animation-delay: 4s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 4s;
 }
 
 .tool-python6 {
@@ -138,13 +133,20 @@
     z-index: 2;
     border-radius: 50%;
     background-image: url('../images_site/logo/logopyth/logobokeh.png');
-    background-size: 120%;
+    background-size: 100%;
     animation: orbit 10s linear infinite;
     position: absolute;
 }
 
+.tool-python6 p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
 .tool-python6 {
-    animation-delay: 5s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 5s;
 }
 
 .tool-python7 {
@@ -161,7 +163,7 @@
 }
 
 .tool-python7 {
-    animation-delay: 6s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 6s;
 }
 
 .tool-python8 {
@@ -177,7 +179,7 @@
 }
 
 .tool-python8 {
-    animation-delay: 7s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 7s;
 }
 
 
@@ -194,8 +196,15 @@
     position: absolute;
 }
 
+.tool-python9 p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
 .tool-python9 {
-    animation-delay: 8s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 8s;
 }
 
 .tool-python10 {
@@ -217,18 +226,28 @@
     color: white;
 }
 
-.tool-python10{
-    animation-delay: 9s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+.tool-python10 {
+    animation-delay: 9s;
 }
 
 .center-gestion {
+    width: 125px;
+    height: 125px;
     position: absolute;
     top: 20%;
     right: 20%;
     z-index: 1;
-    border: 2px solid white;
     border-radius: 50%;
+    box-shadow: 0 0 20px white;
     transform-origin: 50% 50%;
+}
+
+.center-gestion p {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 20px;
+    color:white;
+    text-align: center;
+    padding-top: 2%;
 }
 
 .tool-gestion {
@@ -252,7 +271,7 @@
 }
 
 .tool-gestion {
-    animation-delay: 1.25s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 1.25s;
 }
 
 .tool-gestion2 {
@@ -269,7 +288,7 @@
 }
 
 .tool-gestion2 {
-    animation-delay: 2.5s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 2.5s;
 }
 
 .tool-gestion3 {
@@ -293,7 +312,7 @@
 }
 
 .tool-gestion3 {
-    animation-delay: 3.75s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 3.75s;
 }
 
 .tool-gestion4 {
@@ -310,7 +329,7 @@
 }
 
 .tool-gestion4 {
-    animation-delay: 5s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 5s;
 }
 
 
@@ -328,7 +347,7 @@
 }
 
 .tool-gestion5 {
-    animation-delay: 6.25s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 6.25s;
 }
 
 .tool-gestion6 {
@@ -345,7 +364,7 @@
 }
 
 .tool-gestion6 {
-    animation-delay: 7.5s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 7.5s;
 }
 
 .tool-gestion7 {
@@ -362,7 +381,7 @@
 }
 
 .tool-gestion7 {
-    animation-delay: 8.75s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 8.75s;
 }
 
 .tool-gestion8 {
@@ -386,20 +405,54 @@
 }
 
 .tool-gestion8 {
-    animation-delay: 10s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 10s;
 }
 
 .center-editor {
+    width: 125px;
+    height: 125px;
     position: absolute;
     top: 65%;
     right: 20%;
     z-index: 1;
-    border: 2px solid white;
     border-radius: 50%;
+    box-shadow: 0 0 20px white;
     transform-origin: 50% 50%;
 }
 
+.center-editor p {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 20px;
+    color:white;
+    text-align: center;
+    padding-top: 2%;
+}
+
 .tool-editor {
+    top: 65%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logoframework/logoReactN.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-editor p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.tool-editor {
+    animation-delay: 1.4s;
+}
+
+.tool-editor2 {
     top: 65%;
     right: 20%;
     text-align: center;
@@ -412,30 +465,6 @@
     position: absolute;
 }
 
-.tool-editor p {
-    background-color: rgba(0, 0, 0, 0);
-    text-align: center;
-    font-size: 18px;
-    color: black;
-}
-
-.tool-editor {
-    animation-delay: 3s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
-}
-
-.tool-editor2 {
-    top: 65%;
-    right: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
-    background-image: url('../images_site/logo/logoediteur/logoReplit.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
-}
-
 .tool-editor2 p {
     background-color: rgba(0, 0, 0, 0);
     text-align: center;
@@ -444,7 +473,7 @@
 }
 
 .tool-editor2 {
-    animation-delay: 6s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 2.8s;
 }
 
 .tool-editor3 {
@@ -455,7 +484,7 @@
     height: 100px;
     z-index: 2;
     border-radius: 50%;
-    background-image: url('../images_site/logo/logoediteur/logovisualCodeS.png');
+    background-image: url('../images_site/logo/logoframework/logoNode.png');
     animation: orbit 10s linear infinite;
     position: absolute;
 }
@@ -468,17 +497,124 @@
 }
 
 .tool-editor3 {
-    animation-delay: 9s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 4.2s;
 }
 
-.center_language {
+.tool-editor4 {
+    top: 65%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logoediteur/logoReplit.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-editor4 p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+.tool-editor4 {
+    animation-delay: 5.6s;
+}
+
+.tool-editor5 {
+    top: 65%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logoframework/logoBootstrap.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-editor5 p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}
+
+.tool-editor5 {
+    animation-delay: 7s;
+}
+
+.tool-editor6 {
+    top: 65%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logoediteur/logovisualCodeS.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-editor6 p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.tool-editor6 {
+    animation-delay: 8.4s;
+}
+
+.tool-editor7 {
+    top: 65%;
+    right: 20%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    background-image: url('../images_site/logo/logoframework/logosymfony.png');
+    animation: orbit 10s linear infinite;
+    position: absolute;
+}
+
+.tool-editor7 p {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.tool-editor7 {
+    animation-delay: 9.9s;
+}
+
+.center-language {
+    width: 125px;
+    height: 125px;
     position: absolute;
     top: 65%;
     left: 20%;
     z-index: 1;
     border: 2px solid white;
     border-radius: 50%;
+    box-shadow: 0 0 20px white;
     transform-origin: 50% 50%;
+}
+
+.center-language p {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 2%;
 }
 
 .tool-language {
@@ -496,7 +632,7 @@
 
 
 .tool-language {
-    animation-delay: 2s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 2s;
 }
 
 .tool-language2 {
@@ -513,7 +649,7 @@
 }
 
 .tool-language2 {
-    animation-delay: 4s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 4s;
 }
 
 .tool-language3 {
@@ -548,8 +684,9 @@
 
 
 .tool-language4 {
-    animation-delay: 8s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 8s;
 }
+
 .tool-language5 {
     top: 65%;
     left: 20%;
@@ -563,10 +700,11 @@
     position: absolute;
 }
 
-
 .tool-language5 {
-    animation-delay: 10s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 10s;
 }
+
+
 @keyframes orbit {
   0% {
     transform: rotate(0deg) translateX(200px) rotate(0deg);
