@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html.jinja2' %}
 
-</body>
-</html>
+{% block head_content %}
+<meta name="description" content="La page de mes projets à faire avant la fin de l'année 2023">
+<title>{% block title %}Projets{% endblock %}</title>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/projets.css') }}">
+{% endblock %}
+
+{% block header_content %}
+{% endblock %}
+
+{% block main_content %}
+    <div id="background">
+    </div>
+{% endblock %}
+
+{% block footer_content %}
+
+{% endblock %}
