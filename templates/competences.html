@@ -4,12 +4,11 @@
 <meta name="description" content="Mes compétences acquises au travers de mon parcours professionnel, de mes expériences personelles et de mes formations">
 <title>{% block title %}Mes compétences à travers mon parcours{% endblock %}</title>
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/competences.css') }}">
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/navette.css') }}">
+
 {% endblock %}
 
 {% block main_content %}
 <div id="background">
-    <div class="spaceship"></div>
     <div id="python" class="center-python"></div>
     <div class="tool-python"><p>Seaborn</p></div>
     <div class="tool-python2"></div>
@@ -56,10 +55,6 @@
     <div class="tool-javascript5"></div>
 
 </div>
-
-
-
-<script type="module" src="../static/javascript/movements_navette/movements_navette.js"></script>
 {% endblock %}
 
 {% block footer_content %}
