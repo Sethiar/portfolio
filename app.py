@@ -1,6 +1,10 @@
 """Fichier app.py contenant toutes les routes de mon portfolio"""
 
-from flask import Flask, render_template, send_from_directory, request
+from flask import Flask, render_template, \
+    send_from_directory, request, jsonify
+
+
+import requests
 
 import os
 import locale
@@ -79,12 +83,24 @@ def cv_access():
 Route donnant accès à la section personnelle du portfolio
     :return:
     """
-    # Affichage de la date du jour
-    daydate = datetime.datetime.now().strftime('%A %d %B %Y')
-    # Affichage de l'heure
-    hour = datetime.datetime.now().strftime('%H:%m')
+    # Obtenir la date et l'heure actuelles
+    current_datetime = datetime.datetime.now()
 
-    return render_template("cv.html", hour=hour, daydate=daydate)
+    # Affichage de la date du jour
+    current_date = current_datetime.strftime('%A %d %B %Y')
+
+    # Affichage de l'heure
+    hour = current_datetime.strftime('%H:%M')
+
+    # Construire l'URL avec la date actuelle
+    api_url = f"https://www.icalendar37.net/lunar/api/?lang=fr&month={current_datetime.month}&year={current_datetime.year}&size=100&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&LDZ={int(current_datetime.timestamp())}"
+
+    response = requests.get(api_url)
+    if response.status_code == 200:
+        data = response.json()
+        return render_template("cv.html", hour=hour, current_date=current_date, moon_data=data)
+    else:
+        return "Erreur lors de la récupération des données lunaires."
 
 
 @app.route('/home/cv')
@@ -93,6 +109,7 @@ def cv():
 Route affichant le curriculum vitae
     :return:
     """
+
     return send_from_directory("static/pdf", "CV_arnaud.pdf")
 
 
