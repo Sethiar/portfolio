@@ -8,19 +8,25 @@
 {% endblock %}
 
 {% block header_content %}
+<!-- Phase de la lune -->
+<!-- © wdisseny -->
+<div id="contain_moon" style="text-align:center;padding-top:5px;padding-bottom:5px;">
+    <div style="font-weight:bold">La lune aujourd'hui</div>
+    <div style="margin-top:-7px;margin-bottom:-15px;padding:30px;filter:drop-shadow(0 0 30px hsl(220,100%,15%))"></div>
+    <div>.</div>
+    <div style="font-size:small">.</div>
+</div>
 {% endblock %}
 
 {% block main_content %}
     <div id="background_cv"></div>
 
-    <!-- Phase de la lune -->
-<div id="phase-lune">
-    <p>Phase de la lune : <span id="phase-lune-actuelle">{{ moon_phase }}</span></p>
-</div>
+
+
 
         <!-- Date du jour -->
 <div id="date-jour">
-    <p>Date du jour : <span id="date-actuelle">{{ daydate }}</span></p>
+    <p>Date du jour : <span id="date-actuelle">{{ current_date }}</span></p>
 </div>
 
 <div id="heure">
@@ -37,6 +43,7 @@
 <script type="module" src="../static/javascript/movements_navette/movements_navette.js"></script>
 <script type="module" src="../static/javascript/elements_cv/redirection_cv.js"></script>
 <script type="module" src="../static/javascript/elements_cv/temps.js"></script>
+<script type="module" src="../static/javascript/elements_interface/lune.js"></script>
 {% endblock %}
 {% block footer_content %}
 
