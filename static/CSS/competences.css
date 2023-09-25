@@ -7,8 +7,18 @@
     background-image: url('../images_site/image_background/background3/background3-3.jpg');
     background-size: cover;
     position: relative;
+    animation: moveBackgroundDown 120s linear infinite;
+
 }
 
+@keyframes moveBackgroundDown {
+  0% {
+    background-position-y: 0vh;
+  }
+  100% {
+    background-position-y: 150vh;
+  }
+}
 .spaceship {
    border: none;
 }
