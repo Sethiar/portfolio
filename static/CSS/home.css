@@ -12,22 +12,17 @@ h1 {
     top: 15vh;
     transform: translateX(50%);
     color: orange;
+    font-size: 40px;
     z-index: 20;
     }
+
 h3.explic {
     position: absolute;
     color: orange;
     top: 20vh;
+    font-size: 20px;
     right: 10%;
 }
-
-h3.explic2 {
-    position: absolute;
-    color: orange;
-    top: 45vh;
-    left: 40%;
-}
-
 
 #background {
     height: 150vh;
@@ -35,11 +30,7 @@ h3.explic2 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
-    animation-name: moveBackgroundDown;
-    /* Durée totale de l'animation du défilement du background*/
-    animation-duration: 60s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation: moveBackgroundDown 60s linear infinite;
  }
 
 @keyframes moveBackgroundDown {
