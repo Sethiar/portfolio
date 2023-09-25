@@ -2,16 +2,10 @@
 
 /* Styles gérant le message d'introduction du portfolio */
 
-
-@font-face {
-  font-family: 'AbrilFatface';
-  src: url('../font/AbrilFatface-Regular.ttf') format('ttf');
-}
-
 .message-container {
     position: absolute;
     display: none;
-    top: 50vh;
+    top: 55vh;
     left: 5vw;
     padding: 2%;
     /* Fond semi-transparent pour la lisibilité */
@@ -25,7 +19,6 @@
 
 .message-container #message-content p {
     font-size: 32px;
-    font-family: 'AbrilFatface', sans-serif;
 }
 
 @keyframes appear {
