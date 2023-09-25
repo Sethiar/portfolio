@@ -77,6 +77,15 @@ body, html {
 
 }
 
+div p.label1 {
+    position: fixed;
+    top: 80%;
+    left: -6%;
+    font-size: 24px;
+    width: 250px;
+    color: orange;
+}
+
 @keyframes earth_animation {
     0% { background-position: 0 0; }
     100% { background-position: -2100px 0; }
@@ -95,6 +104,15 @@ body, html {
     background-position: 0 0;
     border-radius: 50%;
     border: 2px solid transparent;
+}
+
+div p.label2 {
+    position: fixed;
+    top: 80%;
+    left: -6%;
+    font-size: 24px;
+    width: 250px;
+    color: orange;
 }
 
 @keyframes mars_animation {
@@ -118,6 +136,15 @@ body, html {
     border: 2px solid transparent;
 }
 
+div p.label3 {
+    position: fixed;
+    top: 80%;
+    left: -6%;
+    font-size: 24px;
+    width: 250px;
+    color: orange;
+}
+
 @keyframes planet1_animation {
     0% { background-position: 0 0; }
     100% { background-position: -1000px; }
@@ -138,6 +165,14 @@ body, html {
     border: 2px solid transparent;
 }
 
+div p.label4 {
+    position: fixed;
+    top: 80%;
+    left: -40%;
+    font-size: 24px;
+    width: 300px;
+    color: orange;
+}
 
 @keyframes planet2_animation {
     0% { background-position: 0 0; }
