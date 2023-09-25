@@ -9,8 +9,8 @@ body, html {
 
 #heure {
     position: absolute;
-    top: 10%;
-    right: 10%;
+    top: 15%;
+    right: 5%;
     font-size: 25px;
     border: 1px solid darkgrey;
     background: black;
@@ -20,13 +20,21 @@ body, html {
 
 #date-jour {
     position: absolute;
-    top: 10%;
-    left: 10%;
-    font-size: 25px;
+    top: 15%;
+    left: 5%;
+    font-size: 20px;
     border: 1px solid darkgrey;
     background: black;
     padding-right: 2%;
     padding-left: 2%;
+}
+
+#moon-icon {
+     position: absolute;
+     top: 10px; /* Ajustez la valeur pour définir la distance par rapport au haut */
+     left: 10px; /* Ajustez la valeur pour définir la distance par rapport à la gauche */
+     width: 32px; /* Ajustez la largeur de l'icône */
+     height: 32px; /* Ajustez la hauteur de l'icône */
 }
 
 #background_cv {
@@ -57,7 +65,7 @@ body, html {
     width: 150px;
     height: 150px;
     position: absolute;
-    top: 25%;
+    top: 45%;
     left:50%;
     transform: translate(-50%, -50%);
     background-image: url('../images_site/images_planets/sprite-sheet_terre3.png');
@@ -78,7 +86,7 @@ body, html {
     width: 125px;
     height: 140px;
     position: absolute;
-    top: 45%;
+    top: 65%;
     left:20%;
     transform: translate(-50%, -50%);
     background-image: url('../images_site/images_planets/sprite-sheet_mars.png');
@@ -99,7 +107,7 @@ body, html {
     width: 130px;
     height: 135px;
     position: absolute;
-    top: 45%;
+    top: 65%;
     left:80%;
     transform: translate(-50%, -50%);
     background-image: url('../images_site/images_planets/sprite-sheet_planet1.png');
@@ -119,7 +127,7 @@ body, html {
     width: 130px;
     height: 135px;
     position: absolute;
-    top: 60%;
+    top: 80%;
     left:50%;
     transform: translate(-50%, -50%);
     background-image: url('../images_site/images_planets/sprite-sheet_planet2.png');
