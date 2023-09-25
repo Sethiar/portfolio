@@ -4,10 +4,10 @@
 
 #target {
     /* width et height de la cible #target */
-    width: 8vh;
-    height: 8vh;
+    width: 15vh;
+    height: 15vh;
     /* chemin de l'image associée à l'élément */
-    background-image: url('../../images_site/images_element/target1.png');
+    background-image: url('../../images_site/images_element/star.png');
     background-size: cover;
     position: absolute;
     /* Pour la positionner en haut au centre */
@@ -45,7 +45,7 @@
 #target-message {
     z-index: 20;
     position: absolute;
-    top: 40vh;
+    top: 47vh;
     font-size: 28px;
     animation: color 2s linear infinite;
 }
