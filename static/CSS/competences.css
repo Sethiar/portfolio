@@ -4,7 +4,7 @@
 
 #background {
     height: 150vh;
-    background-image: url('../images_site/image_background/background3/background3-3.jpg');
+    background-image: url('../images_site/image_background/image_front/background3-3.jpg');
     background-size: cover;
     position: relative;
     animation: moveBackgroundDown 120s linear infinite;
