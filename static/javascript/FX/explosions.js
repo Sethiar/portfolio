@@ -1,5 +1,5 @@
 export function afficherExplosion() {
-  const explosion = document.getElementById('explosion');
+  const explosion = document.getElementById('explosion_asteroid');
   // Déclaration ded caractéristiques de l'explosion
   const explosionWidth = parseFloat(getComputedStyle(explosion).width);
   const explosionHeight = parseFloat(getComputedStyle(explosion).height);
@@ -7,11 +7,11 @@ export function afficherExplosion() {
   explosion.style.display = "block";
 
   let explosionFrameIndex = 0;
-  const totalExplosionFrames = 8;
+  const totalExplosionFrames = 16;
 
   // Fonction mettant à jour la position de l'image de l'explosion
   function animateExplosion() {
-    const explosionSpriteOffset = -explosionFrameIndex * (explosionWidth / 8);
+    const explosionSpriteOffset = -explosionFrameIndex * (explosionWidth / 16);
     explosion.style.backgroundPosition = `${explosionSpriteOffset}px 0`;
     explosionFrameIndex = (explosionFrameIndex + 1) % totalExplosionFrames;
 
