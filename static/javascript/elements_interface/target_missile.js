@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
       message.style.display = "none"
       missile.style.display = "none";
       afficherPhoto();
-      afficherExplosion();
+
 
 
       // afficher le message
