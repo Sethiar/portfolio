@@ -1,3 +1,6 @@
+
+import { afficherExplosion} from '../FX/explosions.js';
+
 document.addEventListener("DOMContentLoaded", function () {
   let asteroidCount = 0;
   const maxAsteroids = 12; // Nombre maximal d'astéroïdes
@@ -37,17 +40,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const rectMissile = missile.getBoundingClientRect();
 
     if (
+    // détecter les positions pour collisions
       rectMissile.left < rectAsteroid.right &&
       rectMissile.right > rectAsteroid.left &&
       rectMissile.top < rectAsteroid.bottom &&
       rectMissile.bottom > rectAsteroid.top
     ) {
-      asteroid.remove();
-      missile.style.display = "none";
-      document.getElementById(linkId).style.display = "inline";
-    }
-  }
+       // Récupérez les coordonnées de l'astéroïde
+    const asteroidLeft = rectAsteroid.left;
+    const asteroidTop = rectAsteroid.top;
 
+    // Appliquez les coordonnées à l'élément d'explosion
+    const explosion = document.getElementById('explosion_asteroid');
+    explosion.style.left = asteroidLeft + 'px';
+    explosion.style.top = asteroidTop + 'px';
+
+    asteroid.remove();
+    missile.style.display = "none";
+    afficherExplosion();
+    document.getElementById(linkId).style.display = "inline";
+  }
+}
   setInterval(() => {
     createAsteroid('asteroid1', 'cv-link');
   }, 5000);
