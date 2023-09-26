@@ -8,7 +8,7 @@
     z-index:5;
 
     /* spécifie l'image de fond associé au spaceship */
-    background-image: url('../images_site/images_spaceship/spritesheet_spaceship.png');
+    background-image: url('../../images_site/images_spaceship/spritesheet_spaceship.png');
 
     /* Contrôle de la redimension de l'image de fond. */
     background-size: 300% auto;
@@ -27,7 +27,7 @@
     /* contrôle la durée de l'animation en secondes */
     animation-duration: 0.5s;
     /* remplace l'image de fond par une nouvelle image lorsque l'élément a la classe .move-right-animation */
-    background-image: url('../images_site/images_spaceship/spritesheet_spaceship_right.png');
+    background-image: url('../../images_site/images_spaceship/spritesheet_spaceship_right.png');
 }
 
 .move-left-animation {
@@ -36,5 +36,5 @@
     /* contrôle la durée de l'animation en secondes */
     animation-duration: 0.5s;
     /* remplace l'image de fond par une nouvelle image lorsque l'élément a la classe .move-right-animation */
-    background-image: url('../images_site/images_spaceship/spritesheet_spaceship_left.png');
+    background-image: url('../../images_site/images_spaceship/spritesheet_spaceship_left.png');
 }
