@@ -11,35 +11,36 @@
 
 {% block main_content %}
     <div id="background">
-
-
         <div id="projet_1">
             <div class="ring1"></div>
-            <div class="titre1">
-            <h2>Mes projets de blog</h2>
-                <p> Ce projet se décompose en deux temps.</p>
-                <p>
-                    Dans un premier temps, un membre de ma famille est youtuber et étant donné qu'il
-                    commence à avoir une petite communauté, il aimerait se doter d'un blog afin de
-                    pouvoir avoir une totale liberté sur les discussions qu'il entretient avec ses abonnés.
-                    Je lui ai donc proposé mes services afin de lui construire son blog. Ce dernier
-                    contiendra toutes les sections nécessaires à la discussion, à la rédaction d'articles par les
-                    administrateurs(...)
-                    Ce blog sera créé avec le CMS WordPress et contiendra toutes les foncitonnalités essentielles
-                    d'un blog opérationnel et novateur.
-                </p>
-                <p>
-                    Dans un deuxième temps, je souhaite créer mon blog "from scratch". Cet exercice me sera très bénéfique
-                    sur l'instant car il me donnera une expérience précise et complète. De plus, il me permettra de donner
-                    aux recruteur un aperçu de mes connaissances dans le domaine de la programmation. En outre, sur le long terme, ce blog me
-                    permettra par la suite de fédérer, je l'espère, autour de moi une petite communauté afin de pouvoir
-                    echanger sur les sujets qui me plaisent, l'astronomie, la physique,  les mangas, la programmation et la philosophie de la biologie.
-                </p>
-            </div>
         </div>
+
         <div id="projet_2">
             <div class="ring2"></div>
-            <div class="titre2">
+        </div>
+
+
+        <div id="projet_3">
+            <div class="ring3"></div>
+        </div>
+
+        <div id="projet_4">
+            <div class="ring4"></div>
+        </div>
+</div>
+<div class="explanation">
+<div class="titre1">
+    <h2>Mes projets de blog</h2>
+    <p> Ce projet se décompose en deux temps.</p>
+    <p>
+        Création d'un blog pour un youtuber avec WordPress.
+    </p>
+    <p>
+        Création d'un blog personnel "from scratch".
+    </p>
+</div>
+
+    <div class="titre2">
                 <h2 >Mon projet de site en ligne e-commerce</h2>
                 <p class="explication">
                     Je souhaite créer un site de vente en ligne "from scratch"
@@ -59,71 +60,68 @@
                     Le but principal de ce site sera debloyer mes connaissances théoriques afin
                     de faire en sorte que ce site soit le plus pratique et fonctionnelle possible.
                 </p>
-            </div>
+</div>
 
-        </div>
-        <div id="projet_3">
-            <div class="ring3"></div>
-            <div class="titre3">
-            <h2>Mon projet d'application pour smartphone "Clean Us Trash"</h2>
-              <p>
-                Ce projet a pour but de permettre aux randonneurs de prendre une photo d'un dépot
-                  sauvage d'ordures et de prévenir auitomatiquement lmes services de voiries les
-                  plus proches de la présence de détritus sur leur territoire administratif afin de
-                  prendre les mesures nécessaires pour les déplayer. La photo prise par le smartphone
-                  transmettra les coordonnées GPS afin de localiser le plus précisément possible le dépôt sauvage.
-                  Cette application sera faîte avec le framework <b>React Native</b> est accessible sur <i>Android</i>
-                  et système <i>iOS</i>.
-              </p>
-            </div>
-        </div>
-        <div id="projet_4">
-            <div class="ring4"></div>
-            <div class="titre4">
-            <h2> Mes projets de création de jeu basique: Le Snake</h2>
-                <p>
-                    Afin de déterminer les avantages, les inconvénients, les différences et les ressemblances entre
-                    le langage <b>Python</b> et <b>Javascript</b>, j'ai décidé de coder un petit jeu très simple <u>"Le Serpent"</u>. Le but
-                    étant de faire évoluer un serpent dans un espace clos et de le faire grandir lorsqu'il mange des items.
-                    Nous perdons lorsqu'il touche son corps ou un des bords de son espace d'évolution.
-                </p>
-                <p>
-                    Pourquoi ce petit jeu sur <i>Python</i> et <i>Javascript</i> ? Afin de me perfectionner dans mon langage de
-                    prédilection <b>Python</b>, j'ai décidé de coder ce petit jeu de deux manières différentes. Une première fois
-                    avec la librairie <b>Pygame</b> et une deuxième fois avec <b>Tkinter</b>. Le but étant de me permettre
-                    une maîtrise plus profonde du langage <b>Python</b>.
-                </p>
-                <p>
-                    La deuxième chose qui me paraît iomportant ici de préciser et que je souhaite aussi coder ce jeu en <b>Javascript</b>
-                    car il m'est nécessaire d'augmenter ma connaissance dans ce langage et je pense qu'un des moyens les plus rapides
-                    est de coder des fonctionnalités similaires à celles que je crée avec le langage que je maîtrise le mieux.
-                    Cela me permettra j'en suis persuadé' de prendre conscience des avantages et des inconvénients de chacun des deux langages,
-                    mais aussi de leurs ressemblances et de leurs différences. Ce sont des éléments essentiels dans tout apprentissage.
-                </p>
-            </div>
-        </div>
-    </div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const ring1 = document.querySelectorAll(".ring1");
-  const titre1 = document.querySelectorAll(".titre1");
+<div class="titre3">
+    <h2>Mon projet d'application pour smartphone "Clean Us Trash"</h2>
+    <p>
+        Ce projet a pour but de permettre aux randonneurs de prendre une photo d'un dépot
+        sauvage d'ordures et de prévenir auitomatiquement lmes services de voiries les
+        plus proches de la présence de détritus sur leur territoire administratif afin de
+        prendre les mesures nécessaires pour les déplayer. La photo prise par le smartphone
+        transmettra les coordonnées GPS afin de localiser le plus précisément possible le dépôt sauvage.
+        Cette application sera faîte avec le framework <b>React Native</b> est accessible sur <i>Android</i>
+        et système <i>iOS</i>.
+    </p>
+</div>
 
-  ring1.forEach(function (point) {
-    point.addEventListener("mouseenter", function () {
-      // Lorsque la souris passe sur un point, supprimez l'animation de rotation du fond d'écran
-      background.style.animation = "none";
-      titre1.style.display = "block";
+<div class="titre4">
+    <h2> Mes projets de création de jeu basique: Le Snake</h2>
+    <p>
+        Afin de déterminer les avantages, les inconvénients, les différences et les ressemblances entre
+        le langage <b>Python</b> et <b>Javascript</b>, j'ai décidé de coder un petit jeu très simple <u>"Le Serpent"</u>. Le but
+        étant de faire évoluer un serpent dans un espace clos et de le faire grandir lorsqu'il mange des items.
+        Nous perdons lorsqu'il touche son corps ou un des bords de son espace d'évolution.
+    </p>
+    <p>
+        Pourquoi ce petit jeu sur <i>Python</i> et <i>Javascript</i> ? Afin de me perfectionner dans mon langage de
+        prédilection <b>Python</b>, j'ai décidé de coder ce petit jeu de deux manières différentes. Une première fois
+        avec la librairie <b>Pygame</b> et une deuxième fois avec <b>Tkinter</b>. Le but étant de me permettre
+        une maîtrise plus profonde du langage <b>Python</b>.
+    </p>
+    <p>
+        La deuxième chose qui me paraît iomportant ici de préciser et que je souhaite aussi coder ce jeu en <b>Javascript</b>
+        car il m'est nécessaire d'augmenter ma connaissance dans ce langage et je pense qu'un des moyens les plus rapides
+        est de coder des fonctionnalités similaires à celles que je crée avec le langage que je maîtrise le mieux.
+        Cela me permettra j'en suis persuadé' de prendre conscience des avantages et des inconvénients de chacun des deux langages,
+        mais aussi de leurs ressemblances et de leurs différences. Ce sont des éléments essentiels dans tout apprentissage.
+    </p>
+</div>
+</div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const rings = document.querySelectorAll(".ring1, .ring2, .ring3, .ring4");
+      const titles = document.querySelectorAll(".titre1, .titre2, .titre3, .titre4");
+      const titleActive = Array.from({ length: rings.length }, () => false);
+
+      rings.forEach(function (ring, index) {
+        ring.addEventListener("mouseenter", function () {
+          if (!titleActive[index]) {
+            titles[index].style.opacity = "1"; // Make the text visible
+            titleActive[index] = true;
+          }
+        });
+
+        ring.addEventListener("mouseleave", function () {
+          if (titleActive[index]) {
+            titles[index].style.opacity = "0"; // Hide the text
+            titleActive[index] = false;
+          }
+        });
+      });
     });
-
-    point.addEventListener("mouseleave", function () {
-      // Lorsque la souris quitte un point, réappliquez l'animation de rotation au fond d'écran
-      background.style.animation = "moverotate 100s linear infinite";
-      titre1.style.display = "none";
-
-    });
-  });
-});
-</script>
+    </script>
 {% endblock %}
 
 {% block footer_content %}
