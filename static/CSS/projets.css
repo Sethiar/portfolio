@@ -7,22 +7,9 @@ body, html {
 
 #background {
     height: 150vh;
-    background-image: url('../images_site/galaxy_projet/galaxy1.jpg');
+    background-image: url('../images_site/image_background/image_front/front2.jpg');
     background-size: cover;
-    border-radius: 100%;
-    animation: bluedeep 10s linear infinite, moverotate 100s linear infinite;
-    }
 
-@keyframes bluedeep  {
-    0% { box-shadow: 0 0 70px blue;
-    }
-    33% { box-shadow: 0 0 70px white;
-    }
-    66% { box-shadow: 0 0 70px blue;
-    }
-    99% { box-shadow: 0 0 70px blue;
-    }
-}
 
 #projet_1 {
     position: absolute;
@@ -101,23 +88,4 @@ body, html {
     height: 20px;
     border-radius: 50%;
     background-color: orange;
-}
-
-
-@keyframes moverotate {
-    0% {
-      transform: rotate(0deg) translateX(0px) rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg) translateX(0px) rotate(360deg);
-    }
-}
-
-@keyframes contreMoveRotate {
-    0% {
-      transform: rotate(0deg) translateX(0px) rotate(0deg);
-    }
-    100% {
-      transform: rotate(-360deg) translateX(0px) rotate(-360deg);
-    }
 }
