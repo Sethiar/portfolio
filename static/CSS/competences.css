@@ -19,9 +19,7 @@
     background-position-y: 150vh;
   }
 }
-.spaceship {
-   border: none;
-}
+
 
 .center-python {
     position: absolute;
@@ -36,7 +34,16 @@
     transform-origin: 50% 50%;
 }
 
-.tool-python {
+.tool-python,
+.tool-python2,
+.tool-python3,
+.tool-python4,
+.tool-python5,
+.tool-python6,
+.tool-python7,
+.tool-python8,
+.tool-python9,
+.tool-python10 {
     top: 20%;
     left: 20%;
     text-align: center;
@@ -44,7 +51,6 @@
     height: 100px;
     z-index: 2;
     border-radius: 50%;
-    background-image: url('../images_site/logo/logopyth/logoseaborn.png');
     animation: orbit 10s linear infinite;
     position: absolute;
 }
@@ -56,16 +62,15 @@
     color: black;
 }
 
+.tool-python {
+    background-image: url('../images_site/logo/logopyth/logoseaborn.png');
+    background-size: cover;
+    animation-delay: 0s;
+}
+
 .tool-python2 {
-    top: 20%;
-    left: 20%;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logopyth/logoflask.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
+    animation-delay: 1s;
 }
 
 .tool-python2 p {
@@ -75,36 +80,14 @@
     color: black;
 }
 
-.tool-python2 {
-    animation-delay: 1s;
-}
-
 .tool-python3 {
-    top: 20%;
-    left: 20%;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logopyth/logodjango.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
-}
-
-.tool-python3 {
     animation-delay: 2s;
 }
 
 .tool-python4 {
-    top: 20%;
-    left: 20%;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logopyth/logomathplotlib.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
+    animation-delay: 3s;
 }
 
 .tool-python4 p {
@@ -114,38 +97,16 @@
     color: black;
 }
 
-.tool-python4 {
-    animation-delay: 3s;
-}
-
 .tool-python5 {
-    top: 20%;
-    left: 20%;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logopyth/logopanda.png');
     background-size: cover;
-    animation: orbit 10s linear infinite;
-    position: absolute;
-}
-
-.tool-python5 {
     animation-delay: 4s;
 }
 
 .tool-python6 {
-    top: 20%;
-    left: 20%;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logopyth/logobokeh.png');
     background-size: 100%;
-    animation: orbit 10s linear infinite;
-    position: absolute;
+    animation-delay: 5s;
 }
 
 .tool-python6 p {
@@ -155,55 +116,19 @@
     color: black;
 }
 
-.tool-python6 {
-    animation-delay: 5s;
-}
-
 .tool-python7 {
-    top: 20%;
-    left: 20%;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logopyth/logonumpy.png');
-    background-size: 100%;
-    animation: orbit 10s linear infinite;
-    position: absolute;
-}
-
-.tool-python7 {
     animation-delay: 6s;
 }
 
 .tool-python8 {
-    top: 20%;
-    left: 20%;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logopyth/logoRest.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
-}
-
-.tool-python8 {
     animation-delay: 7s;
 }
 
-
 .tool-python9 {
-    top: 20%;
-    left: 20%;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logopyth/logostreamlit.png');
-    background-size: cover;
-    animation: orbit 10s linear infinite;
-    position: absolute;
+    animation-delay: 8s;
 }
 
 .tool-python9 p {
@@ -213,20 +138,10 @@
     color: black;
 }
 
-.tool-python9 {
-    animation-delay: 8s;
-}
-
 .tool-python10 {
-    top: 20%;
-    left: 20%;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logopyth/logotkinter.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
+    background-size: 100%;
+    animation-delay: 9s;
 }
 
 .tool-python10 p {
@@ -236,9 +151,6 @@
     color: white;
 }
 
-.tool-python10 {
-    animation-delay: 9s;
-}
 
 .center-gestion {
     width: 125px;
@@ -260,7 +172,14 @@
     padding-top: 2%;
 }
 
-.tool-gestion {
+.tool-gestion,
+.tool-gestion2,
+.tool-gestion3,
+.tool-gestion4,
+.tool-gestion5,
+.tool-gestion6,
+.tool-gestion7,
+.tool-gestion8 {
     top: 20%;
     right: 20%;
     text-align: center;
@@ -268,7 +187,6 @@
     height: 100px;
     z-index: 2;
     border-radius: 50%;
-    background-image: url('../images_site/logo/logogestion/logojira.png');
     animation: orbit 10s linear infinite;
     position: absolute;
 }
@@ -281,37 +199,18 @@
 }
 
 .tool-gestion {
+    background-image: url('../images_site/logo/logogestion/logojira.png');
     animation-delay: 1.25s;
 }
 
 .tool-gestion2 {
-    top: 20%;
-    right: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logobdd/logomongodb.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
-}
-
-.tool-gestion2 {
     animation-delay: 2.5s;
 }
 
 .tool-gestion3 {
-    top: 20%;
-    right: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logogestion/logoGantt.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
+    animation-delay: 3.75s;
 }
 
 .tool-gestion3 p {
@@ -321,90 +220,30 @@
     color: black;
 }
 
-.tool-gestion3 {
-    animation-delay: 3.75s;
-}
-
 .tool-gestion4 {
-    top: 20%;
-    right: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logobdd/logoPostgresql.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
-}
-
-.tool-gestion4 {
     animation-delay: 5s;
 }
 
 
 .tool-gestion5 {
-    top: 20%;
-    right: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logogestion/logoUML.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
-}
-
-.tool-gestion5 {
     animation-delay: 6.25s;
 }
 
 .tool-gestion6 {
-    top: 20%;
-    right: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logobdd/logosql.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
-}
-
-.tool-gestion6 {
     animation-delay: 7.5s;
 }
 
 .tool-gestion7 {
-    top: 20%;
-    right: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logogestion/logoKanban.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
-}
-
-.tool-gestion7 {
     animation-delay: 8.75s;
 }
 
 .tool-gestion8 {
-    top: 20%;
-    right: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logogestion/logoTrello.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
+    animation-delay: 10s;
 }
 
 .tool-gestion8 p {
@@ -412,10 +251,6 @@
     text-align: center;
     font-size: 18px;
     color: black;
-}
-
-.tool-gestion8 {
-    animation-delay: 10s;
 }
 
 .center-editor {
@@ -438,7 +273,13 @@
     padding-top: 2%;
 }
 
-.tool-editor {
+.tool-editor,
+.tool-editor2,
+.tool-editor3,
+.tool-editor4,
+.tool-editor5,
+.tool-editor6,
+.tool-editor7 {
     top: 65%;
     right: 20%;
     text-align: center;
@@ -446,7 +287,6 @@
     height: 100px;
     z-index: 2;
     border-radius: 50%;
-    background-image: url('../images_site/logo/logoframework/logoReactN.png');
     animation: orbit 10s linear infinite;
     position: absolute;
 }
@@ -459,20 +299,13 @@
 }
 
 .tool-editor {
+    background-image: url('../images_site/logo/logoframework/logoReactN.png');
     animation-delay: 1.4s;
 }
 
 .tool-editor2 {
-    top: 65%;
-    right: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logoediteur/logopycharm.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
+    animation-delay: 2.8s;
 }
 
 .tool-editor2 p {
@@ -482,21 +315,9 @@
     color: black;
 }
 
-.tool-editor2 {
-    animation-delay: 2.8s;
-}
-
 .tool-editor3 {
-    top: 65%;
-    right: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logoframework/logoNode.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
+    animation-delay: 4.2s;
 }
 
 .tool-editor3 p {
@@ -506,21 +327,9 @@
     color: white;
 }
 
-.tool-editor3 {
-    animation-delay: 4.2s;
-}
-
 .tool-editor4 {
-    top: 65%;
-    right: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logoediteur/logoReplit.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
+    animation-delay: 5.6s;
 }
 
 .tool-editor4 p {
@@ -530,21 +339,9 @@
     color: black;
 }
 
-.tool-editor4 {
-    animation-delay: 5.6s;
-}
-
 .tool-editor5 {
-    top: 65%;
-    right: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logoframework/logoBootstrap.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
+    animation-delay: 7s;
 }
 
 .tool-editor5 p {
@@ -554,21 +351,9 @@
     color: black;
 }
 
-.tool-editor5 {
-    animation-delay: 7s;
-}
-
 .tool-editor6 {
-    top: 65%;
-    right: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logoediteur/logovisualCodeS.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
+    animation-delay: 8.4s;
 }
 
 .tool-editor6 p {
@@ -578,21 +363,9 @@
     color: white;
 }
 
-.tool-editor6 {
-    animation-delay: 8.4s;
-}
-
 .tool-editor7 {
-    top: 65%;
-    right: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logoframework/logosymfony.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
+    animation-delay: 9.9s;
 }
 
 .tool-editor7 p {
@@ -600,10 +373,6 @@
     text-align: center;
     font-size: 18px;
     color: white;
-}
-
-.tool-editor7 {
-    animation-delay: 9.9s;
 }
 
 .center-language {
@@ -627,7 +396,11 @@
     padding-top: 2%;
 }
 
-.tool-language {
+.tool-language,
+.tool-language2,
+.tool-language3,
+.tool-language4,
+.tool-language5 {
     top: 65%;
     left: 20%;
     text-align: center;
@@ -635,82 +408,33 @@
     height: 100px;
     z-index: 2;
     border-radius: 50%;
-    background-image: url('../images_site/logo/logolangage/logoPhp.png');
     animation: orbit 10s linear infinite;
     position: absolute;
 }
 
 
 .tool-language {
+    background-image: url('../images_site/logo/logolangage/logoPhp.png');
     animation-delay: 2s;
 }
 
 .tool-language2 {
-    top: 65%;
-    left: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logolangage/logohtml.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
-}
-
-.tool-language2 {
     animation-delay: 4s;
 }
 
 .tool-language3 {
-    top: 65%;
-    left: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logolangage/logojs.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
-}
-
-.tool-language3 {
-    animation-delay: 6s; /* Ajoutez un délai pour que la deuxième rotation commence après la première */
+    animation-delay: 6s;
 }
 
 .tool-language4 {
-    top: 65%;
-    left: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logolangage/logocss.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
-}
-
-
-.tool-language4 {
     animation-delay: 8s;
 }
 
 .tool-language5 {
-    top: 65%;
-    left: 20%;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    border-radius: 50%;
     background-image: url('../images_site/logo/logolangage/logoPython.png');
-    animation: orbit 10s linear infinite;
-    position: absolute;
-}
-
-.tool-language5 {
     animation-delay: 10s;
 }
 
@@ -722,4 +446,103 @@
   100% {
     transform: rotate(360deg) translateX(200px) rotate(-360deg);
   }
+}
+
+/* Media query pour les petits écrans (moins de 768px de largeur) */
+@media screen and (max-width: 768px) {
+    * {
+        background-color: black;
+    }
+
+    #background {
+        height: 140vh;
+    }
+    .center-python {
+        position : absolute;
+        top: 10vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .tool-python,
+    .tool-python2,
+    .tool-python3,
+    .tool-python4,
+    .tool-python5,
+    .tool-python6,
+    .tool-python7,
+    .tool-python8,
+    .tool-python9,
+    .tool-python10 {
+        position: absolute;
+        top: 10vh;
+        left: 42%;
+        transform: translateX(-50%);
+    }
+
+    .center-gestion {
+        position : absolute;
+        top: 45vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .tool-gestion,
+    .tool-gestion2,
+    .tool-gestion3,
+    .tool-gestion4,
+    .tool-gestion5,
+    .tool-gestion6,
+    .tool-gestion7,
+    .tool-gestion8 {
+        position: absolute;
+        top: 45vh;
+        left: 42%;
+        transform: translateX(-50%);
+    }
+
+    .center-editor {
+        position : absolute;
+        top: 80vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .tool-editor,
+    .tool-editor2,
+    .tool-editor3,
+    .tool-editor4,
+    .tool-editor5,
+    .tool-editor6,
+    .tool-editor7 {
+        position: absolute;
+        top: 80vh;
+        left: 42%;
+        transform: translateX(-50%);
+    }
+
+    .center-language {
+        position : absolute;
+        top: 115vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .tool-language,
+    .tool-language2,
+    .tool-language3,
+    .tool-language4,
+    .tool-language5,
+    .tool-language6,
+    .tool-language7 {
+        position: absolute;
+        top: 115vh;
+        left: 42%;
+
+    }
+
+    @keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
 }
