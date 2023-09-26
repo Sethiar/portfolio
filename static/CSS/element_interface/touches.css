@@ -19,3 +19,11 @@
     justify-content: left;
     color: gold;
 }
+
+
+/* Caractéristiques pour les petits écrans (par exemple, moins de 768px de largeur) */
+@media screen and (max-width: 768px) {
+    #touches {
+    display: none;
+    }
+}
