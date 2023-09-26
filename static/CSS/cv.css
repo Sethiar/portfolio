@@ -87,8 +87,12 @@ div p.label1 {
 }
 
 @keyframes earth_animation {
-    0% { background-position: 0 0; }
-    100% { background-position: -2100px 0; }
+    0% {
+    background-position: 0 0;
+    }
+    100% {
+    background-position: -2100px 0;
+    }
 }
 
 #animated_mars {
@@ -116,8 +120,12 @@ div p.label2 {
 }
 
 @keyframes mars_animation {
-    0% { background-position: 0 0; }
-    100% { background-position: -1000px; }
+    0% {
+    background-position: 0 0;
+    }
+    100% {
+    background-position: -1000px;
+    }
 }
 
 
@@ -146,8 +154,12 @@ div p.label3 {
 }
 
 @keyframes planet1_animation {
-    0% { background-position: 0 0; }
-    100% { background-position: -1000px; }
+    0% {
+    background-position: 0 0;
+    }
+    100% {
+     background-position: -1000px;
+     }
 }
 
 #planet2 {
@@ -175,6 +187,10 @@ div p.label4 {
 }
 
 @keyframes planet2_animation {
-    0% { background-position: 0 0; }
-    100% { background-position: -1000px; }
+    0% {
+    background-position: 0 0;
+    }
+    100% {
+    background-position: -1000px;
+    }
 }
