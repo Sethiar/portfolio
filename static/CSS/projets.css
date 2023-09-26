@@ -20,14 +20,14 @@ body, html {
     }
     66% { box-shadow: 0 0 70px blue;
     }
-    99% { box-shadow: 0 0 70px blue;}
+    99% { box-shadow: 0 0 70px blue;
     }
+}
 
 #projet_1 {
     position: absolute;
     top: 25%;
     left: 25%;
-    display: block;
 }
 
 .ring1 {
@@ -39,21 +39,23 @@ body, html {
 
 .titre1,
 .titre2,
-.titre3
+.titre3,
 .titre4  {
     position: fixed;
     border : 2px solid lightgrey;
     opacity: 0.8;
     color: white;
+    display: none;
 }
 .titre1 div {
-    display: block;
+    top: 10%;
+    left: 25%;
 }
+
 #projet_2 {
     position: absolute;
     top: 75%;
     left: 60%;
-    display: block;
 }
 
 .ring2 {
@@ -63,7 +65,7 @@ body, html {
     background-color: yellow;
 }
 
-titre2 div {
+.titre2 div {
     display: none;
 }
 
@@ -71,10 +73,9 @@ titre2 div {
     position: absolute;
     top: 45%;
     left: 10%;
-    display: block;
 }
 
-titre3 div {
+.titre3 div {
     display: none;
 }
 
@@ -85,7 +86,7 @@ titre3 div {
     background-color: red;
 }
 
-div.titre4  {
+.titre4 div {
     display: none;
 }
 
@@ -93,7 +94,6 @@ div.titre4  {
     position: absolute;
     top: 60%;
     left: 30%;
-    display: block;
 }
 
 .ring4 {
@@ -110,5 +110,14 @@ div.titre4  {
     }
     100% {
       transform: rotate(360deg) translateX(0px) rotate(360deg);
+    }
+}
+
+@keyframes contreMoveRotate {
+    0% {
+      transform: rotate(0deg) translateX(0px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg) translateX(0px) rotate(-360deg);
     }
 }
