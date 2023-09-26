@@ -30,7 +30,7 @@ h3.explic {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
-    animation: moveBackgroundDown 60s linear infinite;
+    animation: moveBackgroundDown 120s linear infinite;
  }
 
 @keyframes moveBackgroundDown {
