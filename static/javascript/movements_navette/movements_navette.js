@@ -1,21 +1,18 @@
+
+// Déclaration de la variable spaceshipFrameIndex en dehors de la fonction DOMContentLoaded
+let spaceshipFrameIndex = 0;
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Déclaration de la variable spaceship
+  // Déclaration des constantes
   const spaceship = document.querySelector(".spaceship");
-  // Déclaration du pas du spaceship
-  const step = 11;
-  const animationSpaceshipSpeed = 125;
   const spaceshipWidth = 144;
   const spaceshipHeight = 52;
-
-  // Intervalle de déplacement (60 FPS)
+  const step = 11;
+  const animationSpaceshipSpeed = 125;
+  const totalSpaceshipFrames = 3;
   const moveInterval = 1000 / 60;
 
-  let spaceshipFrameIndex = 0;
-  const totalSpaceshipFrames = 3;
-
-  let isMissileLaunched = false;
-
-  // Drapeaux pour les touches enfoncées
+  // Déclaration des drapeaux pour les touches enfoncées
   const keysPressed = {
     q: false,
     s: false,
@@ -24,12 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
     f: false,
   };
 
+  // Fonction pour animer la navette
   function animateSpaceship() {
-    const spaceshipSpriteOffset = -spaceshipFrameIndex * (spaceshipWidth / 3);
+    const spaceshipSpriteOffset = spaceshipFrameIndex * (spaceshipWidth / 3);
     spaceship.style.backgroundPosition = `${spaceshipSpriteOffset}px 0`;
     spaceshipFrameIndex = (spaceshipFrameIndex + 1) % totalSpaceshipFrames;
   }
 
+  // Fonction pour déplacer la navette
   function moveSpaceship() {
     const currentLeft = parseFloat(getComputedStyle(spaceship).left) || 0;
     const currentBottom = parseFloat(getComputedStyle(spaceship).bottom) || 0;
@@ -42,24 +41,23 @@ document.addEventListener("DOMContentLoaded", function () {
     if (keysPressed.d) leftDelta += step;
     if (keysPressed.z) bottomDelta += step;
 
-    // Récupère les dimensions de l'écran
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
 
-    // Limite les déplacements pour empêcher la navette de sortir de l'écran
     const newLeft = currentLeft + leftDelta;
     const newBottom = currentBottom + bottomDelta;
 
     if (newLeft >= 0 && newLeft <= screenWidth - spaceshipWidth / 5) {
       spaceship.style.left = `${newLeft}px`;
-}
+    }
 
     if (newBottom >= 0 && newBottom + spaceshipHeight <= screenHeight) {
       spaceship.style.bottom = `${newBottom}px`;
     }
   }
 
-  document.addEventListener("keydown", function (event) {
+  // Gestionnaires d'événements pour les touches enfoncées
+  function handleKeyDown(event) {
     const key = event.key;
 
     if (keysPressed.hasOwnProperty(key) && !keysPressed[key]) {
@@ -67,43 +65,100 @@ document.addEventListener("DOMContentLoaded", function () {
       moveSpaceship();
 
       if (key === "d") {
-        // Ajout de la classe d'animation lorsque la touche est enfoncée
         spaceship.classList.add("move-right-animation");
       }
       if (key === "q") {
-        // Ajout de la classe d'animation lorsque la touche est enfoncée
         spaceship.classList.add("move-left-animation");
       }
     }
-  });
+  }
 
-  document.addEventListener("keyup", function (event) {
+  // Gestionnaires d'événements pour les touches relâchées
+  function handleKeyUp(event) {
     const key = event.key;
 
     if (keysPressed.hasOwnProperty(key)) {
       keysPressed[key] = false;
 
       if (key === "d") {
-        // Retire la classe d'animation lorsque la touche "d" est relâchée
         spaceship.classList.remove("move-right-animation");
       }
       if (key === "q") {
-        // Retire la classe d'animation lorsque la touche "q" est relâchée
         spaceship.classList.remove("move-left-animation");
       }
     }
-  });
+  }
 
-  // Déplace la navette à intervalles réguliers tant que la touche est enfoncée
-  setInterval(function () {
-    if (keysPressed.z || keysPressed.s || keysPressed.q || keysPressed.d) {
-      moveSpaceship();
-    }
-  }, moveInterval);
+  // Écouteurs d'événements pour les touches enfoncées et relâchées
+  document.addEventListener("keydown", handleKeyDown);
+  document.addEventListener("keyup", handleKeyUp);
 
-  setInterval(animateSpaceship, animationSpaceshipSpeed);
+  // Gestionnaires d'événements pour les boutons de l'interface mobile
+const mobileButtons = {
+  top: document.getElementById("top2"),
+  left: document.getElementById("left2"),
+  right: document.getElementById("right2"),
+  bottom: document.getElementById("bottom2"),
+};
+
+function handleMobileButtonPress(buttonName) {
+  keysPressed[buttonName] = true;
+  moveSpaceship();
+
+  // Ajout de la classe d'animation lorsque le bouton est enfoncé
+  if (buttonName === "d") {
+    spaceship.classList.add("move-right-animation");
+  }
+  if (buttonName === "q") {
+    spaceship.classList.add("move-left-animation");
+  }
+}
+
+function handleMobileButtonRelease(buttonName) {
+  keysPressed[buttonName] = false;
+
+  // Retire la classe d'animation lorsque le bouton est relâché
+  if (buttonName === "d") {
+    spaceship.classList.remove("move-right-animation");
+  }
+  if (buttonName === "q") {
+    spaceship.classList.remove("move-left-animation");
+  }
+}
+
+mobileButtons.top.addEventListener("mousedown", () => {
+  handleMobileButtonPress("z");
 });
 
+mobileButtons.top.addEventListener("mouseup", () => {
+  handleMobileButtonRelease("z");
+});
 
+mobileButtons.left.addEventListener("mousedown", () => {
+  handleMobileButtonPress("q");
+});
 
+mobileButtons.left.addEventListener("mouseup", () => {
+  handleMobileButtonRelease("q");
+});
 
+mobileButtons.right.addEventListener("mousedown", () => {
+  handleMobileButtonPress("d");
+});
+
+mobileButtons.right.addEventListener("mouseup", () => {
+  handleMobileButtonRelease("d");
+});
+
+mobileButtons.bottom.addEventListener("mousedown", () => {
+  handleMobileButtonPress("s");
+});
+
+mobileButtons.bottom.addEventListener("mouseup", () => {
+  handleMobileButtonRelease("s");
+});
+
+  // Intervalles d'animation et de déplacement
+  setInterval(moveSpaceship, moveInterval);
+  setInterval(animateSpaceship, animationSpaceshipSpeed);
+});
