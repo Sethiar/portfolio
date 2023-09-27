@@ -1,4 +1,9 @@
 (function() {
+  // Latitude de Caen, France
+  var latitude = 49.1828;
+  // Longitude de Caen, France
+  var longitude = -0.3706;;
+
   var currentDate = new Date();
   var dayOfMonth = currentDate.getDate();
   var moonElements = document.querySelectorAll("#contain_moon div");
@@ -9,7 +14,10 @@
     "&year=" +
     currentDate.getFullYear() +
     "&size=100&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&LDZ=" +
-    Math.floor(currentDate.getTime() / 1000);
+    Math.floor(currentDate.getTime() / 1000) +
+    // Ajout des coordonnées géographiques
+    "&lat=" + latitude +
+    "&lon=" + longitude;
 
   moonElements[1].style.height = "100px";
 
@@ -26,4 +34,4 @@
 
   xhr.open("GET", url, true);
   xhr.send();
-})();
+})();;

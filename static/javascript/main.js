@@ -1,8 +1,8 @@
-import "movements_navette/movements_navette.js";
-import "elements_interface/target_missile.js";
-import "elements_interface/message.js";
-import "FX/explosions.js";
-import { getLocalStorageItem } from 'elements_interface/conservation_liens.js';
+import "/movements_navette/movements_navette.js";
+import "/elements_interface/target_missile.js";
+import "/elements_interface/message.js";
+import "/FX/explosions.js";
+import { getLocalStorageItem } from '/elements_interface/conservation_liens.js';
 
 document.addEventListener("DOMContentLoaded", function () {
   const retour = document.getElementById('retour_home');
