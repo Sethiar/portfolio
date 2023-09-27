@@ -8,7 +8,7 @@ body, html {
 
 #heure {
     position: absolute;
-    top: 1%%;
+    top: 1%;
     right: 1%;
     font-size: 18px;
     padding-right: 2%;
@@ -84,10 +84,9 @@ body, html {
 #animated_earth {
     width: 150px;
     height: 150px;
-    top: 45%;
+    top: 55%;
     left:50%;
     background-image: url('../images_site/images_planets/sprite-sheet_terre3.png');
-
     animation: earth_animation 3s steps(14) infinite;
 
 }
@@ -104,8 +103,8 @@ body, html {
 #animated_mars {
     width: 125px;
     height: 140px;
-    top: 65%;
-    left:20%;
+    top: 105%;
+    left: 50%;
     background-image: url('../images_site/images_planets/sprite-sheet_mars.png');
     animation: mars_animation 1s steps(8) infinite;
 }
@@ -133,14 +132,14 @@ body, html {
 }
 
 #planet1 {
-    top: 65%;
-    left:80%;
+    top: 85%;
+    left: 80%;
     background-image: url('../images_site/images_planets/sprite-sheet_planet1.png');
 }
 
 #planet2 {
-    top: 80%;
-    left:50%;
+    top: 85%;
+    left: 20%;
     background-image: url('../images_site/images_planets/sprite-sheet_planet2.png');
 }
 
@@ -185,7 +184,7 @@ div p.label4 {
     #animated_earth {
         width: 150px;
         height: 150px;
-        top: 35%;
+        top: 55%;
         left:50%;
         background-image: url('../images_site/images_planets/sprite-sheet_terre3.png');
         animation: earth_animation 3s steps(14) infinite;
@@ -194,7 +193,7 @@ div p.label4 {
     #animated_mars {
         width: 125px;
         height: 140px;
-        top: 55%;
+        top: 75%;
         left: 50%;
         background-image: url('../images_site/images_planets/sprite-sheet_mars.png');
         animation: mars_animation 1s steps(8) infinite;
@@ -214,13 +213,13 @@ div p.label4 {
     }
 
     #planet1 {
-        top: 75%;
+        top: 95%;
         left: 50%;
         background-image: url('../images_site/images_planets/sprite-sheet_planet1.png');
     }
 
     #planet2 {
-        top: 95%;
+        top: 115%;
         left:50%;
         background-image: url('../images_site/images_planets/sprite-sheet_planet2.png');
     }
