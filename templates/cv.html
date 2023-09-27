@@ -4,51 +4,50 @@
 <title>{% block title %}Curriculum vitae et parcours{% endblock %}</title>
 <meta name="description" content="Mes documents attestant de mes formations, de mon expérience et des diplômes obtenus">
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/cv.css') }}">
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/navette/navette.css') }}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/footer.css') }}">
 {% endblock %}
 
 {% block header_content %}
+<!-- Heure -->
+<div id="heure">
+        <p><u>Heure</u> : <span id="heure-actuelle">{{ hour }}</span></p>
+    </div>
 <!-- Phase de la lune -->
 <!-- © wdisseny -->
 <div id="contain_moon" style="text-align:center;padding-top:5px;padding-bottom:5px;">
-    <div style="font-weight:bold">La lune aujourd'hui</div>
-    <div style="margin-top:-7px;margin-bottom:-15px;padding:30px;filter:drop-shadow(0 0 30px hsl(220,100%,15%))"></div>
+    <div>La lune de cette nuit</div>
+    <div></div>
     <div>.</div>
-    <div style="font-size:small">.</div>
+    <div>.</div>
 </div>
+<div id="retour_home">
+    <a href="{{ url_for('home') }}"><u>Retour à la page d'accueil</u></a>
+</div>
+<br>
+<!-- Date du jour -->
+<div id="date-jour">
+    <p><u>Date du jour</u> : {{ current_date }}</p>
+</div>
+
 {% endblock %}
 
 {% block main_content %}
     <div id="background_cv"></div>
 
-
-
-
-        <!-- Date du jour -->
-<div id="date-jour">
-    <p>Date du jour : <span id="date-actuelle">{{ current_date }}</span></p>
-</div>
-
-<div id="heure">
-        <p>Heure : <span id="heure-actuelle">{{ hour }}</span></p>
-    </div>
-
-<div class="spaceship"></div>
 <div id="animated_earth" class="highlight">
-    <p class="label1">Curriculum vitae</p>
+    <p class="label">Curriculum vitae</p>
 </div>
 <div id="animated_mars" class="highlight">
-    <p class="label2">Notes Master 1</p>
+    <p class="label">Notes Master 1</p>
 </div>
 <div id="planet1" class="highlight">
-    <p class="label3">Attestation de réussite provisoire-(STUDI)</p>
+    <p class="label3">Attestation de réussite (STUDI)</p>
 </div>
 <div id="planet2" class="highlight">
     <p class="label4">Grille de synthèse des blocs de compétences-(STUDI)</p>
 </div>
 
-
-<script type="module" src="../static/javascript/movements_navette/movements_navette.js"></script>
+<script type="module" src="../static/javascript/main.js"></script>
 <script type="module" src="../static/javascript/elements_cv/redirection_cv.js"></script>
 <script type="module" src="../static/javascript/elements_cv/temps.js"></script>
 <script type="module" src="../static/javascript/elements_interface/lune.js"></script>
