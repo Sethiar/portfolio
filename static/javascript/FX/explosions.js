@@ -1,6 +1,6 @@
-export function afficherExplosion() {
+export function afficherExplosion(asteroid) {
   const explosion = document.getElementById('explosion_asteroid');
-  // Déclaration ded caractéristiques de l'explosion
+  // Déclaration des caractéristiques de l'explosion
   const explosionWidth = parseFloat(getComputedStyle(explosion).width);
   const explosionHeight = parseFloat(getComputedStyle(explosion).height);
   const animationExplosionSpeed = 70;
@@ -12,7 +12,17 @@ export function afficherExplosion() {
   // Fonction mettant à jour la position de l'image de l'explosion
   function animateExplosion() {
     const explosionSpriteOffset = -explosionFrameIndex * (explosionWidth / 16);
-    explosion.style.backgroundPosition = `${explosionSpriteOffset}px 0`;
+
+    // Récupérer la position de l'astéroïde
+    const asteroidRect = asteroid.getBoundingClientRect();
+    const asteroidTop = asteroidRect.top + window.scrollY;
+    const asteroidHeight = asteroidRect.height;
+
+    // Calculer la position verticale de l'explosion en fonction de l'astéroïde
+    const explosionTop = asteroidTop + asteroidHeight / 2 - explosionHeight / 2;
+
+    explosion.style.backgroundPosition = `${explosionSpriteOffset}px ${explosionTop}px`;
+
     explosionFrameIndex = (explosionFrameIndex + 1) % totalExplosionFrames;
 
     if (explosionFrameIndex >= totalExplosionFrames) {
@@ -24,7 +34,7 @@ export function afficherExplosion() {
   }
 
   // Démarrer l'animation de l'explosion
-  const explosionInterval = setInterval(animateExplosion, animationExplosionSpeed)
+  const explosionInterval = setInterval(animateExplosion, animationExplosionSpeed);
 
   // Arrêtez l'animation après un certain temps (10 secondes dans cet exemple)
   setTimeout(() => {
