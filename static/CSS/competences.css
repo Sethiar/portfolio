@@ -11,6 +11,14 @@
 
 }
 
+#retour_home {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    font-size: 16px;
+    color: white;
+}
+
 @keyframes moveBackgroundDown {
   0% {
     background-position-y: 0vh;
@@ -539,10 +547,10 @@
 
     @keyframes orbit {
   0% {
-    transform: rotate(0deg) translateX(150px) rotate(0deg);
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    transform: rotate(360deg) translateX(120px) rotate(-360deg);
   }
 }
 }
