@@ -25,7 +25,7 @@
     <div id="background">
         <h1><u>Bienvenue sur mon portfolio</u></h1>
         <h3 class="explic">Appuyez sur "F" pour tirer un missile</h3>
-    </div>
+
 <div id="target-container">
     <div id="target"></div>
     <div id="target-message">SHOOT ME !!</div>
@@ -65,7 +65,23 @@
         <p id="bottom" class="direction">"S" = arrière</p>
         <p id="fire" class="direction">"F" = tir</p>
     </div>
-
+    <div id="phone-touches">
+        <div id="top2" class="phone-direction">
+            <img src="../static/images_site/images_element/elements_mobile/arrow-top.png" width="100px" height="100px">
+        </div>
+        <div id="left2" class="phone-direction">
+            <img src="../static/images_site/images_element/elements_mobile/arrow-left.png" width="100px" height="100px">
+        </div>
+        <div id="right2" class="phone-direction">
+            <img src="../static/images_site/images_element/elements_mobile/arrow-right.png" width="100px" height="100px">
+        </div>
+        <div id="bottom2" class="phone-direction">
+            <img src="../static/images_site/images_element/elements_mobile/arrow-down.png" width="100px" height="100px">
+        </div>
+        <div id="fire2" class="phone-direction">
+        </div>
+    </div>
+</div>
 
 <script type="module" src="../static/javascript/movements_navette/movements_navette.js"></script>
 <script type="module" src="../static/javascript/elements_interface/message.js"></script>
@@ -73,6 +89,7 @@
 <script type="module" src="../static/javascript/elements_interface/asteroids.js"></script>
 <script type="module" src="../static/javascript/FX/explosions.js"></script>
 <script type="module" src="../static/javascript/movements_navette/movements_automatic.js"></script>
+<script type="module" src="../static/javascript/javascript_mobile/direction_mobile.js"></script>
 {% endblock %}
 
 {% block footer_content %}
