@@ -4,8 +4,10 @@
 
 header {
     display: flex;
-    justify-content: right;
-
+    /* Aligner la barre de navigation à droite */
+    justify-content: flex-end;
+    /* Aligner la barre de navigation en haut */
+    align-items: flex-start;
 }
 
 #navbar {
@@ -15,30 +17,29 @@ header {
     list-style-type: none;
     list-style: none;
     font-size: 30px;
+    width: 70%;
 }
 
 nav li {
-    margin-right: 2vw;
+    margin-right: 2%;
 }
 
 nav a {
     color: lightgrey;
     border-right: 1px solid lightgrey;
-    padding-right: 8vw;
+    padding-right: 8%;
 }
 
 nav a:hover {
     color: orange;
     opacity: 1;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid gold;
 }
 
 #navbar li {
     top: 2vh;
-
     margin-left: 20px;
 }
-
 
 #cv-link {
     display: none;
@@ -50,4 +51,30 @@ nav a:hover {
 
 #projets-link{
     display: none;
+}
+
+@media screen and (max-width: 768px) {
+     #navbar ul {
+         /* Afficher les éléments en colonnes */
+         display: flex;
+         justify-content: flex-end;
+         flex-direction: column;
+         font-size: 24px;
+         /* Supprimer la marge intérieure de la liste */
+         padding: 0;
+    }
+
+    nav li {
+        /* Supprimerla marge à droite */
+        margin-right: 0;
+        /* Ajout une marge en bas pour espacer les éléments */
+        margin-bottom: 10px;
+    }
+
+    nav a {
+         /* Supprimer le padding à droite */
+         padding-right: 0;
+         /* Supprimer la bordure droite */
+         border-right: none;
+    }
 }
