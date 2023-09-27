@@ -1,5 +1,8 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const spaceship = document.querySelector(".spaceship");
+
 
     // Fonction de gestion du clic, de l'appui sur Entrée, et du surlignage
     function handlePlanetInteraction(planet, destination) {
