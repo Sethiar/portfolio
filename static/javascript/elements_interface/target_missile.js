@@ -1,5 +1,5 @@
-import { afficherMessageAvecAnimation} from './message.js';
-import { afficherExplosion} from '../FX/explosions.js';
+import { afficherMessageAvecAnimation } from './message.js';
+import { afficherExplosion } from '../FX/explosions.js';
 
 document.addEventListener("DOMContentLoaded", function () {
   // Déclaration de la variable missile
@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const rectTarget = target.getBoundingClientRect();
     const rectMissile = missile.getBoundingClientRect();
 
+
     if (
       rectMissile.left < rectTarget.right &&
       rectMissile.right > rectTarget.left &&
@@ -75,8 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
       missile.style.display = "none";
       afficherPhoto();
 
-
-
       // afficher le message
       afficherMessageAvecAnimation();
     }
@@ -86,7 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const photo = document.getElementById("photo");
     // Apparition et animation photo
     photo.style.display = "block";
-
   }
 
   document.addEventListener("keydown", function (event) {
@@ -96,4 +94,12 @@ document.addEventListener("DOMContentLoaded", function () {
       launchMissile();
     }
   });
-}); 
+
+  // Sélectionnez le bouton "Fire 2" par son ID
+  const fireButton2 = document.getElementById("fire2");
+
+  // Ajoutez un gestionnaire d'événements au bouton "Fire 2"
+  fireButton2.addEventListener("click", function () {
+    launchMissile();
+  });
+});
