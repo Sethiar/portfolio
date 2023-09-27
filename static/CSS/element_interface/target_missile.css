@@ -3,16 +3,16 @@
 
 
 #target {
+    position: absolute;
     /* width et height de la cible #target */
     width: 15vh;
     height: 15vh;
     /* chemin de l'image associée à l'élément */
     background-image: url('../../images_site/images_element/star.png');
     background-size: cover;
-    position: absolute;
     /* Pour la positionner en haut au centre */
     left: 50%;
-    top: 30vh;
+    top: 50vh;
     /* Pour centrer la cible horizontalement */
     transform: translateX(-50%);
     border-radius: 50%;
@@ -88,7 +88,7 @@
     position: absolute;
     /* Pour la positionner en haut au centre */
     left: 50%;
-    top: 30vh;
+    top: 50vh;
     /* Pour centrer la cible horizontalement */
     transform: translateX(-50%);
     display: none;
