@@ -1,9 +1,12 @@
 
 import { afficherExplosion} from '../FX/explosions.js';
+import { setLocalStorageItem} from '../elements_interface/conservation_liens.js';
+
 
 document.addEventListener("DOMContentLoaded", function () {
   let asteroidCount = 0;
   const maxAsteroids = 12; // Nombre maximal d'astéroïdes
+
 
   function createAsteroid(className, linkId) {
     if (asteroidCount < maxAsteroids) { // Vérifie la limite
@@ -57,7 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     asteroid.remove();
     missile.style.display = "none";
-    afficherExplosion();
+    afficherExplosion(asteroid);
+    // Enregistrement du lien débloqué
+    setLocalStorageItem(linkId, "true");
+    // Affichage du lien débloqué
     document.getElementById(linkId).style.display = "inline";
   }
 }
@@ -72,4 +78,5 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(() => {
     createAsteroid('asteroid3', 'competences-link');
   }, 6000);
+
 });
