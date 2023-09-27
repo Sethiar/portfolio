@@ -13,7 +13,14 @@
 <br>
 <header>
     {% block header_content %}
-    {% endblock %}
+<nav id="navbar">
+    <ul>
+        <li id="cv-link"><a href="{{url_for('cv_access')}}">Espace personnel</a></li>
+        <li id="competences-link"><a href="{{url_for('competences') }}">Espace compétences</a></li>
+        <li id="projets-link"><a href="{{url_for('projet_perso') }}">Espace projets</a></li>
+    </ul>
+</nav>
+{% endblock %}
 </header>
 
 <body>
@@ -57,11 +64,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy Copyright 2023 SethiarWorks. Tous droits réservés.</p>
+            <p>&copy; Copyright 2023 SethiarWorks. Tous droits réservés.</p>
         </div>
     {% block footer_content %}
     {% endblock %}
     </footer>
-<script src="{{ url_for('static', filename='javascript/main.js') }}"></script>
+<script type="module" src="{{ assets.js_bundle.url }}"></script>
 </body>
 </html>
