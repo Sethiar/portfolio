@@ -92,14 +92,28 @@ h3.explic {
     }
 }
 
+/* Styles pour les écrans moyens (par exemple, entre 769px et 1024px de largeur) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    h1 {
+        position: absolute;
+        top: 15vh;
+        transform: translateX(50%);
+        color: red;
+        font-size: 40px;
+        z-index: 20;
+    }
+
+    .message-container {
+        top: 50vh; /* Modifiez la position pour les écrans moyens */
+        left: 3%; /* Modifiez la position pour les écrans moyens */
+        padding: 1.5%; /* Modifiez la taille de la marge intérieure pour les écrans moyens */
+        font-size: 16px; /* Modifiez la taille de la police pour les écrans moyens */
+    }
+}
+
 /* Caractéristiques pour les petits écrans (par exemple, moins de 768px de largeur) */
 @media screen and (max-width: 768px) {
-
-    #background {
-        height: 100vh;
-        background-size: cover;
-        animation: moveBackgroundDown 120s linear infinite;
-    }
 
     h1 {
         position: absolute;
@@ -130,28 +144,3 @@ h3.explic {
     }
 }
 
-/* Styles pour les écrans moyens (par exemple, entre 769px et 1024px de largeur) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-
-    #background {
-        height: 100vh;
-        background-size: 100%;
-        animation: moveBackgroundDown 120s linear infinite;
-    }
-
-    h1 {
-        position: absolute;
-        top: 15vh;
-        transform: translateX(50%);
-        color: red;
-        font-size: 40px;
-        z-index: 20;
-    }
-
-    .message-container {
-        top: 50vh; /* Modifiez la position pour les écrans moyens */
-        left: 3%; /* Modifiez la position pour les écrans moyens */
-        padding: 1.5%; /* Modifiez la taille de la marge intérieure pour les écrans moyens */
-        font-size: 16px; /* Modifiez la taille de la police pour les écrans moyens */
-    }
-}
