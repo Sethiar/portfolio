@@ -1,5 +1,4 @@
 
-
 body, html {
     height: 100%;
     background-color: black;
@@ -9,24 +8,41 @@ body, html {
 
 #heure {
     position: absolute;
-    top: 15%;
-    right: 5%;
-    font-size: 25px;
+    top: 1%%;
+    right: 1%;
+    font-size: 18px;
+    padding-right: 2%;
+    padding-left: 2%;
+    margin: 0 auto;
+}
+
+#date-jour {
+    position: relative;
+    top: 0%;
+    left: 5%;
+    width: 350px;
+    font-size: 20px;
     border: 1px solid darkgrey;
     background: black;
     padding-right: 2%;
     padding-left: 2%;
 }
 
-#date-jour {
+#retour_home {
     position: absolute;
-    top: 15%;
-    left: 5%;
-    font-size: 20px;
-    border: 1px solid darkgrey;
-    background: black;
-    padding-right: 2%;
-    padding-left: 2%;
+    top: 5%;
+    left: 2%;
+    font-size: 16px;
+    color: white;
+}
+
+#contain_moon {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: -7px;
+    margin-bottom: -15px;
+    padding: 30px;
+    filter:drop-shadow(0 0 30px hsl(220,100%,15%))
 }
 
 #moon-icon {
@@ -43,11 +59,6 @@ body, html {
     background-size: cover;
 }
 
-.spaceship {
-    position: absolute;
-    z-index: 999;
-}
-
 
 .highlight {
     transition: box-shadow 0.3s; /* Ajout d'une transition pour un effet de fondu */
@@ -60,30 +71,25 @@ body, html {
     box-shadow: 0 0 10px gold;
 }
 
+#animated_earth,
+#animated_mars {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
 
 #animated_earth {
     width: 150px;
     height: 150px;
-    position: absolute;
     top: 45%;
     left:50%;
-    transform: translate(-50%, -50%);
     background-image: url('../images_site/images_planets/sprite-sheet_terre3.png');
-    background-repeat: no-repeat;
+
     animation: earth_animation 3s steps(14) infinite;
-    background-position: 0 0;
-    border-radius: 50%;
-    border: 2px solid transparent;
 
-}
-
-div p.label1 {
-    position: fixed;
-    top: 80%;
-    left: -6%;
-    font-size: 24px;
-    width: 250px;
-    color: orange;
 }
 
 @keyframes earth_animation {
@@ -98,25 +104,10 @@ div p.label1 {
 #animated_mars {
     width: 125px;
     height: 140px;
-    position: absolute;
     top: 65%;
     left:20%;
-    transform: translate(-50%, -50%);
     background-image: url('../images_site/images_planets/sprite-sheet_mars.png');
-    background-repeat: no-repeat;
     animation: mars_animation 1s steps(8) infinite;
-    background-position: 0 0;
-    border-radius: 50%;
-    border: 2px solid transparent;
-}
-
-div p.label2 {
-    position: fixed;
-    top: 80%;
-    left: -6%;
-    font-size: 24px;
-    width: 250px;
-    color: orange;
 }
 
 @keyframes mars_animation {
@@ -128,15 +119,12 @@ div p.label2 {
     }
 }
 
-
-#planet1 {
+#planet1,
+#planet2 {
     width: 130px;
     height: 135px;
     position: absolute;
-    top: 65%;
-    left:80%;
     transform: translate(-50%, -50%);
-    background-image: url('../images_site/images_planets/sprite-sheet_planet1.png');
     background-repeat: no-repeat;
     animation: planet1_animation 1s steps(8) infinite;
     background-position: 0 0;
@@ -144,13 +132,16 @@ div p.label2 {
     border: 2px solid transparent;
 }
 
-div p.label3 {
-    position: fixed;
+#planet1 {
+    top: 65%;
+    left:80%;
+    background-image: url('../images_site/images_planets/sprite-sheet_planet1.png');
+}
+
+#planet2 {
     top: 80%;
-    left: -6%;
-    font-size: 24px;
-    width: 250px;
-    color: orange;
+    left:50%;
+    background-image: url('../images_site/images_planets/sprite-sheet_planet2.png');
 }
 
 @keyframes planet1_animation {
@@ -162,21 +153,23 @@ div p.label3 {
      }
 }
 
-#planet2 {
-    width: 130px;
-    height: 135px;
-    position: absolute;
+div p.label {
+    position: fixed;
     top: 80%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    background-image: url('../images_site/images_planets/sprite-sheet_planet2.png');
-    background-repeat: no-repeat;
-    animation: planet2_animation 1s steps(8) infinite;
-    background-position: 0 0;
-    border-radius: 50%;
-    border: 2px solid transparent;
+    left: -6%;
+    font-size: 24px;
+    width: 250px;
+    color: orange;
 }
 
+div p.label3 {
+    position: fixed;
+    top: 80%;
+    left: -20%;
+    font-size: 24px;
+    width: 250px;
+    color: orange;
+}
 div p.label4 {
     position: fixed;
     top: 80%;
@@ -186,11 +179,49 @@ div p.label4 {
     color: orange;
 }
 
-@keyframes planet2_animation {
-    0% {
-    background-position: 0 0;
+
+/* Caractéristiques pour les petits écrans (par exemple, moins de 768px de largeur) */
+@media screen and (max-width: 768px) {
+    #animated_earth {
+        width: 150px;
+        height: 150px;
+        top: 35%;
+        left:50%;
+        background-image: url('../images_site/images_planets/sprite-sheet_terre3.png');
+        animation: earth_animation 3s steps(14) infinite;
     }
-    100% {
-    background-position: -1000px;
+
+    #animated_mars {
+        width: 125px;
+        height: 140px;
+        top: 55%;
+        left: 50%;
+        background-image: url('../images_site/images_planets/sprite-sheet_mars.png');
+        animation: mars_animation 1s steps(8) infinite;
+    }
+
+    #planet1,
+    #planet2 {
+        width: 130px;
+        height: 135px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        background-repeat: no-repeat;
+        animation: planet1_animation 1s steps(8) infinite;
+        background-position: 0 0;
+        border-radius: 50%;
+        border: 2px solid transparent;
+    }
+
+    #planet1 {
+        top: 75%;
+        left: 50%;
+        background-image: url('../images_site/images_planets/sprite-sheet_planet1.png');
+    }
+
+    #planet2 {
+        top: 95%;
+        left:50%;
+        background-image: url('../images_site/images_planets/sprite-sheet_planet2.png');
     }
 }
