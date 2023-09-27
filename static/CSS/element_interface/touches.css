@@ -19,11 +19,136 @@
     justify-content: left;
     color: gold;
 }
+#phone-touches {
+    display: none;
+}
 
+/* Styles pour les écrans moyens (par exemple, entre 769px et 1024px de largeur) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    #background {
+        height: 125vh;
+    }
+
+    #touches {
+        display: none;
+    }
+
+    #phone-touches {
+        position: absolute;
+        z-index: 20;
+        height: 200px;
+        width: 200px;
+        min-width: 180;
+        display: block;
+        bottom: -20%;
+        right: 5%;
+        background-color: lightgrey;
+        border: 1px solid gold;
+        opacity: 0.3;
+    }
+
+    #top2 {
+        position: absolute;
+        top: -7%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    #left2 {
+        position: absolute;
+        top: 25%;
+        left: 0%;
+    }
+
+    #right2 {
+        position: absolute;
+        top: 25%;
+        right: 0%;
+    }
+
+    #bottom2 {
+        position: absolute;
+        right: 50%;
+        bottom: -8%;
+        transform: translateX(50%);
+    }
+
+    #fire2 {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        top: 35%;
+        transform: translateY(50%);
+        right: 50%;
+        transform: translateX(50%);
+        border-radius: 50%;
+        border: 1px solid white;
+        background-color: red;
+        opacity: 1;
+    }
+}
 
 /* Caractéristiques pour les petits écrans (par exemple, moins de 768px de largeur) */
 @media screen and (max-width: 768px) {
-    #touches {
-    display: none;
+
+     #background {
+        height: 125vh;
     }
+
+    #touches {
+       display: none;
+    }
+   #phone-touches {
+       position: absolute;
+       z-index: 20;
+       height: 180px;
+       width: 170px;
+       display: block;
+       bottom: -20%;
+       right: 5%;
+       border: 1px solid gold;
+       background-color: lightgrey;
+       opacity: 0.3
+   }
+
+   #top2 {
+       position: absolute;
+       top: -9%;
+       right: 50%;
+       transform: translateX(50%);
+   }
+
+   #left2 {
+       position: absolute;
+       top: 25%;
+       left: -9%;
+   }
+
+   #right2 {
+       position: absolute;
+       top: 25%;
+       right: -9%;
+   }
+
+   #bottom2 {
+       position: absolute;
+       right: 50%;
+       bottom: -15%;
+       transform: translateX(50%);
+   }
+
+   #fire2 {
+       position: absolute;
+       width: 50px;
+       height: 50px;
+       top: 39%;
+       transform: translateY(50%);
+       right: 50%;
+       transform: translateX(50%);
+       border-radius: 50%;
+       border: 1px solid white;
+       background-color: red;
+       opacity: 1;
+   }
 }
