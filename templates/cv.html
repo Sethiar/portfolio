@@ -5,9 +5,7 @@
 <meta name="description" content="Mes documents attestant de mes formations, de mon expérience et des diplômes obtenus">
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/cv.css') }}">
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/footer.css') }}">
-{% endblock %}
-
-{% block header_content %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/navbars/navbars2.css') }}">
 <!-- Heure -->
 <div id="heure">
         <p><u>Heure</u> : <span id="heure-actuelle">{{ hour }}</span></p>
@@ -16,9 +14,9 @@
 <!-- © wdisseny -->
 <div id="contain_moon" style="text-align:center;padding-top:5px;padding-bottom:5px;">
     <div>La lune de cette nuit</div>
-    <div></div>
+    <div style="margin-top:-7px;margin-bottom:-15px;padding:30px;filter:drop-shadow(0 0 30px hsl(220,100%,15%))"></div>
     <div>.</div>
-    <div>.</div>
+    <div style="font-size:small">.</div>
 </div>
 <div id="retour_home">
     <a href="{{ url_for('home') }}"><u>Retour à la page d'accueil</u></a>
@@ -47,10 +45,9 @@
     <p class="label4">Grille de synthèse des blocs de compétences-(STUDI)</p>
 </div>
 
-<script type="module" src="../static/javascript/main.js"></script>
+<script type="module" src="../static/javascript/elements_interface/lune.js"></script>
 <script type="module" src="../static/javascript/elements_cv/redirection_cv.js"></script>
 <script type="module" src="../static/javascript/elements_cv/temps.js"></script>
-<script type="module" src="../static/javascript/elements_interface/lune.js"></script>
 {% endblock %}
 {% block footer_content %}
 
