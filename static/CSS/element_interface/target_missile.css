@@ -157,7 +157,7 @@
     height: 100px;
     background-image: url('../../images_site/images_element/asteroids/asteroid1.png');
     background-size: cover;
-    animation: asteroid1 2s steps(12) infinite;
+    animation: asteroid1 4s steps(12) infinite;
 }
 
 @keyframes asteroid1 {
@@ -176,7 +176,7 @@
     height: 70px;
     background-image: url('../../images_site/images_element/asteroids/asteroid2.png');
     background-size: cover;
-    animation: asteroid2 2s steps(12) infinite;
+    animation: asteroid2 4s steps(12) infinite;
 }
 
 @keyframes asteroid2 {
@@ -195,7 +195,7 @@
     height: 50px;
     background-image: url('../../images_site/images_element/asteroids/asteroid3.png');
     background-size: cover;
-    animation: asteroid3 2s steps(12) infinite;
+    animation: asteroid3 4s steps(12) infinite;
 }
 
 @keyframes asteroid3 {
