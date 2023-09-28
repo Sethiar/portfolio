@@ -1,32 +1,25 @@
-
-/* Styles gérant le positionnement et le contenu de la barre de navigation du portfolio pour les pages autre que home.html*/
+/* Styles gérant le positionnement et le contenu de la barre de navigation du portfolio pour les pages autre que home.html */
 
 header {
-    display: flex;
-    /* Aligne la barre de navigation à droite */
+    /* Déplacement de  la barre de navigation à droite */
     justify-content: flex-end;
-    /* Aligne la barre de navigation en haut */
-    align-items: flex-start;
+    /* Activation de la flexbox */
+    display: flex;
+    padding: 0 100px; /*décalage aux cotés*/
 }
 
 #navbar {
-    z-index: 20;
     color: darkgrey;
     opacity: 0.5;
-    list-style-type: none;
-    list-style: none;
-    font-size: 30px;
+    font-size: 26px;
     width: 100%;
-}
-
-nav li {
-    margin-right: 2%;
+    padding: 5x;
 }
 
 nav a {
     color: lightgrey;
     border-right: 1px solid lightgrey;
-    padding-right: 8%;
+    padding-right: 5%;
 }
 
 nav a:hover {
@@ -36,44 +29,45 @@ nav a:hover {
 }
 
 #navbar li {
-    top: 2vh;
-    margin-left: 20px;
+    margin-left: 5%;
 }
 
 #cv-link {
     display: inline;
+    align-items: center;
 }
-
 #competences-link {
     display: inline;
+    align-items: center;
 }
-
-#projets-link{
+#projets-link {
     display: inline;
+    align-items: center;
 }
 
+/* Styles pour les petits écrans(largeur de 769px) */
 @media screen and (max-width: 768px) {
-     #navbar ul {
-         /* Affiche les éléments en colonnes */
-         display: flex;
-         justify-content: flex-end;
-         flex-direction: column;
-         font-size: 24px;
-         /* Supprime la marge intérieure de la liste */
-         padding: 0;
+    #navbar ul {
+        /* Affiche les éléments en colonnes */
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        font-size: 24px;
+        /* Supprime la marge intérieure de la liste */
+        padding: 0;
     }
 
     nav li {
-        /* Supprimerla marge à droite */
+        /* Supprime la marge à droite */
         margin-right: 0;
-        /* Ajout une marge en bas pour espacer les éléments */
+        /* Ajoute une marge en bas pour espacer les éléments */
         margin-bottom: 10px;
     }
 
     nav a {
-         /* Supprime le padding à droite */
-         padding-right: 0;
-         /* Supprime la bordure droite */
-         border-right: none;
+        /* Supprime le padding à droite */
+        padding-right: 0;
+        /* Supprime la bordure droite */
+        border-right: none;
     }
 }
