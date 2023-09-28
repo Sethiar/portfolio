@@ -51,6 +51,34 @@ nav a:hover {
 #projets-link{
     display: none;
 }
+
+/* Styles pour les petits écrans(largeur de 769px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+     #navbar ul {
+         /* Affiche les éléments en colonnes */
+         display: flex;
+         justify-content: flex-end;
+         flex-direction: column;
+         font-size: 24px;
+         /* Supprime la marge intérieure de la liste */
+         padding: 0;
+    }
+
+    nav li {
+        /* Supprime la marge à droite */
+        margin-right: 0;
+        /* Ajout une marge en bas pour espacer les éléments */
+        margin-bottom: 10px;
+    }
+
+    nav a {
+         /* Supprime le padding à droite */
+         padding-right: 0;
+         /* Supprime la bordure droite */
+         border-right: none;
+    }
+}
+
 /* Styles pour les petits écrans(largeur de 769px) */
 @media screen and (max-width: 768px) {
      #navbar ul {
