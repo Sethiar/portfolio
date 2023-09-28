@@ -73,9 +73,7 @@ h3 {
     text-align: right;
 }
 .footer {
-    background-color: black;
-    box-shadow: none;
-    opacity: 1;
+    display: none;
 }
 
 /* Caractérisques pour les petits écrans */
