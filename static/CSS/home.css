@@ -6,6 +6,24 @@ body, html {
     margin: 0;
     color: white;
     }
+#background {
+    height: 150vh;
+    background-image: url('../images_site/image_background/image_front/front1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    /* Animation pour impression de mouvement de la navette */
+    animation: moveBackgroundDown 120s linear infinite;
+}
+ /* Propriétés de l'animation */
+@keyframes moveBackgroundDown {
+    0% {
+        background-position-y: 0vh;
+    }
+    100% {
+        background-position-y: 150vh;
+    }
+}
 
 h1 {
     position: absolute;
@@ -22,26 +40,6 @@ h3.explic {
     top: 20vh;
     font-size: 20px;
     right: 10%;
-}
-
-#background {
-    height: 150vh;
-    background-image: url('../images_site/image_background/image_front/front1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    /* Animation pour impression de mouvement de la navette */
-    animation: moveBackgroundDown 120s linear infinite;
- }
-
-/* Propriétés de l'animation */
-@keyframes moveBackgroundDown {
-  0% {
-    background-position-y: 0vh;
-  }
-  100% {
-    background-position-y: 150vh;
-  }
 }
 
 .spaceship {

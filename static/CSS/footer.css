@@ -66,12 +66,48 @@ a {
 }
 
 
-/* Styles pour les écrans moyens (par exemple, entre 769px et 1024px de largeur) */
+/* Styles pour les écrans moyens (entre 769px et 1024px de largeur) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 
-}
+    .footer {
+        font-size: 16px;
+        margin-right: 10%;
+        margin-left: 10%;
+        color: orange;
+        box-shadow: 0px 0px 30px gold;
+        border: 1px solid gold;
+        margin-bottom: 5%;
+        opacity: 0.8;
+    }
 
-/* Caractéristiques pour les petits écrans (par exemple, moins de 768px de largeur) */
-@media screen and (max-width: 768px) {
+    h3.footer_titre {
+        color: white;
+        box-shadow: 0 0 5px orange;
+        font-size: 20px;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-right: 5%;
+        margin-left: 5%;
+        text-align: center;
+    }
 
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .reseaux li {
+        margin-bottom: 15%;
+    }
+
+    /* Caractéristiques du bas du footer */
+    .footer-bottom {
+        margin-top: 1%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 }

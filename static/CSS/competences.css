@@ -1,3 +1,4 @@
+
 * {
   background-color: black;
 }
@@ -28,7 +29,7 @@
   }
 }
 
-
+/* Position du centre de rotation */
 .center-python {
     position: absolute;
     top: 20%;
@@ -41,7 +42,7 @@
     box-shadow: 0 0 20px white;
     transform-origin: 50% 50%;
 }
-
+/* Styles des items gravitant autour du centre */
 .tool-python,
 .tool-python2,
 .tool-python3,
@@ -159,7 +160,7 @@
     color: white;
 }
 
-
+/* Position du centre de rotation */
 .center-gestion {
     width: 125px;
     height: 125px;
@@ -180,6 +181,7 @@
     padding-top: 2%;
 }
 
+/* Styles des items gravitant autour du centre */
 .tool-gestion,
 .tool-gestion2,
 .tool-gestion3,
@@ -261,6 +263,7 @@
     color: black;
 }
 
+/* Position du centre de rotation */
 .center-editor {
     width: 125px;
     height: 125px;
@@ -281,6 +284,7 @@
     padding-top: 2%;
 }
 
+/* Styles des items gravitant autour du centre */
 .tool-editor,
 .tool-editor2,
 .tool-editor3,
@@ -383,6 +387,7 @@
     color: white;
 }
 
+/* Position du centre de rotation */
 .center-language {
     width: 125px;
     height: 125px;
@@ -404,6 +409,7 @@
     padding-top: 2%;
 }
 
+/* Styles des items gravitant autour du centre */
 .tool-language,
 .tool-language2,
 .tool-language3,
@@ -446,7 +452,7 @@
     animation-delay: 10s;
 }
 
-
+/* Animation des items gravitant autour du centre */
 @keyframes orbit {
   0% {
     transform: rotate(0deg) translateX(200px) rotate(0deg);
@@ -458,19 +464,18 @@
 
 /* Media query pour les petits écrans (moins de 768px de largeur) */
 @media screen and (max-width: 768px) {
-    * {
-        background-color: black;
-    }
 
     #background {
         height: 140vh;
     }
+    /* Position du centre de rotation */
     .center-python {
         position : absolute;
         top: 10vh;
         left: 50%;
         transform: translateX(-50%);
     }
+    /* Styles des items gravitant autour du centre */
     .tool-python,
     .tool-python2,
     .tool-python3,
@@ -486,13 +491,14 @@
         left: 42%;
         transform: translateX(-50%);
     }
-
+    /* Position du centre de rotation */
     .center-gestion {
         position : absolute;
         top: 45vh;
         left: 50%;
         transform: translateX(-50%);
     }
+    /* Styles des items gravitant autour du centre */
     .tool-gestion,
     .tool-gestion2,
     .tool-gestion3,
@@ -506,13 +512,14 @@
         left: 42%;
         transform: translateX(-50%);
     }
-
+    /* Position du centre de rotation */
     .center-editor {
         position : absolute;
         top: 80vh;
         left: 50%;
         transform: translateX(-50%);
     }
+    /* Styles des items gravitant autour du centre */
     .tool-editor,
     .tool-editor2,
     .tool-editor3,
@@ -525,13 +532,14 @@
         left: 42%;
         transform: translateX(-50%);
     }
-
+    /* Position du centre de rotation */
     .center-language {
         position : absolute;
         top: 115vh;
         left: 50%;
         transform: translateX(-50%);
     }
+    /* Styles des items gravitant autour du centre */
     .tool-language,
     .tool-language2,
     .tool-language3,
@@ -545,6 +553,7 @@
 
     }
 
+    /* Animation pour écrans largeur inférieure à 768px */
     @keyframes orbit {
   0% {
     transform: rotate(0deg) translateX(120px) rotate(0deg);

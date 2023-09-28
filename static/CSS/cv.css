@@ -6,6 +6,7 @@ body, html {
     color: white;
     }
 
+/* Styles pour l'heure */
 #heure {
     position: absolute;
     top: 1%;
@@ -16,6 +17,7 @@ body, html {
     margin: 0 auto;
 }
 
+/* Styles pour la date */
 #date-jour {
     position: relative;
     top: 0%;
@@ -28,6 +30,7 @@ body, html {
     padding-left: 2%;
 }
 
+/* Styles pour lien de retour à l'accueil*/
 #retour_home {
     position: absolute;
     top: 5%;
@@ -35,7 +38,7 @@ body, html {
     font-size: 16px;
     color: white;
 }
-
+/* Styles pour division contenant la lune */
 #contain_moon {
     font-size: 15px;
     font-weight: bold;
@@ -44,13 +47,13 @@ body, html {
     padding: 30px;
     filter:drop-shadow(0 0 30px hsl(220,100%,15%))
 }
-
+/* Styles pour l'icône de la lune */
 #moon-icon {
      position: absolute;
-     top: 10px; /* Ajustez la valeur pour définir la distance par rapport au haut */
-     left: 10px; /* Ajustez la valeur pour définir la distance par rapport à la gauche */
-     width: 32px; /* Ajustez la largeur de l'icône */
-     height: 32px; /* Ajustez la hauteur de l'icône */
+     top: 10px;
+     left: 10px;
+     width: 32px;
+     height: 32px; /
 }
 
 #background_cv {
@@ -59,11 +62,12 @@ body, html {
     background-size: cover;
 }
 
-
+/* Ajout d'une transition pour un effet de fondu */
 .highlight {
-    transition: box-shadow 0.3s; /* Ajout d'une transition pour un effet de fondu */
+    transition: box-shadow 0.3s;
 }
 
+/* Styles concernant les animations des planètes: surlignage, position, taille, comportement */
 #animated_earth:hover,
 #animated_mars:hover,
 #planet1:hover,
@@ -152,6 +156,7 @@ body, html {
      }
 }
 
+/* Styles des titres */
 div p.label {
     position: fixed;
     top: 80%;
@@ -179,8 +184,9 @@ div p.label4 {
 }
 
 
-/* Caractéristiques pour les petits écrans (par exemple, moins de 768px de largeur) */
+/* Caractéristiques pour les petits écrans (moins de 768px de largeur) */
 @media screen and (max-width: 768px) {
+
     #animated_earth {
         width: 150px;
         height: 150px;

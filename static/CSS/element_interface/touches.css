@@ -1,5 +1,4 @@
 
-
 #touches {
     display: block;
     position: absolute;
@@ -10,7 +9,6 @@
     z-index: 20;
   }
 
-
 .direction {
     margin: 0;
     padding: 0;
@@ -19,11 +17,12 @@
     justify-content: left;
     color: gold;
 }
+
 #phone-touches {
     display: none;
 }
 
-/* Styles pour les écrans moyens (par exemple, entre 769px et 1024px de largeur) */
+/* Styles pour les écrans moyens (entre 769px et 1024px de largeur) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 
     #background {
@@ -89,7 +88,7 @@
     }
 }
 
-/* Caractéristiques pour les petits écrans (par exemple, moins de 768px de largeur) */
+/* Caractéristiques pour les petits écrans (moins de 768px de largeur) */
 @media screen and (max-width: 768px) {
 
      #background {

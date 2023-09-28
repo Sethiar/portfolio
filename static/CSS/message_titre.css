@@ -1,5 +1,4 @@
 
-
 /* Styles gérant le message d'introduction du portfolio */
 
 .message-container {
@@ -23,6 +22,7 @@
     font-size: 24px;
 }
 
+/* Animation pour apparition du message */
 @keyframes appear {
     0% {
         opacity: 0;

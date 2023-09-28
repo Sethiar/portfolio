@@ -10,7 +10,7 @@
     /* chemin de l'image associée à l'élément */
     background-image: url('../../images_site/images_element/star.png');
     background-size: cover;
-    /* Pour la positionner en haut au centre */
+    /* Pour  positionner la cible */
     left: 50%;
     top: 50vh;
     /* Pour centrer la cible horizontalement */
@@ -86,10 +86,10 @@
     background-size: cover;
     border-radius: 50%;
     position: absolute;
-    /* Pour la positionner en haut au centre */
+    /* Pour positionner la photo au même niveau que la cible */
     left: 50%;
     top: 50vh;
-    /* Pour centrer la cible horizontalement */
+    /* Pour centrer la photo horizontalement */
     transform: translateX(-50%);
     display: none;
     animation: rotateOscillation 4s forwards;
@@ -204,5 +204,30 @@
     }
     100% {
     background-position: -1300px;
+    }
+}
+
+
+/* Caractéristiques pour les petits écrans (par exemple, moins de 768px de largeur) */
+@media screen and (max-width: 768px) {
+
+    @keyframes rotateOscillation {
+        0% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        25% {
+            transform: translate(15vw, -15vh) rotate(30deg);
+        }
+        50% {
+            transform: translate(40vw, 13vh) rotate(-50deg);
+            display: block;
+        }
+        75% {
+            transform: translate(-20vw, -5vh) rotate(30deg);
+        }
+        100% {
+            transform: translate(-45vw, 0vh) rotate(0deg);
+            box-shadow: 0 0 50px blue;
+        }
     }
 }

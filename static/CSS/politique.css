@@ -1,60 +1,81 @@
 /* Définition d'une police pour tous les éléments de la page */
 * {
-  box-sizing: border-box;
-  font-size: 16px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Pas d'accès à la navbar ici */
+#cv-link {
+    display: none;
+}
+
+#competences-link {
+    display: none;
+}
+
+#projets-link{
+    display: none;
+}
+.retour {
+    color: black;
 }
 
 /* Surligne le lien retour à l'accueil */
 .retour:hover {
-  color: orange;
-  border-bottom: 1px solid gold;
+    color: orange;
+    border-bottom: 1px solid gold;
 }
 
 /* Séparation entre l'entête et le titre de la section */
 .separation1 {
-  border-bottom: 2px solid orange;
+    border-bottom: 2px solid orange;
 }
 
 /* Caractéristiques du titre de la section */
 h2 {
-  marging-top: 20px;
-  border: 1px solid black;
-  background: orange;
-  font-size: 18px;
-  text-align: center;
-  color: black;
-  max-width: 800px;
-  margin: 0;
-  margin: auto;
+    marging-top: 20px;
+    border: 1px solid black;
+    background: orange;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+    max-width: 800px;
+    margin: 0;
+    margin: auto;
 }
 
 .encadre {
-  border: 1px solid black;
-  padding: 30px;
+    border: 1px solid black;
+    padding: 30px;
 }
 
 h3 {
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: underline;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .date {
-  text-align: right;
+    text-align: right;
 }
 
 .intro {
-  text-indent: 2em;
-  text-align: justify;
+    text-indent: 2em;
+    text-align: justify;
 }
 
 .para {
-  text-indent: 2em;
-  text-align: justify;
+    text-indent: 2em;
+    text-align: justify;
 }
 
 .outro {
-  text-align: right;
+    text-align: right;
+}
+.footer {
+    background-color: black;
+    box-shadow: none;
+    opacity: 1;
 }
 
 /* Caractérisques pour les petits écrans */
