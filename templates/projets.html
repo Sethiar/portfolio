@@ -8,6 +8,7 @@
 {% endblock %}
 
 {% block header_content %}
+{{ super() }}
 <div id="retour_home">
     <a href="{{ url_for('home') }}"><u>Retour à la page d'accueil</u></a>
 </div>
@@ -51,7 +52,7 @@
         </p>
         <p class="explanation">
             Le but principal de ce site sera de mettre en pratique mes connaissances afin
-            de faire en sorte que ce site soit le plus agréable et fonctionnel possible.
+            de faire en sorte qu'il soit le plus agréable et fonctionnel possible.
         </p>
         <p class="explanation">
             Date limite de création fin 2023.
