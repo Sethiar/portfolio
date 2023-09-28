@@ -4,6 +4,7 @@ from flask import Flask, render_template, send_from_directory, request
 from flask_assets import Environment, Bundle
 
 
+
 import requests
 import os
 import locale
@@ -15,8 +16,9 @@ def create_app():
 Création de la fonction de création de mon application
     :return:
     """
-    app = Flask("Portfolio", static_url_path='/static')
+    app = Flask("Portfolio", static_url_path='/static', static_folder='static')
     assets = Environment(app)
+
 
     # Créer un bundle CSS
     css_bundle = Bundle(
