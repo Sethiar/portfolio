@@ -57,12 +57,11 @@ Création de la fonction de création de mon application
         output='gen/packed.js'
     )
 
-    assets.register('css.bundle', css_bundle)
+    assets.register('css_bundle', css_bundle)
     assets.register('js_bundle', js_bundle)
 
     # Définir la locale en français
     locale.setlocale(locale.LC_TIME, 'fr_FR.utf8')
-
 
     @app.route("/consentement", methods=["POST"])
     def consentement():
@@ -83,15 +82,13 @@ Création de la fonction de création de mon application
             # Traitement en cas de données de consentement inconnues ou incorrectes
             return "Données de consentement invalides"
 
-
     @app.route("/")
     def modale():
         """
     Route permettant l'affichage de la modale des cookies
         :return:
         """
-        return render_template("modale.html")
-
+        return render_template("modale.html", assets=assets)
 
     @app.route("/refus-cookie")
     def refus_cookie():
@@ -99,8 +96,7 @@ Création de la fonction de création de mon application
     Route renseignant sur les conséquences du refus des cookies.
         :return:
         """
-        return render_template("refus-cookie.html")
-
+        return render_template("refus-cookie.html", assets=assets)
 
     # Route vers la page 404 de mon site
     @app.route('/404')
@@ -109,8 +105,7 @@ Création de la fonction de création de mon application
     Access to 404 page.
         :return:
         """
-        return render_template("404.html")
-
+        return render_template("404.html", assets=assets)
 
     # Ma page d'accueil
     @app.route('/home')
@@ -120,7 +115,6 @@ Création de la fonction de création de mon application
         :return:
         """
         return render_template("home.html", assets=assets)
-
 
     # Mon curriculum vitae que je présente dans mon portfolio
     @app.route('/home/cv_access')
@@ -148,7 +142,6 @@ Création de la fonction de création de mon application
         else:
             return "Erreur lors de la récupération des données lunaires."
 
-
     @app.route('/home/cv')
     def cv():
         """
@@ -158,7 +151,6 @@ Création de la fonction de création de mon application
 
         return send_from_directory("static/pdf", "CV_arnaud.pdf")
 
-
     @app.route('/home/M1')
     def notes_m1():
         """
@@ -166,7 +158,6 @@ Création de la fonction de création de mon application
         :return:
         """
         return send_from_directory("static/pdf", "Relevé_note_M1.pdf")
-
 
     @app.route('/home/attestation-reussite')
     def attestation_reussite():
@@ -176,7 +167,6 @@ Création de la fonction de création de mon application
         """
         return send_from_directory("static/pdf", "Attestation_de_reussite.pdf")
 
-
     @app.route('/home/Resultats-formation')
     def resultats_formation():
         """
@@ -185,7 +175,6 @@ Création de la fonction de création de mon application
         """
         return send_from_directory("static/pdf", "Resultats_Formation.pdf")
 
-
     @app.route('/home/projets')
     def projet_perso():
         """
@@ -193,7 +182,6 @@ Création de la fonction de création de mon application
         :return:
         """
         return render_template("projets.html", assets=assets)
-
 
     # Les compétences que je présente dans mon portfolio
     @app.route('/home/competences')
@@ -204,15 +192,13 @@ Création de la fonction de création de mon application
         """
         return render_template("competences.html", assets=assets)
 
-
     @app.route("/conditions-utilisation")
     def condition():
         """
     Route affichant les conditions d'utilisation du site
         :return:
         """
-        return render_template("conditions.html")
-
+        return render_template("conditions.html", assets=assets)
 
     @app.route("/politique-confidentialité")
     def politique():
@@ -220,8 +206,7 @@ Création de la fonction de création de mon application
     Rute affichant la politique d'utilisation du site
         :return:
         """
-        return render_template("politique.html")
-
+        return render_template("politique.html", assets=assets)
 
     @app.route("/sitemap.xml")
     def sitemap():
@@ -230,7 +215,6 @@ Création de la fonction de création de mon application
         :return:
         """
         return send_from_directory(".", "sitemap.xml")
-
 
     @app.route("/robots.txt")
     def robots():
