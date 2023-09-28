@@ -8,120 +8,105 @@
 {% endblock %}
 
 {% block header_content %}
+<div id="retour_home">
+    <a href="{{ url_for('home') }}"><u>Retour à la page d'accueil</u></a>
+</div>
 {% endblock %}
 
 {% block main_content %}
     <div id="background">
         <div id="projet_1">
-            <div class="ring1"></div>
+            <div class="ring1"><p class="intitule">Projets de blog</p></div>
         </div>
 
         <div id="projet_2">
-            <div class="ring2"></div>
+            <div class="ring2"><p class="intitule">Création d'un site e-commerce</p></div>
         </div>
 
 
         <div id="projet_3">
-            <div class="ring3"></div>
+            <div class="ring3"><p class="intitule">Application pour mobile</p></div>
         </div>
 
         <div id="projet_4">
-            <div class="ring4"></div>
+            <div class="ring4"><p class="intitule">Reverse's Land</p></div>
         </div>
 </div>
-<div class="explanation">
-<div class="titre1">
-    <h2>Mes projets de blog</h2>
-    <p> Ce projet se décompose en deux temps.</p>
-    <p>
-        Création d'un blog pour un youtuber avec WordPress.
-    </p>
-    <p>
-        Création d'un blog personnel "from scratch".
-    </p>
-</div>
+
+<div>
+    <div class="titre1">
+        <h2>Mes projets de blog</h2>
+        <p class="explanation">
+            Création d'un blog pour un youtuber avec WordPress. Date limite fin octobre.
+        </p>
+        <p class="explanation">
+            Création d'un blog personnel "from scratch". Date limite fin 2023.
+        </p>
+    </div>
 
     <div class="titre2">
-                <h2 >Mon projet de site en ligne e-commerce</h2>
-                <p class="explication">
-                    Je souhaite créer un site de vente en ligne "from scratch"
-                    fonctionnel afin de vendre des mangas ainsi que des figurines.
-                    Ce site contiendra :
-                </p>
-                <ul>
-                    <li>Un moyen d'authentification sécurisé pour les administrateurs</li>
-                    <li>Un moyen d'authentificaiton sécurisé pour les clients</li>
-                    <li>L'automatisation maximum du système de mailings.</li>
-                    <li>La possibilité de devenir un client VIP et de profiter des promotions</li>
-                    <li>La protection contre toutes sortes d'attaques via les formulaires</li>
-                    <li>...</li>
-                    <li>Une API de paiement</li>
-                </ul>
-                <p>
-                    Le but principal de ce site sera debloyer mes connaissances théoriques afin
-                    de faire en sorte que ce site soit le plus pratique et fonctionnelle possible.
-                </p>
-</div>
-
-<div class="titre3">
-    <h2>Mon projet d'application pour smartphone "Clean Us Trash"</h2>
-    <p>
-        Ce projet a pour but de permettre aux randonneurs de prendre une photo d'un dépot
-        sauvage d'ordures et de prévenir auitomatiquement lmes services de voiries les
-        plus proches de la présence de détritus sur leur territoire administratif afin de
-        prendre les mesures nécessaires pour les déplayer. La photo prise par le smartphone
-        transmettra les coordonnées GPS afin de localiser le plus précisément possible le dépôt sauvage.
-        Cette application sera faîte avec le framework <b>React Native</b> est accessible sur <i>Android</i>
-        et système <i>iOS</i>.
-    </p>
-</div>
-
-<div class="titre4">
-    <h2> Mes projets de création de jeu basique: Le Snake</h2>
-    <p>
-        Afin de déterminer les avantages, les inconvénients, les différences et les ressemblances entre
-        le langage <b>Python</b> et <b>Javascript</b>, j'ai décidé de coder un petit jeu très simple <u>"Le Serpent"</u>. Le but
-        étant de faire évoluer un serpent dans un espace clos et de le faire grandir lorsqu'il mange des items.
-        Nous perdons lorsqu'il touche son corps ou un des bords de son espace d'évolution.
-    </p>
-    <p>
-        Pourquoi ce petit jeu sur <i>Python</i> et <i>Javascript</i> ? Afin de me perfectionner dans mon langage de
-        prédilection <b>Python</b>, j'ai décidé de coder ce petit jeu de deux manières différentes. Une première fois
-        avec la librairie <b>Pygame</b> et une deuxième fois avec <b>Tkinter</b>. Le but étant de me permettre
-        une maîtrise plus profonde du langage <b>Python</b>.
-    </p>
-    <p>
-        La deuxième chose qui me paraît iomportant ici de préciser et que je souhaite aussi coder ce jeu en <b>Javascript</b>
-        car il m'est nécessaire d'augmenter ma connaissance dans ce langage et je pense qu'un des moyens les plus rapides
-        est de coder des fonctionnalités similaires à celles que je crée avec le langage que je maîtrise le mieux.
-        Cela me permettra j'en suis persuadé' de prendre conscience des avantages et des inconvénients de chacun des deux langages,
-        mais aussi de leurs ressemblances et de leurs différences. Ce sont des éléments essentiels dans tout apprentissage.
-    </p>
-</div>
+        <h2 >Mon projet de site en ligne e-commerce</h2>
+        <p class="explanation">
+            Création d'un site de vente en ligne.
+        </p>
+        <p class="explanation">
+            Le but principal de ce site sera de mettre en pratique mes connaissances afin
+            de faire en sorte que ce site soit le plus agréable et fonctionnel possible.
+        </p>
+        <p class="explanation">
+            Date limite de création fin 2023.
+        </p>
+    </div>
+    <div class="titre3">
+        <h2>Mon projet d'application pour smartphone "Clean Us Trash"</h2>
+        <p class="explanation">
+            Ce projet a pour but de permettre aux randonneurs de prendre la photo d'un dépot
+            sauvage d'ordures et de l'envoyer avec les coordonnées GPS du site photographié
+            à la mairie la plus proche. Cela permettra aux services de la voierie d'intervenir le plus
+            efficacement possible.
+            Cette application sera développée avec le framework <b>React Native</b> est sera accessible sur <i>Android</i>
+            et <i>iOS</i>.
+        </p>
+        <p class="explanation">
+            Date limite de création fin 2023.
+        </p>
+    </div>
+    <div class="titre4">
+        <h2> Mon projets de création de jeu : Reverse's Land</h2>
+        <p class="explanation">
+            Afin de mettre en pratique les connaissances que j'ai acquises et d'exprimer ma créativité, je développe un jeu
+            de type RPG. Ce jeu consistera à évoluer dans un monde fantastique en acquérant de l'expérience et en résolvant les mystères
+            que contient le continent.
+        </p>
+    </div>
 </div>
 
     <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const rings = document.querySelectorAll(".ring1, .ring2, .ring3, .ring4");
-      const titles = document.querySelectorAll(".titre1, .titre2, .titre3, .titre4");
-      const titleActive = Array.from({ length: rings.length }, () => false);
+  const rings = document.querySelectorAll(".ring1, .ring2, .ring3, .ring4");
+  const titles = document.querySelectorAll(".titre1, .titre2, .titre3, .titre4");
 
-      rings.forEach(function (ring, index) {
-        ring.addEventListener("mouseenter", function () {
-          if (!titleActive[index]) {
-            titles[index].style.opacity = "1"; // Make the text visible
-            titleActive[index] = true;
-          }
-        });
+  rings.forEach(function (ring, index) {
+    ring.addEventListener("mouseenter", function () {
+      // Réinitialisez la position de tous les titres
+      titles.forEach(function (title) {
+        title.style.display = "none";
+      });
 
-        ring.addEventListener("mouseleave", function () {
-          if (titleActive[index]) {
-            titles[index].style.opacity = "0"; // Hide the text
-            titleActive[index] = false;
-          }
-        });
+      // Positionnez le titre associé au ring survolé
+      titles[index].style.display = "block";
+      titles[index].style.top = "50%"; // Position verticale au milieu de l'écran
+      titles[index].style.left = "10%"; // Position horizontale à 10% de la largeur de l'écran
+    });
+
+    ring.addEventListener("mouseleave", function () {
+      // Masquez tous les titres lorsqu'on quitte un ring
+      titles.forEach(function (title) {
+        title.style.display = "none";
       });
     });
+  });
+});
     </script>
 {% endblock %}
 
