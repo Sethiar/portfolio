@@ -15,7 +15,7 @@ body, html {
 
 #retour_home {
     position: absolute;
-    top: 5%;
+    top: 2%;
     left: 2%;
     font-size: 16px;
     color: white;
@@ -82,19 +82,19 @@ div h2 {
 
 #projet_2 {
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 60%;
 }
 
 #projet_3 {
     position: absolute;
-    top: 45%;
+    top: 55%;
     left: 10%;
 }
 
 #projet_4 {
     position: absolute;
-    top: 15%;
+    top: 38%;
     right: 20%;
 }
 
@@ -151,19 +151,19 @@ div h2 {
 
     #projet_2 {
         position: absolute;
-        top: 50%;
+        top: 70%;
         left: 60%;
     }
 
     #projet_3 {
         position: absolute;
-        top: 45%;
+        top: 65%;
         left: 10%;
     }
 
     #projet_4 {
         position: absolute;
-        top: 15%;
+        top: 38%;
         right: 35%;
     }
 
