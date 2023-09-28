@@ -1,6 +1,6 @@
 
 import { afficherExplosion} from '../FX/explosions.js';
-import { setLocalStorageItem} from '../elements_interface/conservation_liens.js';
+import { setLocalStorageItem, recupererLiens} from '../elements_interface/conservation_liens.js';
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -79,4 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
     createAsteroid('asteroid3', 'competences-link');
   }, 6000);
 
+  // Au chargement de la page, récupération dee l'état actuel des liens et les afficher
+  recupererLiens('cv-link');
+  recupererLiens('competences-link');
+  recupererLiens('projets-link');
 });
