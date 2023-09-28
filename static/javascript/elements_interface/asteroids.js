@@ -49,9 +49,9 @@ document.addEventListener("DOMContentLoaded", function () {
       rectMissile.top < rectAsteroid.bottom &&
       rectMissile.bottom > rectAsteroid.top
     ) {
-       // Récupérez les coordonnées de l'astéroïde
-    const asteroidLeft = rectAsteroid.left;
-    const asteroidTop = rectAsteroid.top;
+    // Récupérez les coordonnées de l'astéroïde
+    const asteroidLeft = rectAsteroid.left + window.scrollX; // Ajustez la position horizontale
+    const asteroidTop = rectAsteroid.top + window.scrollY; // Ajustez la position verticale
 
     // Appliquez les coordonnées à l'élément d'explosion
     const explosion = document.getElementById('explosion_asteroid');
