@@ -1,12 +1,11 @@
 
 /* Styles gérant le positionnement et le contenu de la barre de navigation du portfolio */
 
-
 header {
     display: flex;
-    /* Aligner la barre de navigation à droite */
+    /* Aligne la barre de navigation à droite */
     justify-content: flex-end;
-    /* Aligner la barre de navigation en haut */
+    /* Aligne la barre de navigation en haut */
     align-items: flex-start;
 }
 
@@ -52,29 +51,29 @@ nav a:hover {
 #projets-link{
     display: none;
 }
-
+/* Styles pour les petits écrans(largeur de 769px) */
 @media screen and (max-width: 768px) {
      #navbar ul {
-         /* Afficher les éléments en colonnes */
+         /* Affiche les éléments en colonnes */
          display: flex;
          justify-content: flex-end;
          flex-direction: column;
          font-size: 24px;
-         /* Supprimer la marge intérieure de la liste */
+         /* Supprime la marge intérieure de la liste */
          padding: 0;
     }
 
     nav li {
-        /* Supprimerla marge à droite */
+        /* Supprime la marge à droite */
         margin-right: 0;
         /* Ajout une marge en bas pour espacer les éléments */
         margin-bottom: 10px;
     }
 
     nav a {
-         /* Supprimer le padding à droite */
+         /* Supprime le padding à droite */
          padding-right: 0;
-         /* Supprimer la bordure droite */
+         /* Supprime la bordure droite */
          border-right: none;
     }
 }
