@@ -47,5 +47,5 @@ document.addEventListener("DOMContentLoaded", function () {
     handlePlanetInteraction(earth, "/home/cv");
     handlePlanetInteraction(mars, "/home/M1");
     handlePlanetInteraction(planet1, "/home/attestation-reussite");
-    handlePlanetInteraction(planet2, "/home/Resultats-formation");
+    handlePlanetInteraction(planet2, "/home/resultats-formation");
 });
