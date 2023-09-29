@@ -19,7 +19,6 @@ Création de la fonction de création de mon application
     app = Flask("Portfolio", static_url_path='/static', static_folder='static')
     assets = Environment(app)
 
-
     # Créer un bundle CSS
     css_bundle = Bundle(
         'css/competences.css',
@@ -135,8 +134,11 @@ Création de la fonction de création de mon application
         hour = current_datetime.strftime('%H:%M')
 
         # Construire l'URL avec la date actuelle
-        api_url = f"https://www.icalendar37.net/lunar/api/?lang=fr&month={current_datetime.month}&year={current_datetime.year}&size=100&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&LDZ={int(current_datetime.timestamp())}"
-
+        api_url = "https://www.icalendar37.net/lunar/api/?lang=fr&month={}&year={}&size=100&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&LDZ={}".format(
+            current_datetime.month,
+            current_datetime.year,
+            int(current_datetime.timestamp())
+        )
         response = requests.get(api_url)
         if response.status_code == 200:
             data = response.json()
@@ -169,13 +171,13 @@ Création de la fonction de création de mon application
         """
         return send_from_directory("static/pdf", "Attestation_de_reussite.pdf")
 
-    @app.route('/home/Resultats-formation')
+    @app.route('/home/resultats-formation')
     def resultats_formation():
         """
     Route affichant les résultats Studi
         :return:
         """
-        return send_from_directory("static/pdf", "Resultats_Formation.pdf")
+        return send_from_directory("static/pdf", "resultats_Formation.pdf")
 
     @app.route('/home/projets')
     def projet_perso():
