@@ -1,0 +1,62 @@
+{% extends 'base2.html.jinja2' %}
+
+{% block head_content %}
+<meta name="description" content="My skills acquired through my professional journey, personal experiences, and training.">
+<title>{% block title %}My professionals skills{% endblock %}</title>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/competences.css') }}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/navbars/navbars2.css') }}">
+{% endblock %}
+
+{% block header_content %}
+{{ super() }}
+<div id="retour_home">
+    <a href="{{ url_for('home') }}"><u>Back to the home page</u></a>
+</div>
+{% endblock %}
+
+{% block main_content %}
+<div id="background">
+    <div id="python" class="center-python"></div>
+    <div class="tool-python"><p>Seaborn</p></div>
+    <div class="tool-python2"></div>
+    <div class="tool-python3"></div>
+    <div class="tool-python4"><p>Mathplotlib</p></div>
+    <div class="tool-python5"></div>
+    <div class="tool-python6"><p>Bokeh</p></div>
+    <div class="tool-python7"></div>
+    <div class="tool-python8"></div>
+    <div class="tool-python9"><p>Streamlit</p></div>
+    <div class="tool-python10"><p>Tkinter</p></div>
+
+    <div id="gestion" class="center-gestion"><p>Management software and databases</p></div>
+    <div class="tool-gestion"><p>Jira</p></div>
+    <div class="tool-gestion2"></div>
+    <div class="tool-gestion3"><p>Gantt</p></div>
+    <div class="tool-gestion4"></div>
+    <div class="tool-gestion5"></div>
+    <div class="tool-gestion6"></div>
+    <div class="tool-gestion7"></div>
+    <div class="tool-gestion8"><p>Trello</p></div>
+
+    <div id="editor" class="center-editor"><p>Code editor and frameworks.</p></div>
+    <div class="tool-editor"></div>
+    <div class="tool-editor2"></div>
+    <div class="tool-editor3"></div>
+    <div class="tool-editor4"></div>
+    <div class="tool-editor5"></div>
+    <div class="tool-editor6"></div>
+    <div class="tool-editor7"></div>
+
+    <div id="language" class="center-language"><p>Programming language</p></div>
+    <div class="tool-language"></div>
+    <div class="tool-language2"></div>
+    <div class="tool-language3"></div>
+    <div class="tool-language4"></div>
+    <div class="tool-language5"></div>
+
+</div>
+{% endblock %}
+
+{% block footer_content %}
+
+{% endblock %}

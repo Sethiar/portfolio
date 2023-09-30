@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/modale.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='image/favicon/favimage.ico') }}">
+    <title>Cookie Consent</title>
+</head>
+<body>
+<div id="fenetre_modale" class="modale">
+        <div class="contenu_modale">
+            <h2>Cookie Consent</h2>
+            <p>"We use cookies to enhance your experience on our site. Do you accept the use of non-essential cookies?"</p>
+            <button id="acceptBtn">Accept</button>
+            <button id="rejectBtn">Refuse</button>
+        </div>
+    <p><a class="politique" href="/politique-confidentialité">View our privacy policy</a></p>
+</div>
+
+<script src="static/javascript/modale.js"></script>
+</body>
+</html>

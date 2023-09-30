@@ -1,0 +1,116 @@
+{% extends 'base2.html.jinja2' %}
+
+{% block head_content %}
+<meta name="description" content="The page of my projects to be completed by the end of 2023.">
+<title>{% block title %}Projects{% endblock %}</title>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/projets.css') }}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/navbars/navbars2.css') }}">
+{% endblock %}
+
+{% block header_content %}
+{{ super() }}
+<div id="retour_home">
+    <a href="{{ url_for('home') }}"><u>Back to the home page</u></a>
+</div>
+{% endblock %}
+
+{% block main_content %}
+    <div id="background">
+        <div id="projet_1">
+            <div class="ring1"><p class="intitule">Blog projects</p></div>
+        </div>
+
+        <div id="projet_2">
+            <div class="ring2"><p class="intitule">Creation of an e-commerce website"</p></div>
+        </div>
+
+
+        <div id="projet_3">
+            <div class="ring3"><p class="intitule">Mobile Application</p></div>
+        </div>
+
+        <div id="projet_4">
+            <div class="ring4"><p class="intitule">Reverse's Land</p></div>
+        </div>
+</div>
+
+<div>
+    <div class="titre1">
+        <h2>My blog projects</h2>
+        <p class="explanation">
+            "Creation of a blog for a YouTuber using WordPress. Deadline: end of October."
+        </p>
+        <p class="explanation">
+            Création ofmy personal blog "from scratch". Deadline: end of 2023.
+        </p>
+    </div>
+
+    <div class="titre2">
+        <h2 >My online e-commerce website project.</h2>
+        <p class="explanation">
+            Creation of an e-commerce website.
+        </p>
+        <p class="explanation">
+            "The primary goal of this site, powered by APIs, is to put my knowledge
+            into practice to make it as enjoyable and functional as possible."
+        </p>
+        <p class="explanation">
+            Deadline: end of 2023.
+        </p>
+    </div>
+    <div class="titre3">
+        <h2>"My smartphone application project 'Clean Us Trash.'"</h2>
+        <p class="explanation">
+            "This project aims to allow hikers to take a photo of an illegal waste dump and
+            send it along with the GPS coordinates of the photographed site to the nearest
+            city hall. This will enable the road services to intervene as efficiently
+            as possible.
+            The application will be developed using the <b>React Native</b> framework
+            and will be available on both <i>Android</i> and <i>iOS</i>."
+        </p>
+        <p class="explanation">
+            Deadline: end of 2023.
+        </p>
+    </div>
+    <div class="titre4">
+        <h2> My creating game project : Reverse's Land</h2>
+        <p class="explanation">
+            Afin de mettre en pratique les connaissances que j'ai acquises et d'exprimer ma créativité, je développe un jeu
+            de type RPG. Ce jeu consistera à évoluer dans un monde fantastique en acquérant de l'expérience et en résolvant les mystères
+            que contient le continent.
+        </p>
+    </div>
+</div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const rings = document.querySelectorAll(".ring1, .ring2, .ring3, .ring4");
+  const titles = document.querySelectorAll(".titre1, .titre2, .titre3, .titre4");
+
+  rings.forEach(function (ring, index) {
+    ring.addEventListener("mouseenter", function () {
+      // Réinitialisez la position de tous les titres
+      titles.forEach(function (title) {
+        title.style.display = "none";
+      });
+
+      // Positionnez le titre associé au ring survolé
+      titles[index].style.display = "block";
+      titles[index].style.top = "50%"; // Position verticale au milieu de l'écran
+      titles[index].style.left = "10%"; // Position horizontale à 10% de la largeur de l'écran
+    });
+
+    ring.addEventListener("mouseleave", function () {
+      // Masquez tous les titres lorsqu'on quitte un ring
+      titles.forEach(function (title) {
+        title.style.display = "none";
+      });
+    });
+  });
+});
+    </script>
+{% endblock %}
+
+{% block footer_content %}
+
+{% endblock %}

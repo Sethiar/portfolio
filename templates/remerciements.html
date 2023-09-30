@@ -1,0 +1,86 @@
+{% extends 'base.html.jinja2' %}
+
+{% block head_content %}
+    <meta name="description" content="Cette page remercie les auteurs des fonds d'écran et des auteurs de l'API donnant les phases de la lune.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/politique.css') }}">
+    <title>{% block title %}Remerciements{% endblock %}</title>
+{% endblock %}
+
+{% block main_content %}
+<br><br><br>
+
+<div>
+    <p><a class="liens" href="{{ url_for('home') }}">Retour à l'accueil</a></p>
+</div>
+
+<br><br>
+
+<div class="separation1">
+</div>
+
+<br>
+<br>
+<h2>Remerciements aux contributeurs et auteurs qui ont indirectement permis la construction de mon portfolio.</h2>
+<br>
+<br>
+<div class="encadre">
+    <div>
+        <p class="intro"><i>La présente section remercie les auteurs des oeuvres qui sont exposées dans mon portfolio.
+    Selon mes recherches,  toutes ces oeuvres sont libres de droits si leurs auteurs sont cités au sein du travail dans lequel elles sont utilisées.</i></p>
+    </div>
+    <br>
+    <div>
+        <h3>Remerciements pour les fonds d'écran.</h3>
+
+        <p class="para">J'ai trouvé au sein du site <a class="liens" href="https://wallhere.com/en/wallpapers?q=espace"><i>https://wallhere.com/</i></a>, la qualité et le design que je souhaitais afin de donner à mon portfolio l'aspect recherché.
+            Je remercie non seulement les auteurs de ces travaux mais je leur témoigne aussi toute ma considération pour le travail de grande qualité effectué.</p>
+        <p class="para"><a class="liens" href="https://wallhere.com/en/wallpaper/1256195"><b>Fond d'écran de ma section 'Espace Personnel'</b></a></p>
+        <p class="para"><a class="liens" href="https://wallhere.com/en/wallpaper/2216452"><b>Fond d'écran de ma section 'Espace Projet'</b></a></p>
+    </div>
+    <br>
+    <div>
+        <h3>Remerciements pour le design de la navette.</h3>
+        <p class="para">Les spritesheets ainsi que les missiles ont été téloéchargés à partir du site : <a class="liens" href="https://itch.io/">https://itch.io/</a>.
+            Je remercie l'auteur, <b><i>FoozleCC</i></b> dont voici les informations :</p>
+        <div class="foozleCC">
+            <h4><u>Void - Main Ship (1.0)</u></h4>
+            <p class="para">Distributed by Foozle</p>
+            <p>------------------------------</p>
+            <p class="para"><u>License: (Creative Commons Zero, CC0)</u></p>
+            <p class="para"><a class="liens" href="http://creativecommons.org/publicdomain/zero/1.0/"><b>Site Creative Commons Zero</b></a></p>
+            <p class="para"><i>This content is free to use and modify for all projects, including commercial projects.
+                Attribution not required.  If you would like to support, consider a voluntary donation.</i></p>
+
+            <p>------------------------------</p>
+
+            <p class="para"><u>Donate</u>: <a class="liens" href="https://foozlecc.itch.io/">https://foozlecc.itch.io/</a></p>
+            <p class="para"><u>Patreon</u>:  <a class="liens" href="https://www.patreon.com/bePatron?u=48464594">https://www.patreon.com/bePatron?u=48464594</a></p>
+            <p class="para">Follow on YouTube and Twitter for updates:
+            <p><a class="liens" href="https://www.youtube.com/c/FoozleCC">Suivre sur YouTube.</a></p>
+            <p><a class="liens" href="http://twitter.com/FoozleCC">Suivre sur Twitter.</a></p>
+        </div>
+    </div>
+    <br>
+    <div>
+        <h3>Icônes et logos.</h3>
+        <p class="para">Tous les <b>icônes</b> et <b>Logo</b> utilisés dans cette oeuvre sont des images libres de droits
+            et non détournées de leur utilisation et référence initiales. Je les utilise afin qu'elles se réfèrent
+            directement à ce qu'elles représentent.</p>
+
+        <div class="outro">
+            Si vous avez des questions ou des réclamations pour l'utilisation des oeuvres, merci de bien vouloir, dans un premier temps,
+            accepter mes excuses et d'ensuite me contacter au plus vite à cette adresse : <a class="liens" href="mailto:alefetey123@gmail.com"><b>alefetey123@gmail.com</b></a>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="separation1">
+</div>
+<br><br>
+
+
+<div class="footer-bottom">
+    <p>&copy; Copyright 2023 SethiarWorks. Tous droits réservés.</p>
+</div>
+
+{% endblock %}

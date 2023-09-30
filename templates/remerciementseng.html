@@ -1,0 +1,88 @@
+{% extends 'base2.html.jinja2' %}
+
+{% block head_content %}
+    <meta name="description" content="This page thanks the authors of the wallpapers, dynamic elements, and those of the API providing the moon phases.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/politique.css') }}">
+    <title>{% block title %}Achievements{% endblock %}</title>
+{% endblock %}
+
+{% block main_content %}
+<br><br><br>
+
+<div>
+    <p><a class="liens" href="{{ url_for('home') }}">Back to the home page</a></p>
+</div>
+
+<br><br>
+
+<div class="separation1">
+</div>
+
+<br>
+<br>
+<h2>Thanks to the contributors and authors who indirectly contributed to the construction of my portfolio.</h2>
+<br>
+<br>
+<div class="encadre">
+    <div>
+        <p class="intro"><i>This section expresses gratitude to the authors of the works showcased in my
+            portfolio. According to my research, all these works are in the public domain if their authors
+            are credited within the work in which they are used</i></p>
+    </div>
+    <br>
+    <div>
+        <h3>Thanks for the wallpapers.</h3>
+
+        <p class="para">I found the quality and design I was looking for on the website <a class='liens' href='https://wallhere.com/en/wallpapers?q=espace'>
+            <i>https://wallhere.com/</i></a> to achieve the desired look for my portfolio. I not only thank the authors of these works but also express
+            my utmost appreciation for the high-quality work they have done.</p>
+        <p class="para"><a class="liens" href="https://wallhere.com/en/wallpaper/1256195"><b>Wallpaper of my Personnal section</b></a></p>
+        <p class="para"><a class="liens" href="https://wallhere.com/en/wallpaper/2216452"><b>Wallpaper of my Projects section</b></a></p>
+    </div>
+    <br>
+    <div>
+        <h3>Thanks for the design spaceship.</h3>
+        <p class="para">The spritesheets and missiles were downloaded from the website: <a class='liens' href='https://itch.io/'>https://itch.io/</a>.
+            I would like to express my gratitude to the author, <b><i>FoozleCC</i></b>,
+            whose information is as follows :</p>
+        <div class="foozleCC">
+            <h4><u>Void - Main Ship (1.0)</u></h4>
+            <p class="para">Distributed by Foozle</p>
+            <p>------------------------------</p>
+            <p class="para"><u>License: (Creative Commons Zero, CC0)</u></p>
+            <p class="para"><a class="liens" href="http://creativecommons.org/publicdomain/zero/1.0/"><b>Site Creative Commons Zero</b></a></p>
+            <p class="para"><i>This content is free to use and modify for all projects, including commercial projects.
+                Attribution not required.  If you would like to support, consider a voluntary donation.</i></p>
+
+            <p>------------------------------</p>
+
+            <p class="para"><u>Donate</u>: <a class="liens" href="https://foozlecc.itch.io/">https://foozlecc.itch.io/</a></p>
+            <p class="para"><u>Patreon</u>:  <a class="liens" href="https://www.patreon.com/bePatron?u=48464594">https://www.patreon.com/bePatron?u=48464594</a></p>
+            <p class="para">Follow on YouTube and Twitter for updates:
+            <p><a class="liens" href="https://www.youtube.com/c/FoozleCC">Follow on YouTube.</a></p>
+            <p><a class="liens" href="http://twitter.com/FoozleCC">Follow on Twitter.</a></p>
+        </div>
+    </div>
+    <br>
+    <div>
+        <h3>Icones and logos.</h3>
+        <p class="para">All the <b>icons</b> and <b>logos</b> used in this work are royalty-free images and have not been diverted from their original
+            use and reference. I use them in a way that directly relates to what they represent</p>
+
+        <div class="outro">
+            If you have any questions or complaints regarding the use of these works, please first accept my apologies,
+            and then contact me as soon as possible at this address : <a class="liens" href="mailto:alefetey123@gmail.com"><b>alefetey123@gmail.com</b></a>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="separation1">
+</div>
+<br><br>
+
+
+<div class="footer-bottom">
+    <p>&copy; Copyright 2023 SethiarWorks. All rights reserved.</p>
+</div>
+
+{% endblock %}

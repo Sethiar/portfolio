@@ -1,0 +1,53 @@
+{% extends 'base2.html.jinja2' %}
+
+{% block head_content %}
+<title>{% block title %}Curriculum vitae et parcours{% endblock %}</title>
+<meta name="description" content="My documents confirming my education, experience, and obtained diplomas.">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/cv.css') }}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/footer.css') }}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/navbars/navbars2.css') }}">
+<!-- Heure -->
+<div id="heure">
+        <p><u>Hour</u> : <span id="heure-actuelle">{{ hour }}</span></p>
+    </div>
+<!-- Phase de la lune -->
+<!-- © wdisseny -->
+<div id="contain_moon" style="text-align:center;padding-top:5px;padding-bottom:5px;">
+    <div>The moon tonight :</div>
+    <div style="margin-top:-7px;margin-bottom:-15px;padding:30px;filter:drop-shadow(0 0 30px hsl(220,100%,15%))"></div>
+    <div>.</div>
+    <div style="font-size:small">.</div>
+</div>
+<div id="retour_home">
+    <a href="{{ url_for('home') }}"><u>Back to the home page</u></a>
+</div>
+<br>
+<!-- Date du jour -->
+<div id="date-jour">
+    <p><u>Date of the day</u> : {{ current_date }}</p>
+</div>
+{% endblock %}
+
+{% block main_content %}
+    <div id="background_cv"></div>
+
+<div id="animated_earth" class="highlight">
+    <p class="label">Curriculum vitae</p>
+</div>
+<div id="animated_mars" class="highlight">
+    <p class="label">Master's first-year grades</p>
+</div>
+<div id="planet1" class="highlight">
+    <p class="label3">Completion Certificate (STUDI)</p>
+</div>
+<div id="planet2" class="highlight">
+    <p class="label4">Competency Block Synthesis Chart (STUDI)</p>
+</div>
+
+<script type="module" src="../static/javascript/elements_interface/lune.js"></script>
+<script type="module" src="../static/javascript/elements_cv/redirection_cv.js"></script>
+<script type="module" src="../static/javascript/elements_cv/temps.js"></script>
+{% endblock %}
+{% block footer_content %}
+
+{% endblock %}

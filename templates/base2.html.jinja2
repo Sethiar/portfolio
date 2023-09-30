@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/footer.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images_site/favicon/favimage.ico') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    {% block head_content %}
+    {% endblock %}
+</head>
+<br>
+<body>
+<header>
+    {% block header_content %}
+<nav id="navbar">
+    <ul>
+        <li id="cv-link"><a href="{{url_for('cv_access')}}">Personal's section</a></li>
+        <li id="competences-link"><a href="{{url_for('competences') }}">Skill's section</a></li>
+        <li id="projets-link"><a href="{{url_for('projet_perso') }}">Projects section</a></li>
+    </ul>
+</nav>
+{% endblock %}
+</header>
+
+    <main>
+        {% block main_content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row footer-content">
+                <div class="col-md-4">
+                    <h3 class="footer_titre">Informations</h3>
+                    <br>
+                    <p class="gold">Address : Caen, Calvados, France</p>
+                    <br>
+                    <p class="gold"><a class="retour" href="mailto:alefetey123@gmail.com">Email : alefetey123@gmail.com</a></p>
+                <br><br>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer_titre">Legales notices</h3>
+                    <br>
+                    <ul class="reseaux">
+                        <li><a href="{{ url_for('condition') }}">Terms of use</a></li>
+                        <li><a href="/politique-confidentialité">Privacy policy</a></li>
+                        <li><a href="/remerciements">Acknowledgements</a></li>
+                    </ul>
+                <br><br>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer_titre">Social networks"</h3>
+                    <br>
+                    <ul class="reseaux">
+                        <li ><a href="https://www.facebook.com/profile.php?id=100095257672419" target="_blanck"><i class="fab fa-facebook"></i>Facebook</a></li>
+
+                        <li><a href="https://twitter.com/LefeteyA" target="_blanck"><i class="fab fa-twitter"></i>Twitter</a></li>
+
+                        <li><a href="https://www.instagram.com/lefeteya/" target="_blanck"><i class="fab fa-instagram"></i>Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Copyright 2023 SethiarWorks. All rights reserved.</p>
+        </div>
+    {% block footer_content %}
+    {% endblock %}
+    </footer>
+<script type="module" src="{{ assets.js_bundle.url }}"></script>
+</body>
+</html>
