@@ -16,12 +16,14 @@
 #projets-link{
     display: none;
 }
-.retour {
-    color: black;
+
+.liens {
+    color: navy;
+    text-decoration: underline;
 }
 
 /* Surligne le lien retour à l'accueil */
-.retour:hover {
+.liens:hover {
     color: orange;
     border-bottom: 1px solid gold;
 }
@@ -40,13 +42,13 @@ h2 {
     text-align: center;
     color: black;
     max-width: 800px;
-    margin: 0;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .encadre {
     border: 1px solid black;
     padding: 30px;
+    margin: 10%;
 }
 
 h3 {
@@ -67,18 +69,43 @@ h3 {
 .para {
     text-indent: 2em;
     text-align: justify;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 
 .outro {
     text-align: right;
+    margin-bottom: 5%;
+    padding-right: 5%;
 }
 .footer {
     display: none;
 }
 
+.foozleCC {
+    border: 1px solid darkgrey;
+    text-align: center;
+    background-color: lightgrey;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+/* Caractéristiques du bas du footer */
+.footer-bottom {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 auto;
+    background-color: orange;
+    border: 1px solid black;
+    max-width: 40%;
+}
+
 /* Caractérisques pour les petits écrans */
 @media screen and (max-width: 768px) {
-  body {
-    font-family: Arial, sans-serif;
+   body {
+      font-family: Arial, sans-serif;
   }
 }
+
+
+
