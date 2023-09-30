@@ -1,0 +1,73 @@
+{% extends 'base2.html.jinja2' %}
+
+{% block head_content %}
+    <meta name="description" content="this page provides some informations about the terms of use of this site.">
+    <title>{% block title %}Terms of use{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/politique.css') }}">
+{% endblock %}
+
+{% block main_content %}
+<br><br><br>
+
+<div>
+    <p><a class="liens" href="{{ url_for('homeeng') }}">Back to the home pagel</a></p>
+</div>
+
+<br><br><br>
+
+<div class="separation1">
+
+</div>
+
+<br>
+<br>
+
+<h2>Conditions d'utilisation du Portfolio de Lefetey Arnaud.</h2>
+<br>
+<br>
+<div class="encadre">
+    <div>
+        <h3>Droits d'auteur et droits de propriété intellectuelle :</h3>
+        <p class="para">
+            Toutes les images, les textes et les créations présentées dans ce portfolio ont les droits requis pour y figurer.
+            Les photos de projets ainsi que les liens vers certains documents sont accessibles à tous car ils sont sur une présentation publique.
+        </p>
+    </div>
+    <br>
+    <div>
+        <h3>Autorisations et consentements :</h3>
+        <p class="para">
+            Les exemples de travaux réalisés pour l'école de formation Studi ont été autorisés, seuls leurs énoncés d'évaluations et réponses à ceux-ci
+            ont été interdits à figurer dans ce portfolio car il s'agit d'éléments confidentiels qui sont la propriété intellectuelle de l'organisme de formation.
+        </p>
+        <p class="para">
+            De plus, il est formellement interdit de reproduire, dupliquer ou utiliser les informations présentes dans ce portfolio sous peine de poursuites judiciaires.
+        </p>
+    </div>
+    <br>
+    <div>
+        <h3>Protection des données personnelles :</h3>
+        <p class="para">
+            Ce travail a été réalisé en accord avec les lois de protection des données personnelles. Aucune information recueillie ne sera utilisée sans le consentement
+            explicite de son propriétaire ou auteur. Nours respectons pour cela le Règlement Général sur la Protection des Données (RGPD) en Europe.
+            Le RGPD s’inscrit dans la continuité de la loi française « Informatique et Libertés » de 1978, modifiée par la loi du 20 juin 2018 relative à la protection des données personnelles,
+            établissant des règles sur la collecte et l’utilisation des données sur le territoire français.
+        </p>
+    </div>
+    <br>
+    <div>
+        <h3>Déclaration de droits réservés :</h3>
+        <p class="para">
+            Tous les textes, images et graphiques sur ce site web sont protégés par des droits d'auteur.
+            Tous les droits sont réservés. Aucune partie de cette œuvre ne peut être reproduite ou utilisée sans autorisation écrite de l'auteur.
+        </p>
+    </div>
+</div>
+<br><br>
+<div class="separation1">
+</div>
+<br><br>
+<div class="footer-bottom">
+    <p>&copy; Copyright 2023 SethiarWorks. All right reserved.</p>
+</div>
+{% endblock %}
