@@ -19,7 +19,7 @@
 
 <br>
 <br>
-<h2>Avertissement.</h2>
+<h2>Avertissement // Disclaimer.</h2>
 <br>
 <br>
 <div class="encadre">
@@ -30,9 +30,22 @@
         </p>
     </div>
     <div>
-        <p class="para"><a class="retour" href="{{url_for('modale') }}">Si vous désirez accepter les cookies, vous pouvez y accéder par ce lien. </a></p>
-        <p class="para"><a class="retour" href="{{url_for('home') }}">Sinon cliquez ici.</a></p>
+        <p class="para">*
+            By refusing cookies, you do not consent to the use of site data to enhance its
+            readability and performance. Please be aware that the site does not use any of your
+            personal data, and the usage is solely focused on performance.</p>
     </div>
+   <div class="container">
+       <div class="column">
+           <p class="para"><a class="retour" href="{{url_for('modale') }}">Si vous désirez accepter les cookies, vous pouvez y accéder par ce lien.</a></p>
+           <p class="para"><a class="retour" href="{{url_for('home') }}">Sinon cliquez ici.</a></p>
+       </div>
+       <div class="column">
+           <p class="para"><a class="retour" href="{{url_for('modale_eng') }}">If you would like to accept cookies, you can do so by following this link.</a></p>
+           <p class="para"><a class="retour" href="{{url_for('home_eng') }}">Else click here.</a></p>
+       </div>
+   </div>
+
 </div>
 <script>
 
