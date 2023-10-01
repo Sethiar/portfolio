@@ -26,6 +26,18 @@ button {
     margin-top: 10px;
 }
 
+.politique {
+    position: absolute;
+    top: 55%;
+    left: 5%;
+}
+
+.english {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
 /* Caractérisques pour les petits écrans */
 @media screen and (max-width: 768px) {
   body {

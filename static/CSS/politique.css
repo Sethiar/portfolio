@@ -35,7 +35,7 @@
 
 /* Caractéristiques du titre de la section */
 h2 {
-    marging-top: 20px;
+    margin-top: 20px;
     border: 1px solid black;
     background: orange;
     font-size: 18px;
@@ -45,6 +45,7 @@ h2 {
     margin: 0 auto;
 }
 
+/* Encadre du texte et margin - padding */
 .encadre {
     border: 1px solid black;
     padding: 30px;
@@ -62,8 +63,23 @@ h3 {
 }
 
 .intro {
+    /* indentation et centrage du texte */
     text-indent: 2em;
     text-align: justify;
+}
+
+.container {
+    /* Utiliser un affichage flex pour les colonnes */
+    display: flex;
+    /* Espacement égal entre les colonnes */
+    justify-content: space-between;
+}
+
+.column {
+    /* Les colonnes prennent une part égale de l'espace disponible */
+    flex: 1;
+    /* Marge intérieure pour un meilleur espacement du contenu */
+    padding: 10px;
 }
 
 .para {
