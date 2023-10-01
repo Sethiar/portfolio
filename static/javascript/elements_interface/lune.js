@@ -2,7 +2,7 @@
   // Latitude de Caen, France
   var latitude = 49.1828;
   // Longitude de Caen, France
-  var longitude = -0.3706;;
+  var longitude = -0.3706;
 
   var currentDate = new Date();
   var dayOfMonth = currentDate.getDate();
@@ -34,4 +34,4 @@
 
   xhr.open("GET", url, true);
   xhr.send();
-})();;
+})();
