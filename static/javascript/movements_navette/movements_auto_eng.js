@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     requestAnimationFrame(moveDiagonal);
                 } else {
                     // Une fois arrivée à la destination, redirigez vers la page "cv"
-                    window.location.href = "cv_access_eng";
+                    window.location.href = "/home/cv_access_eng";
                 }
             }
 
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     requestAnimationFrame(moveDiagonal);
                 } else {
                     // Une fois arrivée à la destination, redirigez vers la page "cv"
-                    window.location.href = "skill-section";
+                    window.location.href = "home/skill-section";
                 }
             }
 
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 requestAnimationFrame(moveDiagonal);
             } else {
                 // Une fois arrivée à la destination, redirigez vers la page "projets"
-                window.location.href = "projects-section";
+                window.location.href = "home/projects-section";
             }
         }
 

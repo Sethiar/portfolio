@@ -24,14 +24,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Gérer les clics sur les boutons
     acceptBtn.addEventListener('click', function() {
         setCookie('cookie_consent', 'accepted', 30);
-        sendConsentToServer('accepted');  // Envoie les données au serveur
+        // Envoie les données au serveur
+        sendConsentToServer('accepted');
         modale.style.display = 'none';
         console.log("Accept button clicked");
     });
 
     rejectBtn.addEventListener('click', function() {
         setCookie('cookie_consent', 'rejected', 30);
-        sendConsentToServer('rejected');  // Envoie les données au serveur
+        // Envoie les données au serveur
+        sendConsentToServer('rejected');
         modale.style.display = 'none';
         console.log("refuse button clicked");
     });
