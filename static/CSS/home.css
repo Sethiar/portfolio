@@ -7,6 +7,10 @@ body, html {
     color: white;
 }
 
+header a {
+    color: black;
+}
+
 #background {
     height: 150vh;
     background-image: url('../images_site/image_background/image_front/front1.jpg');
