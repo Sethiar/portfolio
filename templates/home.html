@@ -19,6 +19,11 @@
         <li id="projets-link"><a href="{{url_for('projet_perso') }}">Espace projets</a></li>
     </ul>
 </nav>
+<div class="english_version">
+    <h3>English's version</h3>
+    <p class="english">If you want to go to the english version of my portfolio, go there.</p>
+    <button id="english_button"><a href="{{ url_for('home_eng') }}">English version</a></button>
+</div>
 {% endblock %}
 
 {% block main_content %}

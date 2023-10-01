@@ -14,11 +14,16 @@
 {% block header_content %}
 <nav id="navbar">
     <ul>
-        <li id="cv-link"><a href="{{url_for('cv_accesseng')}}">Personal section</a></li>
+        <li id="cv-link"><a href="{{url_for('cv_access_eng')}}">Personal section</a></li>
         <li id="competences-link"><a href="{{url_for('skill_section') }}">Skills section</a></li>
         <li id="projets-link"><a href="{{url_for('projects_section') }}">Projects section</a></li>
     </ul>
 </nav>
+<div class="english_version">
+    <h3>French's version</h3>
+    <p class="english">If you want to go to the french version of my portfolio, go there.</p>
+    <button id="english_button"><a href="{{ url_for('home') }}">French version</a></button>
+</div>
 {% endblock %}
 
 {% block main_content %}
@@ -82,7 +87,7 @@
 <script type="module" src="../static/javascript/elements_interface/target_missile.js"></script>
 <script type="module" src="../static/javascript/elements_interface/asteroids.js"></script>
 <script type="module" src="../static/javascript/FX/explosions.js"></script>
-<script type="module" src="../static/javascript/movements_navette/movements_automatic.js"></script>
+<script type="module" src="../static/javascript/movements_navette/movements_auto_eng.js"></script>
 <script type="module" src="../static/javascript/javascript_mobile/direction_mobile.js"></script>
 
 {% endblock %}

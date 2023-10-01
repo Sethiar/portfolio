@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +16,9 @@
     {% block header_content %}
 <nav id="navbar">
     <ul>
-        <li id="cv-link"><a href="{{url_for('cv_accesseng')}}">Personal section</a></li>
-        <li id="competences-link"><a href="{{url_for('skill_section') }}">Skill section</a></li>
-        <li id="projets-link"><a href="{{url_for('projects_section') }}">Projects section</a></li>
+        <li id="cv-link"><a href="{{ url_for('cv_access_eng') }}">Personal section</a></li>
+        <li id="competences-link"><a href="{{ url_for('skill_section') }}">Skills section</a></li>
+        <li id="projets-link"><a href="{{ url_for('projects_section') }}">Projects section</a></li>
     </ul>
 </nav>
 {% endblock %}
@@ -45,20 +45,19 @@
                     <br>
                     <ul class="reseaux">
                         <li><a href="{{ url_for('terms_of_use') }}">Terms of use</a></li>
-                        <li><a href="/privacy_policy/eng">Privacy policy</a></li>
+                        <li><a href="/privacy-policy">Privacy policy</a></li>
                         <li><a href="/acknowledgements">Acknowledgements</a></li>
                     </ul>
                 <br><br>
                 </div>
                 <div class="col-md-4">
-                    <h3 class="footer_titre">Social networks"</h3>
+                    <h3 class="footer_titre">Social networks</h3>
                     <br>
                     <ul class="reseaux">
-                        <li ><a href="https://www.facebook.com/profile.php?id=100095257672419" target="_blanck"><i class="fab fa-facebook"></i>Facebook</a></li>
-
-                        <li><a href="https://twitter.com/LefeteyA" target="_blanck"><i class="fab fa-twitter"></i>Twitter</a></li>
-
-                        <li><a href="https://www.instagram.com/lefeteya/" target="_blanck"><i class="fab fa-instagram"></i>Instagram</a></li>
+                        <li ><a href="https://www.facebook.com/profile.php?id=100095257672419" target="_blanck"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://twitter.com/LefeteyA" target="_blanck"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://www.instagram.com/lefeteya/" target="_blanck"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://www.github.com/Sethiar/" target="_blanck"><i class="fab fa-github"></i> Github</a></li>
                     </ul>
                 </div>
             </div>
