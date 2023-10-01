@@ -1,6 +1,7 @@
 """Fichier app.py contenant toutes les routes de mon portfolio"""
 
-from flask import Flask, render_template, send_from_directory, request
+from flask import Flask, render_template, send_from_directory,\
+    request, abort
 from flask_assets import Environment, Bundle
 
 
@@ -16,7 +17,7 @@ def create_app():
 Création de la fonction de création de mon application
     :return:
     """
-    app = Flask("Portfolio", static_url_path='/static', static_folder='static')
+    app = Flask("Portfolio", static_url_path='/static')
     assets = Environment(app)
 
     # Créer un bundle CSS
@@ -44,15 +45,18 @@ Création de la fonction de création de mon application
         'javascript/main.js',
         'javascript/modale.js',
         'javascript/element_cv/redirection_cv.js',
+        'javascript/element_cv/redirection_cv_eng.js'
         'javascript/element_cv/temps.js',
         'javascript/elements_interface/asteroids.js',
         'javascript/elements_interface/conservation_liens.js',
         'javascript/elements_interface/lune.js',
+        'javascript/elements_interface/lune_eng.js',
         'javascript/elements_interface/message.js',
         'javascript/elements_interface/target_missile.js',
         'javascript/FX/explosions.js',
         'javascript/javascript_mobile/direction_mobile.js',
         'javascript/movements_navette/movements_automatic.js',
+        'javascript/movements_navette/movements_auto_eng.js',
         'javascript/movements_navette/movements_navette.js',
         filters='jsmin',
         output='gen/packed.js'
@@ -67,7 +71,7 @@ Création de la fonction de création de mon application
     @app.route("/consentement", methods=["POST"])
     def consentement():
         """
-    Route permettant de conner le consentement aux cookies ou non.41
+    Route permettant de conner le consentement aux cookies ou non.
         :return:
         """
         consent_data = request.json
@@ -90,6 +94,14 @@ Création de la fonction de création de mon application
         :return:
         """
         return render_template("modale.html", assets=assets)
+
+    @app.route("/eng")
+    def modale_eng():
+        """
+    Route permettant l'affichage de la modale des cookies
+        :return:
+        """
+        return render_template("modale_eng.html", assets=assets)
 
     @app.route("/refus-cookie")
     def refus_cookie():
@@ -118,8 +130,8 @@ Création de la fonction de création de mon application
         return render_template("home.html", assets=assets)
 
     # Version anglaise : Ma page d'accueil
-    @app.route('/home/eng')
-    def homeeng():
+    @app.route('/home_eng')
+    def home_eng():
         """
     Route menant à la verison anglaise de l'accueil du portfolio
         :return:
@@ -154,30 +166,31 @@ Création de la fonction de création de mon application
             data = response.json()
             return render_template("cv.html", hour=hour, current_date=current_date, moon_data=data, assets=assets)
         else:
-            return "Erreur lors de la récupération des données lunaires."
+            # En cas d'erreur, générer une erreur 500
+            abort(500, "Erreur lors de la récupération des données lunaires.")
 
     # Version anglaise : Mon curriculum vitae que je présente dans mon portfolio
-    @app.route('/home/cv_access/eng')
-    def cv_accesseng():
+    @app.route('/home/cv_access_eng')
+    def cv_access_eng():
         """
     Route donnant accès à la version anglaise de la section personnelle du portfolio
         :return:
         """
+        # Obtenir la date et l'heure actuelles
         current_datetime = datetime.datetime.now()
 
-        # Display the current date
-        current_date = current_datetime.strftime('%A, %B %d, %Y')
+        # Affichage de la date du jour
+        current_date = current_datetime.strftime('%A %d %B %Y')
 
-        # Display the current time
+        # Affichage de l'heure
         hour = current_datetime.strftime('%H:%M')
 
-        # Build the URL with the current date
-        api_url = "https://www.icalendar37.net/lunar/api/?lang=en&month={}&year={}&size=100&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&LDZ={}".format(
+        # Construire l'URL avec la date actuelle
+        api_url = "https://www.icalendar37.net/lunar/api/?lang=fr&month={}&year={}&size=100&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&LDZ={}".format(
             current_datetime.month,
             current_datetime.year,
             int(current_datetime.timestamp())
         )
-
         response = requests.get(api_url)
         if response.status_code == 200:
             data = response.json()
@@ -197,7 +210,7 @@ Création de la fonction de création de mon application
 
     # Version anglaise : Présentation de mon cv
     @app.route('/home/cv/eng')
-    def cveng():
+    def cv_eng():
         """
     Route affichant le curriculum vitae dans la version anglaise
         :return:
@@ -320,7 +333,7 @@ Création de la fonction de création de mon application
     Route affichant la page de remerciements version anglaise aux auteurs des oeuvres utilisées pour le  site
         :return:
         """
-        return render_template("Acknowledgements.html", assets=assets)
+        return render_template("acknowledgements.html", assets=assets)
 
     @app.route("/sitemap.xml")
     def sitemap():
