@@ -94,6 +94,7 @@ h3 {
     margin-bottom: 5%;
     padding-right: 5%;
 }
+
 .footer {
     display: none;
 }
@@ -157,6 +158,7 @@ h3 {
     color: orange;
     text-decoration: underline;
 }
+
 /* Caractérisques pour les petits écrans */
 @media screen and (max-width: 768px) {
    body {

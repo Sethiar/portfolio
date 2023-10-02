@@ -1,0 +1,68 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+.frame-loading-items {
+    position: absolute;
+    align-items: center;
+}
+
+.loading-items {
+}
+
+.loading-items-gif {
+    /* Maintien de l'image au centre */
+    position: fixed;
+    /* Place le haut de l'image à 50% de la hauteur de la fenêtre */
+    top: 50%;
+    /* Place la gauche de l'image à 50% de la largeur de la fenêtre */
+    left: 50%;
+    /* Déplace l'image de -50% de sa propre largeur et hauteur pour la centrer */
+    transform: translate(-50%, -50%);
+    /* Largeur de l'items-gif */
+    width: auto;
+    /* Hauteur de l'items-gif */
+    height: auto;
+}
+
+.footer {
+    display: none;
+}
+
+.loading {
+    position: absolute;
+    /* Ajuste le 10px en fonction de l'espace souhaité entre les deux éléments */
+    top: calc(50% + (0px / 2) + 150px);
+    /* Place la gauche de l'image à 50% de la largeur de la fenêtre */
+    left: 50%;
+    /* Taille police */
+    font-size: 50px;
+    /* Déplace l'image de -50% de sa propre largeur pour la centrer */
+    transform: translateX(-50%);
+    /* Styles de l'animation */
+    animation: load 3s linear infinite;
+}
+
+
+/* Animation pour LOADING */
+@keyframes load {
+    0% {
+        color: deepskyblue;
+        opacity: 1;
+    }
+    50% {
+        color: white;
+        opacity: 0.4
+    }
+    100% {
+        color: deepskyblue;
+        opacity: 1;
+    }
+}
+
+.done {
+    display: none;
+    font-size: 50px;
+    color : gold;
+}
