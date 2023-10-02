@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+ {% extends 'base.html.jinja2'%}
 
-</body>
-</html>
+ {% block head_content %}
+    <meta name="description" content="Mise en place de la page erreur 404.">
+    <title>{% block title %}Perdu-e dans les limbes du net ?{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/politique.css') }}">
+{% endblock %}
+
+{% block header_content %}
+ {{ super() }}
+    <div class="retour_home">
+        <a href="{{ url_for('home') }}"><u>Retour à la page d'accueil</u></a>
+    </div>
+{% endblock %}
+
+{% block main_content %}
+
+    <div class="container2">
+         <p class="nowhere">Erreur 404 : La page à laquelle vous tentez d'accéder doit être par là ou par ici.</p>
+        <img class="python" src="{{ url_for('static',filename='images_site/erreur/404.jpg') }}" alt="La quête de la page HTML"/>
+    </div>
+{% endblock %}
+
+
