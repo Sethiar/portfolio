@@ -116,6 +116,47 @@ h3 {
     max-width: 40%;
 }
 
+/* Styles de la page 404 */
+* {
+ background-color : #2c3e50;
+ color: white;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.python {
+    max-width: 100%;
+    max-height: 100%;
+    border: 10px solid gold;
+}
+
+.nowhere {
+    position: fixed;
+    align-items: top center;
+    max-width: 500px;
+    color: black;
+    font-size: 24px;
+    background-color: darkgrey;
+    border: 2px solid gold;
+}
+
+.retour_home {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    font-size: 30px;
+    color: white;
+}
+
+.retour_home {
+    color: orange;
+    text-decoration: underline;
+}
 /* Caractérisques pour les petits écrans */
 @media screen and (max-width: 768px) {
    body {

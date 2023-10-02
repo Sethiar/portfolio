@@ -1,4 +1,5 @@
 """Fichier app.py contenant toutes les routes de mon portfolio"""
+# -*- coding: utf-8 -*-
 
 from flask import Flask, render_template, send_from_directory,\
     request, abort
@@ -12,13 +13,20 @@ import locale
 import datetime
 
 
-def create_app():
+def create_app_instance():
     """
 Création de la fonction de création de mon application
     :return:
     """
     app = Flask("Portfolio", static_url_path='/static')
     assets = Environment(app)
+
+    # Prise en charge des accents dans les tests avec pytest
+    app.config['JSON_AS_ASCII'] = False
+    app.config['TESTING'] = True
+
+    # Définir la locale en français
+    locale.setlocale(locale.LC_TIME, 'fr_FR.utf8')
 
     # Créer un bundle CSS
     css_bundle = Bundle(
@@ -45,7 +53,7 @@ Création de la fonction de création de mon application
         'javascript/main.js',
         'javascript/modale.js',
         'javascript/element_cv/redirection_cv.js',
-        'javascript/element_cv/redirection_cv_eng.js'
+        'javascript/element_cv/redirection_cv_eng.js',
         'javascript/element_cv/temps.js',
         'javascript/elements_interface/asteroids.js',
         'javascript/elements_interface/conservation_liens.js',
@@ -65,27 +73,26 @@ Création de la fonction de création de mon application
     assets.register('css_bundle', css_bundle)
     assets.register('js_bundle', js_bundle)
 
-    # Définir la locale en français
-    locale.setlocale(locale.LC_TIME, 'fr_FR.utf8')
 
     @app.route("/consentement", methods=["POST"])
     def consentement():
         """
-    Route permettant de conner le consentement aux cookies ou non.
+    Route permettant de donner le consentement aux cookies ou non.
         :return:
         """
-        consent_data = request.json
-        if consent_data["consent"] == "accepted":
-            # Faites ce que vous voulez en cas d'acceptation
-            return "/home"
+        with app.app_context():
+            consent_data = request.json
+            if consent_data["consent"] == "accepted":
+                # Faites ce que vous voulez en cas d'acceptation
+                return "/home"
 
-        elif consent_data["consent"] == "rejected":
-            # Faites ce que vous voulez en cas de refus
-            return "/refus-cookie"
+            elif consent_data["consent"] == "rejected":
+                # Faites ce que vous voulez en cas de refus
+                return "/refus-cookie"
 
-        else:
-            # Traitement en cas de données de consentement inconnues ou incorrectes
-            return "Données de consentement invalides"
+            else:
+                # Traitement en cas de données de consentement inconnues ou incorrectes
+                return "Données de consentement invalides"
 
     @app.route("/")
     def modale():
@@ -93,15 +100,17 @@ Création de la fonction de création de mon application
     Route permettant l'affichage de la modale des cookies
         :return:
         """
-        return render_template("modale.html", assets=assets)
+        with app.app_context():
+            return render_template("modale.html", assets=assets)
 
     @app.route("/eng")
     def modale_eng():
         """
-    Route permettant l'affichage de la modale des cookies
+    Route permettant l'affichage de la modale des cookies en anglais
         :return:
         """
-        return render_template("modale_eng.html", assets=assets)
+        with app.app_context():
+            return render_template("modale_eng.html", assets=assets)
 
     @app.route("/refus-cookie")
     def refus_cookie():
@@ -109,7 +118,8 @@ Création de la fonction de création de mon application
     Route renseignant sur les conséquences du refus des cookies.
         :return:
         """
-        return render_template("refus-cookie.html", assets=assets)
+        with app.app_context():
+            return render_template("refus-cookie.html", assets=assets)
 
     # Route vers la page 404 de mon site
     @app.route('/404')
@@ -118,7 +128,8 @@ Création de la fonction de création de mon application
     Access to 404 page.
         :return:
         """
-        return render_template("error404.html", assets=assets)
+        with app.app_context():
+            return render_template("error404.html", assets=assets)
 
     # Ma page d'accueil
     @app.route('/home')
@@ -127,7 +138,8 @@ Création de la fonction de création de mon application
     Route menant à l'accueil du portfolio
         :return:
         """
-        return render_template("home.html", assets=assets)
+        with app.app_context():
+            return render_template("home.html", assets=assets)
 
     # Version anglaise : Ma page d'accueil
     @app.route('/home_eng')
@@ -136,7 +148,8 @@ Création de la fonction de création de mon application
     Route menant à la verison anglaise de l'accueil du portfolio
         :return:
         """
-        return render_template("homeeng.html", assets=assets)
+        with app.app_context():
+            return render_template("homeeng.html", assets=assets)
 
 
 # Mon curriculum vitae que je présente dans mon portfolio
@@ -146,28 +159,30 @@ Création de la fonction de création de mon application
     Route donnant accès à la section personnelle du portfolio
         :return:
         """
-        # Obtenir la date et l'heure actuelles
-        current_datetime = datetime.datetime.now()
 
-        # Affichage de la date du jour
-        current_date = current_datetime.strftime('%A %d %B %Y')
+        with app.app_context():
+            # Obtenir la date et l'heure actuelles
+            current_datetime = datetime.datetime.now()
 
-        # Affichage de l'heure
-        hour = current_datetime.strftime('%H:%M')
+            # Affichage de la date du jour
+            current_date = current_datetime.strftime('%A %d %B %Y')
 
-        # Construire l'URL avec la date actuelle
-        api_url = "https://www.icalendar37.net/lunar/api/?lang=fr&month={}&year={}&size=100&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&LDZ={}".format(
-            current_datetime.month,
-            current_datetime.year,
-            int(current_datetime.timestamp())
-        )
-        response = requests.get(api_url)
-        if response.status_code == 200:
-            data = response.json()
-            return render_template("cv.html", hour=hour, current_date=current_date, moon_data=data, assets=assets)
-        else:
-            # En cas d'erreur, générer une erreur 500
-            abort(500, "Erreur lors de la récupération des données lunaires.")
+            # Affichage de l'heure
+            hour = current_datetime.strftime('%H:%M')
+
+            # Construire l'URL avec la date actuelle
+            api_url = "https://www.icalendar37.net/lunar/api/?lang=fr&month={}&year={}&size=100&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&LDZ={}".format(
+                current_datetime.month,
+                current_datetime.year,
+                int(current_datetime.timestamp())
+            )
+            response = requests.get(api_url)
+            if response.status_code == 200:
+                data = response.json()
+                return render_template("cv.html", hour=hour, current_date=current_date, moon_data=data, assets=assets)
+            else:
+                # En cas d'erreur, générer une erreur 500
+                abort(500, "Erreur lors de la récupération des données lunaires.")
 
     # Version anglaise : Mon curriculum vitae que je présente dans mon portfolio
     @app.route('/home/cv_access_eng')
@@ -176,27 +191,28 @@ Création de la fonction de création de mon application
     Route donnant accès à la version anglaise de la section personnelle du portfolio
         :return:
         """
-        # Obtenir la date et l'heure actuelles
-        current_datetime = datetime.datetime.now()
+        with app.app_context():
+            # Obtenir la date et l'heure actuelles
+            current_datetime = datetime.datetime.now()
 
-        # Affichage de la date du jour
-        current_date = current_datetime.strftime('%A %d %B %Y')
+            # Affichage de la date du jour
+            current_date = current_datetime.strftime('%A %d %B %Y')
 
-        # Affichage de l'heure
-        hour = current_datetime.strftime('%H:%M')
+            # Affichage de l'heure
+            hour = current_datetime.strftime('%H:%M')
 
-        # Construire l'URL avec la date actuelle
-        api_url = "https://www.icalendar37.net/lunar/api/?lang=fr&month={}&year={}&size=100&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&LDZ={}".format(
-            current_datetime.month,
-            current_datetime.year,
-            int(current_datetime.timestamp())
-        )
-        response = requests.get(api_url)
-        if response.status_code == 200:
-            data = response.json()
-            return render_template("cveng.html", hour=hour, current_date=current_date, moon_data=data, assets=assets)
-        else:
-            return "Error occurred while retrieving lunar data."
+            # Construire l'URL avec la date actuelle
+            api_url = "https://www.icalendar37.net/lunar/api/?lang=fr&month={}&year={}&size=100&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&LDZ={}".format(
+                current_datetime.month,
+                current_datetime.year,
+                int(current_datetime.timestamp())
+            )
+            response = requests.get(api_url)
+            if response.status_code == 200:
+                data = response.json()
+                return render_template("cveng.html", hour=hour, current_date=current_date, moon_data=data, assets=assets)
+            else:
+                return "Error occurred while retrieving lunar data."
 
     # Présentation de mon cv
     @app.route('/home/cv')
@@ -205,18 +221,18 @@ Création de la fonction de création de mon application
     Route affichant le curriculum vitae
         :return:
         """
-
-        return send_from_directory("static/pdf", "CV_arnaud.pdf")
+        with app.app_context():
+            return send_from_directory("static/pdf", "CV_arnaud.pdf")
 
     # Version anglaise : Présentation de mon cv
-    @app.route('/home/cv/eng')
+    @app.route('/home/cv_eng')
     def cv_eng():
         """
     Route affichant le curriculum vitae dans la version anglaise
         :return:
         """
-
-        return send_from_directory("static/pdf", "CV_arnaud_eng.pdf")
+        with app.app_context():
+            return send_from_directory("static/pdf", "CV_arnaud_eng.pdf")
 
     # Présentation Notes de M1
     @app.route('/home/M1')
@@ -225,7 +241,8 @@ Création de la fonction de création de mon application
     Route affichant les notes de Master1 Lophisc
         :return:
         """
-        return send_from_directory("static/pdf", "Relevé_note_M1.pdf")
+        with app.app_context():
+            return send_from_directory("static/pdf", "Relevé_note_M1.pdf")
 
     # Attestation de réussite
     @app.route('/home/attestation-reussite')
@@ -234,7 +251,8 @@ Création de la fonction de création de mon application
     Route affichant l'attestation Studi
         :return:
         """
-        return send_from_directory("static/pdf", "Attestation_de_reussite.pdf")
+        with app.app_context():
+            return send_from_directory("static/pdf", "Attestation_de_reussite.pdf")
 
     # Résultats de la formation
     @app.route('/home/resultats-formation')
@@ -243,7 +261,8 @@ Création de la fonction de création de mon application
     Route affichant les résultats Studi
         :return:
         """
-        return send_from_directory("static/pdf", "resultats_Formation.pdf")
+        with app.app_context():
+            return send_from_directory("static/pdf", "resultats_Formation.pdf")
 
     # Présentation des projets
     @app.route('/home/projets')
@@ -252,7 +271,8 @@ Création de la fonction de création de mon application
     Les projets personnels que je présente dans mon portfolio
         :return:
         """
-        return render_template("projets.html", assets=assets)
+        with app.app_context():
+            return render_template("projets.html", assets=assets)
 
     # Version anglaise : Présentation des projets
     @app.route('/home/projects-section')
@@ -261,7 +281,8 @@ Création de la fonction de création de mon application
     Les projets personnels que je présente dans la version anglaise de mon portfolio
         :return:
         """
-        return render_template("projects_section.html", assets=assets)
+        with app.app_context():
+            return render_template("projects_section.html", assets=assets)
 
     # Les compétences que je présente dans mon portfolio
     @app.route('/home/competences')
@@ -270,7 +291,8 @@ Création de la fonction de création de mon application
     Route permettant d'accéder à mes compétences
         :return:
         """
-        return render_template("competences.html", assets=assets)
+        with app.app_context():
+            return render_template("competences.html", assets=assets)
 
     # Version anglaise : Les compétences que je présente dans mon portfolio
     @app.route('/home/skill-section')
@@ -279,7 +301,8 @@ Création de la fonction de création de mon application
     Route permettant d'accéder à mes compétences
         :return:
         """
-        return render_template("skill_section.html", assets=assets)
+        with app.app_context():
+            return render_template("skill_section.html", assets=assets)
 
     # Accès aux conditions d'utilisation de mon portfolio
     @app.route("/conditions-utilisation")
@@ -288,7 +311,8 @@ Création de la fonction de création de mon application
     Route affichant les conditions d'utilisation du site
         :return:
         """
-        return render_template("conditions.html", assets=assets)
+        with app.app_context():
+            return render_template("conditions.html", assets=assets)
 
     # Version anglaise : Accès aux conditions d'utilisation de mon portfolio
     @app.route("/terms-of-use")
@@ -297,7 +321,8 @@ Création de la fonction de création de mon application
     Route affichant les conditions d'utilisation de la version anglaise du site
         :return:
         """
-        return render_template("terms_of_use.html", assets=assets)
+        with app.app_context():
+            return render_template("terms_of_use.html", assets=assets)
 
     # Accès à la politique de confidentialité de mon portfolio
     @app.route("/politique-confidentialité")
@@ -306,7 +331,8 @@ Création de la fonction de création de mon application
     Route affichant la politique d'utilisation du site
         :return:
         """
-        return render_template("politique.html", assets=assets)
+        with app.app_context():
+            return render_template("politique.html", assets=assets)
 
     # Version anglaise : Accès à la politique de confidentialité de mon portfolio
     @app.route("/privacy-policy")
@@ -315,7 +341,8 @@ Création de la fonction de création de mon application
     Route affichant la politique d'utilisation de la version anglmaise du site
         :return:
         """
-        return render_template("privacy_policy.html", assets=assets)
+        with app.app_context():
+            return render_template("privacy_policy.html", assets=assets)
 
     # Page de remerciements aux contributeurs
     @app.route("/remerciements")
@@ -324,7 +351,8 @@ Création de la fonction de création de mon application
     Route affichant la page de remerciements aux auteurs des oeuvres utilisées sur ce site
         :return:
         """
-        return render_template("remerciements.html", assets=assets)
+        with app.app_context():
+            return render_template("remerciements.html", assets=assets)
 
     # Version anglaise : Page de remerciements aux contributeurs
     @app.route("/acknowledgements")
@@ -333,7 +361,8 @@ Création de la fonction de création de mon application
     Route affichant la page de remerciements version anglaise aux auteurs des oeuvres utilisées pour le  site
         :return:
         """
-        return render_template("acknowledgements.html", assets=assets)
+        with app.app_context():
+            return render_template("acknowledgements.html", assets=assets)
 
     @app.route("/sitemap.xml")
     def sitemap():
@@ -341,7 +370,8 @@ Création de la fonction de création de mon application
     route permettant l'accès au fichier sitemap.xml
         :return:
         """
-        return send_from_directory(".", "sitemap.xml")
+        with app.app_context():
+            return send_from_directory(".", "sitemap.xml")
 
     @app.route("/robots.txt")
     def robots():
@@ -349,12 +379,13 @@ Création de la fonction de création de mon application
     route permettant d'accepter ou non les types de robots
         :return:
         """
-        return send_from_directory(".", "robots.txt")
+        with app.app_context():
+            return send_from_directory(".", "robots.txt")
 
     return app
 
 
 if __name__ == "__main__":
-    app = create_app()
+    app = create_app_instance()
     port = int(os.environ.get("PORT", 8080))
     app.run(host="127.0.0.1", port=port, debug=True)
