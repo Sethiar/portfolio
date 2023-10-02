@@ -1,0 +1,110 @@
+/* Définition d'une police pour tous les éléments de la page */
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Pas d'accès à la navbar ici */
+#cv-link {
+    display: none;
+}
+
+#competences-link {
+    display: none;
+}
+
+#projets-link{
+    display: none;
+}
+/* Styles pour les liens */
+.liens {
+    color: navy;
+    text-decoration: underline;
+}
+
+.liens:hover {
+    color: orange;
+    border-bottom: 1px solid gold;
+}
+
+/* Séparation entre l'entête et le titre de la section */
+.separation1 {
+    border-bottom: 2px solid orange;
+}
+
+/* Caractéristiques du titre de la section */
+h2 {
+    margin-top: 20px;
+    border: 1px solid black;
+    background: orange;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Encadre du texte et margin - padding */
+.encadre {
+    border: 1px solid black;
+    padding: 30px;
+    margin: 10%;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* indentation et centrage du texte */
+.intro {
+    text-indent: 2em;
+    text-align: justify;
+}
+
+/* Styles des paragraphes */
+.para {
+    text-indent: 2em;
+    text-align: justify;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+/* Styles de la dernière section */
+.outro {
+    text-align: right;
+    margin-bottom: 5%;
+    padding-right: 5%;
+}
+
+/* Pas de footer dans cette section */
+.footer {
+    display: none;
+}
+
+/* Styles de l'ncadré des auteurs */
+.foozleCC {
+    border: 1px solid darkgrey;
+    text-align: center;
+    background-color: lightgrey;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+/* Styles du bas du footer */
+.footer-bottom {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 auto;
+    background-color: orange;
+    border: 1px solid black;
+    max-width: 40%;
+}
+
+/* Styles pour les petits écrans */
+@media screen and (max-width: 768px) {
+   body {
+      font-family: Arial, sans-serif;
+   }
+}

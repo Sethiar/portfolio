@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const planet2 = document.getElementById("planet2");
 
     // Appel de la fonction pour chaque planète avec sa destination respective
-    handlePlanetInteraction(earth, "/home/cv/eng");
+    handlePlanetInteraction(earth, "/home/cv_eng");
     handlePlanetInteraction(mars, "/home/M1");
     handlePlanetInteraction(planet1, "/home/attestation-reussite");
     handlePlanetInteraction(planet2, "/home/resultats-formation");
