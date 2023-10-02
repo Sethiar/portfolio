@@ -32,6 +32,16 @@ def test_create_app():
     assert app.config['TESTING'] is True
 
 
+def test_modale_page(app):
+    with app.test_client() as client:
+        # Envoi d'une requête GET
+        response = client.get('/')
+        # Le code de statut de la réponse est 200
+        assert response.status_code == 200
+        # La réponse renvoie les données attendue
+        assert b'LOADING' in response.data
+
+
 def test_consent_accept(app):
     with app.test_client() as client:
         # Préparation des données JSON pour le test
@@ -64,7 +74,7 @@ def test_consent_reject(app):
 def test_modale_page(app):
     with app.test_client() as client:
         # Envoi d'une requête GET
-        response = client.get('/')
+        response = client.get('/fr')
         # Le code de statut de la réponse est 200
         assert response.status_code == 200
         # La réponse renvoie les données attendue
