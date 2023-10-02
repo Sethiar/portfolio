@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const spaceship = document.querySelector(".spaceship");
   const spaceshipWidth = 144;
   const spaceshipHeight = 52;
-  const step = 7;
+  const step = 8;
   const animationSpaceshipSpeed = 125;
   const totalSpaceshipFrames = 3;
   const moveInterval = 1000 / 60;

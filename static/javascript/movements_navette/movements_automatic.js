@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     window.location.href = "home/cv_access";
                 }
             }
-
             // Démarrer le déplacement en diagonale
             moveDiagonal();
         }
@@ -90,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     window.location.href = "home/competences";
                 }
             }
-
             // Démarrer le déplacement en diagonale
             moveDiagonal();
         }
@@ -129,17 +127,23 @@ document.addEventListener("DOMContentLoaded", function () {
                     spaceship.style.left = `${newX}px`;
                     spaceship.style.top = `${newY}px`;
 
-                     // Calculer l'angle en degrés pour déterminer la direction
+                // Calculer l'angle en degrés pour déterminer la direction
                 const angleDegrees = (angle * 180) / Math.PI;
                 if (angleDegrees < 0) {
                     // La navette tourne vers la gauche
-                    spaceship.classList.remove("move-right-animation");
-                    spaceship.classList.add("move-left-animation");
-                } else {
-                    // La navette tourne vers la droite
                     spaceship.classList.remove("move-left-animation");
+                    spaceship.classList.add("move-left-animation");
+                if (angleDegrees > 0) {
+                    // La navette tourne vers la droite
+                    spaceship.classList.remove("move-right-animation");
                     spaceship.classList.add("move-right-animation");
+                } else {
+                   // LA navette
+                   spaceship.classList.remove("move-left-animation");
+                    spaceship.classList.add("move-left-animation");
+                    }
                 }
+
 
                 spaceship.style.left = `${newX}px`;
                 spaceship.style.top = `${newY}px`;
