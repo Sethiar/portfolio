@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html.jinja2' %}
+
+{% block head_content %}
+<meta name="description" content="La page de chargement de mon portfolio.">
+<title>{% block title %}Page de chargement{% endblock %}</title>
+<link type="text/css" rel="stylesheet" href="{{url_for('static', filename='CSS/loading_page.css') }}">
+{% endblock %}
+
+{% block header_content %}
+{% endblock %}
+
+{% block main_content %}
+
+<div class="frame-loading-items">
+    <div class="loading-items">
+        <img class="loading-items-gif" src="{{url_for('static', filename='images_site/chargement/loading1.gif') }}" alt="Gif de chargement de la page du portfolio de Lefetey Arnaud">
+    </div>
+</div>
+<div>
+    <p class="loading">LOADING</p>
+</div>
+
+<script>
+    // 4 secondes (4000 milliseconds) avant redirection
+        setTimeout(function() {
+
+        // Redirige vers la route /fr
+           window.location.href = "/fr";
+
+           // 4000 milliseconds
+           }, 4000);
+
+</script>
+{% endblock %}
+{% block footer_content %}
+{% endblock %}
