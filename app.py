@@ -73,6 +73,33 @@ Création de la fonction de création de mon application
     assets.register('css_bundle', css_bundle)
     assets.register('js_bundle', js_bundle)
 
+    @app.route("/")
+    def loading_page():
+        """
+    Route permettant l'affichage de la page de chargement
+        """
+        with app.app_context():
+            return render_template("loading_page.html", assets=assets)
+
+    @app.route("/fr")
+    def modale():
+        """
+    Route permettant l'affichage de la modale des cookies
+        :return:
+        """
+        with app.app_context():
+            return render_template("modale.html", assets=assets)
+
+    @app.route("/eng")
+    def modale_eng():
+        """
+    Route permettant l'affichage de la modale des cookies en anglais
+        :return:
+        """
+        with app.app_context():
+            return render_template("modale_eng.html", assets=assets)
+
+
 
     @app.route("/consentement", methods=["POST"])
     def consentement():
@@ -93,24 +120,6 @@ Création de la fonction de création de mon application
             else:
                 # Traitement en cas de données de consentement inconnues ou incorrectes
                 return "Données de consentement invalides"
-
-    @app.route("/")
-    def modale():
-        """
-    Route permettant l'affichage de la modale des cookies
-        :return:
-        """
-        with app.app_context():
-            return render_template("modale.html", assets=assets)
-
-    @app.route("/eng")
-    def modale_eng():
-        """
-    Route permettant l'affichage de la modale des cookies en anglais
-        :return:
-        """
-        with app.app_context():
-            return render_template("modale_eng.html", assets=assets)
 
     @app.route("/refus-cookie")
     def refus_cookie():
