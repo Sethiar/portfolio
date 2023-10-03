@@ -1,4 +1,4 @@
-
+// exportation de la fonction enregistrant les liens dans le stockage local
 export function setLocalStorageItem(key, value) {
   localStorage.setItem(key, value);
 }

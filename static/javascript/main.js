@@ -1,36 +1,38 @@
+// import des fonction nécessaire aux mouvements de la navette, la disparition de la target,
+// l'apparition de la photo, les explosions et la conservation des liens de redirection.
 import "/movements_navette/movements_navette.js";
 import "/elements_interface/target_missile.js";
 import "/elements_interface/message.js";
 import "/FX/explosions.js";
 import { getLocalStorageItem } from '/elements_interface/conservation_liens.js';
 
+// Ecouteur d'événements pou le bouton retour et les liens
 document.addEventListener("DOMContentLoaded", function () {
   const retour = document.getElementById('retour_home');
-
   // Gestionnaire d'événement pour le bouton de retour
   retour.addEventListener('click', function () {
-    // Récupérer l'état des liens depuis le stockage local
+    // Récupération de l'état des liens depuis le stockage local
     const cvLinkUnlocked = getLocalStorageItem("cv-link-unlocked");
     const competencesLinkUnlocked = getLocalStorageItem("competences-link-unlocked");
     const projetsLinkUnlocked = getLocalStorageItem("projets-link-unlocked");
 
-    // Vérifier si le lien "cv-link" est débloqué
+    // Vérification si le lien "cv-link" est débloqué
     if (cvLinkUnlocked === "true") {
      console.log("Afficher le lien CV");
-      // Afficher le lien
+      // Affichage du lien
       document.getElementById("cv-link").style.display = "inline"
     }
 
-    // Vérifier si le lien "competences-link" est débloqué
+    // Vérification si le lien "competences-link" est débloqué
     if (competencesLinkUnlocked === "true") {
      console.log("Afficher le lien competence");
-    // Afficher le lien
+    // Affichage du lien
       document.getElementById("competences-link").style.display = "inline"
     }
-    // Vérifier si le lien "projets-link" est débloqué
+    // Vérification si le lien "projets-link" est débloqué
     if (projetsLinkUnlocked === "true") {
      console.log("Afficher le lien Projets");
-      // Afficher le lien
+      // Affichage du lien
       document.getElementById("projets-link").style.display = "inline"
     }
   });
@@ -39,22 +41,23 @@ document.addEventListener("DOMContentLoaded", function () {
   function moveBackgroundDown() {
     const background = document.getElementById("background");
 
-    // Mettez à jour la hauteur de l'animation CSS à chaque redimensionnement de fenêtre
+    // Mise à jour de la hauteur de l'animation CSS à chaque redimensionnement de fenêtre
     function updateAnimationHeight() {
       const windowHeight = window.innerHeight;
       background.style.animationDuration = "1s";
       background.style.animationTimingFunction = "linear";
       background.style.animationIterationCount = "infinite";
-      background.style.animationPlayState = "running"; // Réinitialisez l'animation
+      // Réinitialisation de l'animation
+      background.style.animationPlayState = "running";
     }
 
-    // Appelez la fonction pour mettre à jour la hauteur de l'animation lors du chargement initial
+    // Appel de la fonction pour mettre à jour la hauteur de l'animation lors du chargement initial
     updateAnimationHeight();
 
-    // Ajoutez un gestionnaire d'événement pour le redimensionnement de la fenêtre
+    // Ajout d'un gestionnaire d'événement pour le redimensionnement de la fenêtre
     window.addEventListener("resize", updateAnimationHeight);
   }
 
-  // Appelez la fonction pour initialiser l'animation de l'arrière-plan
+  // Appel de la fonction pour initialiser l'animation de l'arrière-plan
   moveBackgroundDown();
 });
