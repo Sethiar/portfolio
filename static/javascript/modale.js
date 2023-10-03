@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var acceptBtn = document.getElementById('acceptBtn');
     var rejectBtn = document.getElementById('rejectBtn');
 
-    // Afficher la modale
+    // Affichage de la modale
     console.log("Modal is displayed");
     modale.style.display = 'block';
 
@@ -37,15 +37,18 @@ document.addEventListener("DOMContentLoaded", function () {
         modale.style.display = 'none';
         console.log("refuse button clicked");
     });
-
+    // Fonction qui envoie la demande de consentement au serveur requête POST
     function sendConsentToServer(consent) {
+        // envoie une requête HTTP POST grâce à la fonction fetch
         fetch("/consentement", {
+            // Configuration de la requête
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ consent: consent })
         })
+        // Traitement de la réponse en tant aue texte
         .then(response => response.text())
         .then(data => {
             console.log("Response from server:", data);

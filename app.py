@@ -5,12 +5,13 @@ from flask import Flask, render_template, send_from_directory,\
     request, abort
 from flask_assets import Environment, Bundle
 
-
-
+from config import *
 import requests
 import os
 import locale
+import time
 import datetime
+import logging
 
 
 def create_app_instance():
@@ -23,22 +24,10 @@ Création de la fonction de création de mon application
 
     # Prise en charge des accents dans les tests avec pytest
     app.config['JSON_AS_ASCII'] = False
-    app.config['TESTING'] = True
+    app.config['TESTING'] = False
 
     # Définir la locale en français
     locale.setlocale(locale.LC_TIME, 'fr_FR.utf8')
-
-    # Définir le User-Agent que vous souhaitez utiliser (utilisez le même que votre navigateur)
-    user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
-
-    # URL de la ressource à accéder
-    url = "https://www.freepik.com/"
-
-    # Créer un dictionnaire d'en-têtes HTTP avec le User-Agent défini
-    headers = {"User-Agent": user_agent}
-
-    # Effectuer la requête HTTP avec les en-têtes personnalisés
-    response = requests.get(url, headers=headers)
 
     # Créer un bundle CSS
     css_bundle = Bundle(
@@ -111,8 +100,6 @@ Création de la fonction de création de mon application
         with app.app_context():
             return render_template("modale_eng.html", assets=assets)
 
-
-
     @app.route("/consentement", methods=["POST"])
     def consentement():
         """
@@ -143,14 +130,14 @@ Création de la fonction de création de mon application
             return render_template("refus-cookie.html", assets=assets)
 
     # Route vers la page 404 de mon site
-    @app.route('/404')
-    def page404():
+    @app.errorhandler(404)
+    def page404(error):
         """
     Access to 404 page.
         :return:
         """
-        with app.app_context():
-            return render_template("error404.html", assets=assets)
+        app.logger.error("Page not found: %s", request.path)
+        return render_template("error404.html", assets=assets), 404
 
     # Ma page d'accueil
     @app.route('/home')
@@ -172,16 +159,17 @@ Création de la fonction de création de mon application
         with app.app_context():
             return render_template("homeeng.html", assets=assets)
 
-
-# Mon curriculum vitae que je présente dans mon portfolio
+    # Mon curriculum vitae que je présente dans mon portfolio
     @app.route('/home/cv_access')
     def cv_access():
         """
     Route donnant accès à la section personnelle du portfolio
         :return:
         """
-
         with app.app_context():
+            # Début de la requête
+            start_time = time.time()
+
             # Obtenir la date et l'heure actuelles
             current_datetime = datetime.datetime.now()
 
@@ -198,11 +186,21 @@ Création de la fonction de création de mon application
                 int(current_datetime.timestamp())
             )
             response = requests.get(api_url)
+
+            # Obtention du temps de fin de la requête
+            end_time = time.time()
+
+            # Calcul du temps de la requête
+            request_duration = end_time - start_time
+
+            # Comportement en fonction de la réponse
             if response.status_code == 200:
                 data = response.json()
+                app.logger.info("Temps de requête ! %.2f secondes", request_duration)
                 return render_template("cv.html", hour=hour, current_date=current_date, moon_data=data, assets=assets)
             else:
                 # En cas d'erreur, générer une erreur 500
+                app.logger.error("Erreur lors de la récupération des données lunaires. Temps de requête : %.2f secondes", request_duration)
                 abort(500, "Erreur lors de la récupération des données lunaires.")
 
     # Version anglaise : Mon curriculum vitae que je présente dans mon portfolio
@@ -369,7 +367,7 @@ Création de la fonction de création de mon application
     @app.route("/remerciements")
     def merci():
         """
-    Route affichant la page de remerciements aux auteurs des oeuvres utilisées sur ce site
+    Route affichant la page de remerciements aux auteurs des œuvres utilisées sur ce site
         :return:
         """
         with app.app_context():
@@ -379,7 +377,7 @@ Création de la fonction de création de mon application
     @app.route("/acknowledgements")
     def acknowledgements():
         """
-    Route affichant la page de remerciements version anglaise aux auteurs des oeuvres utilisées pour le  site
+    Route affichant la page de remerciements version anglaise aux auteurs des œuvres utilisées pour le site
         :return:
         """
         with app.app_context():
@@ -388,7 +386,7 @@ Création de la fonction de création de mon application
     @app.route("/sitemap.xml")
     def sitemap():
         """
-    route permettant l'accès au fichier sitemap.xml
+    Route permettant l'accès au fichier sitemap.xml
         :return:
         """
         with app.app_context():
@@ -397,7 +395,7 @@ Création de la fonction de création de mon application
     @app.route("/robots.txt")
     def robots():
         """
-    route permettant d'accepter ou non les types de robots
+    Route permettant d'accepter ou non les types de robots
         :return:
         """
         with app.app_context():

@@ -35,22 +35,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let leftDelta = 0;
     let bottomDelta = 0;
-
+    // Déclaration des pas de la navettes en fonction des touches enfoncées
     if (keysPressed.q) leftDelta -= step;
     if (keysPressed.s) bottomDelta -= step;
     if (keysPressed.d) leftDelta += step;
     if (keysPressed.z) bottomDelta += step;
 
+    // Déclaration des dimensions de l'écran
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
 
+    // Calcul des nouvelles positions de la navette
     const newLeft = currentLeft + leftDelta;
     const newBottom = currentBottom + bottomDelta;
 
+    // Conditions pour empêcher la navette de sortir de l'écran
     if (newLeft >= 0 && newLeft <= screenWidth - spaceshipWidth / 5) {
       spaceship.style.left = `${newLeft}px`;
     }
-
     if (newBottom >= 0 && newBottom + spaceshipHeight <= screenHeight) {
       spaceship.style.bottom = `${newBottom}px`;
     }
@@ -100,7 +102,7 @@ const mobileButtons = {
   right: document.getElementById("right2"),
   bottom: document.getElementById("bottom2"),
 };
-
+// Fonction pour gérer l'appui sur un bouton mobile
 function handleMobileButtonPress(buttonName) {
   keysPressed[buttonName] = true;
   moveSpaceship();
@@ -113,7 +115,7 @@ function handleMobileButtonPress(buttonName) {
     spaceship.classList.add("move-left-animation");
   }
 }
-
+// Fonction qui détermine les mouvements pour la navette
 function handleMobileButtonRelease(buttonName) {
   keysPressed[buttonName] = false;
 
@@ -126,6 +128,7 @@ function handleMobileButtonRelease(buttonName) {
   }
 }
 
+// Écouteurs d'événements
 mobileButtons.top.addEventListener("mousedown", () => {
   handleMobileButtonPress("z");
 });
@@ -158,7 +161,7 @@ mobileButtons.bottom.addEventListener("mouseup", () => {
   handleMobileButtonRelease("s");
 });
 
-  // Intervalles d'animation et de déplacement
-  setInterval(moveSpaceship, moveInterval);
-  setInterval(animateSpaceship, animationSpaceshipSpeed);
+// Intervalles d'animation et de déplacement
+setInterval(moveSpaceship, moveInterval);
+setInterval(animateSpaceship, animationSpaceshipSpeed);
 });

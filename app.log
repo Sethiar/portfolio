@@ -1,0 +1,195 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 232-260-832
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:41] "GET /fr HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:42] "[36mGET /static/javascript/modale.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:42] "GET /static/CSS/modale.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "POST /consentement HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/CSS/home.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/CSS/element_interface/target_missile.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/CSS/navette/navette.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/CSS/navbars/navbars.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/CSS/message_titre.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/CSS/element_interface/touches.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/javascript/elements_interface/conservation_liens.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/javascript/movements_navette/movements_navette.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/javascript/elements_interface/target_missile.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/javascript/elements_interface/message.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/javascript/elements_interface/asteroids.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/javascript/movements_navette/movements_automatic.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/javascript/FX/explosions.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/javascript/javascript_mobile/direction_mobile.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "[36mGET /static/CSS/footer.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/images_site/images_element/elements_mobile/arrow-top.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/images_site/images_element/elements_mobile/arrow-right.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/images_site/images_element/elements_mobile/arrow-left.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/images_site/images_element/elements_mobile/arrow-down.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/javascript/movements_navette/movements_navette.js/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:43] "GET /static/images_site/image_background/image_front/front1.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:44] "GET /static/images_site/images_element/star.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:44] "GET /static/images_site/images_spaceship/spritesheet_spaceship.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:44] "GET /static/images_site/images_weapons/spritesheet_rocket.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:49] "GET /static/images_site/images_element/asteroids/asteroid1.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "GET /static/images_site/images_element/asteroids/asteroid2.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "GET /home_eng HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/javascript/elements_interface/conservation_liens.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/javascript/movements_navette/movements_navette.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/javascript/elements_interface/message.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/javascript/elements_interface/target_missile.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/javascript/FX/explosions.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/javascript/elements_interface/asteroids.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "GET /static/javascript/movements_navette/movements_auto_eng.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/javascript/javascript_mobile/direction_mobile.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/CSS/footer.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/CSS/home.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/CSS/element_interface/target_missile.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/CSS/navette/navette.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/CSS/navbars/navbars.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/CSS/message_titre.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/CSS/element_interface/touches.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/javascript/movements_navette/movements_navette.js/ HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/images_site/images_element/elements_mobile/arrow-left.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/images_site/images_element/elements_mobile/arrow-top.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/images_site/images_element/elements_mobile/arrow-down.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/images_site/images_element/elements_mobile/arrow-right.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/images_site/image_background/image_front/front1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "GET /static/images_site/images_weapons/spritesheet_rocket.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/images_site/images_element/star.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:50] "[36mGET /static/images_site/images_spaceship/spritesheet_spaceship.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:54] "GET /static/images_site/images_spaceship/spritesheet_spaceship_right.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:55] "GET /static/images_site/images_spaceship/spritesheet_spaceship_left.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:55] "[36mGET /static/images_site/images_element/asteroids/asteroid1.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:56] "[36mGET /static/images_site/images_element/asteroids/asteroid2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:56] "GET /static/images_site/images_element/photo1.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:51:57] "GET /static/images_site/images_element/asteroids/asteroid3.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:52:00] "GET /static/images_site/images_explosion/explosion-spritesheet2.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:52:11] "GET /home/cv_access_eng HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:52:11] "GET /static/CSS/cv.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:52:11] "GET /static/javascript/elements_interface/lune_eng.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:52:11] "GET /static/CSS/navbars/navbars2.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:52:11] "GET /static/javascript/elements_cv/redirection_cv_eng.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:52:11] "GET /static/javascript/elements_cv/temps.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:52:11] "[36mGET /static/CSS/footer.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:52:11] "GET /static/images_site/image_background/image_front/front1-4.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:52:11] "GET /static/images_site/images_planets/sprite-sheet_terre3.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:52:11] "GET /static/images_site/images_planets/sprite-sheet_mars.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:52:11] "GET /static/images_site/images_planets/sprite-sheet_planet1.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 19:52:11] "GET /static/images_site/images_planets/sprite-sheet_planet2.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Lefet\\PycharmProjects\\portfolio\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 232-260-832
+INFO:werkzeug: * Detected change in 'C:\\Users\\Lefet\\PycharmProjects\\portfolio\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 232-260-832
+INFO:werkzeug: * Detected change in 'C:\\Users\\Lefet\\PycharmProjects\\portfolio\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 232-260-832
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:31] "GET /home/cv_access_eng HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:31] "[36mGET /static/javascript/elements_cv/redirection_cv_eng.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:31] "[36mGET /static/CSS/navbars/navbars2.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:31] "[36mGET /static/javascript/elements_interface/lune_eng.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:31] "[36mGET /static/javascript/elements_cv/temps.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:31] "GET /static/CSS/footer.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:31] "GET /static/CSS/cv.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:31] "GET /static/images_site/image_background/image_front/front1-4.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:31] "[36mGET /static/images_site/images_planets/sprite-sheet_terre3.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:31] "GET /static/images_site/images_planets/sprite-sheet_mars.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:31] "[36mGET /static/images_site/images_planets/sprite-sheet_planet2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:31] "[36mGET /static/images_site/images_planets/sprite-sheet_planet1.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "GET /home_eng HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/CSS/footer.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/javascript/elements_interface/conservation_liens.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/javascript/movements_navette/movements_navette.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/javascript/elements_interface/message.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/javascript/elements_interface/target_missile.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/javascript/elements_interface/asteroids.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/javascript/FX/explosions.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/javascript/movements_navette/movements_auto_eng.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/javascript/javascript_mobile/direction_mobile.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "GET /static/CSS/element_interface/target_missile.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "GET /static/CSS/home.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "GET /static/CSS/navette/navette.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/CSS/navbars/navbars.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/CSS/message_titre.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/CSS/element_interface/touches.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/javascript/movements_navette/movements_navette.js/ HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/images_site/images_element/elements_mobile/arrow-left.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/images_site/images_element/elements_mobile/arrow-top.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/images_site/images_element/elements_mobile/arrow-down.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/images_site/images_element/elements_mobile/arrow-right.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "GET /static/images_site/images_element/star.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "[36mGET /static/images_site/image_background/image_front/front1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "GET /static/images_site/images_spaceship/spritesheet_spaceship.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:34] "GET /static/images_site/images_weapons/spritesheet_rocket.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/javascript/elements_interface/conservation_liens.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/javascript/movements_navette/movements_navette.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/javascript/elements_interface/message.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/javascript/elements_interface/target_missile.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/javascript/elements_interface/asteroids.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/javascript/FX/explosions.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/javascript/movements_navette/movements_automatic.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/javascript/javascript_mobile/direction_mobile.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "GET /static/CSS/footer.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "GET /static/CSS/home.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "GET /static/CSS/element_interface/target_missile.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "GET /static/CSS/navette/navette.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/CSS/navbars/navbars.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/CSS/message_titre.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/CSS/element_interface/touches.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/javascript/movements_navette/movements_navette.js/ HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/images_site/images_element/elements_mobile/arrow-left.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/images_site/images_element/elements_mobile/arrow-top.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/images_site/images_element/elements_mobile/arrow-down.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/images_site/images_element/elements_mobile/arrow-right.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "[36mGET /static/images_site/image_background/image_front/front1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "GET /static/images_site/images_element/star.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "GET /static/images_site/images_spaceship/spritesheet_spaceship.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:37] "GET /static/images_site/images_weapons/spritesheet_rocket.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:39] "GET /static/images_site/images_spaceship/spritesheet_spaceship_left.png HTTP/1.1" 200 -
+INFO:Portfolio:Temps de requête ! 0.76 secondes
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:41] "GET /home/cv_access HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:41] "GET /static/javascript/elements_cv/redirection_cv.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:41] "GET /static/javascript/elements_interface/lune.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:41] "[36mGET /static/javascript/elements_cv/temps.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:41] "GET /static/CSS/footer.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:41] "[36mGET /static/CSS/navbars/navbars2.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:41] "[36mGET /static/CSS/cv.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:41] "GET /static/images_site/image_background/image_front/front1-4.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:41] "GET /static/images_site/images_planets/sprite-sheet_mars.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:41] "[36mGET /static/images_site/images_planets/sprite-sheet_terre3.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:41] "[36mGET /static/images_site/images_planets/sprite-sheet_planet1.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:41] "[36mGET /static/images_site/images_planets/sprite-sheet_planet2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:41] "GET /static/images_site/favicon/favimage.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /home HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/CSS/home.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/CSS/footer.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/CSS/element_interface/target_missile.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/CSS/navette/navette.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/CSS/message_titre.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/CSS/navbars/navbars.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/CSS/element_interface/touches.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/javascript/elements_interface/conservation_liens.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/javascript/movements_navette/movements_navette.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/javascript/elements_interface/target_missile.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/javascript/elements_interface/message.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/javascript/elements_interface/asteroids.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/javascript/FX/explosions.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/javascript/movements_navette/movements_automatic.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/javascript/javascript_mobile/direction_mobile.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/javascript/movements_navette/movements_navette.js/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/images_site/images_element/elements_mobile/arrow-right.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/images_site/images_element/elements_mobile/arrow-left.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/images_site/images_element/elements_mobile/arrow-top.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:46] "GET /static/images_site/images_element/elements_mobile/arrow-down.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:47] "GET /static/images_site/image_background/image_front/front1.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:47] "GET /static/images_site/images_weapons/spritesheet_rocket.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:47] "GET /static/images_site/images_element/star.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2023 20:01:47] "GET /static/images_site/images_spaceship/spritesheet_spaceship.png HTTP/1.1" 200 -
