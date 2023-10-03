@@ -6,7 +6,6 @@ from flask import Flask, render_template, send_from_directory,\
 from flask_assets import Environment, Bundle
 
 
-
 import requests
 import os
 import locale
@@ -27,18 +26,6 @@ Création de la fonction de création de mon application
 
     # Définir la locale en français
     locale.setlocale(locale.LC_TIME, 'fr_FR.utf8')
-
-    # Définir le User-Agent que vous souhaitez utiliser (utilisez le même que votre navigateur)
-    user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
-
-    # URL de la ressource à accéder
-    url = "https://www.freepik.com/"
-
-    # Créer un dictionnaire d'en-têtes HTTP avec le User-Agent défini
-    headers = {"User-Agent": user_agent}
-
-    # Effectuer la requête HTTP avec les en-têtes personnalisés
-    response = requests.get(url, headers=headers)
 
     # Créer un bundle CSS
     css_bundle = Bundle(
@@ -111,8 +98,6 @@ Création de la fonction de création de mon application
         with app.app_context():
             return render_template("modale_eng.html", assets=assets)
 
-
-
     @app.route("/consentement", methods=["POST"])
     def consentement():
         """
@@ -172,8 +157,7 @@ Création de la fonction de création de mon application
         with app.app_context():
             return render_template("homeeng.html", assets=assets)
 
-
-# Mon curriculum vitae que je présente dans mon portfolio
+    # Mon curriculum vitae que je présente dans mon portfolio
     @app.route('/home/cv_access')
     def cv_access():
         """
@@ -369,7 +353,7 @@ Création de la fonction de création de mon application
     @app.route("/remerciements")
     def merci():
         """
-    Route affichant la page de remerciements aux auteurs des oeuvres utilisées sur ce site
+    Route affichant la page de remerciements aux auteurs des œuvres utilisées sur ce site
         :return:
         """
         with app.app_context():
@@ -379,7 +363,7 @@ Création de la fonction de création de mon application
     @app.route("/acknowledgements")
     def acknowledgements():
         """
-    Route affichant la page de remerciements version anglaise aux auteurs des oeuvres utilisées pour le  site
+    Route affichant la page de remerciements version anglaise aux auteurs des œuvres utilisées pour le site
         :return:
         """
         with app.app_context():
@@ -388,7 +372,7 @@ Création de la fonction de création de mon application
     @app.route("/sitemap.xml")
     def sitemap():
         """
-    route permettant l'accès au fichier sitemap.xml
+    Route permettant l'accès au fichier sitemap.xml
         :return:
         """
         with app.app_context():
@@ -397,7 +381,7 @@ Création de la fonction de création de mon application
     @app.route("/robots.txt")
     def robots():
         """
-    route permettant d'accepter ou non les types de robots
+    Route permettant d'accepter ou non les types de robots
         :return:
         """
         with app.app_context():
