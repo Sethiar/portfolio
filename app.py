@@ -5,11 +5,13 @@ from flask import Flask, render_template, send_from_directory,\
     request, abort
 from flask_assets import Environment, Bundle
 
-
+from config import *
 import requests
 import os
 import locale
+import time
 import datetime
+import logging
 
 
 def create_app_instance():
@@ -22,7 +24,7 @@ Création de la fonction de création de mon application
 
     # Prise en charge des accents dans les tests avec pytest
     app.config['JSON_AS_ASCII'] = False
-    app.config['TESTING'] = True
+    app.config['TESTING'] = False
 
     # Définir la locale en français
     locale.setlocale(locale.LC_TIME, 'fr_FR.utf8')
@@ -128,14 +130,14 @@ Création de la fonction de création de mon application
             return render_template("refus-cookie.html", assets=assets)
 
     # Route vers la page 404 de mon site
-    @app.route('/404')
-    def page404():
+    @app.errorhandler(404)
+    def page404(error):
         """
     Access to 404 page.
         :return:
         """
-        with app.app_context():
-            return render_template("error404.html", assets=assets)
+        app.logger.error("Page not found: %s", request.path)
+        return render_template("error404.html", assets=assets), 404
 
     # Ma page d'accueil
     @app.route('/home')
@@ -164,8 +166,10 @@ Création de la fonction de création de mon application
     Route donnant accès à la section personnelle du portfolio
         :return:
         """
-
         with app.app_context():
+            # Début de la requête
+            start_time = time.time()
+
             # Obtenir la date et l'heure actuelles
             current_datetime = datetime.datetime.now()
 
@@ -182,11 +186,21 @@ Création de la fonction de création de mon application
                 int(current_datetime.timestamp())
             )
             response = requests.get(api_url)
+
+            # Obtention du temps de fin de la requête
+            end_time = time.time()
+
+            # Calcul du temps de la requête
+            request_duration = end_time - start_time
+
+            # Comportement en fonction de la réponse
             if response.status_code == 200:
                 data = response.json()
+                app.logger.info("Temps de requête ! %.2f secondes", request_duration)
                 return render_template("cv.html", hour=hour, current_date=current_date, moon_data=data, assets=assets)
             else:
                 # En cas d'erreur, générer une erreur 500
+                app.logger.error("Erreur lors de la récupération des données lunaires. Temps de requête : %.2f secondes", request_duration)
                 abort(500, "Erreur lors de la récupération des données lunaires.")
 
     # Version anglaise : Mon curriculum vitae que je présente dans mon portfolio
