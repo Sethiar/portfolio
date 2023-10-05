@@ -24,7 +24,7 @@ Création de la fonction de création de mon application
     app.config['TESTING'] = True
 
     # Définir la locale en français
-    locale.setlocale(locale.LC_TIME, 'fr_FR.utf8')
+    locale.setlocale(locale.LC_TIME, 'fr_FR')
 
     # Créer un bundle CSS
     css_bundle = Bundle(
