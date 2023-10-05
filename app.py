@@ -12,7 +12,6 @@ import os
 import locale
 import time
 import datetime
-import logging
 
 
 def create_app_instance():
