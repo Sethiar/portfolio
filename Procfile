@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT app:app
+web: waitress-serve --port=17736 app: create_app_instance
