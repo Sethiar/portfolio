@@ -23,11 +23,6 @@ Création de la fonction de création de mon application
     app.config['JSON_AS_ASCII'] = False
     app.config['TESTING'] = False
 
-    if 'DYNO' in os.environ:  # Vérifie si l'application s'exécute sur Heroku
-        locale.setlocale(locale.LC_TIME, 'fr_FR.utf8')
-    else:
-        locale.setlocale(locale.LC_TIME, 'fr_FR')
-
     # Créer un bundle CSS
     css_bundle = Bundle(
         'css/competences.css',
