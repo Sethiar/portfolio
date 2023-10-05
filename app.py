@@ -361,6 +361,8 @@ Création de la fonction de création de mon application
 
 if __name__ == "__main__":
     app = create_app_instance()
+    # Utilise le port Heroku ou 8080 en local
     port = int(os.environ.get("PORT", 8080))
-    host = "127.0.0.1"
+    # Écoute sur toutes les adresses IP disponibles
+    host = "0.0.0.0"
     serve(app, host=host, port=port)
