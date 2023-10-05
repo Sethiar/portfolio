@@ -78,6 +78,20 @@ h3 {
     padding-right: 5%;
 }
 
+.container {
+    /* Utiliser un affichage flex pour les colonnes */
+    display: flex;
+    /* Espacement égal entre les colonnes */
+    justify-content: space-between;
+}
+
+.column {
+    /* Les colonnes prennent une part égale de l'espace disponible */
+    flex: 1;
+    /* Marge intérieure pour un meilleur espacement du contenu */
+    padding: 10px;
+}
+
 /* Pas de footer dans cette section */
 .footer {
     display: none;

@@ -68,20 +68,6 @@ h3 {
     text-align: justify;
 }
 
-.container {
-    /* Utiliser un affichage flex pour les colonnes */
-    display: flex;
-    /* Espacement égal entre les colonnes */
-    justify-content: space-between;
-}
-
-.column {
-    /* Les colonnes prennent une part égale de l'espace disponible */
-    flex: 1;
-    /* Marge intérieure pour un meilleur espacement du contenu */
-    padding: 10px;
-}
-
 .para {
     text-indent: 2em;
     text-align: justify;
@@ -97,14 +83,6 @@ h3 {
 
 .footer {
     display: none;
-}
-
-.foozleCC {
-    border: 1px solid darkgrey;
-    text-align: center;
-    background-color: lightgrey;
-    margin: 0 auto;
-    max-width: 500px;
 }
 
 /* Caractéristiques du bas du footer */
@@ -154,7 +132,7 @@ h3 {
     color: white;
 }
 
-.retour_home {
+.retour_home:hover {
     color: orange;
     text-decoration: underline;
 }

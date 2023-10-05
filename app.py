@@ -4,6 +4,7 @@
 from flask import Flask, render_template, send_from_directory,\
     request, abort
 from flask_assets import Environment, Bundle
+from waitress import serve
 
 from config import *
 import requests
@@ -407,4 +408,7 @@ Création de la fonction de création de mon application
 if __name__ == "__main__":
     app = create_app_instance()
     port = int(os.environ.get("PORT", 8080))
-    app.run(host="127.0.0.1", port=port, debug=True)
+    # Adresse locale
+    host = "127.0.0.1"
+    print(f"Serveur Flask démarré sur http://{host}:{port}/")
+    serve(app, host=host, port=port,)

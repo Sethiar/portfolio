@@ -36,55 +36,48 @@
     #phone-touches {
         position: absolute;
         z-index: 20;
-        height: 200px;
-        width: 200px;
-        min-width: 180px;
         display: block;
-        bottom: -20%;
-        right: 5%;
-        background-color: lightgrey;
-        border: 1px solid gold;
-        opacity: 0.3;
+        opacity: 0.8;
     }
 
     #top2 {
-        position: absolute;
-        top: -7%;
-        right: 50%;
+        position: fixed;
+        top: 60%;
+        right: 15%;
         transform: translateX(50%);
     }
 
     #left2 {
-        position: absolute;
-        top: 25%;
-        left: 0%;
+        position: fixed;
+        top: 69.5%;
+        right: 18%;
     }
 
     #right2 {
-        position: absolute;
-        top: 25%;
+        position: fixed;
+        top: 70%;
         right: 0%;
     }
 
     #bottom2 {
-        position: absolute;
-        right: 50%;
-        bottom: -8%;
+        position: fixed;
+        top: 80%;
+        right: 15%;
         transform: translateX(50%);
     }
 
     #fire2 {
-        position: absolute;
+        position: fixed;
         width: 60px;
         height: 60px;
-        top: 35%;
+        top: 72%;
         transform: translateY(50%);
-        right: 50%;
+        right: 15%;
         transform: translateX(50%);
         border-radius: 50%;
         border: 1px solid white;
         background-color: red;
-        opacity: 1;
+        opacity: 0.8;
     }
 }
 
@@ -98,56 +91,49 @@
     #touches {
        display: none;
     }
+
    #phone-touches {
-       position: absolute;
-       z-index: 20;
-       height: 180px;
-       width: 170px;
-       display: block;
-       bottom: -20%;
-       right: 5%;
-       border: 1px solid gold;
-       background-color: lightgrey;
-       opacity: 0.3
-   }
+        position: fixed;
+        z-index: 20;
+        display: block;
+        opacity: 0.8;
+    }
 
    #top2 {
-       position: absolute;
-       top: -9%;
-       right: 50%;
-       transform: translateX(50%);
+        position: fixed;
+        top: 50%;
+        right: 22%;
+        transform: translateX(50%);
    }
 
    #left2 {
-       position: absolute;
-       top: 25%;
-       left: -9%;
+        position: fixed;
+        top: 60%;
+        right: 25%;
    }
 
    #right2 {
-       position: absolute;
-       top: 25%;
-       right: -9%;
+        position: fixed;
+        top: 59.9%;
+        right: 3%;
    }
 
    #bottom2 {
-       position: absolute;
-       right: 50%;
-       bottom: -15%;
-       transform: translateX(50%);
+        position: fixed;
+        top: 70%;
+        right:22%;
+        transform: translateX(50%);
    }
 
    #fire2 {
-       position: absolute;
-       width: 50px;
-       height: 50px;
-       top: 39%;
-       transform: translateY(50%);
-       right: 50%;
-       transform: translateX(50%);
-       border-radius: 50%;
-       border: 1px solid white;
-       background-color: red;
-       opacity: 1;
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        top: 62%;
+        right: 17%;
+        border-radius: 50%;
+        border: 1px solid white;
+        background-color: red;
+        opacity: 0.8;
    }
 }

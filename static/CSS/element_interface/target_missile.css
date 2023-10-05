@@ -20,6 +20,7 @@
     animation: target 2s linear infinite;
 }
 
+/*Animation de la cible */
 @keyframes target {
     0% {
     opacity: 1;
@@ -42,6 +43,7 @@
     }
 }
 
+/* Styles du message */
 #target-message {
     z-index: 20;
     position: absolute;
@@ -50,6 +52,7 @@
     animation: color 2s linear infinite;
 }
 
+/* Animation du message */
 @keyframes color {
     0% {
     color: orange;
@@ -72,6 +75,7 @@
    }
 }
 
+/* Styles du conteneur de la cible */
 #target-container {
     display: flex;
     flex-direction: column;
@@ -79,6 +83,7 @@
     justify-content: center;
 }
 
+/* Stlyle de la photo */
 #photo {
     width: 13vh;
     height: 13vh;
