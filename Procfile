@@ -1,1 +1,1 @@
-web: waitress-serve --port=17736 app: create_app_instance
+web: gunicorn app:app

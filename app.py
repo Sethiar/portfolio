@@ -4,7 +4,7 @@
 from flask import Flask, render_template, send_from_directory,\
     request, abort
 from flask_assets import Environment, Bundle
-from waitress import serve
+
 
 import os
 import requests
@@ -359,10 +359,6 @@ Création de la fonction de création de mon application
     return app
 
 
+port = int(os.environ.get("PORT", 5000))
 if __name__ == "__main__":
-    app = create_app_instance()
-    # Utilise le port Heroku ou 8080 en local
-    port = int(os.environ.get("PORT", 8080))
-    # Écoute sur toutes les adresses IP disponibles
-    host = "0.0.0.0"
-    serve(app, host=host, port=port)
+    create_app_instance().run(host="0.0.0.0", port=port, debug=True)
