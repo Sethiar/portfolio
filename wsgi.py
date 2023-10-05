@@ -1,9 +1,8 @@
 """Configuration du serveur waitress"""
 
 import os
-from app import create_app_instance
 
-app = create_app_instance()
+from app import app
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
