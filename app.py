@@ -4,10 +4,11 @@
 from flask import Flask, render_template, send_from_directory,\
     request, abort
 from flask_assets import Environment, Bundle
+from waitress import serve
 
 import os
 import requests
-import locale
+
 import datetime
 
 
@@ -362,4 +363,4 @@ if __name__ == "__main__":
     app = create_app_instance()
     port = int(os.environ.get("PORT", 8080))
     host = "127.0.0.1"
-    app.run(host=host, port=port)
+    serve(app, host=host, port=port)
