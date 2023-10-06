@@ -468,12 +468,12 @@
 @media screen and (max-width: 768px) {
 
     #background {
-        height: 140vh;
+        height: 200vh;
     }
     /* Position du centre de rotation */
     .center-python {
         position : absolute;
-        top: 10vh;
+        top: 20vh;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -489,14 +489,14 @@
     .tool-python9,
     .tool-python10 {
         position: absolute;
-        top: 10vh;
-        left: 42%;
+        top: 20vh;
+        left: 40%;
         transform: translateX(-50%);
     }
     /* Position du centre de rotation */
     .center-gestion {
         position : absolute;
-        top: 45vh;
+        top: 70vh;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -510,14 +510,14 @@
     .tool-gestion7,
     .tool-gestion8 {
         position: absolute;
-        top: 45vh;
-        left: 42%;
+        top: 70vh;
+        left: 40%;
         transform: translateX(-50%);
     }
     /* Position du centre de rotation */
     .center-editor {
         position : absolute;
-        top: 80vh;
+        top: 120vh;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -530,14 +530,14 @@
     .tool-editor6,
     .tool-editor7 {
         position: absolute;
-        top: 80vh;
-        left: 42%;
+        top: 120vh;
+        left: 40%;
         transform: translateX(-50%);
     }
     /* Position du centre de rotation */
     .center-language {
         position : absolute;
-        top: 115vh;
+        top: 170vh;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -550,8 +550,8 @@
     .tool-language6,
     .tool-language7 {
         position: absolute;
-        top: 115vh;
-        left: 42%;
+        top: 170vh;
+        left: 40%;
 
     }
 
