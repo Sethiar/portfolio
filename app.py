@@ -245,7 +245,7 @@ def resultats_formation():
 Route affichant les résultats Studi
     :return:
     """
-    return send_from_directory("static/pdf", "resultats_Formation.pdf")
+    return send_from_directory("static/pdf", "Resultats_Formation.pdf")
 
     # Présentation des projets
 @app.route('/home/projets')
