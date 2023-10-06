@@ -145,6 +145,61 @@ div h2 {
 
 /* Styles pour les écrans moyens (entre 769px et 1024px de largeur) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    #projet_1 {
+        position: absolute;
+        top: 40%;
+        left: 15%;
+    }
+
+    #projet_2 {
+        position: absolute;
+        top: 80%;
+        left: 60%;
+    }
+
+    #projet_3 {
+        position: absolute;
+        top: 75%;
+        left: 10%;
+    }
+
+    #projet_4 {
+        position: absolute;
+        top: 50%;
+        right: 35%;
+    }
+
+    .intitule {
+        width: 150px;
+        height: auto;
+        font-size: 22px;
+        color: orange;
+        margin-bottom: 2%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .intitule:hover {
+        text-decoration: underline;
+        color: gold;
+        box-shadow: 0 0 10px white;
+    }
+
+    .titre1,
+    .titre2,
+    .titre3,
+    .titre4 {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 20%;
+        color: black;
+        font-size: 18px;
+        background-color: lightgrey;
+        opacity: 0.8;
+        border: 2px solid black;
+    }
 }
 
 /* Caractéristiques pour les petits écrans (moins de 768px de largeur) */
@@ -152,25 +207,25 @@ div h2 {
 
     #projet_1 {
         position: absolute;
-        top: 25%;
+        top: 50%;
         left: 15%;
     }
 
     #projet_2 {
         position: absolute;
-        top: 70%;
+        top: 85%;
         left: 60%;
     }
 
     #projet_3 {
         position: absolute;
-        top: 65%;
+        top: 75%;
         left: 10%;
     }
 
     #projet_4 {
         position: absolute;
-        top: 38%;
+        top: 40%;
         right: 35%;
     }
 
