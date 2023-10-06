@@ -22,16 +22,16 @@ button {
     margin-top: 10px;
 }
 
-.politique {
-    position: absolute;
-    top: 7%;
-    left: 5%;
-}
-
 .english {
     position: absolute;
     top: 3%;
     right: 5%;
+}
+
+.politique {
+    position: absolute;
+    top: 9%;
+    left: 5%;
 }
 
 /* Caractérisques pour les petits écrans */
