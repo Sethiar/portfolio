@@ -58,6 +58,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Fonction pour déplacer la navette en fonction des événements tactiles (mobile)
+  function moveSpaceshipWithTouch(e) {
+    const touchX = e.touches[0].clientX;
+    const touchY = e.touches[0].clientY;
+
+    // Calcul des déplacements en fonction des coordonnées tactiles
+    const currentLeft = parseFloat(getComputedStyle(spaceship).left) || 0;
+    const currentBottom = parseFloat(getComputedStyle(spaceship).bottom) || 0;
+
+    const deltaX = touchX - currentLeft;
+    const deltaY = touchY - currentBottom;
+
+    spaceship.style.left = `${touchX}px`;
+    spaceship.style.bottom = `${touchY}px`;
+}
+
   // Gestionnaires d'événements pour les touches enfoncées
   function handleKeyDown(event) {
     const key = event.key;
@@ -95,6 +111,16 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("keydown", handleKeyDown);
   document.addEventListener("keyup", handleKeyUp);
 
+  // Écouteurs d'événements pour les événements tactiles (mobile)
+  spaceship.addEventListener("touchstart", function (e) {
+    e.preventDefault(); // Empêche le défilement lors du toucher
+    spaceship.addEventListener("touchmove", moveSpaceshipWithTouch);
+});
+
+spaceship.addEventListener("touchend", function () {
+  spaceship.removeEventListener("touchmove", moveSpaceshipWithTouch);
+});
+
   // Gestionnaires d'événements pour les boutons de l'interface mobile
 const mobileButtons = {
   top: document.getElementById("top2"),
@@ -102,6 +128,7 @@ const mobileButtons = {
   right: document.getElementById("right2"),
   bottom: document.getElementById("bottom2"),
 };
+
 // Fonction pour gérer l'appui sur un bouton mobile
 function handleMobileButtonPress(buttonName) {
   keysPressed[buttonName] = true;
