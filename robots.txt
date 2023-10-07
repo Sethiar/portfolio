@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /dossier-prive/
 Allow: /public/
-Sitemap: https://portfoliolefeteya-119a68814922.herokuapp.com/sitemap.xml
+Sitemap: https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/sitemap.xml
