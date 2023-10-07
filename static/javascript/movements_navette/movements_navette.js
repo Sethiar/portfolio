@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function moveSpaceshipWithTouch(e) {
     const touchX = e.touches[0].clientX;
     const touchY = e.touches[0].clientY;
+    console.log('touches enfoncées')
 
     // Calcul des déplacements en fonction des coordonnées tactiles
     const currentLeft = parseFloat(getComputedStyle(spaceship).left) || 0;
@@ -74,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     spaceship.style.bottom = `${touchY}px`;
 }
 
-  // Gestionnaires d'événements pour les touches enfoncées
+  // Gestionnaire d'événements pour les touches enfoncées
   function handleKeyDown(event) {
     const key = event.key;
 
@@ -91,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Gestionnaires d'événements pour les touches relâchées
+  // Gestionnaire d'événements pour les touches relâchées
   function handleKeyUp(event) {
     const key = event.key;
 
@@ -113,7 +114,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Écouteurs d'événements pour les événements tactiles (mobile)
   spaceship.addEventListener("touchstart", function (e) {
-    e.preventDefault(); // Empêche le défilement lors du toucher
+    // Empêche le défilement lors du toucher
+    e.preventDefault();
     spaceship.addEventListener("touchmove", moveSpaceshipWithTouch);
 });
 
@@ -122,11 +124,11 @@ spaceship.addEventListener("touchend", function () {
 });
 
   // Gestionnaires d'événements pour les boutons de l'interface mobile
-const mobileButtons = {
-  top: document.getElementById("top2"),
-  left: document.getElementById("left2"),
-  right: document.getElementById("right2"),
-  bottom: document.getElementById("bottom2"),
+  const mobileButtons = {
+    top: document.getElementById("top2"),
+    left: document.getElementById("left2"),
+    right: document.getElementById("right2"),
+    bottom: document.getElementById("bottom2"),
 };
 
 // Fonction pour gérer l'appui sur un bouton mobile
@@ -142,6 +144,7 @@ function handleMobileButtonPress(buttonName) {
     spaceship.classList.add("move-left-animation");
   }
 }
+
 // Fonction qui détermine les mouvements pour la navette
 function handleMobileButtonRelease(buttonName) {
   keysPressed[buttonName] = false;
