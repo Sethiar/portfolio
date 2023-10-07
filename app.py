@@ -118,9 +118,9 @@ Route renseignant sur les conséquences du refus des cookies.
     return render_template("refus-cookie.html", assets=assets)
 
 
-# Route vers la page 404 de mon site
+# Redirection vers la page 404.
 @app.errorhandler(404)
-def page404():
+def page_not_found(error):
     """
 Access to 404 page.
     :return:
