@@ -5,13 +5,9 @@ from flask import Flask, render_template, send_from_directory,\
     request, abort
 from flask_assets import Environment, Bundle
 
-
-import os
 import requests
 
 import datetime
-
-
 
 
 app = Flask("Portfolio", static_url_path='/static')
@@ -66,12 +62,14 @@ js_bundle = Bundle(
 assets.register('css_bundle', css_bundle)
 assets.register('js_bundle', js_bundle)
 
+
 @app.route("/")
 def loading_page():
     """
 Route permettant l'affichage de la page de chargement
     """
     return render_template("loading_page.html", assets=assets)
+
 
 @app.route("/fr")
 def modale():
@@ -81,6 +79,7 @@ Route permettant l'affichage de la modale des cookies
         """
     return render_template("modale.html", assets=assets)
 
+
 @app.route("/eng")
 def modale_eng():
     """
@@ -88,6 +87,7 @@ Route permettant l'affichage de la modale des cookies en anglais
     :return:
     """
     return render_template("modale_eng.html", assets=assets)
+
 
 @app.route("/consentement", methods=["POST"])
 def consentement():
@@ -108,6 +108,7 @@ Route permettant de donner le consentement aux cookies ou non.
         # Traitement en cas de données de consentement inconnues ou incorrectes
         return "Données de consentement invalides"
 
+
 @app.route("/refus-cookie")
 def refus_cookie():
     """
@@ -115,6 +116,7 @@ Route renseignant sur les conséquences du refus des cookies.
     :return:
     """
     return render_template("refus-cookie.html", assets=assets)
+
 
 # Route vers la page 404 de mon site
 @app.route('/404')
@@ -125,6 +127,7 @@ Access to 404 page.
     """
     return render_template("error404.html", assets=assets)
 
+
 # Ma page d'accueil
 @app.route('/home')
 def home():
@@ -134,6 +137,7 @@ Route menant à l'accueil du portfolio
     """
     return render_template("home.html", assets=assets)
 
+
 # Version anglaise : Ma page d'accueil
 @app.route('/home_eng')
 def home_eng():
@@ -142,6 +146,7 @@ def home_eng():
     :return:
     """
     return render_template("homeeng.html", assets=assets)
+
 
 # Mon curriculum vitae que je présente dans mon portfolio
 @app.route('/home/cv_access')
@@ -173,6 +178,7 @@ Route donnant accès à la section personnelle du portfolio
         # En cas d'erreur, générer une erreur 500
         abort(500, "Erreur lors de la récupération des données lunaires.")
 
+
 # Version anglaise : Mon curriculum vitae que je présente dans mon portfolio
 @app.route('/home/cv_access_eng')
 def cv_access_eng():
@@ -202,6 +208,7 @@ Route donnant accès à la version anglaise de la section personnelle du portfol
     else:
         return "Error occurred while retrieving lunar data."
 
+
 # Présentation de mon cv
 @app.route('/home/cv')
 def cv():
@@ -210,6 +217,7 @@ Route affichant le curriculum vitae
     :return:
     """
     return send_from_directory("static/pdf", "CV_arnaud.pdf")
+
 
 # Version anglaise : Présentation de mon cv
 @app.route('/home/cv_eng')
@@ -220,6 +228,7 @@ Route affichant le curriculum vitae dans la version anglaise
     """
     return send_from_directory("static/pdf", "CV_arnaud_eng.pdf")
 
+
 # Présentation Notes de M1
 @app.route('/home/M1')
 def notes_m1():
@@ -228,6 +237,7 @@ Route affichant les notes de Master1 Lophisc
     :return:
     """
     return send_from_directory("static/pdf", "Relevé_note_M1.pdf")
+
 
 # Attestation de réussite
 @app.route('/home/attestation-reussite')
@@ -238,6 +248,7 @@ Route affichant l'attestation Studi
     """
     return send_from_directory("static/pdf", "Attestation_de_reussite.pdf")
 
+
 # Résultats de la formation
 @app.route('/home/resultats-formation')
 def resultats_formation():
@@ -247,7 +258,8 @@ Route affichant les résultats Studi
     """
     return send_from_directory("static/pdf", "Resultats_Formation.pdf")
 
-    # Présentation des projets
+
+# Présentation des projets
 @app.route('/home/projets')
 def projet_perso():
     """
@@ -255,6 +267,7 @@ Les projets personnels que je présente dans mon portfolio
     :return:
     """
     return render_template("projets.html", assets=assets)
+
 
 # Version anglaise : Présentation des projets
 @app.route('/home/projects-section')
@@ -265,6 +278,7 @@ Les projets personnels que je présente dans la version anglaise de mon portfoli
     """
     return render_template("projects_section.html", assets=assets)
 
+
 # Les compétences que je présente dans mon portfolio
 @app.route('/home/competences')
 def competences():
@@ -273,6 +287,7 @@ Route permettant d'accéder à mes compétences
     :return:
     """
     return render_template("competences.html", assets=assets)
+
 
 # Version anglaise : Les compétences que je présente dans mon portfolio
 @app.route('/home/skill-section')
@@ -283,6 +298,7 @@ Route permettant d'accéder à mes compétences
     """
     return render_template("skill_section.html", assets=assets)
 
+
 # Accès aux conditions d'utilisation de mon portfolio
 @app.route("/conditions-utilisation")
 def condition():
@@ -291,6 +307,7 @@ Route affichant les conditions d'utilisation du site
     :return:
     """
     return render_template("conditions.html", assets=assets)
+
 
     # Version anglaise : Accès aux conditions d'utilisation de mon portfolio
 @app.route("/terms-of-use")
@@ -301,14 +318,16 @@ Route affichant les conditions d'utilisation de la version anglaise du site
     """
     return render_template("terms_of_use.html", assets=assets)
 
+
 # Accès à la politique de confidentialité de mon portfolio
 @app.route("/politique-confidentialité")
 def politique():
     """
-oute affichant la politique d'utilisation du site
+Route affichant la politique d'utilisation du site
     :return:
     """
     return render_template("politique.html", assets=assets)
+
 
 # Version anglaise : Accès à la politique de confidentialité de mon portfolio
 @app.route("/privacy-policy")
@@ -319,6 +338,7 @@ Route affichant la politique d'utilisation de la version anglaise du site
     """
     return render_template("privacy_policy.html", assets=assets)
 
+
 # Page de remerciements aux contributeurs
 @app.route("/remerciements")
 def merci():
@@ -327,6 +347,7 @@ Route affichant la page de remerciements aux auteurs des œuvres utilisées sur 
     :return:
     """
     return render_template("remerciements.html", assets=assets)
+
 
 # Version anglaise : Page de remerciements aux contributeurs
 @app.route("/acknowledgements")
@@ -337,6 +358,7 @@ Route affichant la page de remerciements version anglaise aux auteurs des œuvre
     """
     return render_template("acknowledgements.html", assets=assets)
 
+
 @app.route("/sitemap.xml")
 def sitemap():
     """
@@ -344,6 +366,7 @@ Route permettant l'accès au fichier sitemap.xml
     :return:
     """
     return send_from_directory(".", "sitemap.xml")
+
 
 @app.route("/robots.txt")
 def robots():
@@ -353,3 +376,12 @@ Route permettant d'accepter ou non les types de robots
     """
     return send_from_directory(".", "robots.txt")
 
+
+@app.route("/static/images_site/images_element/<path:photo1>")
+def serve_image(photo1):
+    """
+Photo pour réseau social twitter
+    :param photo1:
+    :return:
+    """
+    return send_from_directory(app.static_folder + "/images_site/images_element/", photo1)
