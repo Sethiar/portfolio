@@ -353,7 +353,3 @@ Route permettant d'accepter ou non les types de robots
     """
     return send_from_directory(".", "robots.txt")
 
-
-port = int(os.environ.get("PORT", 5000))
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=port, debug=True)
