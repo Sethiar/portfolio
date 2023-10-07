@@ -120,7 +120,7 @@ Route renseignant sur les conséquences du refus des cookies.
 
 # Redirection vers la page 404.
 @app.errorhandler(404)
-def page_not_found(error):
+def page_not_found():
     """
 Access to 404 page.
     :return:
@@ -309,7 +309,7 @@ Route affichant les conditions d'utilisation du site
     return render_template("conditions.html", assets=assets)
 
 
-    # Version anglaise : Accès aux conditions d'utilisation de mon portfolio
+# Version anglaise : Accès aux conditions d'utilisation de mon portfolio
 @app.route("/terms-of-use")
 def terms_of_use():
     """
