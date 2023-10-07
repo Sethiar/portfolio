@@ -2,7 +2,27 @@
 
 {% block head_content %}
 <meta name="description" content="La page de chargement de mon portfolio.">
+ <meta property="og:title" content="PortFolio de Lefetey Arnaud">
+
+<meta property="fb:app_id" content="319664303772017">
+<meta property="og:description" content="Ce site est mon portfolio, il présente mon curriculum vitae, mes compétences, mon parcours ainsi que mes projets personnels.">
+<meta property="og:url" content="https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com">
+<meta property="og:image"  content="{{ url_for('serve_image', photo1='photo1.jpg') }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PortFolio de Lefetey Arnaud">
+<meta name="twitter:description" content="Ce site est mon portfolio, il présente mon curriculum vitae, mes compétences, mon parcours ainsi que mes projets personnels.">
+<meta name="twitter:image" content="https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/static/image/photo2.jpg">
+<meta name="twitter:url" content="https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com">
+<meta name="twitter:site" content="@LefeteyA">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1EBKD5HK9X"></script>
+
+
 <title>{% block title %}Page de chargement{% endblock %}</title>
+<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images_site/favicon/favimage.ico') }}">
 <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='CSS/loading_page.css') }}">
 {% endblock %}
 
