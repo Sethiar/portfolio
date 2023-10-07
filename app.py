@@ -119,7 +119,7 @@ Route renseignant sur les conséquences du refus des cookies.
 
 
 # Route vers la page 404 de mon site
-@app.route('/404')
+@app.errorhandler(404)
 def page404():
     """
 Access to 404 page.
