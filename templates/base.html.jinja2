@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/footer.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images_site/favicon/favimage.ico') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EBKD5HK9X"></script>
     {% block head_content %}
     {% endblock %}
 </head>
@@ -28,7 +29,13 @@
         {% block main_content %}
         {% endblock %}
     </main>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'G-1EBKD5HK9X');
+    </script>
     <footer class="footer">
         <div class="container">
             <div class="row footer-content">

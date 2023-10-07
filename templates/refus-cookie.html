@@ -7,7 +7,7 @@
     <meta name="description" content="Cette page renseigne sur l'utilisation des cookies.">
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/remerciements.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='image/favicon/favimage.ico') }}">
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EBKD5HK9X"></script>
 </head>
 <body>
 
@@ -48,7 +48,11 @@
 
 </div>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-1EBKD5HK9X');
 </script>
 </body>
 </html>

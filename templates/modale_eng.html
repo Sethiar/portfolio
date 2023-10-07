@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/modale.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='image/favicon/favimage.ico') }}">
     <title>Cookie Consent</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EBKD5HK9X"></script>
 </head>
 <body>
 <div id="fenetre_modale" class="modale">
@@ -21,5 +22,12 @@
 </div>
 
 <script src="static/javascript/modale.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1EBKD5HK9X');
+</script>
 </body>
 </html>
