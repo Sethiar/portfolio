@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        xmlbeans:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com</loc>
