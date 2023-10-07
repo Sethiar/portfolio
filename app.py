@@ -120,12 +120,12 @@ Route renseignant sur les conséquences du refus des cookies.
 
 # Redirection vers la page 404.
 @app.errorhandler(404)
-def page_not_found():
+def page_not_found(error):
     """
 Access to 404 page.
     :return:
     """
-    return render_template("error404.html", assets=assets)
+    return render_template("error404.html", assets=assets), 404
 
 
 # Ma page d'accueil
