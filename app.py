@@ -139,7 +139,7 @@ Route menant à l'accueil du portfolio
 
 
 # Version anglaise : Ma page d'accueil
-@app.route('/home_eng')
+@app.route('/home-eng')
 def home_eng():
     """
     Route menant à la verison anglaise de l'accueil du portfolio
@@ -149,7 +149,7 @@ def home_eng():
 
 
 # Mon curriculum vitae que je présente dans mon portfolio
-@app.route('/home/cv_access')
+@app.route('/home/cv-access')
 def cv_access():
     """
 Route donnant accès à la section personnelle du portfolio
@@ -180,7 +180,7 @@ Route donnant accès à la section personnelle du portfolio
 
 
 # Version anglaise : Mon curriculum vitae que je présente dans mon portfolio
-@app.route('/home/cv_access_eng')
+@app.route('/home/cv-access-eng')
 def cv_access_eng():
     """
 Route donnant accès à la version anglaise de la section personnelle du portfolio
@@ -220,7 +220,7 @@ Route affichant le curriculum vitae
 
 
 # Version anglaise : Présentation de mon cv
-@app.route('/home/cv_eng')
+@app.route('/home/cv-eng')
 def cv_eng():
     """
 Route affichant le curriculum vitae dans la version anglaise

@@ -1,6 +1,5 @@
 /* Caractéristiques des sections du footer */
 
-
 .footer {
     font-size: 16px;
     margin-right: 10%;
@@ -11,6 +10,7 @@
     margin-bottom: 5%;
     opacity: 0.8;
 }
+
 h3.footer_titre {
   color: white;
   box-shadow: 0 0 5px orange;
@@ -50,12 +50,22 @@ ul {
 
 .gold {
   color: gold;
-  padding-left: 20px;
+  padding-left: 1%;
 }
 
-a {
+footer a {
   text-decoration: none;
   color: gold;
+}
+
+/* Styles pour les liens */
+#retour_home {
+    color: navy;
+    text-decoration: underline;
+}
+
+#retour_home:hover {
+    color: orange;
 }
 
 /* Caractéristiques du bas du footer */

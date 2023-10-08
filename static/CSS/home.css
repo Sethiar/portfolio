@@ -48,6 +48,10 @@ h1 {
     font-size: 14px;
 }
 
+#retour_home {
+    display: none;
+}
+
 h3.explic {
     position: absolute;
     color: orange;

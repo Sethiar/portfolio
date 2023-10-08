@@ -16,15 +16,15 @@
 #projets-link{
     display: none;
 }
+
 /* Styles pour les liens */
-.liens {
+#retour_home {
     color: navy;
     text-decoration: underline;
 }
 
-.liens:hover {
+#retour_home:hover {
     color: orange;
-    border-bottom: 1px solid gold;
 }
 
 /* Séparation entre l'entête et le titre de la section */

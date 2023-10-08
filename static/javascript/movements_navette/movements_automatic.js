@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     requestAnimationFrame(moveDiagonal);
                 } else {
                     // Une fois arrivée à la destination, redirigez vers la page "cv"
-                    window.location.href = "home/cv_access";
+                    window.location.href = "home/cv-access";
                 }
             }
             // Démarrer le déplacement en diagonale

@@ -33,13 +33,13 @@
     {% block header_content %}
 <nav id="navbar">
     <ul>
-        <li id="cv-link"><a href="{{url_for('cv_access')}}">Espace personnel</a></li>
-        <li id="competences-link"><a href="{{url_for('competences') }}">Espace compétences</a></li>
-        <li id="projets-link"><a href="{{url_for('projet_perso') }}">Espace projets</a></li>
+        <li id="cv-link"><a href="{{ url_for('cv_access') }}">Espace personnel</a></li>
+        <li id="competences-link"><a href="{{ url_for('competences') }}">Espace compétences</a></li>
+        <li id="projets-link"><a href="{{ url_for('projet_perso') }}">Espace projets</a></li>
     </ul>
 </nav>
 <div id="retour_home">
-    <a href="{{ url_for('home_eng') }}"><u>Retour à la page d'accueil</u></a>
+    <a href="{{ url_for('home') }}"><u>Retour à la page d'accueil</u></a>
 </div>
 {% endblock %}
 </header>
@@ -56,7 +56,7 @@
                     <br>
                     <p class="gold">Adresse : Caen, Calvados, France</p>
                     <br>
-                    <p class="gold"><a class="retour" href="mailto:alefetey123@gmail.com">Email : alefetey123@gmail.com</a></p>
+                    <p class="gold"><a class="gold" href="mailto:alefetey123@gmail.com">Email : alefetey123@gmail.com</a></p>
                 <br><br>
                 </div>
                 <div class="col-md-4">

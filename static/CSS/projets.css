@@ -20,6 +20,12 @@ body, html {
     font-size: 16px;
     color: white;
 }
+
+#retour_home:hover {
+    color: orange;
+    border-bottom: 1px solid gold;
+}
+
 #lien_github {
     position: absolute;
     top: 10%;
