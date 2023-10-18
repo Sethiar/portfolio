@@ -16,6 +16,7 @@
     max-width: 280px;
     justify-content: left;
     color: gold;
+    font-family: 'DotGothic16', sans-serif;
 }
 
 #phone-touches {
@@ -42,16 +43,17 @@
         background-color: lightgrey;
         opacity: 0.5;
     }
+
     #fire2 {
         position: absolute; /* Utilisez position: absolute; */
-    left: calc(50% - 30px); /* Largeur de l'élément / 2 */
-    top: 100%;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid white;
-    background-color: red;
-    opacity: 0.8;
+        left: calc(50% - 30px); /* Largeur de l'élément / 2 */
+        top: 100%;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid white;
+        background-color: red;
+        opacity: 0.8;
    }
 }
 

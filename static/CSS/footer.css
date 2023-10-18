@@ -1,5 +1,6 @@
 /* Caractéristiques des sections du footer */
 
+
 .footer {
     font-size: 16px;
     margin-right: 10%;
@@ -9,6 +10,7 @@
     border: 1px solid gold;
     margin-bottom: 5%;
     opacity: 0.8;
+    font-family: poppins;
 }
 
 h3.footer_titre {

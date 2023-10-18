@@ -47,8 +47,9 @@
 #target-message {
     z-index: 20;
     position: absolute;
-    top: 47vh;
+    top: 45vh;
     font-size: 28px;
+    font-family: 'DotGothic16', sans-serif;
     animation: color 2s linear infinite;
 }
 
