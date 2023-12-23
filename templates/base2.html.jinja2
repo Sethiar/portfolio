@@ -28,8 +28,10 @@
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images_site/favicon/favimage.ico') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- <link rel="canonical" href="https://www.sethiar-lefetey.com">-->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BNWVX0D535"></script>
+
     {% block head_content %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EBKD5HK9X"></script>
     {% endblock %}
 </head>
 <br>
@@ -93,6 +95,12 @@
     {% endblock %}
     </footer>
 <script type="module" src="{{ assets.js_bundle.url }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-BNWVX0D535');
+</script>
 </body>
 </html>
