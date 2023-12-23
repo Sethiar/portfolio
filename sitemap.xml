@@ -3,164 +3,140 @@
         xmlbeans:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/fr</loc>
-        <lastmod>2023-10-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/eng</loc>
-        <lastmod>2023-10-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/consentement</loc>
-        <lastmod>2023-10-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/refus-cookie</loc>
-        <lastmod>2023-10-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/404</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/error404</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/home</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/home</loc>https://sethiar-lefetey.com
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/home_eng</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/home_eng</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/cv_access</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/cv_access</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/cv_access_eng</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/cv_access_eng</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/home/cv</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/home/cv</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/home/cv_eng</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/home/cv_eng</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/home/M1</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/home/M1</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/home/attestation-reussite</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/home/attestation-reussite</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/home/resultats-formation</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/home/resultats-formation</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/home/projets</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/home/projets</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/home/projects-section</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/home/projects-section</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/home/competences</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/home/competences</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/home/skill_section</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/home/skill_section</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/conditions-utilisation</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/conditions-utilisation</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/terms-of-use</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/terms-of-use</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/politique-confidentialité</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/politique-confidentialité</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/privacy-policy</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/privacy-policy</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/remerciements</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/remerciements</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/acknowledgements</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/acknowledgements</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/sitemap.xml</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/sitemap.xml</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://lefetey-arnaud-portfolio-f2bddf6a2b7a.herokuapp.com/robots.txt</loc>
-        <lastmod>2023-10-07</lastmod>
+        <loc>https://sethiar-lefetey.com/robots.txt</loc>
+        <lastmod>2023-12-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
