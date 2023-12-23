@@ -24,7 +24,7 @@ nav li {
 }
 
 nav a {
-    color: lightgrey;
+    color: red;
     border-right: 1px solid lightgrey;
     padding-right: 8%;
 }
@@ -32,24 +32,11 @@ nav a {
 nav a:hover {
     color: orange;
     opacity: 1;
-    border-bottom: 2px solid gold;
 }
 
 #navbar li {
     top: 2vh;
     margin-left: 20px;
-}
-
-#cv-link {
-    display: none;
-}
-
-#competences-link {
-    display: none;
-}
-
-#projets-link{
-    display: none;
 }
 
 /* Styles pour les écrans moyens (entre 769px et 1024px de largeur) */

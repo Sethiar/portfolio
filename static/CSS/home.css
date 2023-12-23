@@ -81,15 +81,6 @@ h1 {
     display: none;
 }
 
-h3.explic {
-    position: absolute;
-    color: orange;
-    font-family: 'DotGothic16', sans-serif;
-    top: 20vh;
-    font-size: 20px;
-    right: 10%;
-}
-
 .move-right-animation {
     /* Spécifie le nom de l'animation */
     animation-name: moveRight;
@@ -135,12 +126,6 @@ h3.explic {
         max-width: 20%;
 }
 
-    h3.explic {
-        top: 25vh;
-        font-size: 16px;
-        right: 10%;
-    }
-
     .message-container {
         top: 50vh;
         left: 3%;
@@ -166,12 +151,6 @@ h3.explic {
         font-size: 11px;
         max-width: 20%;
 }
-
-    h3.explic {
-        top: 35vh;
-        font-size: 14px;
-        right: 10%;
-    }
 
     .spaceship {
         /* Positionnement de la navette */
