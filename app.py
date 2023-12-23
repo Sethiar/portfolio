@@ -24,7 +24,6 @@ css_bundle = Bundle(
     'css/footer.css',
     'css/home.css',
     'css/message_titre.css',
-    'css/modale.css',
     'css/politique.css',
     'css/projets.css',
     'css/element_interface/drapeaux.css',
@@ -40,7 +39,6 @@ css_bundle = Bundle(
 # Créer un bundle JavaScript
 js_bundle = Bundle(
     'javascript/main.js',
-    'javascript/modale.js',
     'javascript/element_cv/redirection_cv.js',
     'javascript/element_cv/redirection_cv_eng.js',
     'javascript/element_cv/temps.js',
@@ -69,53 +67,6 @@ def loading_page():
 Route permettant l'affichage de la page de chargement
     """
     return render_template("loading_page.html", assets=assets)
-
-
-@app.route("/fr")
-def modale():
-    """
-Route permettant l'affichage de la modale des cookies
-    :return:
-        """
-    return render_template("modale.html", assets=assets)
-
-
-@app.route("/eng")
-def modale_eng():
-    """
-Route permettant l'affichage de la modale des cookies en anglais
-    :return:
-    """
-    return render_template("modale_eng.html", assets=assets)
-
-
-@app.route("/consentement", methods=["POST"])
-def consentement():
-    """
-Route permettant de donner le consentement aux cookies ou non.
-    :return:
-    """
-    consent_data = request.json
-    if consent_data["consent"] == "accepted":
-        # Faites ce que vous voulez en cas d'acceptation
-        return "/home"
-
-    elif consent_data["consent"] == "rejected":
-        # Faites ce que vous voulez en cas de refus
-        return "/refus-cookie"
-
-    else:
-        # Traitement en cas de données de consentement inconnues ou incorrectes
-        return "Données de consentement invalides"
-
-
-@app.route("/refus-cookie")
-def refus_cookie():
-    """
-Route renseignant sur les conséquences du refus des cookies.
-    :return:
-    """
-    return render_template("refus-cookie.html", assets=assets)
 
 
 # Redirection vers la page 404.
