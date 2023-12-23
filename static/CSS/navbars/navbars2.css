@@ -17,7 +17,7 @@ header {
 }
 
 nav a {
-    color: lightgrey;
+    color: red;
     border-right: 1px solid lightgrey;
     padding-right: 5%;
 }
@@ -25,7 +25,6 @@ nav a {
 nav a:hover {
     color: orange;
     opacity: 1;
-    border-bottom: 2px solid gold;
 }
 
 #navbar li {
@@ -57,7 +56,7 @@ nav a:hover {
     }
 
     nav a {
-        color: lightgrey;
+        color: red;
         border-right: 1px solid lightgrey;
         padding-right: 5%;
     }
@@ -65,7 +64,6 @@ nav a:hover {
     nav a:hover {
         color: orange;
         opacity: 1;
-        border-bottom: 2px solid gold;
     }
 
     #navbar li {
