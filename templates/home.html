@@ -8,7 +8,6 @@
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/navette/navette.css') }}">
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/navbars/navbars.css') }}">
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/message_titre.css') }}">
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='CSS/element_interface/touches.css') }}">
 {% endblock %}
 
 {% block header_content %}
@@ -28,7 +27,6 @@
 {% block main_content %}
     <div id="background">
         <h1><u>Bienvenue sur mon portfolio</u></h1>
-        <h3 class="explic">Appuyez sur "F" pour tirer un missile</h3>
 
 <div id="target-container">
     <div id="target"></div>
@@ -58,7 +56,6 @@
 
 
 </div>
-<script type="module" src="../static/javascript/elements_interface/conservation_liens.js"></script>
 <script type="module" src="../static/javascript/movements_navette/movements_navette.js"></script>
 <script type="module" src="../static/javascript/elements_interface/message.js"></script>
 <script type="module" src="../static/javascript/elements_interface/target_missile.js"></script>
