@@ -1,0 +1,527 @@
+@charset "UTF-8";
+/* Variables CSS - base/variables.scss */
+/* Noir */
+/* Blanc */
+/* Lightgrey */
+/* Gris foncé */
+/* Gris ++ foncé */
+/* Cadre des images */
+/* Orange foncé */
+/* Orange */
+/* Orange plus clair */
+/* Gold */
+/* Anthracite */
+/* Blanc pur */
+/* Blanc cassé */
+/* Spécifique */
+/* Erreur */
+/* Avertissement */
+/* Succès */
+/* Réinitialiser les marges, le padding et la box-sizing */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+figure,
+figcaption,
+footer,
+header,
+section,
+article,
+main,
+aside {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Utiliser box-sizing border-box par défaut */
+}
+
+/* Éviter que le texte soit hérité de styles non désirés */
+body {
+  line-height: 1.6;
+  font-family: "Calibri", "Arial", sans-serif;
+}
+
+/* Réinitialiser les styles pour les liens */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Réinitialiser les styles pour les listes */
+ul,
+li {
+  list-style: none;
+}
+
+/* Réinitialiser les bordures */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #f2f2f2;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+th {
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+}
+
+td,
+th {
+  padding: 1rem;
+  text-align: left;
+}
+
+/* Assurez-vous que les boutons sont sans styles par défaut */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Empêcher les comportements par défaut des formulaires */
+input,
+textarea {
+  outline: none;
+}
+
+/* Contrôler les valeurs par défaut des images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Media Queries pour la Responsivité */
+/* Mobile - Portrait (max-width: 599px) */
+@media (max-width: 599px) {
+  html,
+  body {
+    font-size: 1.5rem;
+  }
+  /* Ajouter d'autres ajustements pour les mobiles ici si nécessaire */
+}
+/* Mobile - Paysage (min-width: 600px et max-width: 899px) */
+@media (min-width: 600px) and (max-width: 899px) {
+  html,
+  body {
+    font-size: 1.5rem;
+  }
+  /* Ajouter d'autres ajustements pour les mobiles paysage ici */
+}
+/* Tablette - Portrait (min-width: 900px et max-width: 1199px) */
+@media (min-width: 900px) and (max-width: 1199px) {
+  html,
+  body {
+    font-size: 1.5rem;
+  }
+  /* Ajouter d'autres ajustements pour les tablettes portrait ici */
+}
+/* Tablette - Paysage (min-width: 1200px et max-width: 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  html,
+  body {
+    font-size: 2rem;
+  }
+}
+.layout {
+  display: flex;
+  height: 0;
+}
+
+/* Conteneur principal */
+.main-content {
+  position: relative;
+  margin-left: 30%;
+  width: 70%;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: #000000;
+}
+
+/* Cadre principal (conteneur externe) */
+.outer-frame {
+  /* Contour de la bordure externe */
+  border: 3px solid #ff8c00;
+  border-radius: 15px;
+  /* Espacement interne */
+  padding: 2%;
+  /* Couleur de fond du cadre externe */
+  background: #f2f2f2;
+  /* Ombre subtile */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Animation fluide */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.outer-frame:hover {
+  /* Légère mise en avant */
+  transform: scale(1.05);
+  /* Ombre subtile */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Cadre interne */
+.inner-frame {
+  /* Couleur et taille de la bordure interne */
+  border: 1px solid #ffd700;
+  border-radius: 10px;
+  /* Espacement interne */
+  padding: 1.5%;
+  /* Couleur de fond du cadre interne */
+  background: color-fourth;
+  /* Ombre interne */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.inner-frame:hover {
+  /* Légère mise en avant du cadre interne */
+  transform: scale(1.02);
+  /* Changement de couleur de bordure */
+  border-color: #ff8c00;
+}
+
+.space {
+  height: 10vh;
+}
+
+.separation {
+  width: 80%;
+  border-bottom: 1px solid #ffd700;
+  margin: 0 auto;
+}
+
+/* footer */
+footer {
+  background-color: #212f3d;
+  width: 70%;
+  /* Décale le footer vers la droite */
+  margin-left: auto;
+  margin-right: 0;
+  color: #ffffff;
+  /* Augmente le padding pour les petites résolutions */
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  /* Centre le contenu */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenu principal du pied de page */
+.footer-content {
+  display: flex;
+  /* Distribue l'espace entre les sections */
+  justify-content: space-between;
+  /* Espacement entre les éléments */
+  gap: 2rem;
+  padding: 2rem;
+  /* Permet aux sections de passer à la ligne en cas de petite taille d'écran */
+  flex-wrap: wrap;
+}
+
+/* Chaque section du footer */
+.footer-section {
+  flex: 1;
+  /* Garantit que chaque section ait une taille minimale */
+  min-width: 200px;
+  /* Ajoute de l'espace entre les sections */
+  margin: 0 1rem;
+}
+
+/* Titres des sections */
+footer h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  color: #ffa500;
+}
+
+/* Listes */
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  /* Espace plus important entre les éléments de liste */
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+footer ul li a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+footer ul li a:hover {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+footer ul li p {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+footer ul li p a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #ffd700;
+  transition: color 0.3s ease;
+}
+footer ul li p a:hover {
+  color: #ffa500;
+}
+
+/* Texte simple */
+footer p {
+  margin-bottom: 1.5%;
+  color: #ffa500;
+}
+
+/* Bas de la section */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 2%;
+  color: #ff8c00;
+}
+
+/* Adaptation mobile */
+@media (max-width: 1024px) {
+  footer {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .footer-content {
+    /* Les sections s'affichent verticalement sur mobile */
+    flex-direction: column;
+    /* Réduit le padding */
+    padding: 1.5rem;
+  }
+  .footer-section {
+    /* Chaque section prend toute la largeur */
+    width: 100%;
+    /* Ajoute un espace vertical entre les sections */
+    margin: 0 0 1.5rem 0;
+  }
+  footer h3 {
+    /* Réduit la taille des titres pour les petits écrans */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  footer ul li {
+    /* Réduit la taille des items de liste */
+    font-size: 1.25rem;
+  }
+  footer p {
+    /* Réduit la taille du texte simple */
+    font-size: 1.25rem;
+  }
+}
+/* Adaptation très petit écran (téléphones) */
+@media (max-width: 480px) {
+  footer {
+    padding: 2rem 0;
+  }
+  .footer-content {
+    /* Les sections s'affichent verticalement */
+    flex-direction: column;
+    padding: 1rem;
+  }
+  footer h3 {
+    /* Réduit encore la taille des titres */
+    font-size: 1.5rem;
+  }
+  footer ul li {
+    /* Réduit la taille des items de liste */
+    font-size: 1.25rem;
+  }
+  footer p {
+    /* Réduit la taille du texte simple */
+    font-size: 1.25rem;
+  }
+}
+/* Style principal */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30%;
+  background-color: #000000;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  border-right: 2px solid #ffd700;
+  color: #292929;
+}
+@media (max-width: 1024px) {
+  .header {
+    display: none;
+  }
+}
+
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1002;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.4rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.hamburger .line {
+  width: 2rem;
+  height: 0.3rem;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 1024px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+.hamburger.active + .header,
+.header.active {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+.main-content {
+  transition: margin-top 0.3s ease;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+.nav-links ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav-links ul li a {
+  font-size: 3rem;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 1rem 0;
+}
+.nav-links ul li a:hover {
+  color: #ffd700;
+}
+
+/* styles pour le logo */
+.logo img {
+  width: 150px;
+  height: auto;
+  /* Cadre de l'image */
+  border: 1px solid #ff8c00;
+  /* Animation fluide pour le zoom et l'ombre */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.logo img:hover {
+  /* Zoom au survol */
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* pages css - pages/_landing.scss */
+/* Titre de la page d'accueil */
+.title-container-landing {
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  align-items: center;
+  margin: 0;
+  height: 20vh;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2% 3%;
+  transition: transform 0.3s ease_out, opacity 0.3s ease_out;
+}
+.title-container-landing:hover {
+  transform: scale(1.025);
+}
+
+/* Contenu centré avec dégradé */
+.content-section-landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+}
+
+/* Media Queries pour la réactivité */
+@media (max-width: 768px) {
+  /* Ajustements pour les tablettes en portrait et les petits écrans */
+  .title-container-landing {
+    font-size: 2rem;
+    height: 12vh;
+  }
+  .content-section-landing {
+    width: 90%;
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  /* Ajustements pour les smartphones */
+  .title-container-landing {
+    font-size: 2rem;
+    height: 10vh;
+  }
+  .content-section-landing {
+    width: 100%;
+    padding: 0.25rem;
+  }
+}

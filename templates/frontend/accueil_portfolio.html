@@ -1,0 +1,70 @@
+{% extends 'base.html.jinja2' %}
+
+{% block head_content %}
+<meta name="description" content="Portfolio de Lefetey Arnaud. Concepteur, Développeur et Designer de produits web.">
+<title>{% block title %}Portfolio de Lefetey Arnaud{% endblock %}</title>
+{% endblock %}
+
+{% block header_content %}
+{% endblock %}
+
+<!-- body -->
+{% block body_content %}
+
+{% block main_content %}
+<div class="main-content">
+    <!-- Conteneur logo animé -->
+    <div class="logo-animation" id="logo-animation">
+
+        <button id="button-logo-animation" class="btn-secondary" onclick="">Rejouer l'animation</button>
+    </div>
+
+    <div class="separation"></div>
+    <div class="space"></div>
+
+    <!-- Conteneur titre -->
+    <div class="title-container-landing">
+        <h1 class="h1-landing">Portfolio de Arnaud Lefetey</h1>
+    </div>
+
+    <div class="separation"></div>
+    <div class="space"></div>
+
+    <div class="content-section-landing">
+        <!-- cadre extérieur -->
+        <div class="outer-frame">
+
+            <!-- cadre intérieur -->
+            <div class="inner-frame">
+
+                <!-- Première section -->
+                <section id="product" class="section-products" aria-label="Produits">
+                    <h3 class="h3-section">Produits</h3>
+                </section>
+
+                <!-- Deuxième section -->
+                <section id="project-over" class="section-projects" aria-label="Projets terminés">
+                    <h3 class="h3-section">Projets terminés</h3>
+                </section>
+
+                <!-- Troisième section -->
+                <section id="ongoing-project" class="section-projects" aria-label="Projets en cours">
+                    <h3 class="h3-section">Projets en cours</h3>
+                </section>
+
+                <!-- Quatrième section -->
+                <section id="certificate" class="section-certificate" aria-label="Diplômes et Formations">
+                    <h3 class="h3-section">Diplômes et Formations</h3>
+                </section>
+
+                <!-- Cinquième section -->
+                <section id="ego" class="section-ego" aria-label="Qui suis-je ?">
+                    <h3 class="h3-section">Qui suis-je ?</h3>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
+{% endblock %}

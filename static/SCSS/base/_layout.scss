@@ -1,0 +1,71 @@
+// Importation des variables.
+@use 'variables' as *;
+
+// Base layout
+.layout {
+  display: flex;
+  height: 0;
+}
+
+/* Conteneur principal */
+.main-content {
+  position: relative;
+  margin-left: 30%;
+  width: 70%;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: $color-primary;
+}
+
+/* Cadre principal (conteneur externe) */
+.outer-frame {
+  /* Contour de la bordure externe */
+  border: 3px solid $color-border-image;
+  border-radius: 15px;
+  /* Espacement interne */
+  padding: 2%;
+  /* Couleur de fond du cadre externe */
+  background: $color-third;
+  /* Ombre subtile */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Animation fluide */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    /* Légère mise en avant */
+    transform: scale(1.05);
+    /* Ombre subtile */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Cadre interne */
+.inner-frame {
+  /* Couleur et taille de la bordure interne */
+  border: 1px solid $color-frame-header;
+  border-radius: 10px;
+  /* Espacement interne */
+  padding: 1.5%;
+  /* Couleur de fond du cadre interne */
+  background: color-fourth;
+  /* Ombre interne */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    /* Légère mise en avant du cadre interne */
+    transform: scale(1.02);
+    /* Changement de couleur de bordure */
+    border-color: $color-border-image;
+  }
+}
+
+.space {
+  height: 10vh;
+}
+
+.separation {
+  width: 80%;
+  border-bottom: 1px solid $color-frame-header;
+  margin: 0 auto;
+}
+

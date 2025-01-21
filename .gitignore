@@ -1,0 +1,8 @@
+# Exclusion des fichiers de configuration locaux
+
+*.env
+
+# Fichiers générés
+node_modules/
+__pycache__/
+*.pyc

@@ -1,0 +1,65 @@
+// Importation de variables.scss
+@use '../base/variables' as *;
+
+/* pages css - pages/_landing.scss */
+
+// Styles du contenu de la page d'accueil.
+
+/* Titre de la page d'accueil */
+.title-container-landing {
+  display: flex;
+  justify-content: center;
+  font-size: $font-size-title;
+  align-items: center;
+  margin: 0;
+  height: 20vh;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2% 3%;
+  transition: transform 0.3s ease_out, opacity 0.3s ease_out;
+
+  &:hover {
+    transform: scale(1.025);
+  }
+}
+
+/* Contenu centré avec dégradé */
+.content-section-landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+}
+
+
+/* Media Queries pour la réactivité */
+
+@media (max-width: 768px) {
+  /* Ajustements pour les tablettes en portrait et les petits écrans */
+  .title-container-landing {
+    font-size: $font-size-xxl;
+    height: 12vh;
+  }
+
+  .content-section-landing {
+    width: 90%;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustements pour les smartphones */
+  .title-container-landing {
+    font-size: $font-size-xxl;
+    height: 10vh;
+  }
+
+  .content-section-landing {
+    width: 100%;
+    padding: 0.25rem;
+  }
+}

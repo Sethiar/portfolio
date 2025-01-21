@@ -1,0 +1,20 @@
+// Importation de variables.scss
+@use '../base/variables' as *;
+
+
+/* styles pour le logo */
+.logo img {
+  width: 150px;
+  height: auto;
+  /* Cadre de l'image */
+  border: 1px solid $color-border-image;
+  /* Animation fluide pour le zoom et l'ombre */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    /* Zoom au survol */
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+}
+
