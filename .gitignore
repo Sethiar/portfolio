@@ -1,6 +1,11 @@
-# Exclusion des fichiers de configuration locaux
 
+#================================================#
+# Exclusion des fichiers de configuration locaux #
+#================================================#
+
+# Fichiers de configuration locaux
 *.env
+/venv
 
 # Fichiers générés
 node_modules/

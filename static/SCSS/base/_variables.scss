@@ -1,79 +1,208 @@
+/* Fichier : _variables.scss
+ * Description : Fichier contenant les styles des variables CSS de base du portfolio    
+ * Auteur : Lefetey Arnaud
+ * Date de création : 01/09/2025
+ */
+
+
 /* Variables CSS - base/variables.scss */
+//---------------------------------------------------------------
 
 
-// Variables globales.
+//====================//
+// Variables globales //
+//====================//
 
+//=========================//
+//    Taille des polices   //
+//=========================//
 
-// Taille des polices
 $font-size-small: 0.8rem;    // Taille petite (12.8px)
-$font-size-sm2: 0.875rem;     // Taille petite (14px)
+$font-size-sm: 0.875rem;     // Taille petite (14px)
 $font-size-base: 1rem;       // Taille de base (16px)
 $font-size-lg: 1.25rem;      // Taille grande (20px)
 $font-size-xl: 1.5rem;       // Taille extra-large (24px)
 $font-size-xxl: 2rem;        // Taille super large (32px)
 $font-size-xxxl: 3rem;       // Taille extra-super large (40px)
 $font-size-title: 4rem;      // Taille de caractères de titre (48px)
+//---------------------------------------------------------------
 
 
-// === Couleurs globales ===
+//===========================//
+//     Couleurs globales     //
+//===========================//
+
+
+//======================//
+// Couleurs principales //
+//======================//
+
+/* Orange Sethiar */
+$color-primary: #DE7915;
+
 /* Noir */
-$color-primary: #000000;
+$color-black: #000000;
+
 /* Blanc */
-$color-secondary: #ffffff;
+$color-white: #ffffff;
+//---------------------------------------------------------------
+
+//======================//
+// Couleurs secondaires //
+//======================//
+
+/* Couleur footer Bleu Sethiar */
+$color-footer: #3D5776; 
+
+/* Orange classique */
+$color-secondary-orange: #FF8C11;
+
+/* Jaune Or */
+$color-secondary-gold: #F8C456; 
+//---------------------------------------------------------------
+
+//======================//
+//  Couleurs déclinées  //
+//======================//
+
+// Déclinaisons orange
+/* Plus clair */
+$color-decline-orange1: #F08C1C;
+/* Plus foncé */
+$color-decline-orange2: #C96B12;
 
 
-// === Couleurs variantes gris ===
-/* Lightgrey */
-$color-third: #f2f2f2;
+// Déclinaisons Bleu Sethiar
+/* Plus clair */
+$color-decline-blue1: #4A6C91;
+/* Plus foncé */
+$color-decline-blue2: #2F445C;
+
+
+// Déclinaisons Jaune Or
+/* Plus clair */
+$color-decline-gold1: #FFD580;
+/* Plus foncé */
+$color-decline-gold2: #E5AD36; 
+//---------------------------------------------------------------
+
+
+//==========//
+//  Neutres //
+//==========//
+
 /* Gris foncé */
-$color-fourth: #292929;
-/* Gris ++ foncé */
-$color-fourth2: #a9a9a9;
+$color-neutral-darkgrey: #a9a9a9;
+
+/* Gris */
+$color-neutral-grey: #cec7c7;
+
+/*Gris clair 1 */
+$color-neutral-lightgrey: #e4dcdc;
+
+/* Gris clair */
+$color-lightgrey: #f2f2f2;
 
 
-// Couleurs principales du site
-/* Cadre des images */
-/* Orange foncé */
-$color-border-image: #ff8c00;
+// Accents
 /* Orange */
-$color-border-frame: #ffa500;
-/* Orange plus clair */
-$color-border-frame2: #ff9c00;
-/* Gold */
-$color-frame-header: #ffd700;
+$color-accent-orange: #FF8C11; 
 
-// Couleur background produits
-/* Anthracite */
+/* Rouge foncé */
+$color-accent-darkred: #D32F2F; 
+/* Rouge foncé hover cancelled */
+$color-accent-darkred2: #6b1919;
+
+/* Orange foncé */
+$color-accent-darkorange: #C96B12; 
+//----------------------------------------------
+
+
+//=============================//
+// Couleur background produits //
+//=============================//
+
+/* Antracite */
 $color-background-product: #1e1e1e;
-
 
 // Couleur Texte produits
 /* Blanc pur */
 $color-text-product: #fff;
+
 /* Blanc cassé */
 $color-text-product-card-h3: #f4f4f4;
 
-/* Spécifique */
-$color-footer: #212f3d; // Couleur pour le pied de page
+/* Gris très très clair */
+$color-text-product-p: #ddd;
+//---------------------------------------------------------------
 
 
-// === Couleurs d'alerte ===
-/* Erreur */
-$color-alert-error-text: #a94442; // Texte
-$color-alert-error-background: #f2dede; // Fond
-$color-alert-error-border: #ebccd1; // Bordure
+//============================//
+//  Couleur background hover  //
+//============================//
 
-/* Avertissement */
-$color-alert-warning-text: #8a6d3b; // Texte
-$color-alert-warning-background: #fcf8e3; // Fond
-$color-alert-warning-border: #faebcc; // Bordure
+/* Gris foncé */
+$color-background-product-hover:#292929;
 
-/* Succès */
-$color-alert-success-text: #3c763d; // Texte
-$color-alert-success-background: #dff0d8; // Fond
-$color-alert-success-border: #d6e9c6; // Bordure
+// Couleur background card hover
+/* Orange plus clair */
+$color-background-productcard-hover: #F08C1C;
+//---------------------------------------------------------------
 
 
-// Polices
-$font-primary: 'Arial', sans-serif;
-$font-secondary: 'Comic Sans MS', cursive;
+//===========================//
+//     Couleurs d'alerte     //
+//===========================//
+
+// Erreur
+//------------------------
+
+/* Texte */
+$color-alert-error-text: #a94442; 
+
+/* Fond */
+$color-alert-error-background: #f2dede; 
+
+/* Bordure */
+$color-alert-error-border: #ebccd1; 
+//------------------------
+
+
+// Avertissement
+//------------------------
+/* Texte */
+$color-alert-warning-text: #8a6d3b; 
+
+/* Fond */
+$color-alert-warning-background: #fcf8e3; 
+
+/* Bordure */
+$color-alert-warning-border: #faebcc;
+//------------------------
+
+
+// Succès
+//------------------------
+/* Texte */
+$color-alert-success-text: #3c763d;
+
+/* Fond */
+$color-alert-success-background: #dff0d8;
+
+/* Bordure */
+$color-alert-success-border: #d6e9c6;
+//------------------------
+
+//=========//
+// Polices //
+//=========//
+
+/* Police principale */
+$font-primary: 'Lato', sans-serif;
+
+/* Police secondaire */
+$font-secondary: 'Anonymous Pro', cursive;
+
+/* Police tertiare */
+$font-tertiary: 'Libre Baskerville';
+//------------------------

@@ -1,20 +1,65 @@
-// Importation de variables.scss
-@use '../base/variables' as *;
+/* Fichier : _images.scss
+ * Description : Fichier contenant les styles des images du portfolio
+ * Auteur : Lefetey Arnaud
+ * Date de création : 01/09/2025
+ */
+
+ 
+// Importation des variables.
+@import '../base/variables';
+// Importation tailles responsive.
+@import '../base/responsive-size';
 
 
-/* styles pour le logo */
-.logo img {
-  width: 150px;
-  height: auto;
-  /* Cadre de l'image */
-  border: 1px solid $color-border-image;
-  /* Animation fluide pour le zoom et l'ombre */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+//=================================//
+//  Styles des images du header    //
+//=================================//
 
-  &:hover {
-    /* Zoom au survol */
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
+.logo {
+  width: 30%;
+  align-items: center;
+  border: 2px solid silver;
 }
+
+
+//===================================//
+//  Image des icônes de compétences  //
+//===================================//
+
+
+
+
+
+//================================================//
+// Images des cartes de visite de la page contact //
+//================================================//
+
+.contact-cartes-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.carte-visite {
+  width: 300px;
+  height: 200px;
+  background-color: $color-primary;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-lg;
+  font-weight: bold;
+}
+
+
+
+
+
+
+//====================================//
+//          Responsive design         //
+//====================================//
+
 

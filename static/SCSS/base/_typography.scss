@@ -1,2 +1,70 @@
+/* Fichier : _typography.scss
+ * Description : Fichier contenant les styles des titres, paragraphes et autres éléments de contenu du portfolio
+ * Auteur : Lefetey Arnaud
+ * Date de création : 01/09/2025
+ */
+
+
 // Importation des variables.
-@use 'variables' as *;
+@import 'variables';
+// Importation tailles responsive.
+@import 'responsive-size';
+
+
+//=======================================//
+// typography css - base/typography.scss //
+//=======================================//
+
+
+// Personnalisation des titres, paragraphes et éléments de contenus //
+
+
+/* Titres de la page d'accueil */
+.landing-h1 {
+  font-size: $font-size-xxxl;
+  font-weight: 700;
+  color: $color-primary;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+//===================================//
+//  Gestion des titres du portfolio  //
+//===================================//
+
+/*Titres des sous-sections de lapage d'accueil*/
+.landing-h2 {
+  font-size: $font-size-xl;
+  font-weight: 600;
+  color: $color-primary;
+  margin: 1rem 0;
+}
+
+.landing-h3 {
+  font-size: $font-size-lg;
+  font-weight: 500;
+  color: $color-primary;
+  margin: 0.5rem 0;
+}
+
+
+/* Titres de la page contact */
+.contact-h1 {
+  font-size: $font-size-xxl;
+  font-weight: 700;
+  color: $color-primary;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+//====================================//
+//          Responsive design         //
+//====================================//
+

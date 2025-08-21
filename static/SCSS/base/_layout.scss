@@ -1,71 +1,315 @@
-// Importation des variables.
-@use 'variables' as *;
+/* Fichier : _layout.scss
+ * Description : Fichier contenant les styles des layouts du portfolio ainsi que les séparations.
+ * Auteur : Lefetey Arnaud
+ * Date de création : 01/09/2025
+ */
+ 
+ 
+ // Importation des variables.
+@import 'variables';
+// Importation tailles responsive.
+@import 'responsive-size';
 
-// Base layout
+
+//========================================//
+// Gestion des conteneurs droit et gauche //
+//========================================//
+
 .layout {
   display: flex;
   height: 0;
 }
 
-/* Conteneur principal */
+// Conteneur principal
 .main-content {
-  position: relative;
+  position:relative;
   margin-left: 30%;
   width: 70%;
   padding: 2rem;
   overflow-y: auto;
-  background-color: $color-primary;
+  margin-top: -200vh;
+  background-color: $color-black;
 }
+//-------------------------------------------
 
-/* Cadre principal (conteneur externe) */
-.outer-frame {
-  /* Contour de la bordure externe */
-  border: 3px solid $color-border-image;
-  border-radius: 15px;
+
+//===================//
+//  Style des frames //
+//===================//
+
+/* Cadre principal de la page d'accueil */
+.outer-frame-landing {
+  /* Couleur et taille de la bordure externe */
+  border: 4px solid $color-decline-orange2;
+  /* Coins arrondis */
+  border-radius: 10px; 
   /* Espacement interne */
-  padding: 2%;
+  padding: 2%; 
   /* Couleur de fond du cadre externe */
-  background: $color-third;
+  background: $color-lightgrey; 
   /* Ombre subtile */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   /* Animation fluide */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    
+  &:hover {
+    /* Légère mise en avant */
+    transform: scale(1.05); 
+    /* Ombre amplifiée */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+  }
+}
+
+/* Cadre interne de la page d'accueil */
+.inner-frame-landing {
+  /* Couleur et taille de la bordure interne */
+  border: 2px solid $color-decline-gold2; 
+  /* Coins arrondis */
+  border-radius: 10px; 
+  /* Espacement interne */
+  padding: 1.5%; 
+  /* Couleur de fond du cadre interne */
+  background: $color-black; 
+  /* Ombre interne */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); 
+    
+  &:hover {
+    /* Légère mise en avant du cadre interne */
+    transform: scale(1.02); 
+    /* Changement de couleur de bordure */
+    border-color: $color-decline-orange2; 
+  }
+}
+
+/* Cadre externe de la page contact */
+.outer-frame-contact {
+  /* Couleur et taille de la bordure externe */
+  border: 4px solid $color-decline-orange2;
+  /* Coins arrondis */
+  border-radius: 10px; 
+  /* Espacement interne */
+  padding: 2%; 
+  /* Couleur de fond du cadre externe */
+  background: $color-lightgrey; 
+  /* Ombre subtile */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Animation fluide */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 
   &:hover {
     /* Légère mise en avant */
-    transform: scale(1.05);
-    /* Ombre subtile */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); 
+    /* Ombre amplifiée */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
   }
 }
 
-/* Cadre interne */
-.inner-frame {
+/* Cadre interne de la page contact */
+.inner-frame-contact {
   /* Couleur et taille de la bordure interne */
-  border: 1px solid $color-frame-header;
-  border-radius: 10px;
+  border: 2px solid $color-decline-gold2; 
+  /* Coins arrondis */
+  border-radius: 10px; 
   /* Espacement interne */
-  padding: 1.5%;
+  padding: 1.5%; 
   /* Couleur de fond du cadre interne */
-  background: color-fourth;
+  background: $color-black; 
   /* Ombre interne */
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); 
 
   &:hover {
     /* Légère mise en avant du cadre interne */
-    transform: scale(1.02);
+    transform: scale(1.02); 
     /* Changement de couleur de bordure */
-    border-color: $color-border-image;
+    border-color: $color-decline-orange2; 
   }
 }
+//--------------------------------------------------
 
-.space {
-  height: 10vh;
+
+//==============//
+// Séparateurs  //
+//==============//
+
+@mixin separator($width, $margin, $border-bottom) {
+  width: $width;
+  margin: $margin;
+  border-bottom: $border-bottom;
 }
 
-.separation {
-  width: 80%;
-  border-bottom: 1px solid $color-frame-header;
-  margin: 0 auto;
+/* Séparateur horizontal principal */
+.separator-1 {
+    @include separator(90%, 0 auto, 2px solid $color-decline-gold1);
 }
 
+/* Séparateur horizontal secondaire */
+.separator-2 {
+    @include separator(90%, 0 auto, 2px solid $color-primary);
+}
+
+.contact-divider {
+    border: none;
+    width: 80%;
+    height: 2px;
+    background-color: $color-decline-gold1;
+    margin: 0 auto;
+}
+//--------------------------------------------------
+
+
+//========//
+// Spacer //
+//========//
+
+
+/* Espaceur principal */
+.space-1 {
+    height: 8.5vh;
+}
+
+/* Espaceur secondaire */
+.space-2 {
+    height: 5vh;
+}
+
+.contact-space {
+    height: 4vh;
+}
+//--------------------------------------------------
+
+
+
+//====================================//
+//          Responsive design         //
+//====================================//
+
+
+
+// Mobile - Portrait (max-width: 599px)
+//------------------------------------------
+@include respond-max($breakpoint-xs) {
+  .layout {
+    /* Afficher la mise en page en colonne */
+    flex-direction: column; 
+    height: 10vh;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    top: 0;
+  }
+
+  .outer-frame-landing, .inner-frame-landing,
+  .outer-frame-contact, .inner-frame-contact {
+    padding: 2%;
+    width: 100%;
+  }
+
+
+  .space-1 {
+    height: 8vh;
+  }
+
+  .space-2 {
+    height: 4.5vh;
+  }
+
+  .contact-space {
+    height: 3.5vh;
+}
+}
+//----------------------------------------------------
+
+
+// Mobile - Paysage (min-width: 600px et max-width: 768px)
+//----------------------------------------------------
+@include respond-between($breakpoint-xs + 1, $breakpoint-sm) {
+  .layout {
+    /* Afficher la mise en page en colonne */
+    flex-direction: column; 
+    height: 30vh;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    top: 0;
+  }
+
+  .outer-frame-landing, .inner-frame-landing, 
+  .outer-frame-contact, .inner-frame-contact {
+    padding: 3%;
+    width: 100%;
+  }
+
+  .space-1 {
+    height: 7vh;
+  }
+
+  .space-2 {
+    height: 3.5vh;
+  }
+
+  .contact-space {
+    height: 3vh;
+}
+}
+//---------------------------------------------------------------
+
+
+// Tablette - Portrait (min-width: 769px et max-width: 1024px)
+//-------------------------------------------------------------
+@include respond-between($breakpoint-sm + 1, $breakpoint-md) {
+  .layout {
+    /* Retour à une mise en page en ligne */
+    flex-direction: row; 
+    height: 25vh;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .outer-frame-landing, .inner-frame-landing,
+  .outer-frame-contact, .inner-frame-contact {
+    padding: 3%;
+    width: 100%;
+  }
+
+  .space-1 {
+    height: 7vh;
+  }
+
+  .space-2 {
+    height: 3.5vh;
+  }
+
+  .contact-space {
+    height: 3vh;
+  }
+}
+//--------------------------------------------------------
+
+
+// Tablette - Paysage (min-width: 1025px et max-width: 1400px)
+//-----------------------------------------------------------------
+@include respond-between($breakpoint-md + 1, $breakpoint-xl) {
+  .layout {
+    /* Retour à une mise en page en ligne */
+    flex-direction: row; 
+  }
+
+  .main-content {
+    margin-left: 30%;
+    width: 75%;
+  }
+
+  .outer-frame-landing, .inner-frame-landing,
+  .outer-frame-contact, .inner-frame-contact {
+    padding: 3%;
+    width: 100%;
+  }
+}
+//------------------------------------------------

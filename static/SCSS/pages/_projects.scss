@@ -1,0 +1,54 @@
+/* Fichier : _projects.scss
+ * Description : Fichier contenant les styles de la page des projets de SethiarWorks.
+ * Auteur : Lefetey Arnaud
+ * Date de création : 01/09/2025
+ */
+
+ 
+// Importation des variables.
+@import '../base/variables';
+// Importation tailles responsive.
+@import '../base/responsive-size';
+
+
+//===============================//
+// Styles de la page des projets // 
+//===============================//
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+//====================================//
+//          Responsive design         //
+//====================================//
+
+
+

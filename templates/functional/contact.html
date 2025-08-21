@@ -1,1 +1,97 @@
-{% extends 'base2.html.jinja2' %}
+<html lang="fr-FR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Page de contacts du site de l'entreprise SethiarWorks. Cette page fournit les informations de contact pour 
+            l'entreprise, y compris les cartes de visite et les liens vers les réseaux sociaux. La carte de visite de L'entreprise ainsi que le lien 
+            vers le site de l'entreprise sont également inclus.">
+        <meta name="keywords" content="SethiarWorks, contacts, entreprise, carte de visite, réseaux sociaux, informations de contact">
+        <meta name="author" content="Lefetey Arnaud">
+        <meta name="robots" content="index, follow">
+
+        <link rel="canonical" href="{{ url_for('functional.contact', _external=True) }}">
+        <link rel="alternate" href="{{ url_for('functional.contact', _external=True) }}" hreflang="fr-FR">
+        
+        <title>Contacts - SethiarWorks</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+        <!-- CSS Principal -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='gen/style.css') }}?v=1.0">
+        
+        <!-- Google Fonts -->
+    </head>
+
+    <body>
+        <div class="outer-frame-contact">
+            <div class="inner-frame-contact">
+                <div class="contact-main">
+                    <div class="contact-border">
+                        
+                        <div class="contact-space"></div>
+
+                        <h1 class="contact-h1">Contacts</h1>
+
+                        <div class="contact-header">
+                            <p class="contact-update">Dernière mise à jour : 1 septembre 2025</p>
+                            
+                            <div class="contact-space"></div>
+                            
+                            <a href="{{ url_for('landing_page') }}" class="btn-secondary"
+                                aria-label="Retour à l'accueil">
+                                Retour à l'accueil
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-space"></div>
+
+                    <hr class="contact-divider">
+
+                    <div class="contact-space"></div>
+
+                    <!-- Cartes de visite -->
+                    <div class="contact-cartes-wrapper">
+                        <img src="{{ url_for('static', filename='images/images_sethiar/cart_sethiar.png') }}"
+                             alt="Carte de visite SethiarWorks verso"
+                             class="carte-visite">
+
+                        <div class="contact-space"></div>
+                        
+                        <img src="{{ url_for('static', filename='images/images_sethiar/cart_sethiar2.png') }}"
+                             alt="Carte de visite SethiarWorks recto"
+                             class="carte-visite">
+                    </div>
+
+                    <div class="contact-space"></div>
+
+                    <hr class="contact-divider">
+
+                    <div class="contact-space"></div>
+
+                    <div class="contact-site-entreprise">
+                        <p class="contact-sentence">
+                            Vous pouvez aussi visiter mon site web
+                        </p>
+                        <p class="contact-sentence">
+                           Vous y retrouverez mes produits et services.
+                        </p>
+                        <p class="contact-sentence">
+                            Nous espérons vous revioro bientôt
+                        </p>
+                        <p class="contact-sentence">
+                            <strong>Site de l'entreprise :</strong>
+                            
+                            <a href="https://sethiarworks.sethiar-lefetey.com" class="contact-link"
+                               target="_blank" rel="noopener noreferrer">
+                                https://sethiarworks.sethiar-lefetey.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+

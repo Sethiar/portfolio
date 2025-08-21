@@ -1,0 +1,80 @@
+<html lang="fr-FR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="404, erreur, page introuvable, SethiarWorks, portfolio, Lefetey Arnaud">
+        <meta name="author" content="Lefetey Arnaud">
+        <meta name="robots" content="noindex, nofollow">
+
+        <meta name="description" content="Page d'erreur 404 – Page introuvable. Cette page indique que la ressource demandée n'a pas été trouvée sur le serveur. 
+            Veuillez vérifier l'URL ou revenir à la page d'accueil.">
+        
+        <link rel="canonical" href="{{ url_for('functional.error_404', _external=True) }}">
+        <link rel="alternate" href="{{ url_for('functional.error_404', _external=True) }}" hreflang="fr">
+        
+        <title>Erreur 404 - Page introuvable</title>
+    
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+        <!-- CSS Principal -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='gen/style.css') }}?v=1.0">
+
+    </head>
+    <body>
+ 
+
+        <!-- Contenu principal de la page d'erreur -->
+        <main>
+
+            <div class="error-container">
+
+                <img class="error-image" src="{{ url_for('static', filename='images/images_error/image_404.png') }}" 
+                    alt="Image 404">
+
+                <div class="error-annonce">
+
+                    <h1 class="error-h1">Erreur 404 - Page introuvable</h1>
+
+                    <p class="error-sentence">
+                        Nous vous prions de bien vouloir nous excuser. La page que vous tentez d’atteindre est introuvable.
+                    </p>
+
+                    <p class="error-sentence">
+                        Cela peut être dû à :
+                    </p>
+
+                    <ul class="error-list">
+                        <li>Une erreur dans l’adresse URL saisie</li>
+                        <li>Une page déplacée ou supprimée</li>
+                        <li>Un dérangement temporaire du site</li>
+                    </ul>
+
+                    <p class="error-sentence">
+                        Vous pouvez revenir à l'accueil en cliquant ici :
+                        <a class="error-link" href="{{ url_for('landing_page') }}">Retour à l’accueil</a>.
+                    </p>
+
+                    <p class="error-sentence">
+                        Merci de votre compréhension et à très bientôt sur <b>SethiarWorks</b>.
+                    </p>
+
+                </div>
+            </div>
+        </main>
+        <!-- Pied de page -->
+
+
+        <footer>
+            <!--
+                Ajouter des informations de copyright, mentiosn légales, contacts.
+            -->
+            <h3>informations</h3>
+                <ul>
+                    <li><a href="{{ url_for('functional.mentions') }}">Mentions Légales</a></li>
+                    <li><a href="{{ url_for('functional.contact') }}">Informations sur le créateur du site</a></li>
+                </ul>
+        </footer>
+    </body>
+</html>
+    

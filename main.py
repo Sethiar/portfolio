@@ -1,6 +1,7 @@
 """
-Fichier de configuration de l'application principal.
+Fichier de configuration de l'application portfolio de Lefetey Arnaud.
 """
+
 import os
 import locale
 import time
@@ -15,14 +16,23 @@ locale.setlocale(locale.LC_TIME, 'fr_FR.UTF-8')
 application = create_app()
 
 
-# Route permettant l'affichage du favicon.
-@application.route('/favicon.ico')
-def favicon():
+#==================================================================#
+# Définition des pages particulières de l'application SethiarWorks #
+#==================================================================#
+
+# Route renvoyant l'erreur 404.
+@application.errorhandler(404)
+def page_not_found(error):
     """
-    Sert le fichier favicon.ico à partir du répertoire 'static'.
-    """
-    return send_from_directory(os.path.join(application.root_path, 'static'),
-                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
+    Renvoie une page d'erreur 404 en cas de page non trouvée.
+    
+    Args:
+        error : l'erreur qui a declenché la page non trouvée.
+        
+    Returns:
+        la page d'erreur 404. 
+    """ 
+    return render_template("error/404.html"), 404
 
 
 # Route permettant l'affichage de la route de la page d'accueil.
@@ -31,10 +41,10 @@ def landing_page():
     """
     Page d'accueil du portfolio
 
-    :return: frontend/accueil_portfolio.html
+    :return: frontend/index.html
     """
 
-    return render_template("frontend/accueil_portfolio.html", timestamp=time.time())
+    return render_template("frontend/index.html", timestamp=time.time())
 
 
 # Lancement de l'instance flask.

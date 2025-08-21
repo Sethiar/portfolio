@@ -1,2 +1,33 @@
-// Importation de variables.scss
-@use '../base/variables' as *;
+/* Fichier : _links.scss
+ * Description : Fichier contenant les styles des liens du portfolio
+ * Auteur : Lefetey Arnaud
+ * Date de création : 01/09/2025
+ */
+
+ 
+// Importation des variables.
+@import '../base/variables';
+// Importation tailles responsive.
+@import '../base/responsive-size';
+
+
+// Liens de la page contact
+.contact-link {
+  color: $color-primary;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+    color: $color-decline-gold1;
+    text-decoration: underline;
+  }
+}
+
+
+
+
+//====================================//
+//          Responsive design         //
+//====================================//
+
+
+

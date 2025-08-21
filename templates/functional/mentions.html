@@ -1,32 +1,47 @@
-{% extends 'base2.html.jinja2' %}
+<html lang="fr-FR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Lefetey Arnaud">
+        <meta name="description" content="Mentions légales du site de l'entreprise SethiarWorks. Cette section rappelle 
+            les informations légales concernant l'éditeur du site, l'hébergeur, la propriété intellectuelle, la responsabilité, 
+            les données personnelles et les cookies. Ce site respecte la réglementation en vigueur et les droits des utilisateurs.">
+        
+        <meta name="keywords" content="mentions légales, SethiarWorks, Lefetey Arnaud, portfolio, entreprise, RGPD, données personnelles">
+        <meta name="robots" content="index, follow">
 
-{% block head_content %}
-<meta name="description" content="Mentions légales du site de l'entreprise SethiarWorks.">
-<title>{% block title %}Mentions légales{% endblock %}</title>
-{% endblock %}
+        <title>Mentions légales</title>
 
-{% block main_content %}
-<div class="outer-frame-politique">
-    <div class="inner-frame-politique">
-        <main class="politique-main">
-            <div class="politique-border">
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
-                <!--titre -->
-                <h1 class="politique-title">Mentions Légales</h1>
+        <!-- CSS Principal -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='gen/style.css') }}?v=1.0">
+    </head>
 
-                <!-- Section : Mise à jour et retour -->
-                <div class="politique-header">
-                    <p class="politique-update">Dernière mise à jour : 1 janvier 2025</p>
-                    <a href="{{ url_for('landing_page') }}" class="politique-home-link">Retour à l'accueil</a>
-                </div>
-            </div>
+    <body>
+        <!-- Contenu principal de la page Mentions légales -->
+        <div class="outer-frame-politique">
+            <div class="inner-frame-politique">
+                <main class="politique-main">
+                    <div class="politique-border">
 
-            <!-- Séparation -->
-            <hr class="politique-divider">
+                        <!--titre -->
+                        <h1 class="politique-title">Mentions Légales</h1>
+
+                        <!-- Section : Mise à jour et retour -->
+                        <div class="politique-header">    
+                            <p class="politique-update">Dernière mise à jour : 1 septembre 2025</p>
+                            <a href="{{ url_for('landing_page') }}" class="btn-secondary">Retour à l'accueil</a>
+                        </div>
+                    </div>
+
+                    <!-- Séparation -->
+                    <hr class="politique-divider">
 
             <!-- Logo -->
             <div class="politique-logo">
-                <img src="{{ url_for('static', filename='Images/images_accueil/logo.jpg') }}"
+                <img src="{{ url_for('static', filename='Images/images_logo/logo.png') }}"
                      alt="Logo de SethiarWorks"
                      class="politique-logo-img">
             </div>
@@ -173,8 +188,3 @@
         </main>
     </div>
 </div>
-
-{% endblock %}
-
-{% block footer_content %}
-{% endblock %}

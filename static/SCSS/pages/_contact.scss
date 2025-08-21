@@ -1,0 +1,43 @@
+/* Fichier : _contact.scss
+ * Description : Fichier contenant les styles de la page contact
+ * Auteur : Lefetey Arnaud
+ * Date de création : 01/09/2025
+ */
+
+// Importation des variables.
+@import '../base/variables';
+// Importation tailles responsive.
+@import '../base/responsive-size';
+
+
+//===============================//
+//   Styles de la page contact   //
+//===============================//
+
+
+.contact-main {
+  text-decoration: none;
+}
+
+.contact-border {
+  border: 2px solid $color-primary;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-border {
+  background-color: $color-lightgrey;
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+
+
+
+//====================================//
+//          Responsive design         //
+//====================================//
+
+
+
