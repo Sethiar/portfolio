@@ -34,7 +34,7 @@
   text-align: center;
 }
 
-
+/* Gestion des orbites */
 @mixin orbit($count, $radius: 100px) {
   @for $i from 1 through $count {
     $angle: (360deg / $count) * ($i - 1);
@@ -88,7 +88,7 @@
 
 
 //====================================//
-//          Responsive design         //
+//          Responsiv design         //
 //====================================//
 
 

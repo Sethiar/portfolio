@@ -16,9 +16,8 @@
 //=================================//
 
 .logo {
-  width: 30%;
-  align-items: center;
-  border: 2px solid silver;
+  width: 50%;
+  margin: 0 auto ;
 }
 
 
@@ -26,8 +25,21 @@
 //  Image des icônes de compétences  //
 //===================================//
 
+/* Logos des compétences */
+.skill-logo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform-origin: 100px 0;
+  transition: transform 0.3s;
 
-
+  &:hover {
+    transform: scale(1.3); /* léger zoom au hover */
+  }
+}
 
 
 //================================================//

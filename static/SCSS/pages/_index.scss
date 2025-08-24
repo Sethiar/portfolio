@@ -1,0 +1,91 @@
+/* Fichier : _landing.scss
+ * Description : Fichier contenant les styles de la page d'accueil du portfolio
+ * Auteur : Lefetey Arnaud
+ * Date de création : 01/09/2025
+ */
+ 
+ 
+// Importation des variables.
+@import '../base/variables';
+// Importation tailles responsive.
+@import '../base/responsive-size';
+
+
+
+//=============================//
+// Styles de la page d'accueil //
+//=============================//
+
+/* Titre de la page d'accueil */
+.title-container-landing {
+  display: flex;
+  justify-content: center;
+  font-size: $font-size-title;
+  align-items: center;
+  margin: 0;
+  height: 20hv;
+  text-align: center;
+  padding: 2% 3%;
+  transition: transform 0.3 ease-out, opacity 0.3s ease-out;
+  
+  &:hover {
+    transform: scale(1.025);
+  }
+}
+
+/* Conteneur pour le slogan */
+.slogan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: $color-lightgrey;
+
+  /* Style de base */
+  border: 2px solid $color-decline-orange2;
+  width: 60%;
+  border-radius: 40px;
+
+  /* Animation fluide */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02); /* Agrandir le conteneur */
+    border: 2px solid $color-decline-gold2;
+  }
+}
+
+/* Styles pourle slogan */
+.slogan {
+  display: block;
+  font-size: $font-size-xxl;
+  font-weight: 500;         /* légèrement gras */
+  line-height: 1.4;         /* espace entre les lignes */
+  color: $color-primary;
+  margin: 1rem 0;     /* petit espace entre les <p> */             /* couleur élégante */
+}
+
+/* Style pour le texte de présentation */
+.presentation-container {
+  max-width: 70%;
+  margin: 2rem auto;
+  text-align: center;
+  padding:0 1rem;
+}
+
+.sentence-presentation {
+  font-weight: 600;
+  font-size: $font-size-xxxl;
+  line-height: 1.6;
+  margin: 0.8rem 0;
+}
+
+
+//====================================//
+//          Responsive design         //
+//====================================//
+
+

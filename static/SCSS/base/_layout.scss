@@ -27,7 +27,7 @@
   width: 70%;
   padding: 2rem;
   overflow-y: auto;
-  margin-top: -200vh;
+  margin-top: 0;
   background-color: $color-black;
 }
 //-------------------------------------------
@@ -139,12 +139,16 @@
 
 /* Séparateur horizontal principal */
 .separator-1 {
-    @include separator(90%, 0 auto, 2px solid $color-decline-gold1);
+  @include separator(90%, 0 auto, 2px solid $color-decline-gold2);
 }
 
 /* Séparateur horizontal secondaire */
 .separator-2 {
-    @include separator(90%, 0 auto, 2px solid $color-primary);
+  @include separator(90%, 0 auto, 2px solid $color-primary);
+}
+
+.separator-3 {
+  @include separator(45%, 0 auto, 1px solid $color-white);
 }
 
 .contact-divider {

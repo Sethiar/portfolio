@@ -63,7 +63,7 @@
 html {
   font-size: 100%;
   background-color: #000000;
-  color: #ffffff;
+  color: #a9a9a9;
 }
 
 body {
@@ -249,7 +249,7 @@ img {
   width: 70%;
   padding: 2rem;
   overflow-y: auto;
-  margin-top: -200vh;
+  margin-top: 0;
   background-color: #000000;
 }
 
@@ -341,7 +341,7 @@ img {
 .separator-1 {
   width: 90%;
   margin: 0 auto;
-  border-bottom: 2px solid #FFD580;
+  border-bottom: 2px solid #E5AD36;
 }
 
 /* Séparateur horizontal secondaire */
@@ -349,6 +349,12 @@ img {
   width: 90%;
   margin: 0 auto;
   border-bottom: 2px solid #DE7915;
+}
+
+.separator-3 {
+  width: 45%;
+  margin: 0 auto;
+  border-bottom: 1px solid #ffffff;
 }
 
 .contact-divider {
@@ -528,14 +534,14 @@ img {
 .landing-h1 {
   font-size: 3rem;
   font-weight: 700;
-  color: #DE7915;
+  color: #ffffff;
   text-align: center;
   margin: 0 auto;
 }
 
 /*Titres des sous-sections de lapage d'accueil*/
 .landing-h2 {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: 600;
   color: #DE7915;
   margin: 1rem 0;
@@ -984,7 +990,8 @@ footer p {
   left: 0;
   bottom: 0;
   width: 30%;
-  background-color: #2F445C;
+  border-right: 3px solid #DE7915;
+  background-color: #000000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1001;
   display: flex;
@@ -1004,7 +1011,7 @@ footer p {
 .hamburger {
   display: none;
   position: fixed;
-  top: 1rem;
+  top: 1.5rem;
   right: 1rem;
   z-index: 1002;
   flex-direction: column;
@@ -1037,7 +1044,7 @@ footer p {
   height: 15%;
   flex-direction: column;
   padding: 1.5rem 1rem;
-  background-color: #2F445C;
+  background-color: #000000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   /* Défilement si lien débordent */
   overflow-y: auto;
@@ -1054,7 +1061,6 @@ footer p {
   width: 100%;
   text-align: center;
   padding: 1rem 1.5rem;
-  gap: 2rem;
 }
 
 /* Navigation */
@@ -1069,10 +1075,11 @@ footer p {
   /* Centre verticalement si le parent a une hauteur définie */
   justify-content: center;
   align-items: center;
+  gap: 2.5rem;
 }
 .nav-links ul li a {
   font-size: 2rem;
-  color: #ffffff;
+  color: #a9a9a9;
   text-decoration: none;
   margin: 1rem 0;
 }
@@ -1095,7 +1102,6 @@ footer p {
   }
   .nav-links ul li a {
     font-size: 2rem;
-    color: #ffffff;
     text-decoration: none;
     margin: 1rem 0;
   }
@@ -1108,12 +1114,12 @@ footer p {
     gap: 2rem;
   }
   .nav-links ul li a {
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 1024px) {
   .header.active .nav-links ul li a {
-    font-size: 3rem;
+    font-size: 2rem;
     width: 100%;
     padding: 1rem;
   }
@@ -1123,7 +1129,7 @@ footer p {
     gap: 2rem;
   }
   .nav-links ul li a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 768px) {
@@ -1187,9 +1193,23 @@ footer p {
  * Date de création : 01/09/2025
  */
 .logo {
-  width: 30%;
-  align-items: center;
-  border: 2px solid silver;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* Logos des compétences */
+.skill-logo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform-origin: 100px 0;
+  transition: transform 0.3s;
+}
+.skill-logo:hover {
+  transform: scale(1.3); /* léger zoom au hover */
 }
 
 .contact-cartes-wrapper {
@@ -1399,14 +1419,67 @@ footer p {
  * Auteur : Lefetey Arnaud
  * Date de création : 01/09/2025
  */
-/* Slogan */
-.slogan {
-  font-size: 2rem;
-  font-style: bold;
+/* Titre de la page d'accueil */
+.title-container-landing {
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  align-items: center;
+  margin: 0;
+  height: 20hv;
   text-align: center;
-  font-weight: 500;
-  color: #E5AD36;
-  margin: 1rem 0;
+  padding: 2% 3%;
+  transition: transform 0.3 ease-out, opacity 0.3s ease-out;
+}
+.title-container-landing:hover {
+  transform: scale(1.025);
+}
+
+/* Conteneur pour le slogan */
+.slogan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f2f2f2;
+  /* Style de base */
+  border: 2px solid #C96B12;
+  width: 60%;
+  border-radius: 40px;
+  /* Animation fluide */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.slogan-container:hover {
+  transform: scale(1.02); /* Agrandir le conteneur */
+  border: 2px solid #E5AD36;
+}
+
+/* Styles pourle slogan */
+.slogan {
+  display: block;
+  font-size: 2rem;
+  font-weight: 500; /* légèrement gras */
+  line-height: 1.4; /* espace entre les lignes */
+  color: #DE7915;
+  margin: 1rem 0; /* petit espace entre les <p> */ /* couleur élégante */
+}
+
+/* Style pour le texte de présentation */
+.presentation-container {
+  max-width: 70%;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.sentence-presentation {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.6;
+  margin: 0.8rem 0;
 }
 
 /* Fichier : _mentions.scss
@@ -1525,7 +1598,8 @@ footer p {
 }
 
 .project-card {
-  background: #fff;
+  background: #f2f2f2;
+  color: #000000;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -1625,6 +1699,10 @@ footer p {
   margin-bottom: 1rem;
 }
 
+.section-intro {
+  font-size: 2rem;
+}
+
 /* Fichier : _skills.scss
  * Description : Fichier contenant les styles de la page des compétences de Lefetey Arnaud.
  * Auteur : Lefetey Arnaud
@@ -1697,6 +1775,7 @@ footer p {
   text-align: center;
 }
 
+/* Gestion des orbites */
 .orbit-3 .skill-logo:nth-child(1) {
   transform: rotate(0deg) translateX(100px) rotate(0deg);
 }

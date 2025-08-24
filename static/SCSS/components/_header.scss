@@ -27,7 +27,8 @@ $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   left: 0;
   bottom: 0;
   width: 30%;
-  background-color: $color-decline-blue2;
+  border-right: 3px solid $color-primary;
+  background-color: $color-black;
   box-shadow: $box-shadow;
   z-index: 1001;
   display: flex;
@@ -52,7 +53,7 @@ $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 .hamburger {
   display: none;
   position: fixed;
-  top: 1rem;
+  top: 1.5rem;
   right: 1rem;
   z-index: 1002;
   flex-direction: column;
@@ -91,7 +92,7 @@ $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   height: 15%;
   flex-direction: column;
   padding: 1.5rem 1rem;
-  background-color: $color-decline-blue2;
+  background-color: $color-black;
   box-shadow: $box-shadow;
 
   /* Défilement si lien débordent */
@@ -121,7 +122,6 @@ $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 100%;
   text-align: center;
   padding: 1rem 1.5rem;
-  gap: 2rem;
 }
 
 /* Navigation */
@@ -136,10 +136,11 @@ $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   /* Centre verticalement si le parent a une hauteur définie */
   justify-content: center;
   align-items: center;
+  gap: 2.5rem; // espace entre les <li>
 
   li a {
     font-size: $font-size-xxl;
-    color: $color-white;
+    color: $color-neutral-darkgrey;
     text-decoration: none;
     margin: 1rem 0;
 
@@ -172,7 +173,6 @@ $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     li a {
       font-size: $font-size-xxl;
-      color: $color-white;
       text-decoration: none;
       margin: 1rem 0;
 
@@ -191,7 +191,7 @@ $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .nav-links ul li a {
-    font-size: $font-size-xxxl;
+    font-size: $font-size-xl;
   }
 }
 //---------------------------------------------------------------
@@ -200,7 +200,7 @@ $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 // Gestion du menu hamburger en dessous de 1024px
 @include respond-max($breakpoint-md) {
   .header.active .nav-links ul li a {
-    font-size: $font-size-xxxl;
+    font-size: $font-size-xxl;
     width: 100%;
     padding: 1rem;
   }
@@ -215,7 +215,7 @@ $box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .nav-links ul li a {
-    font-size: $font-size-xxl;
+    font-size: $font-size-xl;
   }
 }
 //---------------------------------------------------------------
