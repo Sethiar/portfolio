@@ -35,10 +35,6 @@ def create_app():
     # Création de l'instance de flask.
     app = Flask("Portfolio")
 
-    # Création des routes flask.
-    from app.frontend import frontend_bp
-    app.register_blueprint(frontend_bp, url_prefix='/frontend')
-
     from app.functional import functional_bp
     app.register_blueprint(functional_bp, url_prefix='/functional')
 

@@ -1,26 +1,127 @@
 <div class="space-2"></div>
 <section id="projects-over">
     <h2 class="landing-h2">Projets terminés</h2>
-    <p class="section-intro">Voici quelques projets que j'ai réalisés dans le passé.</p>
+    <p class="section-intro">Voici quelques projets que j'ai réalisés.</p>
     
     <div class="projects-grid">
         <div class="project-card">
-            <img src="images/projet1.png" alt="Projet 1">
-            <h3 class="landing-h3">Projet 1</h3>
-            <p>Description du projet 1.</p>
-            <a href="#" class="btn">Voir le projet</a>
+            <img src="{{url_for('static', filename="images/images_project/sethiarworks.png") }}" alt="Projet du site entreprise SethiarWorks">
+            <h3 class="landing-h3">Site entreprise SethiarWorks</h3>
+            <h4>Création de mon site entreprise avec Devis, Chat vidéo et forum avec authentification</h4>
+
+            <div class="product-space"></div>
+           
+            <!-- Bouton qui ouvre la modale -->
+            <a href="javascript:void(0)" class="btn-secondary" 
+                onclick="openModal('modal-sethiarworks')">
+                    Voir la description
+            </a><br>
+
+            <!-- La modale -->
+            <div id="modal-sethiarworks" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal-sethiarworks')">&times;</span>
+                    <h3>Description complète</h3>
+                    <p>
+                        Ce projet a consisté à créer un site entreprise complet avec système de devis,
+                        chat vidéo intégré, et forum avec authentification. Il a servi de vitrine professionnelle
+                        et d’exercice de mise en place de fonctionnalités avancées en backend et frontend.
+                    </p>
+                </div>
+            </div>
+
+            <div class="product-space"></div>
+    
+            <a href="https://www.sethiarworks.sethiar-lefetey.com" 
+                class="btn-primary"
+                target="_blank">
+                    Voir le site
+            </a>
+
+            <div class="product-space"></div>
+
+            <a href="https://github.com/Sethiar/Site-Sethiar_V2.git" 
+               class="btn-primary"
+               target="_blank">
+               Voir le code avec Github
+            </a>
+
         </div>
         <div class="project-card">
-            <img src="images/projet2.png" alt="Projet 2">
-            <h3 class="landing-h3">Projet 2</h3>
-            <p>Description du projet 2.</p>
-            <a href="#" class="btn">Voir le projet</a>
+            <img src="{{url_for('static', filename="images/images_project/tititechnique.png") }}" alt="Projet du site d'un Youtube">
+            <h3 class="landing-h3">Site Titi Technique (Youtuber)</h3>
+            <h4>Création d'un blog pour un Youtuber avec API youtube, Chat vidéo et forum avec authentification</h4>
+            
+            <div class="product-space"></div>
+
+            <!-- Bouton qui ouvre la modale -->
+            <a href="javascript:void(0)" class="btn-secondary" 
+                onclick="openModal('modal-tititechnique')">
+                    Voir la description
+            </a><br>
+
+            <!-- La modale -->
+            <div id="modal-tititechnique" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal-tititechnique')">&times;</span>
+                    <h3>Description complète</h3>
+                    <p>
+                       Ce projet consistait à créer un blog pour un Youtuber avec intégration de l’API YouTube,
+                        un chat vidéo et un forum avec authentification. Il a servi à mettre en place un site communautaire
+                        autour de sa chaîne.
+                    </p>
+                </div>
+            </div>
+
+            <div class="product-space"></div>
+
+            <a href="https://www.tititechnique.fr" 
+               class="btn-primary"
+               target="_blank">
+               Voir le site
+            </a>
+
+            <div class="product-space"></div>
+
+            <a href="https://github.com/Sethiar/BlogTiti.git" 
+               class="btn-primary"
+               target="_blank">
+               Voir le code avec Github
+            </a>
         </div>
         <div class="project-card">
-            <img src="images/projet3.png" alt="Projet 3">
-            <h3 class="landing-h3">Projet 3</h3>
-            <p>Description du projet 3.</p>
-            <a href="#" class="btn">Voir le projet</a>
+            <img src="{{url_for('static', filename="images/images_project/domotique.png") }}" alt="Projet de domotique">
+            <h3 class="landing-h3">Projet de Domotique FibaroHC3</h3>
+            <h4>Créer un retour de l'ipx800 à la Fibao afin de mettre à jour un icône</h4>
+
+            <div class="product-space"></div>
+            
+            <!-- Bouton qui ouvre la modale -->
+            <a href="javascript:void(0)" class="btn-secondary" 
+                onclick="openModal('modal-domotique')">
+                    Voir la description
+            </a><br>
+
+            <!-- La modale -->
+            <div id="modal-domotique" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal-domotique')">&times;</span>
+                   <h3>Description complète</h3>
+                    <p>
+                        Ce projet domotique a permis d’interfacer l’IPX800 avec la Fibaro HC3 afin de synchroniser
+                        les états des appareils et mettre à jour les icônes en temps réel. J’ai utilisé Flask
+                        et l’API Fibaro pour établir la communication.
+                    </p>
+                </div>
+            </div>
+
+            <div class="product-space"></div>
+
+            <a href="https://github.com/Sethiar/Domotique_FibaroHC3" 
+               class="btn-primary"
+               target="_blank">
+               Voir le code avec Github
+            </a>
         </div>
     </div>
 </section>

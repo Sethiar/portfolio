@@ -61,11 +61,13 @@
 /* Styles pourle slogan */
 .slogan {
   display: block;
-  font-size: $font-size-xxl;
-  font-weight: 500;         /* légèrement gras */
-  line-height: 1.4;         /* espace entre les lignes */
+  font-size: $font-size-xxxl;
+  /* En gras */
+  font-weight: 700;      
+  /* espace entre les lignes */   
+  line-height: 1.4;         
   color: $color-primary;
-  margin: 1rem 0;     /* petit espace entre les <p> */             /* couleur élégante */
+  margin: 1rem 0;
 }
 
 /* Style pour le texte de présentation */
@@ -78,7 +80,7 @@
 
 .sentence-presentation {
   font-weight: 600;
-  font-size: $font-size-xxxl;
+  font-size: $font-size-xxl;
   line-height: 1.6;
   margin: 0.8rem 0;
 }

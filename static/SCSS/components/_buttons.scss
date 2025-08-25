@@ -12,12 +12,86 @@
 
 
 
+//=============================================//
+// Regroupement des styles communs aux boutons //
+//=============================================//
 
+/* Regroupement */
+%btn-common {
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2 ease;
+  font-weight: bold;
+}
 
+/* Style bouton primaire */
+.btn-primary {
+  @extend %btn-common;
+  padding: 2% 4%;
+  font-size: $font-size-base;
+  background-color: $color-primary;
+  color: $color-white;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background-color: $color-decline-orange2;
+    border: 2px solid $color-black;
+    color: $color-white;
+  }
+}
+
+/* Style bouton secondaire */
+.btn-secondary {
+  @extend %btn-common;  
+  padding: 2% 3%;
+  font-size: $font-size-base;
+  background-color: $color-white;
+  color: $color-primary;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background-color: $color-primary;
+    color: $color-white;
+    border: 2px solid $color-black;
+  }
+}
+//-----------------------------------------
 
 
 //====================================//
 //          Responsive design         //
 //====================================//
 
+
+/* Grand écran ( > 1025px ) */
+//------------------------------------------
+@include respond-min($breakpoint-md + 1) {
+  .btn-primary, .btn-secondary {
+    padding: 2% 5%;
+    font-size: $font-size-lg;
+  }
+}
+
+
+/* Tablette ( < 1024px )*/
+//-------------------------------------------
+@include respond-max($breakpoint-md) {
+  .btn-primary, .btn-secondary {
+    padding: 2% 5%;
+    font-size: $font-size-base;
+  }
+}
+//-------------------------------------------
+
+
+/* Mobile ( < 768px)*/
+//-------------------------------------------
+@include respond-max($breakpoint-sm) {
+  .btn-primary, .btn-secondary {
+    font-size: $font-size-base;  
+  }
+}  
+//-------------------------------------------
 

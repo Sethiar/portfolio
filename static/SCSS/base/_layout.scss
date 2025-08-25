@@ -26,7 +26,6 @@
   margin-left: 30%;
   width: 70%;
   padding: 2rem;
-  overflow-y: auto;
   margin-top: 0;
   background-color: $color-black;
 }
@@ -288,6 +287,10 @@
 
   .space-2 {
     height: 3.5vh;
+  }
+
+  .product-space {
+    height: 2vh;
   }
 
   .contact-space {

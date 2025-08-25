@@ -61,7 +61,6 @@
 */
 /* Réinitialiser les marges, le padding et la box-sizing */
 html {
-  font-size: 100%;
   background-color: #000000;
   color: #a9a9a9;
 }
@@ -248,7 +247,6 @@ img {
   margin-left: 30%;
   width: 70%;
   padding: 2rem;
-  overflow-y: auto;
   margin-top: 0;
   background-color: #000000;
 }
@@ -451,6 +449,9 @@ img {
   }
   .space-2 {
     height: 3.5vh;
+  }
+  .product-space {
+    height: 2vh;
   }
   .contact-space {
     height: 3vh;
@@ -715,6 +716,64 @@ img {
  * Auteur : Lefetey Arnaud
  * Date de création : 01/09/2025
  */
+/* Regroupement */
+.btn-secondary, .btn-primary {
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2 ease;
+  font-weight: bold;
+}
+
+/* Style bouton primaire */
+.btn-primary {
+  padding: 2% 4%;
+  font-size: 1rem;
+  background-color: #DE7915;
+  color: #ffffff;
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  background-color: #C96B12;
+  border: 2px solid #000000;
+  color: #ffffff;
+}
+
+/* Style bouton secondaire */
+.btn-secondary {
+  padding: 2% 3%;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #DE7915;
+}
+.btn-secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  background-color: #DE7915;
+  color: #ffffff;
+  border: 2px solid #000000;
+}
+
+/* Grand écran ( > 1025px ) */
+@media (min-width: 1025px) {
+  .btn-primary, .btn-secondary {
+    padding: 2% 5%;
+    font-size: 1.25rem;
+  }
+}
+/* Tablette ( < 1024px )*/
+@media (max-width: 1024px) {
+  .btn-primary, .btn-secondary {
+    padding: 2% 5%;
+    font-size: 1rem;
+  }
+}
+/* Mobile ( < 768px)*/
+@media (max-width: 768px) {
+  .btn-primary, .btn-secondary {
+    font-size: 1rem;
+  }
+}
 /* Fichier : _footer.scss
  * Description : Fichier contenant les styles du footer du portfolio
  * Auteur : Lefetey Arnaud
@@ -805,6 +864,7 @@ footer h3 {
   font-weight: bold;
   margin-bottom: 1rem;
   text-decoration: underline;
+  color: #DE7915;
 }
 
 /* Listes */
@@ -1460,11 +1520,13 @@ footer p {
 /* Styles pourle slogan */
 .slogan {
   display: block;
-  font-size: 2rem;
-  font-weight: 500; /* légèrement gras */
-  line-height: 1.4; /* espace entre les lignes */
+  font-size: 3rem;
+  /* En gras */
+  font-weight: 700;
+  /* espace entre les lignes */
+  line-height: 1.4;
   color: #DE7915;
-  margin: 1rem 0; /* petit espace entre les <p> */ /* couleur élégante */
+  margin: 1rem 0;
 }
 
 /* Style pour le texte de présentation */
@@ -1477,7 +1539,7 @@ footer p {
 
 .sentence-presentation {
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.6;
   margin: 0.8rem 0;
 }
@@ -1616,6 +1678,34 @@ footer p {
   width: 100%;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.modal {
+  display: none; /* cachée par défaut */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* fond assombri */
+}
+
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 60%;
+  max-width: 700px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 /* Fichier : _products.scss
@@ -1896,21 +1986,6 @@ footer p {
   height: 100%;
   transform: translate(-50%, -50%);
   animation: rotate-orbit 20s linear infinite;
-}
-
-/* Logos des compétences */
-.skill-logo {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform-origin: 100px 0;
-  transition: transform 0.3s;
-}
-.skill-logo:hover {
-  transform: scale(1.3); /* léger zoom au hover */
 }
 
 /* Animation pour faire tourner l'orbite des logos */
