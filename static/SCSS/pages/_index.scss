@@ -90,4 +90,30 @@
 //          Responsive design         //
 //====================================//
 
+/* Petits et très petits écrans */
+@include respond-max($breakpoint-md - 1) {
+  .slogan {
+    font-size: $font-size-xl;
+  }
+  .sentence-presentation {
+    font-size: $font-size-xl;
 
+  }
+}
+
+
+/* Moyens écrans et plus */
+@include respond-min($breakpoint-md) {
+  .slogan {
+    font-size: $font-size-xxl;
+  }
+}
+
+
+
+/* Très grands écrans */
+@include respond-min($breakpoint-lg) {
+  .slogan {
+    font-size: $font-size-xxxl;
+  }
+}

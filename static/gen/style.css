@@ -595,7 +595,7 @@ img {
   margin: 0 auto;
 }
 
-/*Titres des sous-sections de lapage d'accueil*/
+/*Titres des sous-sections de la page d'accueil*/
 .landing-h2 {
   font-size: 3rem;
   font-weight: 600;
@@ -630,6 +630,15 @@ img {
   margin: 0 auto;
 }
 
+/* Petits et très petits écrans */
+@media (max-width: 1023px) {
+  /*Titres des sous-sections de la page d'accueil*/
+  .landing-h2 {
+    font-size: 2rem;
+  }
+}
+/* Moyens écrans et plus */
+/* Très grands écrans */
 /* Fichier : _variables.scss
  * Description : Fichier contenant les styles des variables CSS de base du portfolio    
  * Auteur : Lefetey Arnaud
@@ -1628,6 +1637,17 @@ h2.information-welcome {
   font-weight: 600;
 }
 
+/* Petits et très petits écrans */
+@media (max-width: 1023px) {
+  /*Titres des sous-sections de la page d'accueil*/
+  .downloaded-documents a {
+    font-size: 1.25rem;
+    margin: 5px 20px;
+    padding: 0 2%;
+  }
+}
+/* Moyens écrans et plus */
+/* Très grands écrans */
 /* Fichier : _contact.scss
  * Description : Fichier contenant les styles de la page contact
  * Auteur : Lefetey Arnaud
@@ -1827,6 +1847,27 @@ h2.information-welcome {
   margin: 0.8rem 0;
 }
 
+/* Petits et très petits écrans */
+@media (max-width: 1023px) {
+  .slogan {
+    font-size: 1.5rem;
+  }
+  .sentence-presentation {
+    font-size: 1.5rem;
+  }
+}
+/* Moyens écrans et plus */
+@media (min-width: 1024px) {
+  .slogan {
+    font-size: 2rem;
+  }
+}
+/* Très grands écrans */
+@media (min-width: 1199px) {
+  .slogan {
+    font-size: 3rem;
+  }
+}
 /* Fichier : _mentions.scss
  * Description : Fichier contenant les styles de la page des mentions légales
  * Auteur : Lefetey Arnaud
@@ -2462,6 +2503,15 @@ h2.information-welcome {
   margin-bottom: 0.5rem;
 }
 
+/* Petits et très petits écrans */
+@media (max-width: 1023px) {
+  /*Titres des sous-sections de la page d'accueil*/
+  .section-intro {
+    font-size: 1.5rem;
+  }
+}
+/* Moyens écrans et plus */
+/* Très grands écrans */
 /* Fichier : _skills.scss
  * Description : Fichier contenant les styles de la page des compétences de Lefetey Arnaud.
  * Auteur : Lefetey Arnaud

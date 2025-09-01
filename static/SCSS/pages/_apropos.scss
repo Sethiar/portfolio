@@ -135,3 +135,28 @@ h2.information-welcome {
   color: $color-lightgrey;
   font-weight: 600;
 }
+
+
+/* Petits et très petits écrans */
+@include respond-max($breakpoint-md - 1) {
+  
+  /*Titres des sous-sections de la page d'accueil*/
+  .downloaded-documents a {
+    font-size: $font-size-lg;
+    margin: 5px 20px;
+    padding: 0 2%;
+  }
+}
+
+
+/* Moyens écrans et plus */
+@include respond-min($breakpoint-md) {
+  
+}
+
+
+
+/* Très grands écrans */
+@include respond-min($breakpoint-lg) {
+  
+}

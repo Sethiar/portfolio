@@ -191,9 +191,10 @@
   }
 }
 
-//=====================//
-//   Responsive design //
-//=====================//
+
+//====================================//
+//          Responsive design         //
+//====================================//
 
 @mixin mention-responsive($font-title, $font-subtitle, $font-text, $margin, $padding) {
   .outer-frame-mention {
@@ -257,7 +258,5 @@
   @include mention-responsive($font-size-xl, $font-size-lg, $font-size-base, 10%, 1.5%);
 }
 
-//====================================//
-//          Responsive design         //
-//====================================//
+
 

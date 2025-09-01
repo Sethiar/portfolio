@@ -61,9 +61,30 @@
   margin-bottom: 0.5rem;
 }
 
+
 //====================================//
 //          Responsive design         //
 //====================================//
 
+/* Petits et très petits écrans */
+@include respond-max($breakpoint-md - 1) {
+  
+  /*Titres des sous-sections de la page d'accueil*/
+  .section-intro {
+    font-size: $font-size-xl;
+  }
+}
 
+
+/* Moyens écrans et plus */
+@include respond-min($breakpoint-md) {
+  
+}
+
+
+
+/* Très grands écrans */
+@include respond-min($breakpoint-lg) {
+  
+}
 

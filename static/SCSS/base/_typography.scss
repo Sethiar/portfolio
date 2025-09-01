@@ -34,7 +34,7 @@
 //  Gestion des titres du portfolio  //
 //===================================//
 
-/*Titres des sous-sections de lapage d'accueil*/
+/*Titres des sous-sections de la page d'accueil*/
 .landing-h2 {
   font-size: $font-size-xxxl;
   font-weight: 600;
@@ -71,11 +71,28 @@
 }
 
 
-
-
-
-
 //====================================//
 //          Responsive design         //
 //====================================//
 
+/* Petits et très petits écrans */
+@include respond-max($breakpoint-md - 1) {
+  
+  /*Titres des sous-sections de la page d'accueil*/
+  .landing-h2 {
+    font-size: $font-size-xxl;
+  }
+}
+
+
+/* Moyens écrans et plus */
+@include respond-min($breakpoint-md) {
+  
+}
+
+
+
+/* Très grands écrans */
+@include respond-min($breakpoint-lg) {
+  
+}
