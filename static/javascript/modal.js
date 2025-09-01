@@ -2,8 +2,7 @@
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden"; // empêche de scroller derrière
+        modal.style.display = "block"; // flex permet de centrer proprement
     }
 }
 
@@ -12,7 +11,6 @@ function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.style.display = "none";
-        document.body.style.overflow = "auto";
     }
 }
 
@@ -20,7 +18,6 @@ function closeModal(modalId) {
 window.onclick = function(event) {
     if (event.target.classList.contains("modal")) {
         event.target.style.display = "none";
-        document.body.style.overflow = "auto";
     }
 };
 
@@ -30,6 +27,5 @@ document.addEventListener("keydown", function(event) {
         document.querySelectorAll(".modal").forEach(modal => {
             modal.style.display = "none";
         });
-        document.body.style.overflow = "auto";
     }
 });

@@ -43,10 +43,14 @@
 }
 
 .landing-h3 {
-  font-size: $font-size-lg;
+  font-size: $font-size-xxl;
   font-weight: 500;
   color: $color-primary;
   margin: 0.5rem 0;
+}
+
+.landing-h4 {
+  font-size: $font-size-xl;
 }
 
 

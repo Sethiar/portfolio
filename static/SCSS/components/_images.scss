@@ -18,6 +18,11 @@
 .logo {
   width: 50%;
   margin: 0 auto ;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 
@@ -75,3 +80,15 @@
 //====================================//
 
 
+/* Affichage du menu hamburger en dessous de 1024px */
+  @include respond-max($breakpoint-md) {
+  .logo {
+    width: 30%;
+    margin: 0 auto ;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

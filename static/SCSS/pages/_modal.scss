@@ -19,7 +19,7 @@
 /* Fond flou + centré */
 .modal {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0; left: 0;
   width: 100%; 
   height: 100%;
@@ -35,20 +35,21 @@
   background: $color-lightgrey;
   border-radius: 12px;
   width: 95%;
-  padding: 20px 30px;
+  padding: 20px 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   text-align: left;
   position: relative;
   animation: fadeIn 0.3s ease;
 
   /* gestion du scroll si le contenu dépasse */
-  overflow-y: auto;
+  overflow-y: visible;
 }
 
 /* Titre et sous-titres */
 .modal-content h3 {
+  text-align: center;
   margin-top: 0;
-  font-size: 1.6em;
+  font-size: $font-size-lg;
   border-bottom: 2px solid $color-neutral-darkgrey;
   padding-bottom: 8px;
 }
