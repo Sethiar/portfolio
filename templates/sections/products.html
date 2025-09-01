@@ -4,22 +4,86 @@
     <p class="section-intro">Voici quelques-uns des produits que je développe.</p>
     <div class="product-grid">
         <div class="product-card">
-            <img src="images/product/product1.png" alt="Produit 1">
-            <h3 class="landing-h3">Produit 1</h3>
-            <p>Description du produit 1.</p>
-            <a href="#" class="btn">Voir le produit</a>
+            <img src="{{ url_for('static', filename="images/images_product/developpment.png") }}" alt="Illustration du produit Développement sur mesure.">
+            <h3 class="landing-h3">Développement sur mesure</h3>
+
+            <ul class="product-list">
+                <li>Sites modernes et responsives, adaptés aux besoins de votre entreprise</li>
+                <li>Développement de blogs professionnels avec gestion de contenu simplifiée</li>
+                <li>Conception de sites de vente en ligne avec intégration de systèmes de paiement sécurisés</li>
+                <li>Création d’applications Django, Flask, ou FastAPI adaptées aux besoins des clients</li>
+                <li>Automatisation de tâches répétitives (ex. : extraction de données, génération de rapports)</li>
+                <li>Développement d’outils pour manipuler, analyser et visualiser des données avec Python (pandas, Matplotlib, Dash).</li>
+            </ul>
+
+            <div class="product-space"></div>
         </div>
+
         <div class="product-card">
-            <img src="images/product/product2.png" alt="Produit 2">
-            <h3 class="landing-h3">Produit 2</h3>
-            <p>Description du produit 2.</p>
-            <a href="#" class="btn">Voir le produit</a>
+            <img src="{{url_for('static', filename="images/images_product/template.png") }}" alt="Illustration du produit Templates et outils.">
+            <h3 class="landing-h3">Templates et outils</h3>
+            <ul class="product-list">
+                <li>Scripts pour extraire des données d’un site (web scraping avec BeautifulSoup/Scrapy)</li>
+                <li>Gestion d’API REST</li>
+                <li>Générateur de rapports Excel/CSV automatisés</li>
+                <li>Boilerplate pour des projets Django, Flask ou FastAPI</li>
+                <li>Dashboards interactifs avec Plotly/Dash ou Streamlit pour les entreprises</li>
+                <li>Outils comme un gestionnaire de tâches, un CRM de base ou une application de facturation.</li>
+            </ul>
+            
+            <div class="product-space"></div>
+
         </div>
+
         <div class="product-card">
-            <img src="images/product/product3.png" alt="Produit 3">
-            <h3 class="landing-h3">Produit 3</h3>
-            <p>Description du produit 3.</p>
-            <a href="#" class="btn">Voir le produit</a>
+            <img src="{{url_for('static', filename="images/images_product/consulting.png") }}" alt="Illustration du produit Consulting technique.">
+            <h3 class="landing-h3">Consulting technique</h3>
+            <ul class="product-list">
+                <li>Analyse des besoins techniques d’un projet</li>
+                <li>Recommandations sur l’architecture, les outils, ou les technologies Python à utiliser</li>
+                <li>Audit et optimisation de code existant</li>
+            </ul>
+            
+            <div class="product-space"></div>
+        </div>
+
+        <div class="product-card">
+            <img src="{{ url_for('static', filename="images/images_product/maintenance.png") }}" alt="Illustration du produit Maintenance et support.">
+            <h3 class="landing-h3">Maintenance et support</h3>
+            <ul class="product-list">
+                <li>Résolution de bugs dans des applications existantes</li>
+                <li>Amélioration de la performance d’une application</li>
+                <li>Migration vers des technologies modernes</li>
+            </ul>
+
+            <div class="product-space"></div>
+        </div>
+        
+        <div class="product-card">
+            <img src="{{ url_for('static', filename="images/images_product/saas.png") }}" alt="Illustration du produit Saas.">
+            <h3 class="landing-h3">Produit SaaS</h3>
+            <ul class="product-list">
+                <li>Une application en ligne qui utilise Python pour résoudre un problème précis</li>
+                <li>Une API facile à intégrer pour des tâches spécifiques (ex. : nettoyage ou formatage de données)</li>
+            </ul>
+
+            <div class="product-space"></div>
+
+        </div>
+
+        <div class="product-card">
+            <img src="{{ url_for('static', filename="images/images_product/domotique.png") }}" alt="Illustration du produit domotique.">
+            <h3 class="landing-h3">Produit Domotique</h3>
+            <ul class="product-list">
+                <li>Développement de systèmes pour piloter vos appareils connectés (éclairage, chauffage, volets, sécurité)</li>
+                <li>Création de scripts Python pour automatiser des routines quotidiennes</li>
+                <li>Intégration avec des solutions domotiques existantes (Home Assistant FibaroHC3, relai ipx, etc.)</li>
+                <li>Tableaux de bord personnalisés pour visualiser et contrôler vos équipements</li>
+                <li>Optimisation énergétique grâce à des scénarios intelligents (ex. : réduire la consommation en période de pointe)</li>
+            </ul>
+
+            <div class="product-space"></div>
+
         </div>
     </div>
 </section>

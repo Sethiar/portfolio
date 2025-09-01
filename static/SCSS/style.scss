@@ -22,9 +22,11 @@
 @use 'components/links';
 
 // Pages
+@use 'pages/apropos';
 @use 'pages/contact';
 @use 'pages/index';
 @use 'pages/mentions';
+@use 'pages/modal';
 @use 'pages/projects';
 @use 'pages/products';
 @use 'pages/skills';

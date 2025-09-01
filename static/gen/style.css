@@ -67,7 +67,7 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 div,
@@ -355,12 +355,21 @@ img {
   border-bottom: 1px solid #ffffff;
 }
 
+/* Barre de séparation section contact */
 .contact-divider {
   border: none;
   width: 80%;
   height: 2px;
   background-color: #FFD580;
   margin: 0 auto;
+}
+
+/* Barre de séparation section mention */
+.mention-divider {
+  border: none;
+  height: 2px;
+  background-color: #E5AD36;
+  margin: 2% 0;
 }
 
 /* Espaceur principal */
@@ -375,6 +384,43 @@ img {
 
 .contact-space {
   height: 4vh;
+}
+
+.product-space {
+  height: 3vh;
+}
+
+.mention-space {
+  height: 2vh;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  width: 40px; /* même largeur */
+  height: 40px; /* même hauteur */
+  display: flex; /* centrer le contenu */
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: #DE7915;
+  border-radius: 8px;
+  border: 2px solid #DE7915;
+  text-decoration: none;
+  font-size: 3rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4 ease;
+}
+.back-to-top:hover {
+  background-color: #ffffff;
+  border: 2px solid #E5AD36;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 @media (max-width: 599px) {
@@ -402,6 +448,9 @@ img {
   .contact-space {
     height: 3.5vh;
   }
+  .product-space {
+    height: 2vh;
+  }
 }
 @media (min-width: 600px) and (max-width: 768px) {
   .layout {
@@ -427,6 +476,9 @@ img {
   }
   .contact-space {
     height: 3vh;
+  }
+  .product-space {
+    height: 2vh;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -454,6 +506,9 @@ img {
     height: 2vh;
   }
   .contact-space {
+    height: 3vh;
+  }
+  .product-space {
     height: 3vh;
   }
 }
@@ -560,6 +615,13 @@ img {
   font-size: 2rem;
   font-weight: 700;
   color: #DE7915;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact-h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
   text-align: center;
   margin: 0 auto;
 }
@@ -717,7 +779,7 @@ img {
  * Date de création : 01/09/2025
  */
 /* Regroupement */
-.btn-secondary, .btn-primary {
+.btn-link, .btn-secondary, .btn-primary {
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2 ease;
@@ -726,7 +788,7 @@ img {
 
 /* Style bouton primaire */
 .btn-primary {
-  padding: 2% 4%;
+  padding: 0.75rem 1.5rem;
   font-size: 1rem;
   background-color: #DE7915;
   color: #ffffff;
@@ -741,7 +803,7 @@ img {
 
 /* Style bouton secondaire */
 .btn-secondary {
-  padding: 2% 3%;
+  padding: 0.75rem 1.5rem;
   font-size: 1rem;
   background-color: #ffffff;
   color: #DE7915;
@@ -754,23 +816,40 @@ img {
   border: 2px solid #000000;
 }
 
+/* Style du bouton des liens dans la section à propos */
+.btn-link {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #E5AD36;
+  color: #000000;
+}
+.btn-link:hover {
+  transform: scale(1.05);
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  background-color: #DE7915;
+  color: #ffffff;
+  border: 2px solid #000000;
+}
+
 /* Grand écran ( > 1025px ) */
 @media (min-width: 1025px) {
   .btn-primary, .btn-secondary {
-    padding: 2% 5%;
+    padding: 0.75rem 1.5rem;
     font-size: 1.25rem;
   }
 }
 /* Tablette ( < 1024px )*/
 @media (max-width: 1024px) {
   .btn-primary, .btn-secondary {
-    padding: 2% 5%;
+    padding: 0.75rem 1.5rem;
     font-size: 1rem;
   }
 }
 /* Mobile ( < 768px)*/
 @media (max-width: 768px) {
   .btn-primary, .btn-secondary {
+    padding: 0.75rem 1.5rem;
     font-size: 1rem;
   }
 }
@@ -1349,10 +1428,185 @@ footer p {
   color: #DE7915;
   text-decoration: none;
   font-weight: bold;
+  text-align: center;
+}
+.contact-link a {
+  /* permet le centrage */
+  display: inline-block;
 }
 .contact-link:hover {
   color: #FFD580;
   text-decoration: underline;
+}
+
+/* Fichier : _apropos.scss
+ * Description : Fichier contenant les styles de la page à propos
+ * Auteur : Lefetey Arnaud
+ * Date de création : 01/09/2025
+ */
+/* Fichier : _variables.scss
+ * Description : Fichier contenant les styles des variables CSS de base du portfolio    
+ * Auteur : Lefetey Arnaud
+ * Date de création : 01/09/2025
+ */
+/* Variables CSS - base/variables.scss */
+/* Orange Sethiar */
+/* Noir */
+/* Blanc */
+/* Couleur footer Bleu Sethiar */
+/* Orange classique */
+/* Jaune Or */
+/* Plus clair */
+/* Plus foncé */
+/* Plus clair */
+/* Plus foncé */
+/* Plus clair */
+/* Plus foncé */
+/* Gris foncé */
+/* Gris */
+/*Gris clair 1 */
+/* Gris clair */
+/* Orange */
+/* Rouge foncé */
+/* Rouge foncé hover cancelled */
+/* Orange foncé */
+/* Antracite */
+/* Blanc pur */
+/* Blanc cassé */
+/* Gris très très clair */
+/* Gris foncé */
+/* Orange plus clair */
+/* Texte */
+/* Fond */
+/* Bordure */
+/* Texte */
+/* Fond */
+/* Bordure */
+/* Texte */
+/* Fond */
+/* Bordure */
+/* Police principale */
+/* Police secondaire */
+/* Police tertiare */
+/* Fichier : _responsive-size.scss
+ * Description : Fichier contenant les styles de base pour les breakpoints responsive
+ * Auteur : Lefetey Arnaud
+ * Date de création : 01/09/2025
+ */
+/* Cadre externe */
+.outer-frame-information {
+  border: 4px solid #C96B12;
+  border-radius: 8px;
+  padding: 2%;
+  margin: 10%;
+  background: #f2f2f2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.outer-frame-information:hover {
+  /* Légère mise en avant */
+  transform: scale(1.02);
+  /* Ombre amplifiée */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Cadre interne */
+.inner-frame-information {
+  border: 2px solid #E5AD36;
+  border-radius: 8px;
+  padding: 1.5%;
+  background: #000000;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteneur principal */
+.information-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Titre de la section */
+.information-title {
+  font-size: 3rem;
+  text-align: center;
+  color: #DE7915;
+  margin-bottom: 1rem;
+}
+
+/* Conteneur des images */
+.container-information-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Styles pour les deux images */
+.information-image {
+  flex: 0 1 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles pour le titre de la section */
+h2.information-welcome {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+  border: 1px solid #FFD580;
+}
+
+.downloaded-documents a {
+  display: inline-block;
+  font-weight: 900;
+  color: #DE7915;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.downloaded-documents a:hover {
+  color: #E5AD36;
+  /* Légère mise en avant */
+  transform: scale(1.02);
+  /* Ombre amplifiée */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Sous-titres de la partie information */
+.information-subtitle {
+  font-size: 1.5rem;
+  color: #E5AD36;
+  margin: 2rem 0 1rem;
+}
+
+/* Introduction de la section information */
+.information-intro {
+  font-size: 2rem;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+/* Styles des paragraphes */
+.information-section p {
+  font-size: 1.5rem;
+  text-indent: 2rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+/* Styles de la division entre les parties */
+.information-divider {
+  width: 20%;
+  border: 0.5px solid #ffffff;
+  margin: 0 auto;
+}
+
+.salutations {
+  color: #f2f2f2;
+  font-weight: 600;
 }
 
 /* Fichier : _contact.scss
@@ -1419,10 +1673,20 @@ footer p {
   border-radius: 10px;
 }
 
-.contact-border {
-  background-color: #f2f2f2;
-  width: 60%;
-  margin: 0 auto;
+.contact-site-entreprise {
+  border: 2px solid #C96B12;
+  border-radius: 10px;
+  padding: 2%;
+  font-size: 1.5rem;
+}
+.contact-site-entreprise .contact-sentence {
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 3%;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.contact-site-entreprise .contact-sentence p {
+  text-indent: 2em;
 }
 
 /* Fichier : _landing.scss
@@ -1598,6 +1862,373 @@ footer p {
  * Auteur : Lefetey Arnaud
  * Date de création : 01/09/2025
  */
+.outer-frame-mention {
+  border: 4px solid #C96B12;
+  border-radius: 8px;
+  padding: 2%;
+  margin: 10%;
+  background: #f2f2f2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.outer-frame-mention:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.inner-frame-mention {
+  border: 2px solid #E5AD36;
+  border-radius: 8px;
+  padding: 1.5%;
+  background: #000000;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mention-main {
+  padding: 4% 2%;
+  background-color: #000000;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.mention-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3%;
+  color: #DE7915;
+}
+
+.mention-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2%;
+}
+.mention-header .mention-update {
+  font-size: 1.5rem;
+}
+.mention-header .mention-update {
+  color: #E5AD36;
+}
+
+.mention-logo {
+  display: flex;
+  justify-content: center;
+  margin: 3% 0;
+}
+.mention-logo .mention-logo-img {
+  width: 20%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.mention-logo .mention-logo-img:hover {
+  transform: scale(1.05);
+}
+
+.mention-content {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 4% 2%;
+  border-radius: 12px;
+  border: 1px solid #f2f2f2;
+}
+.mention-content .mention-section {
+  margin-bottom: 4%;
+}
+.mention-content .mention-section .mention-subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 4%;
+  color: #E5AD36;
+  margin-bottom: 1%;
+}
+.mention-content .mention-section p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5%;
+  text-indent: 2em;
+  line-height: 1.8;
+}
+.mention-content .mention-section .mention-list {
+  margin: 0;
+  padding: 0 5% 0 2%;
+}
+.mention-content .mention-section .mention-list li {
+  font-size: 1.5rem;
+  list-style: disc inside;
+  margin-bottom: 1%;
+  padding-left: 1.5em;
+}
+
+.mention-intro {
+  border: 2px solid #C96B12;
+  border-radius: 10px;
+  padding: 2%;
+  background: #f2f2f2;
+  font-size: 2rem;
+  color: #000000;
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 3%;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.mention-intro:hover {
+  background: white;
+  border-color: #E5AD36;
+}
+.mention-intro p {
+  text-indent: 2em;
+}
+
+.mention-footer {
+  text-align: center;
+  margin-top: 15%;
+  font-size: 1.5rem;
+  color: #a9a9a9;
+}
+.mention-footer p {
+  font-style: italic;
+}
+
+/* Tablettes */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .outer-frame-mention {
+    margin: 8%;
+    padding: 2.5%;
+  }
+  .mention-main {
+    padding: 2.5%;
+  }
+  .mention-title {
+    font-size: 2rem;
+  }
+  .mention-header .mention-update {
+    font-size: 1.5rem;
+  }
+  .mention-content {
+    max-width: 95%;
+  }
+  .mention-content .mention-section {
+    margin-bottom: 3.5%;
+  }
+  .mention-content .mention-section .mention-subtitle {
+    font-size: 1.5rem;
+    padding: 4.5%;
+    margin-bottom: 1.5%;
+  }
+  .mention-content .mention-section p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    text-indent: 3em;
+  }
+  .mention-content .mention-section .mention-list li {
+    font-size: 1.25rem;
+  }
+  .mention-footer {
+    margin-top: 10%;
+  }
+}
+/* Mobiles paysage et petites tablettes */
+@media (min-width: 481px) and (max-width: 768px) {
+  .outer-frame-mention {
+    margin: 12%;
+    padding: 2%;
+  }
+  .mention-main {
+    padding: 2%;
+  }
+  .mention-title {
+    font-size: 1.5rem;
+  }
+  .mention-header .mention-update {
+    font-size: 1.25rem;
+  }
+  .mention-content {
+    max-width: 95%;
+  }
+  .mention-content .mention-section {
+    margin-bottom: 3.5%;
+  }
+  .mention-content .mention-section .mention-subtitle {
+    font-size: 1.25rem;
+    padding: 4.5%;
+    margin-bottom: 1.5%;
+  }
+  .mention-content .mention-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-indent: 3em;
+  }
+  .mention-content .mention-section .mention-list li {
+    font-size: 1rem;
+  }
+  .mention-footer {
+    margin-top: 10%;
+  }
+}
+/* Mobiles */
+@media (max-width: 480px) {
+  .outer-frame-mention {
+    margin: 10%;
+    padding: 1.5%;
+  }
+  .mention-main {
+    padding: 1.5%;
+  }
+  .mention-title {
+    font-size: 1.5rem;
+  }
+  .mention-header .mention-update {
+    font-size: 1.25rem;
+  }
+  .mention-content {
+    max-width: 95%;
+  }
+  .mention-content .mention-section {
+    margin-bottom: 3.5%;
+  }
+  .mention-content .mention-section .mention-subtitle {
+    font-size: 1.25rem;
+    padding: 4.5%;
+    margin-bottom: 1.5%;
+  }
+  .mention-content .mention-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-indent: 3em;
+  }
+  .mention-content .mention-section .mention-list li {
+    font-size: 1rem;
+  }
+  .mention-footer {
+    margin-top: 10%;
+  }
+}
+/* Fichier : _buttons.scss
+ * Description : Fichier contenant les styles de boutons du sites.
+ * Auteur : Lefetey Arnaud
+ * Date de création : 01/09/2025
+ */
+/* Fichier : _variables.scss
+ * Description : Fichier contenant les styles des variables CSS de base du portfolio    
+ * Auteur : Lefetey Arnaud
+ * Date de création : 01/09/2025
+ */
+/* Variables CSS - base/variables.scss */
+/* Orange Sethiar */
+/* Noir */
+/* Blanc */
+/* Couleur footer Bleu Sethiar */
+/* Orange classique */
+/* Jaune Or */
+/* Plus clair */
+/* Plus foncé */
+/* Plus clair */
+/* Plus foncé */
+/* Plus clair */
+/* Plus foncé */
+/* Gris foncé */
+/* Gris */
+/*Gris clair 1 */
+/* Gris clair */
+/* Orange */
+/* Rouge foncé */
+/* Rouge foncé hover cancelled */
+/* Orange foncé */
+/* Antracite */
+/* Blanc pur */
+/* Blanc cassé */
+/* Gris très très clair */
+/* Gris foncé */
+/* Orange plus clair */
+/* Texte */
+/* Fond */
+/* Bordure */
+/* Texte */
+/* Fond */
+/* Bordure */
+/* Texte */
+/* Fond */
+/* Bordure */
+/* Police principale */
+/* Police secondaire */
+/* Police tertiare */
+/* Fichier : _responsive-size.scss
+ * Description : Fichier contenant les styles de base pour les breakpoints responsive
+ * Auteur : Lefetey Arnaud
+ * Date de création : 01/09/2025
+ */
+/* Fond flou + centré */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Contenu de la modale */
+.modal-content {
+  background: #f2f2f2;
+  border-radius: 12px;
+  width: 95%;
+  padding: 20px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+  /* gestion du scroll si le contenu dépasse */
+  overflow-y: auto;
+}
+
+/* Titre et sous-titres */
+.modal-content h3 {
+  margin-top: 0;
+  font-size: 1.6em;
+  border-bottom: 2px solid #a9a9a9;
+  padding-bottom: 8px;
+}
+
+.modal-content h4 {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #E5AD36;
+}
+
+/* Bouton de fermeture */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #a9a9a9;
+}
+
+.close:hover {
+  color: #000000;
+}
+
+/* Animation légère */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 /* Fichier : _projects.scss
  * Description : Fichier contenant les styles de la page des projets de SethiarWorks.
  * Auteur : Lefetey Arnaud
@@ -1660,13 +2291,15 @@ footer p {
 }
 
 .project-card {
-  background: #f2f2f2;
-  color: #000000;
+  position: relative;
+  background: #000000;
+  color: #a9a9a9;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #DE7915;
 }
 
 .project-card:hover {
@@ -1693,7 +2326,8 @@ footer p {
 }
 
 .modal-content {
-  background: #fff;
+  background: #f2f2f2;
+  color: #000000;
   margin: 10% auto;
   padding: 20px;
   border-radius: 12px;
@@ -1704,7 +2338,7 @@ footer p {
 
 .close {
   float: right;
-  font-size: 28px;
+  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -1770,12 +2404,15 @@ footer p {
 }
 
 .product-card {
-  background: #fff;
+  display: block;
+  background: #000000;
+  color: #a9a9a9;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #DE7915;
 }
 
 .product-card:hover {
@@ -1784,13 +2421,24 @@ footer p {
 }
 
 .product-card img {
-  width: 100%;
+  margin: 0 auto;
+  width: 55%;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
 
 .section-intro {
   font-size: 2rem;
+}
+
+.product-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.product-list li {
+  margin-bottom: 0.5rem;
 }
 
 /* Fichier : _skills.scss
@@ -1848,23 +2496,95 @@ footer p {
  * Date de création : 01/09/2025
  */
 /* Conteneur principal pour les compétences */
+.competence-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Conteneur des compétences par groupe */
 .competence-group {
   position: relative;
   width: 220px;
-  height: 220px;
   margin: 2rem auto;
 }
 
+/* Conteneur centre de rotation */
+.orbit-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 3rem auto;
+}
+
 /* Titre des compétences */
-.competence-title {
+.orbit-title {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  color: #DE7915;
   text-align: center;
+  width: 130px;
+  height: 130px;
+  padding: 1%;
+  /* pour centrer verticalement si pas de flex */
+  line-height: 120px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Forcer le retour à la ligne */
+  text-align: center;
+  line-height: 1.6;
+  word-break: break-word;
 }
 
+.orbit-pivot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+
+.orbit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+  animation: rotate-orbit 20s linear infinite;
+}
+
+.skill-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.logo-pivot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.skill-logo img {
+  width: 60px;
+  height: 60px;
+  transform-origin: center center;
+  display: block;
+}
+
+/* Animation pour faire tourner l'orbite des logos */
+@keyframes rotate-orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* Gestion des orbites */
 .orbit-3 .skill-logo:nth-child(1) {
   transform: rotate(0deg) translateX(100px) rotate(0deg);
@@ -1988,13 +2708,9 @@ footer p {
   animation: rotate-orbit 20s linear infinite;
 }
 
-/* Animation pour faire tourner l'orbite des logos */
-@keyframes rotate-orbit {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .competence-container {
+    grid-template-columns: 1fr;
   }
 }
 /* Fichier : style/css

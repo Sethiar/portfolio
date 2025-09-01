@@ -17,22 +17,96 @@
 
 
 /* Conteneur principal pour les compétences */
+.competence-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Conteneur des compétences par groupe */
 .competence-group {
   position: relative;
   width: 220px;
-  height: 220px;
   margin: 2rem auto;
 }
 
+/* Conteneur centre de rotation */
+.orbit-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 3rem auto;
+}
+
 /* Titre des compétences */
-.competence-title {
+.orbit-title {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  color: $color-primary;
   text-align: center;
+
+  width: 130px;           
+  height: 130px;
+  padding: 1%;
+  /* pour centrer verticalement si pas de flex */
+  line-height: 120px;     
+  border: 2px solid $color-white;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Forcer le retour à la ligne */
+  text-align: center; 
+  line-height: 1.6;
+  word-break: break-word;
 }
+
+.orbit-pivot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+
+.orbit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  // centre = pivot
+  transform-origin: 0 0; 
+  animation: rotate-orbit 20s linear infinite;
+}
+
+.skill-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.logo-pivot {
+  position: absolute;
+  // centre exact de l'image sur le point
+  transform: translate(-50%, -50%); 
+}
+
+.skill-logo img {
+  width: 60px;
+  height: 60px;
+  transform-origin: center center;
+  display: block;
+}
+
+/* Animation pour faire tourner l'orbite des logos */
+@keyframes rotate-orbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 /* Gestion des orbites */
 @mixin orbit($count, $radius: 100px) {
@@ -62,11 +136,6 @@
   animation: rotate-orbit 20s linear infinite;
 }
 
-/* Animation pour faire tourner l'orbite des logos */
-@keyframes rotate-orbit {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
 
 
 
@@ -76,5 +145,9 @@
 //====================================//
 
 
-
+@media (max-width: 768px) {
+  .competence-container {
+    grid-template-columns: 1fr; // 1 par ligne sur mobile
+  }
+}
 

@@ -3,8 +3,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Portfolio de Lefetey Arnaud. Concepteur, Développeur et Designer de produits web. Ce portfolio résume
-            mes compétences, mes projets terminés et en cours, ainsi que mes produits et services offerts. il s'agit ici de donner une vue d'ensemble 
-            de mon travail et de mes passions.">
+            ses compétences, ses projets terminés et en cours, ainsi que ses produits et services offerts. Il s'agit ici de donner une vue d'ensemble 
+            de son travail et de ses passions.">
+        
+        <meta name="keywords" content="SethiarWorks, contacts, entreprise, carte de visite, réseaux sociaux, informations de contact">
+        <meta name="author" content="Lefetey Arnaud">
+        <meta name="robots" content="index, follow">
+
+        <link rel="canonical" href="{{ url_for('landing_page', _external=True) }}">
+        <link rel="alternate" href="{{ url_for('landing_page', _external=True) }}" hreflang="fr-FR">
     
         <title>Portfolio de Lefetey Arnaud</title>
 
@@ -24,7 +31,7 @@
         <!-- End Google Tag Manager -->
     </head>
 
-    <body>
+    <body id="top">
         <div class="layout">
             <!-- En-tête du site -->
             <header class="header">
@@ -37,6 +44,7 @@
                             <li><a href="#projects-over">Projets terminés</a></li>
                             <li><a href="#current-projects">Projets en cours</a></li>
                             <li><a href="#competences">Compétences</a></li>
+                            <li><a href="{{ url_for('functional.a_propos') }}">À propos</a></li>
                             <li><a href="{{ url_for('functional.contact') }}">Contact</a></li>
                             <li><a href="{{ url_for('functional.mentions') }}">Mentions légales</a></li>
                         </ul>
@@ -105,11 +113,11 @@
 
             {% include 'sections/competences.html' %}
 
-        </main>
+                                
+            <!-- Flèche en bas -->
+            <a href="#top" class="back-to-top">⬆</a>
 
-        <script src="{{ url_for('static', filename='javascript/main.js') }}"></script>
-        <script src="{{ url_for('static', filename='javascript/animation.js') }}"></script>
-        <script src="{{ url_for('static', filename='javascript/competences.js') }}"></script>
+        </main>
         
         <div class="space-2"></div>
 
@@ -132,7 +140,7 @@
                         <h3>informations</h3>
                         <ul>
                             <li><a href="{{ url_for('functional.mentions') }}">Mentions Légales</a></li>
-                            <li><a href="{{ url_for('functional.contact') }}">Informations sur le créateur du site</a></li>
+                            <li><a href="{{ url_for('functional.a_propos') }}">Informations sur le créateur du site</a></li>
                         </ul>
                     </section>
                     <section class="footer-section">
@@ -160,44 +168,15 @@
         </script>
         <!-- End Google Tag Manager -->
 
-        <script>
-          document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.querySelector('.hamburger');
-            const header = document.querySelector('.header');
-            const mainContent = document.querySelector('.main-content'); // Contenu principal
-
-            if (hamburger && header && mainContent) {
-              // S'assurer que la marge du contenu principal est correcte au chargement
-              if (header.classList.contains('active')) {
-                mainContent.style.marginTop = `${header.offsetHeight}px`;
-                } else {
-                mainContent.style.marginTop = '0';
-              }
-
-              // Ajouter un gestionnaire d'événement au clic sur le menu hamburger
-              hamburger.addEventListener('click', () => {
-                // Toggle les classes actives
-                hamburger.classList.toggle('active');
-                header.classList.toggle('active');
-
-                // Gère le décalage du contenu principal
-                if (header.classList.contains('active')) {
-                  mainContent.style.marginTop = `${header.offsetHeight}px`;
-                } else {
-                  mainContent.style.marginTop = '0';
-                } 
-              });
-                } else {
-                  console.error(
-                    'Un ou plusieurs éléments nécessaires sont manquants : .hamburger, .header, ou .main-content.'
-                  );
-                }
-            });
-
-
-        </script>
+        
+        <!-- Incluion du fichier javascript qui gère les animations -->
+        <script src="{{ url_for('static', filename='javascript/animation.js') }}"></script>
+        <!-- Inclusion du menu hamburger -->
+        <script src="{{ url_for('static', filename='javascript/hamburger.js') }}"></script>
         <!-- Inclusion du script des modals-->
         <script src="{{ url_for('static', filename='javascript/modal.js') }}"></script>
+        <!-- Inclusion du script du retour top -->
+        <script src="{{ url_for('static', filename='javascript/widget.js') }}"></script>
     </body>
 </html>
 

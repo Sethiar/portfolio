@@ -25,13 +25,23 @@
   border-radius: 10px;
 }
 
-.contact-border {
-  background-color: $color-lightgrey;
-  width: 60%;
-  margin: 0 auto;
+.contact-site-entreprise {
+  border: 2px solid $color-decline-orange2;
+  border-radius: 10px;
+  padding: 2%;
+  font-size: $font-size-xl;
+
+  .contact-sentence {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 3%;
+    transition: background 0.3s ease, border-color 0.3s ease;
+
+    p {
+      text-indent: 2em;
+    }
+  }
 }
-
-
 
 
 

@@ -1,111 +1,106 @@
 <div class="space-2"></div>
 <section id="competences">
     <h2 class="landing-h2">Compétences</h2>
-    <div class="competences-container">
-        <!-- Conteneur pour bibliothèques python -->
+    <div class="competence-container">
+
+        <!-- Bibliothèques Python -->
         <div class="competence-group">
-            <h3 class="competence-title">Bibliothèques Python</h3>
-            <div class="orbit orbit-7">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_python/flask.svg') }}" 
-                    alt="Logo de Flask" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_python/django.svg') }}" 
-                    alt="Logo de Django" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_python/SQLalchemy.svg') }}"
-                    alt="Logo de SQLalchemy" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_python/matplotlib.svg') }}"
-                    alt="Matplotlib" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_python/seaborn.png') }}"
-                    alt="Logo de Seaborn" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_python/pandas.svg') }}"
-                    alt="Logo de Pandas" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_python/numpy.svg') }}"
-                    alt="Logo de NumPy" class="skill-logo">
+            <div class="orbit-wrapper">
+                <h3 class="orbit-title">Bibliothèques Python</h3>
+                <div class="orbit-pivot">
+                    <div class="orbit orbit-7">
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_python/flask.png') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_python/django.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_python/SQLalchemy.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_python/matplotlib.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_python/seaborn.png') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_python/pandas.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_python/numpy.svg') }}"></div></div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Conteneur pour langages -->
+        <!-- Langages -->
         <div class="competence-group">
-            <h3 class="competence-title">Langages</h3>
-            <div class="orbit orbit-4">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_languages/html5.svg') }}" 
-                    alt="Logo de HTML5" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_languages/css3.svg') }}" 
-                    alt="Logo de CSS3" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_languages/javascript.svg') }}" 
-                    alt="Logo de JavaScript" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_languages/python.svg') }}" 
-                    alt="Python" class="skill-logo">
+            <div class="orbit-wrapper">
+                <h3 class="orbit-title">Langages</h3>
+                <div class="orbit-pivot">
+                    <div class="orbit orbit-4">
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_languages/html5.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_languages/css3.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_languages/javascript.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_languages/python.svg') }}"></div></div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Conteneur pour frameworks -->
+        <!-- Frameworks -->
         <div class="competence-group">
-            <h3 class="competence-title">Frameworks</h3>
-            <div class="orbit orbit-4">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_frameworks/react.svg') }}" 
-                    alt="Logo de React" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_frameworks/vuejs.svg') }}" 
-                    alt="Logo de Vue.js" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_frameworks/bootstrap.svg') }}" 
-                    alt="Logo de Bootstrap" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_frameworks/tailwindcss.svg') }}" 
-                    alt="Logo de Tailwind" class="skill-logo">
-            </div>
-        </div>
-    
-        <!-- Conteneur pour bases de données -->
-        <div class="competence-group">
-            <h3 class="competence-title">Bases de données</h3>
-            <div class="orbit orbit-3">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_bdd/mysql.svg') }}" 
-                    alt="Logo de MySQL" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_bdd/postgresql.svg') }}" 
-                    alt="Logo de PostgreSQL" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_bdd/mongodb.svg') }}" 
-                    alt="Logo de MongoDB" class="skill-logo">
+            <div class="orbit-wrapper">
+                <h3 class="orbit-title">Frameworks</h3>
+                <div class="orbit-pivot">
+                    <div class="orbit orbit-4">
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_frameworks/react.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_frameworks/vuejs.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_frameworks/bootstrap.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_frameworks/tailwindcss.svg') }}"></div></div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Conteneur pour IDE -->
+        <!-- Bases de données -->
         <div class="competence-group">
-            <h3 class="competence-title">IDE & Outils</h3>
-            <div class="orbit orbit-5">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_ide/visualstudio.svg') }}" 
-                    alt="Logo de VisualCode Studio" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_ide/postman.svg') }}" 
-                    alt="Logo de Postman" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_ide/pycharm.svg') }}" 
-                    alt="Logo de Pycharm" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_ide/git.svg') }}" 
-                    alt="Logo de Git" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_ide/github.svg') }}" 
-                    alt="Logo de GitHub" class="skill-logo">
+            <div class="orbit-wrapper">
+                <h3 class="orbit-title">Bases de données</h3>
+                <div class="orbit-pivot">
+                    <div class="orbit orbit-3">
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_bdd/mysql.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_bdd/postgresql.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_bdd/mongodb.svg') }}"></div></div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Conteneur pour outils de design -->
+        <!-- IDE & Outils -->
         <div class="competence-group">
-            <h3 class="competence-title">Outils de design</h3>
-            <div class="orbit orbit-9">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/photoshop.svg') }}" 
-                    alt="Logo de PhotoShop" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/illustrator.svg') }}" 
-                    alt="Logo de illustrator" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/figma.svg') }}" 
-                    alt="Logo de Figma" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/canva.svg') }}" 
-                    alt="Logo de Canva" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/blender.svg') }}" 
-                    alt="Logo de Blender" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/aftereffects.svg') }}" 
-                    alt="Logo de After Effects" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/premierepro.svg') }}" 
-                    alt="Logo de Premiere Pro" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/inkscape.svg') }}" 
-                    alt="Logo de Inkscape" class="skill-logo">
-                <img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/daz3d.png') }}" 
-                    alt="Logo de Daz 3D" class="skill-logo">
+            <div class="orbit-wrapper">
+                <h3 class="orbit-title">IDE & Outils</h3>
+                <div class="orbit-pivot">
+                    <div class="orbit orbit-5">
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_ide/visualstudio.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_ide/postman.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_ide/pycharm.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_ide/git.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_ide/github.svg') }}"></div></div>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <!-- Outils de design -->
+        <div class="competence-group">
+            <div class="orbit-wrapper">
+                <h3 class="orbit-title">Outils de design</h3>
+                <div class="orbit-pivot">
+                    <div class="orbit orbit-9">
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/photoshop.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/illustrator.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/figma.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/canva.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/blender.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/aftereffects.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/premierepro.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/inkscape.svg') }}"></div></div>
+                        <div class="skill-logo"><div class="logo-pivot"><img src="{{ url_for('static', filename='images/images_logo/images_skills/skills_design/daz3d.png') }}"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 <div class="space-2"></div>

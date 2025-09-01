@@ -10,6 +10,252 @@
 @import '../base/responsive-size';
 
 
+//======================================================//
+// Styles pour les pages Mentions Légales  //
+//======================================================//
+
+//============//
+//   Cadres   //
+//============//
+
+.outer-frame-mention {
+  border: 4px solid $color-decline-orange2;
+  border-radius: 8px;
+  padding: 2%;
+  margin: 10%;
+  background: $color-lightgrey;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.inner-frame-mention {
+  border: 2px solid $color-decline-gold2;
+  border-radius: 8px;
+  padding: 1.5%;
+  background: $color-black;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+//=========//
+// Général //
+//=========//
+
+.mention-main {
+  padding: 4% 2%;
+  background-color: $color-black;
+  color: $color-white;
+  line-height: 1.6;
+}
+
+//======================//
+//   Titre principal    //
+//======================//
+
+.mention-title {
+  font-size: $font-size-xxxl;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3%;
+  color: $color-primary;
+}
+
+//=========//
+// En-tête //
+//=========//
+
+.mention-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2%;
+
+  .mention-update {
+    font-size: $font-size-xl;
+  }
+
+  .mention-update {
+    color: $color-decline-gold2;
+  }
+}
+
+
+//=======//
+// Logo  //
+//=======//
+
+.mention-logo {
+  display: flex;
+  justify-content: center;
+  margin: 3% 0;
+
+  .mention-logo-img {
+    width: 20%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+//===============================//
+//      Contenu principal        //
+//===============================//
+
+.mention-content {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 4% 2%;
+  border-radius: 12px;
+  border: 1px solid $color-lightgrey;
+
+  .mention-section {
+    margin-bottom: 4%;
+
+    .mention-subtitle {
+      font-size: $font-size-xxl;
+      font-weight: bold;
+      text-decoration: underline;
+      padding: 4%;
+      color: $color-decline-gold2;
+      margin-bottom: 1%;
+    }
+
+    p {
+      font-size: $font-size-xl;
+      margin-bottom: 1.5%;
+      text-indent: 2em;
+      line-height: 1.8;
+    }
+
+    .mention-list {
+      margin: 0;
+      padding: 0 5% 0 2%;
+
+      li {
+        font-size: $font-size-xl;
+        list-style: disc inside;
+        margin-bottom: 1%;
+        padding-left: 1.5em;
+      }
+    }
+  }
+}
+
+//====================================//
+// Introduction mention avec cadre  //
+//====================================//
+
+.mention-intro{
+  border: 2px solid $color-decline-orange2;
+  border-radius: 10px;
+  padding: 2%;
+  background: $color-lightgrey;
+  font-size: $font-size-xxl;
+  color: $color-black;
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 3%;
+  transition: background 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    background: lighten($color-lightgrey, 10%);
+    border-color: $color-decline-gold2;
+  }
+
+  p {
+    text-indent: 2em;
+  }
+}
+
+
+//=========//
+// Footer  //
+//=========//
+
+.mention-footer {
+  text-align: center;
+  margin-top: 15%;
+  font-size: $font-size-xl;
+  color: $color-neutral-darkgrey;
+
+  p {
+    font-style: italic;
+  }
+}
+
+//=====================//
+//   Responsive design //
+//=====================//
+
+@mixin mention-responsive($font-title, $font-subtitle, $font-text, $margin, $padding) {
+  .outer-frame-mention {
+    margin: $margin;
+    padding: $padding;
+  }
+
+  .mention-main {
+    padding: $padding;
+  }
+
+  .mention-title {
+    font-size: $font-title;
+  }
+
+  .mention-header .mention-update {
+    font-size: $font-subtitle;
+  }
+
+  .mention-content {
+    max-width: 95%;
+
+    .mention-section {
+      margin-bottom: 3.5%;
+
+      .mention-subtitle {
+        font-size: $font-subtitle;
+        padding: 4.5%;
+        margin-bottom: 1.5%;
+      }
+
+      p {
+        font-size: $font-text;
+        line-height: 1.6;
+        text-indent: 3em;
+      }
+
+      .mention-list li {
+        font-size: $font-text;
+      }
+    }
+  }
+
+  .mention-footer {
+    margin-top: 10%;
+  }
+}
+
+/* Tablettes */
+@include respond-between($breakpoint-sm + 1, $breakpoint-lg) {
+  @include mention-responsive($font-size-xxl, $font-size-xl, $font-size-lg, 8%, 2.5%);
+}
+
+/* Mobiles paysage et petites tablettes */
+@include respond-between($breakpoint-xxs + 1, $breakpoint-sm) {
+  @include mention-responsive($font-size-xl, $font-size-lg, $font-size-base, 12%, 2%);
+}
+
+/* Mobiles */
+@include respond-max($breakpoint-xxs) {
+  @include mention-responsive($font-size-xl, $font-size-lg, $font-size-base, 10%, 1.5%);
+}
 
 //====================================//
 //          Responsive design         //

@@ -1,128 +1,363 @@
 <div class="space-2"></div>
 <section id="projects-over">
-    <h2 class="landing-h2">Projets terminés</h2>
-    <p class="section-intro">Voici quelques projets que j'ai réalisés.</p>
-    
-    <div class="projects-grid">
-        <div class="project-card">
-            <img src="{{url_for('static', filename="images/images_project/sethiarworks.png") }}" alt="Projet du site entreprise SethiarWorks">
-            <h3 class="landing-h3">Site entreprise SethiarWorks</h3>
-            <h4>Création de mon site entreprise avec Devis, Chat vidéo et forum avec authentification</h4>
+  <h2 class="landing-h2">Projets terminés</h2>
+  <p class="section-intro">Voici quelques projets que j'ai réalisés.</p>
 
-            <div class="product-space"></div>
-           
-            <!-- Bouton qui ouvre la modale -->
-            <a href="javascript:void(0)" class="btn-secondary" 
-                onclick="openModal('modal-sethiarworks')">
-                    Voir la description
-            </a><br>
+  <div class="projects-grid">
+    <div class="project-card">
+      <img src="{{url_for('static',
+      filename="images/images_project/sethiarworks.png") }}" alt="Projet du site
+      entreprise SethiarWorks">
+      <h3 class="landing-h3">Site entreprise SethiarWorks</h3>
+      <h4>
+        Création de mon site entreprise avec Devis, Chat vidéo et forum avec
+        authentification
+      </h4>
 
-            <!-- La modale -->
-            <div id="modal-sethiarworks" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal-sethiarworks')">&times;</span>
-                    <h3>Description complète</h3>
-                    <p>
-                        Ce projet a consisté à créer un site entreprise complet avec système de devis,
-                        chat vidéo intégré, et forum avec authentification. Il a servi de vitrine professionnelle
-                        et d’exercice de mise en place de fonctionnalités avancées en backend et frontend.
-                    </p>
-                </div>
-            </div>
+      <div class="product-space"></div>
 
-            <div class="product-space"></div>
-    
-            <a href="https://www.sethiarworks.sethiar-lefetey.com" 
-                class="btn-primary"
-                target="_blank">
-                    Voir le site
-            </a>
+      <!-- Bouton qui ouvre la modale -->
+      <a
+        href="javascript:void(0)"
+        class="btn-secondary"
+        onclick="openModal('modal-sethiarworks')"
+      >
+        Voir la description </a
+      ><br />
 
-            <div class="product-space"></div>
+      <!-- La modale -->
+      <div id="modal-sethiarworks" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-sethiarworks')"
+            >&times;</span
+          >
+          <h3>Site professionnel SethiarWorks</h3>
 
-            <a href="https://github.com/Sethiar/Site-Sethiar_V2.git" 
-               class="btn-primary"
-               target="_blank">
-               Voir le code avec Github
-            </a>
+          <h4>Type</h4>
+          <p>Site vitrine professionnel avec fonctionnalités interactives</p>
 
+          <h4>Objectif</h4>
+          <p>
+            Présenter mes services de manière professionnelle, permettre aux
+            clients de poser des questions, demander des devis, interagir via
+            chat et laisser des commentaires, tout en conservant un contrôle
+            administratif sur le contenu publié.
+          </p>
+
+          <h4>Technologies</h4>
+          <p>
+            Frontend et Backend : Flask (Framework RESTful) ; API WhereBy pour
+            chat vidéo en direct
+          </p>
+
+          <h4>Base de données</h4>
+          <p>
+            MySQL adaptée à la gestion utilisateurs, commentaires et messages
+          </p>
+
+          <h4>Hébergement</h4>
+          <p>O2switch</p>
+
+          <h4>Fonctionnalités clés</h4>
+          <ul>
+            <li>Authentification clients et administration</li>
+            <li>
+              Possibilité de laisser un commentaire ou répondre à un commentaire
+            </li>
+            <li>
+              Envoi et réception d’emails automatiques pour notifications ou
+              réponses
+            </li>
+            <li>Demande de devis en ligne</li>
+            <li>Demande de chat vidéo via API WhereBy</li>
+            <li>
+              Interface administrateur afin de gérer et filtrer les commentaires
+              anonymes si nécessaire
+            </li>
+          </ul>
+
+          <h4>Défis techniques / Ce que j’ai appris</h4>
+          <ul>
+            <li>Intégration d’API externe (WhereBy) pour chat vidéo</li>
+            <li>Gestion de la sécurité et authentification des utilisateurs</li>
+            <li>
+              Filtrage et modération des commentaires afin d'éviter les contenus
+              inappropriés
+            </li>
+            <li>Automatisation des notifications et gestion des emails</li>
+            <li>
+              Architecture backend/frontend adaptée à un site interactif et
+              modulable
+            </li>
+          </ul>
         </div>
-        <div class="project-card">
-            <img src="{{url_for('static', filename="images/images_project/tititechnique.png") }}" alt="Projet du site d'un Youtube">
-            <h3 class="landing-h3">Site Titi Technique (Youtuber)</h3>
-            <h4>Création d'un blog pour un Youtuber avec API youtube, Chat vidéo et forum avec authentification</h4>
-            
-            <div class="product-space"></div>
+      </div>
 
-            <!-- Bouton qui ouvre la modale -->
-            <a href="javascript:void(0)" class="btn-secondary" 
-                onclick="openModal('modal-tititechnique')">
-                    Voir la description
-            </a><br>
+      <div class="product-space"></div>
 
-            <!-- La modale -->
-            <div id="modal-tititechnique" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal-tititechnique')">&times;</span>
-                    <h3>Description complète</h3>
-                    <p>
-                       Ce projet consistait à créer un blog pour un Youtuber avec intégration de l’API YouTube,
-                        un chat vidéo et un forum avec authentification. Il a servi à mettre en place un site communautaire
-                        autour de sa chaîne.
-                    </p>
-                </div>
-            </div>
+      <a
+        href="https://www.sethiarworks.sethiar-lefetey.com"
+        class="btn-primary"
+        target="_blank"
+      >
+        Voir le site
+      </a>
 
-            <div class="product-space"></div>
+      <div class="product-space"></div>
 
-            <a href="https://www.tititechnique.fr" 
-               class="btn-primary"
-               target="_blank">
-               Voir le site
-            </a>
-
-            <div class="product-space"></div>
-
-            <a href="https://github.com/Sethiar/BlogTiti.git" 
-               class="btn-primary"
-               target="_blank">
-               Voir le code avec Github
-            </a>
-        </div>
-        <div class="project-card">
-            <img src="{{url_for('static', filename="images/images_project/domotique.png") }}" alt="Projet de domotique">
-            <h3 class="landing-h3">Projet de Domotique FibaroHC3</h3>
-            <h4>Créer un retour de l'ipx800 à la Fibao afin de mettre à jour un icône</h4>
-
-            <div class="product-space"></div>
-            
-            <!-- Bouton qui ouvre la modale -->
-            <a href="javascript:void(0)" class="btn-secondary" 
-                onclick="openModal('modal-domotique')">
-                    Voir la description
-            </a><br>
-
-            <!-- La modale -->
-            <div id="modal-domotique" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal-domotique')">&times;</span>
-                   <h3>Description complète</h3>
-                    <p>
-                        Ce projet domotique a permis d’interfacer l’IPX800 avec la Fibaro HC3 afin de synchroniser
-                        les états des appareils et mettre à jour les icônes en temps réel. J’ai utilisé Flask
-                        et l’API Fibaro pour établir la communication.
-                    </p>
-                </div>
-            </div>
-
-            <div class="product-space"></div>
-
-            <a href="https://github.com/Sethiar/Domotique_FibaroHC3" 
-               class="btn-primary"
-               target="_blank">
-               Voir le code avec Github
-            </a>
-        </div>
+      <a
+        href="https://github.com/Sethiar/Site-Sethiar_V2.git"
+        class="btn-primary"
+        target="_blank"
+      >
+        Voir le code avec Github
+      </a>
     </div>
+    <div class="project-card">
+      <img src="{{url_for('static',
+      filename="images/images_project/tititechnique.png") }}" alt="Projet du
+      site d'un Youtube">
+      <h3 class="landing-h3">Site Titi Technique (Youtuber)</h3>
+      <h4>
+        Création d'un blog pour un Youtuber avec API youtube, Chat vidéo et
+        forum avec authentification
+      </h4>
+
+      <div class="product-space"></div>
+
+      <!-- Bouton qui ouvre la modale -->
+      <a
+        href="javascript:void(0)"
+        class="btn-secondary"
+        onclick="openModal('modal-tititechnique')"
+      >
+        Voir la description </a
+      ><br />
+
+      <!-- La modale -->
+      <div id="modal-tititechnique" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-tititechnique')"
+            >&times;</span
+          >
+          <h3>Projet Blog du Youtuber Tititechnique</h3>
+
+          <h4>Type</h4>
+          <p>
+            Application web interactive pour la collecte et la gestion de vidéos
+          </p>
+
+          <h4>Objectif</h4>
+          <p>
+            Récupérer automatiquement les vidéos d’un YouTuber via l’API
+            YouTube, permettre aux utilisateurs de consulter, liker et interagir
+            avec ces vidéos, tout en assurant une mise à jour asynchrone
+            régulière. Mise en place d'un forum nécessitant de s'authentifier
+            afin de poster un commentaire ou y répondre.
+          </p>
+
+          <h4>Technologies</h4>
+          <p>
+            Frontend et Backend : Flask (Framework RESTful) ; API YouTube pour
+            récupération des vidéos ; Scheduler Python ( APScheduler) pour mise
+            à jour asynchrone
+          </p>
+
+          <h4>Base de données</h4>
+          <p>
+            MySQL pour stocker les informations sur les vidéos, titres, nombre
+            de commentaires, nombre de vue, les likes et les informations
+            utilisateur
+          </p>
+
+          <h4>Hébergement</h4>
+          <p>O2switch</p>
+
+          <h4>Fonctionnalités clés</h4>
+          <ul>
+            <li>Récupération automatique des vidéos via l’API YouTube</li>
+            <li>
+              Mise à jour asynchrone avec scheduler pour synchroniser les
+              nouvelles vidéos
+            </li>
+            <li>Système de like sur les vidéos par les utilisateurs</li>
+            <li>Affichage des vidéos sur le site avec tri et filtres</li>
+            <li>Demande de chat vidéo via API WhereBy</li>
+            <li>Authentification et gestion des utilisateurs</li>
+            <li>
+              Forum pour les utilisateurs connectés, commentaires et réponses
+            </li>
+            <li>Mailing afind e suivre l'avancement des sujets discutés</li>
+            <li>
+              Interface administrateur pour superviser les vidéos et
+              interactions
+            </li>
+          </ul>
+
+          <h4>Défis techniques / Ce que j’ai appris</h4>
+          <ul>
+            <li>
+              Intégration de l’API YouTube pour récupérer les vidéos et
+              métadonnées
+            </li>
+            <li>Intégration d’API externe (WhereBy) pour chat vidéo</li>
+            <li>
+              Gestion des mises à jour asynchrones via scheduler pour ne pas
+              bloquer le site
+            </li>
+            <li>
+              Authentification des utilisateurs afin de poster un message.
+            </li>
+            <li>
+              Implémentation d’un système de likes et suivi des interactions
+              utilisateurs
+            </li>
+            <li>
+              Optimisation des performances pour l’affichage de plusieurs vidéos
+              et métadonnées
+            </li>
+            <li>
+              Architecture backend/frontend robuste pour gérer la
+              synchronisation et les actions utilisateurs
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product-space"></div>
+
+      <a
+        href="https://www.tititechnique.fr"
+        class="btn-primary"
+        target="_blank"
+      >
+        Voir le site
+      </a>
+
+      <div class="product-space"></div>
+
+      <a
+        href="https://github.com/Sethiar/BlogTiti.git"
+        class="btn-primary"
+        target="_blank"
+      >
+        Voir le code avec Github
+      </a>
+    </div>
+    <div class="project-card">
+      <img src="{{url_for('static',
+      filename="images/images_project/domotique.png") }}" alt="Projet de
+      domotique">
+      <h3 class="landing-h3">Projet de Domotique FibaroHC3</h3>
+      <h4>
+        Créer un retour de l'ipx800 à la Fibao afin de mettre à jour un icône
+      </h4>
+
+      <div class="product-space"></div>
+
+      <!-- Bouton qui ouvre la modale -->
+      <a
+        href="javascript:void(0)"
+        class="btn-secondary"
+        onclick="openModal('modal-domotique')"
+      >
+        Voir la description </a
+      ><br />
+
+      <!-- La modale -->
+      <div id="modal-domotique" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-domotique')"
+            >&times;</span
+          >
+          <h3>Projet Domotique : Fibaro → IPX → Flask</h3>
+
+          <h4>Type</h4>
+          <p>Application domotique interactive / Contrôle d’objets connectés</p>
+
+          <h4>Objectif</h4>
+          <p>
+            Contrôler des appareils domotiques Fibaro via IPX et un serveur
+            Flask hébergé sur Raspberry Pi, avec changement dynamique de l’état
+            des icônes sur l'interface utilisateur de la FibaroHC3.
+          </p>
+
+          <h4>Technologies</h4>
+          <p>
+            Python (Flask) pour le serveur backend ; IPX800 pour la gestion des
+            scénarios ; API et HTTP push de Fibaro ; Raspberry Pi comme serveur
+            local ; Pas de frontend car interface ipx et Fibaro
+          </p>
+
+          <h4>Base de données</h4>
+          <p>
+            Fichier JSON stockant l’état des
+            appareils et logs
+          </p>
+
+          <h4>Hébergement</h4>
+          <p>Raspberry Pi local (serveur Flask)</p>
+
+          <h4>Fonctionnalités clés</h4>
+          <ul>
+            <li>
+              Création et gestion de scénarios sur IPX pour déclencher des
+              actions
+            </li>
+            <li>Push d’événements IPX vers le serveur Flask</li>
+            <li>
+              Flask reçoit la requête et envoie la commande correspondante à la
+              Fibaro
+            </li>
+            <li>
+              Changement dynamique de l’état des icônes sur l’interface
+              utilisateur
+            </li>
+            <li>
+              Possibilité de contrôler les appareils en temps réel depuis le
+              navigateur
+            </li>
+            <li>
+              Logs et suivi des actions pour vérifier le bon fonctionnement des
+              scénarios
+            </li>
+          </ul>
+
+          <h4>Défis techniques / Ce que j’ai appris</h4>
+          <ul>
+            <li>
+              Intégration des protocoles Fibaro et IPX pour contrôle domotique
+            </li>
+            <li>
+              Configuration d’un serveur Flask sur Raspberry Pi qui reçoit et
+              traite les requêtes
+            </li>
+            <li>
+              Création de scénarios IPX afin d'automatiser les actions pour
+              déclencher des push
+            </li>
+            <li>
+              Synchronisation temps réel entre état physique des appareils et
+              interface web
+            </li>
+            <li>
+              Gestion de la fiabilité et sécurité des commandes envoyées aux
+              appareils connectés
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product-space"></div>
+
+      <a
+        href="https://github.com/Sethiar/Domotique_FibaroHC3"
+        class="btn-primary"
+        target="_blank"
+      >
+        Voir le code avec Github
+      </a>
+    </div>
+  </div>
 </section>
 <div class="space-2"></div>

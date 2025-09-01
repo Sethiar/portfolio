@@ -150,12 +150,21 @@
   @include separator(45%, 0 auto, 1px solid $color-white);
 }
 
+/* Barre de séparation section contact */
 .contact-divider {
     border: none;
     width: 80%;
     height: 2px;
     background-color: $color-decline-gold1;
     margin: 0 auto;
+}
+
+/* Barre de séparation section mention */
+.mention-divider {
+  border: none;
+  height: 2px;
+  background-color: $color-decline-gold2;
+  margin: 2% 0;
 }
 //--------------------------------------------------
 
@@ -178,9 +187,50 @@
 .contact-space {
     height: 4vh;
 }
+
+.product-space {
+    height: 3vh;
+  }
+
+.mention-space {
+  height: 2vh;
+}
 //--------------------------------------------------
 
 
+//======================================//
+// Flèches de retour en haut de l'écran //
+//======================================//
+
+.back-to-top {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  width: 40px;               /* même largeur */
+  height: 40px;              /* même hauteur */
+  display: flex;             /* centrer le contenu */
+  align-items: center;
+  justify-content: center;
+  background-color: $color-black;
+  color: $color-primary;
+  border-radius: 8px;
+  border: 2px solid $color-primary;
+  text-decoration: none;
+  font-size: $font-size-xxxl;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4 ease;
+  
+  &:hover {
+    background-color: $color-white;
+    border: 2px solid $color-decline-gold2;
+  }
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 //====================================//
 //          Responsive design         //
@@ -220,7 +270,11 @@
 
   .contact-space {
     height: 3.5vh;
-}
+  }
+
+  .product-space {
+    height: 2vh;
+  }
 }
 //----------------------------------------------------
 
@@ -256,7 +310,11 @@
 
   .contact-space {
     height: 3vh;
-}
+  }
+
+  .product-space {
+    height: 2vh;
+  }
 }
 //---------------------------------------------------------------
 
@@ -294,6 +352,10 @@
   }
 
   .contact-space {
+    height: 3vh;
+  }
+
+  .product-space {
     height: 3vh;
   }
 }

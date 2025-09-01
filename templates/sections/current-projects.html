@@ -1,43 +1,457 @@
 <div class="space-2"></div>
 <section id="current-projects">
-    <h2 class="landing-h2">Projets en cours</h2>
-    <p class="section-intro">Voici les projets sur lesquels je travaille actuellement.</p>
-    <div class="projects-grid">
-        <div class="project-card">
-            <img src="images/project/current-project1.png" alt="Image du projet en cours 1">
-            <h3 class="landing-h3">CurrentOcean</h3>
-            <p>
-                Visualisation interactive des courants marins, combinant données scientifiques 
-                et design UX pour une exploration intuitive du globe.
-            </p>
-            <a href="#" class="btn">Voir le projet</a>
+  <h2 class="landing-h2">Projets en cours</h2>
+  <p class="section-intro">
+    Voici les projets sur lesquels je travaille actuellement.
+  </p>
+  <div class="projects-grid">
+    <div class="project-card">
+      <img src="{{url_for('static',
+      filename="images/images_current_project/currentocean.png") }}"
+      alt="CurrentOcean - Visualisation des courants marins.">
+      <h3 class="landing-h3">CurrentOcean</h3>
+      <p>
+        Visualisation interactive des courants marins, combinant données
+        scientifiques et design UX pour une exploration intuitive du globe.
+      </p>
+
+      <div class="product-space"></div>
+
+      <!-- Bouton qui ouvre la modale -->
+      <a
+        href="javascript:void(0)"
+        class="btn-secondary"
+        onclick="openModal('modal-currentocean')"
+      >
+        Voir la description </a
+      ><br />
+
+      <!-- La modale -->
+      <div id="modal-currentocean" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-currentocean')"
+            >&times;</span
+          >
+          <h3>CurrentOcean</h3>
+
+          <h4>Type</h4>
+          <p>Application web interactive</p>
+
+          <h4>Objectif</h4>
+          <p>Visualiser et analyser les courants marins en temps réel pour chercheurs et passionnés.</p>
+
+          <h4>Technologies</h4>
+          <p>Python (Django/Flask), React, API Copernicus</p>
+
+          <h4>Base de données</h4>
+          <p>PostgreSQL + PostGIS</p>
+
+          <h4>Hébergement souhaité</h4>
+          <p>Docker (Django backend + Vue frontend + PostgreSQL)</p>
+
+          <h4>Fonctionnalités clés</h4>
+          <ul>
+            <li>Authentification sécurisée (JWT)</li>
+            <li>Globe 3D interactif des courants marins</li>
+            <li>Tableaux & graphiques dynamiques</li>
+          </ul>
+
+          <h4>Défis techniques / Ce que j’ai appris</h4>
+          <ul>
+            <li>Pipeline de données >100 Go/mois avec nettoyage automatique</li>
+            <li>Optimisation des performances pour affichage 3D temps réel</li>
+            <li>Gestion de l’intégration d’API externes (Copernicus)</li>
+          </ul>
         </div>
-        <div class="project-card">
-            <img src="images/project/current-project2.png" alt="Image du projet en cours 2">
-            <h3 class="landing-h3">CleanUsTrash</h3>
-            <p>
-                Application mobile de signalement des dépôts sauvages, avec suivi et propositions 
-                d’actions bénévoles pour améliorer l’environnement local.</p>
-            <a href="#" class="btn">Voir le projet</a>
-        </div>
-        <div class="project-card">
-            <img src="images/project/current-project3.png" alt="Image du projet en cours 3">
-            <h3 class="landing-h3">Site de vente de figurines de Manga</h3>
-            <p>
-                E-commerce spécialisé avec catalogue interactif et expérience d’achat 
-                optimisée pour les passionnés de figurines et collectibles.
-            </p>
-            <a href="#" class="btn">Voir le projet</a>
-        </div>
-        <div class="project-card">
-            <img src="images/project/current-project4.png" alt="Image du projet en cours 4">
-            <h3 class="landing-h3">Création de templates clé en main</h3>
-            <p>
-                Pack de templates web et landing pages prêts à l’emploi, 
-                personnalisables et adaptés aux freelances et développeurs juniors.
-            </p>
-            <a href="#" class="btn">Voir le projet</a>
-        </div>
+      </div>
+
+      <div class="product-space"></div>
+
+      <a
+        href="https://github.com/Sethiar/CurrentOcean.git"
+        class="btn-primary"
+        target="_blank"
+      >
+        Voir le code avec Github
+      </a>
     </div>
+
+    <div class="project-card">
+      <img src="{{url_for('static',
+      filename="images/images_current_project/cleanustrash.png") }}"
+      alt="Applicaiton téléphonique CleanUsTrash.">
+      <h3 class="landing-h3">CleanUsTrash</h3>
+      <p>
+        Application mobile de signalement des dépôts sauvages, avec suivi et
+        propositions d’actions bénévoles pour améliorer l’environnement local.
+      </p>
+
+      <div class="product-space"></div>
+
+      <!-- Bouton qui ouvre la modale -->
+      <a
+        href="javascript:void(0)"
+        class="btn-secondary"
+        onclick="openModal('modal-cleanustrash')"
+      >
+        Voir la description </a
+      ><br />
+
+      <!-- La modale -->
+      <div id="modal-cleanustrash" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-cleanustrash')"
+            >&times;</span
+          >
+          <h3>CleanUsTrash</h3>
+          
+          <h4>Type</h4>
+          <p>Application mobile Android</p>
+          
+          <h4>Objectif</h4>
+          <p>Permettre aux utilisateurs de signaler des dépôts d’ordures sauvages, suivre les actions de dépollution et proposer des services bénévoles pour améliorer leur environnement local.</p>
+          
+          <h4>Technologies</h4>
+          <p>Android SDK (Java/Kotlin), API REST pour centraliser les signalements</p>
+
+          <h4>Base de données </h4>
+          <p> SQLite (locale) / API distante</p>
+
+          <h4>Hébergement souhaité </h4>
+          <p>Docker pour l’API backend (optionnel)</p>
+
+          <h4>Fonctionnalités clés</h4>
+          <ul>
+            <li>Authentification et gestion des utilisateurs</li>
+            <li>Signalement de dépôts d’ordures avec photo et géolocalisation</li>
+            <li>Envoi à la mairie et gendarmerie de la commune afin de déclarer le dépôt</li>
+            <li>Suivi des actions bénévoles par commune ou région</li>
+            <li>Notifications en temps réel pour les nouvelles actions ou signalements</li>
+            <li>Section blog et commentaires pour partager des initiatives</li>
+          </ul>
+
+          <h4>Défis techniques / Ce que j’ai appris</h4>
+          <ul>
+            <li>Gestion des permissions et géolocalisation sur Android</li>
+            <li>Optimisation du stockage local et synchronisation avec l’API</li>
+            <li>Intégration d’API tierces pour cartes et notifications</li>
+            <li>UI/UX adaptée pour interaction mobile simple et fluide</li>
+            <li>Défendre et élaborer un projet devant les autorités compétentes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product-space"></div>
+
+      <a
+        href="https://www.figma.com/proto/Tdy9bqh7x80cKoP0GqYkfF/CleanUsTrash?node-id=7-16&starting-point-node-id=7%3A16"
+        class="btn-primary"
+        target="_blank"
+      >
+        Voir le wireframe avec Figma
+      </a>
+    </div>
+
+    <div class="project-card">
+      <img src="{{url_for('static',
+      filename="images/images_current_project/japaninfrance.png") }}" alt="Site
+      de vente en ligne 'Japan in France'.">
+      <h3 class="landing-h3">
+        Site de vente de figurines issues d’animés et de la culture pop
+        japonaise.
+      </h3>
+      <p>
+        E-commerce spécialisé avec catalogue interactif et expérience d’achat
+        optimisée pour les passionnés de figurines et collectibles.
+      </p>
+
+      <div class="product-space"></div>
+
+      <!-- Bouton qui ouvre la modale -->
+      <a
+        href="javascript:void(0)"
+        class="btn-secondary"
+        onclick="openModal('modal-japaninfrance')"
+      >
+        Voir la description </a
+      ><br />
+
+      <!-- La modale -->
+      <div id="modal-japaninfrance" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-japaninfrance')"
+            >&times;</span
+          >
+          <h3>Japaninfrane</h3>
+    
+          <h4>Type</h4>
+          <p>Site de vente en ligne / e-commerce</p>
+          
+          <h4>Objectif</h4>
+          <p>Centraliser la vente de figurines japonaises via la collaboration avec des sites existants, en récupérant un pourcentage sur chaque vente grâce à l’intégration de leurs stocks.</p>
+
+          <h4>Technologies</h4>
+          <p>Frontend :  Vue.js (desktop & mobile) ; Backend : Django + Django REST Framework (API RESTful, JWT Authentication); Intégration API Strike pour paiement ; API des partenaires pour récupération des stocks</p>
+          
+          <h4>Base de données</h4>
+          <p> PostgreSQL</p>
+          
+          <h4>Hébergement souhaité</h4>
+          <p> Docker / VPS (backend + frontend + base de données)</p>
+
+          <h4>Fonctionnalités clés</h4>
+          <ul>
+            <li>Authentification utilisateurs et administrateur</li>
+            <li>Système de panier avec gestion des stocks via API partenaires</li>
+            <li>Intégration API de paiement Strike pour transactions sécurisées</li>
+            <li>Système de fidélisation avec points cumulables et suivi</li>
+            <li>Responsive design mobile et desktop</li>
+            <li>Interface administrateur : gestion des produits, commandes, utilisateurs et statistiques</li>
+          </ul>
+
+          <h4>Défis techniques / Ce que j’ai appris</h4>
+          <ul>
+            <li>Intégration simultanée de plusieurs APIs partenaires pour récupérer les stocks en temps réel</li>
+            <li>Gestion des transactions et sécurité avec API de paiement</li>
+            <li>Architecture multi-plateforme (mobile & desktop) avec React / Vue.js</li>
+            <li>Optimisation des performances pour synchronisation de stock et affichage des produits</li>
+            <li>Implémentation d’un système de fidélisation et suivi des points utilisateurs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product-space"></div>
+
+      <a
+        href="https://github.com/Sethiar/Site-Sethiar_V2.git"
+        class="btn-primary"
+        target="_blank"
+      >
+        Voir le code avec Github
+      </a>
+    </div>
+
+    <div class="project-card">
+      <img src="{{url_for('static',
+      filename="images/images_current_project/site_template.png") }}" alt="Site
+      de création de templates">
+      <h3 class="landing-h3">Création de templates clé en main</h3>
+      <p>Landing page pour freelances, portfolio ou e-commerce.</p>
+
+      <div class="product-space"></div>
+
+      <!-- Bouton qui ouvre la modale -->
+      <a
+        href="javascript:void(0)"
+        class="btn-secondary"
+        onclick="openModal('modal-template')"
+      >
+        Voir la description </a
+      ><br />
+
+      <!-- La modale -->
+      <div id="modal-template" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-template')"
+            >&times;</span
+          >
+           <h3>Création de templates clé en main</h3>
+    
+           <h4>Type</h4> 
+           <p>Templates graphiques pour freelances, portfolios et e-commerce</p>
+           
+           <h4>Objectif</h4>
+           <p>Fournir des modèles prêts à l’usage, modulables et professionnels, pour gagner du temps dans la création de sites ou supports marketing.</p>
+    
+           <h4>Technologies / Logiciels</h4>
+           <p>Photoshop, Illustrator, InDesign, Figma, autres logiciels de design graphique</p>
+           
+           <h4>Base de données</h4>
+           <p>Non applicable (contenu statique / fichiers)</p>
+           
+           <h4>Hébergement souhaité</h4>
+           <p>Téléchargement direct via site ou drive partagé</p>
+
+           <h4>Fonctionnalités clés</h4>
+           <ul>
+             <li>Templates gratuits et payants prêts à l’usage</li>
+             <li>Formats modulables et adaptables à différents projets</li>
+             <li>Compatibles avec différents outils de création graphique</li>
+             <li>Fichiers organisés pour faciliter la personnalisation</li>
+           </ul>
+
+           <h4>Défis techniques / Ce que j’ai appris</h4>
+           <ul>
+             <li>Gestion de la cohérence graphique et de la modularité des templates</li>
+             <li>Optimisation des fichiers pour un usage rapide et facile</li>
+             <li>Création de modèles adaptables à différents contextes (landing pages, portfolios, e-commerce)</li>
+             <li>Structuration des fichiers pour une expérience utilisateur fluide</li>
+           </ul>
+        </div>
+      </div>
+
+      <div class="product-space"></div>
+
+      <a
+        href="https://github.com/Sethiar/Site-Sethiar_V2.git"
+        class="btn-primary"
+        target="_blank"
+      >
+        Voir le code avec Github
+      </a>
+    </div>
+    <div class="project-card">
+      <img src="{{url_for('static',
+      filename="images/images_current_project/gamingcollection.png") }}"
+      alt="Site de collection de jeux de SethiarWorks.">
+      <h3 class="landing-h3">
+        Site collection des jeux créés par SethiarWorks
+      </h3>
+      <p>
+        Création d'un site qui répertorie tous les jeux que j'ai créé en langage
+        Python. Solitaire, Space Invaders, Démineur, Tortue, Ping-pong ... Ces
+        jeux seront en accès libre et ne nécessitant aucune authentification.
+      </p>
+
+      <div class="product-space"></div>
+
+      <!-- Bouton qui ouvre la modale -->
+      <a
+        href="javascript:void(0)"
+        class="btn-secondary"
+        onclick="openModal('modal-gamingcollector')"
+      >
+        Voir la description </a
+      ><br />
+
+      <!-- La modale -->
+      <div id="modal-gamingcollector" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-gamingcollector')"
+            >&times;</span
+          >
+          <h3>Vitrine Jeux Python</h3>
+    
+          <h4>Type</h4>
+          <p>Site interactif / Portfolio Python</p>
+          
+          <h4>Objectif</h4>
+          <p>Présenter mes jeux développés en Python (Solitaire, Space Invaders, Démineur, Tortue, Ping-pong, etc.) de manière interactive et libre d’accès.</p>
+          
+          <h4>Technologies</h4>
+          <p>Python, HTML, CSS, JavaScript (optionnel pour jeux côté navigateur), Pyodide / Brython pour exécution dans le navigateur</p>
+          
+          <h4>Base de données</h4>
+          <p>Optionnelle (pour sauvegarde des scores ou parties)</p>
+          
+          <h4>Hébergement souhaité</h4>
+          <p>o2switch (site statique + fichiers Python à télécharger / mini serveur Flask si exécution en ligne)</p>
+
+          <h4>Fonctionnalités clés</h4>
+          <ul>
+            <li>Accès libre aux jeux sans authentification</li>
+            <li>Possibilité de télécharger les jeux pour jouer localement</li>
+            <li>Sauvegarde des parties ou scores (optionnelle)</li>
+            <li>Navigation simple et intuitive pour explorer les différents jeux</li>
+          </ul>
+
+          <h4>Défis techniques / Ce que j’ai appris</h4>
+          <ul>
+            <li>Faire tourner des jeux Python dans le navigateur avec Pyodide ou Brython</li>
+            <li>Gestion des fichiers et des téléchargements côté utilisateur</li>
+            <li>Structuration d’un portfolio interactif pour mettre en valeur ses compétences</li>
+            <li>Optimisation de l’expérience utilisateur pour des jeux simples mais attractifs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product-space"></div>
+
+      <a
+        href="https://github.com/Sethiar/Site-Sethiar_V2.git"
+        class="btn-primary"
+        target="_blank"
+      >
+        Voir le code avec Github
+      </a>
+    </div>
+
+    <div class="project-card">
+      <img src="{{url_for('static',
+      filename="images/images_current_project/reversekingdom.png") }}"
+      alt="Applicaiton téléphonique CleanUsTrash.">
+      <h3 class="landing-h3">ReverseKingdom</h3>
+      <p>
+        Jeu video de type Renpy. Ce jeu permettra de faire évoluer un personnage
+        dans un monde de type Fantasy en lui faisant réussir des quêtes. Les
+        scènes ainsi que les personnages seront travaillés avec DAZ 3D et
+        Blender.
+      </p>
+
+      <div class="product-space"></div>
+
+      <!-- Bouton qui ouvre la modale -->
+      <a
+        href="javascript:void(0)"
+        class="btn-secondary"
+        onclick="openModal('modal-reversekingdom')"
+      >
+        Voir la description </a
+      ><br />
+
+      <!-- La modale -->
+      <div id="modal-reversekingdom" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-reversekingdom')"
+            >&times;</span
+          >
+          <h3>ReverseKingdom</h3>
+    
+          <h4>Type</h4>
+          <p>Jeu vidéo narratif / Ren’Py</p>
+          
+          <h4>Objectif</h4>
+          <p>Faire évoluer un personnage dans un monde fantasy, en réussissant des quêtes et en interagissant avec des personnages et environnements travaillés en 3D.</p>
+    
+          <h4>Technologies</h4>
+          <p>Python (Ren’Py), DAZ 3D, Blender pour les modèles et scènes, assets graphiques supplémentaires</p>
+          
+          <h4>Base de données</h4>
+          <p>Optionnelle (sauvegarde des choix et progression du joueur)</p>
+          
+          <h4>Hébergement souhaité</h4>
+          <p>Téléchargement direct ou distribution via GitHub / plateformes de jeu (Ren’Py compatible)</p>
+
+          <h4>Fonctionnalités clés</h4>
+          <ul>
+            <li>Progression du personnage avec système de quêtes</li>
+            <li>Interactions avec des personnages et dialogues narratifs</li>
+            <li>Graphismes et modèles 3D importés depuis DAZ 3D et Blender</li>
+            <li>Possibilité de sauvegarder la partie et reprendre ultérieurement</li>
+            <li>Accessible sur desktop via Ren’Py</li>
+          </ul>
+
+          <h4>Défis techniques / Ce que j’ai appris</h4>
+          <ul>
+            <li>Création d’un jeu narratif interactif avec Ren’Py et Python</li>
+            <li>Intégration et optimisation des modèles 3D dans un moteur narratif</li>
+            <li>Gestion de la progression et des choix du joueur</li>
+            <li>Structuration des scènes et assets graphiques pour un workflow fluide</li>
+            <li>Distribution du jeu via GitHub et tests multiplateformes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="product-space"></div>
+
+      <a
+        href="https://github.com/Sethiar/ReverseKingdom.git"
+        class="btn-primary"
+        target="_blank"
+      >
+        Voir le code avec Github
+      </a>
+    </div>
+  </div>
 </section>
 <div class="space-2"></div>

@@ -24,12 +24,15 @@
 }
 
 .product-card {
-  background: #fff;
+  display: block;
+  background: $color-black;
+  color: $color-neutral-darkgrey;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid $color-primary;
 }
 
 .product-card:hover {
@@ -38,13 +41,23 @@
 }
 
 .product-card img {
-  width: 100%;
+  margin: 0 auto;
+  width: 55%;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
 
 .section-intro {
   font-size: $font-size-xxl;
+}
+
+.product-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.product-list li {
+  margin-bottom: 0.5rem;
 }
 
 //====================================//

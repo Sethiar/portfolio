@@ -23,7 +23,7 @@
         <!-- Google Fonts -->
     </head>
 
-    <body>
+    <body id="top">
         <div class="outer-frame-contact">
             <div class="inner-frame-contact">
                 <div class="contact-main">
@@ -31,10 +31,10 @@
                         
                         <div class="contact-space"></div>
 
-                        <h1 class="contact-h1">Contacts</h1>
+                        <h1 class="mention-title">Contacts</h1>
 
-                        <div class="contact-header">
-                            <p class="contact-update">Dernière mise à jour : 1 septembre 2025</p>
+                        <div class="mention-header">
+                            <p class="mention-update">Dernière mise à jour : 1 septembre 2025</p>
                             
                             <div class="contact-space"></div>
                             
@@ -52,6 +52,10 @@
                     <div class="contact-space"></div>
 
                     <!-- Cartes de visite -->
+                    <h2 class="contact-h2">Carte de visite</h2>
+
+                    <div class="contact-space"></div>
+
                     <div class="contact-cartes-wrapper">
                         <img src="{{ url_for('static', filename='images/images_sethiar/cart_sethiar.png') }}"
                              alt="Carte de visite SethiarWorks verso"
@@ -72,20 +76,12 @@
 
                     <div class="contact-site-entreprise">
                         <p class="contact-sentence">
-                            Vous pouvez aussi visiter mon site web
+                            Vous pouvez visiter mon site web pour découvrir mes services.
                         </p>
-                        <p class="contact-sentence">
-                           Vous y retrouverez mes produits et services.
-                        </p>
-                        <p class="contact-sentence">
-                            Nous espérons vous revioro bientôt
-                        </p>
-                        <p class="contact-sentence">
-                            <strong>Site de l'entreprise :</strong>
-                            
-                            <a href="https://sethiarworks.sethiar-lefetey.com" class="contact-link"
-                               target="_blank" rel="noopener noreferrer">
-                                https://sethiarworks.sethiar-lefetey.com
+                        <p class="contact-link">                            
+                            <a href="https://sethiarworks.sethiar-lefetey.com" class="btn-link"
+                               target="_blank" rel="noopener noreferrer" alt="Lien vers le site entreprise">
+                                Visiter le site SethiarWorks
                             </a>
                         </p>
                     </div>

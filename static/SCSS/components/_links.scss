@@ -16,6 +16,13 @@
   color: $color-primary;
   text-decoration: none;
   font-weight: bold;
+  text-align: center;
+  
+  a {
+   /* permet le centrage */  
+    display: inline-block;
+    }
+
   &:hover {
     color: $color-decline-gold1;
     text-decoration: underline;

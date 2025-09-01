@@ -1,0 +1,259 @@
+<html lang="fr-FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Informations concernant Lefetey Arnaud. Concepteur, Développeur et Designer de produits web. 
+            Cette section permet de présenter ses certifications, sa charte graphique. Il s'agit ici de donner une vue d'ensemble 
+            de son travail et de ses passions."
+    />
+    <meta
+      name="keywords"
+      content="SethiarWorks, à propos, curriculum vitae, charte graphique, informations."
+    />
+    <meta name="author" content="Lefetey Arnaud" />
+    <meta name="robots" content="index, follow" />
+
+    <link
+      rel="canonical"
+      href="{{ url_for('functional.contact', _external=True) }}"
+    />
+    <link
+      rel="alternate"
+      href="{{ url_for('functional.contact', _external=True) }}"
+      hreflang="fr-FR"
+    />
+
+    <!-- Titre de la page -->
+    <title>À propos de Lefetey Arnaud</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='favicon.ico') }}"
+    />
+
+    <!-- CSS Principal -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='gen/style.css') }}?v=1.0"
+    />
+
+    <!-- Google Fonts -->
+
+    <!-- Google Tag Manager -->
+    <script></script>
+    <!-- End Google Tag Manager -->
+  </head>
+
+  <body>
+    <div class="outer-frame-information">
+      <div class="inner-frame-information">
+        <div class="information-main">
+          <div class="politique-border">
+            <!-- Titre de la section -->
+            <h1 class="mention-title">À propos de l’administrateur</h1>
+
+            <!-- Section : Mise à jour et retour -->
+            <div class="mention-header">
+              <p class="mention-update">
+                Dernière mise à jour : 1 juillet 2025
+              </p>
+
+              <div class="contact-space"></div>
+
+              <a href="{{ url_for('landing_page') }}" class="btn-secondary"
+                >Retour à l'accueil</a
+              >
+            </div>
+          </div>
+
+          <!-- Séparation -->
+          <hr class="politique-divider" />
+
+          <!-- Logo et photo de profil -->
+          <div class="container-information-image">
+            <div class="information-image">
+              <img
+                src="{{ url_for('static', filename='images/images_logo/logo.png') }}"
+                alt="logo de SethiarWorks"
+                class="politique-image"
+              />
+            </div>
+
+            <div class="information-image">
+              <img
+                src="{{ url_for('static', filename='images/images_logo/image_sethiar.png') }}"
+                alt="Image de l'administrateur"
+                class="politique-image"
+              />
+            </div>
+          </div>
+
+          <!-- Contenu principal -->
+          <div class="politique-content">
+            <!-- Introduction -->
+            <section class="information-section">
+              <h2 class="information-welcome">
+                Information sur le développeur
+              </h2>
+
+              <div class="contact-space"></div>
+
+              <p class="politique-intro">
+                Je m'appelle <strong>Lefetey Arnaud</strong> et je suis le
+                fondateur et l’unique développeur de l'entreprise indépendante
+                <b>SethairWorks</b>.
+              </p>
+            </section>
+
+            <!-- Section consultable -->
+            <section class="information-section">
+              <h2 class="information-subtitle">Ressources</h2>
+              <p class="downloaded-documents">
+                <a
+                  href="{{ url_for('static', filename='documents/CV_Arnaud.pdf') }}"
+                  target="_blank"
+                >
+                  Téléchargez mon CV
+                </a>
+              </p>
+              <p class="downloaded-documents">
+                <a
+                  href="{{ url_for('static', filename='documents/CharteGraphique.pdf') }}"
+                  target="_blank"
+                >
+                  Charte graphique de l'entreprise SethiarWorks.
+                </a>
+              </p>
+            </section>
+
+            <!-- Biographie -->
+            <section class="information-section">
+              <div class="contact-space"></div>
+
+              <hr class="information-divider" />
+
+              <h2 class="information-subtitle">Mon parcours</h2>
+              <p>
+                Issu d’un cursus universitaire en philosophie des sciences à la
+                Sorbonne, j’ai toujours été animé par la logique, la rigueur et
+                la créativité.
+              </p>
+              <p>
+                En 2023, j’ai décidé de me reconvertir dans le développement
+                informatique. J’ai suivi une formation intensive pendant deux
+                ans, au cours de laquelle j’ai appris à concevoir des
+                applications mobiles, des sites web modernes, et à développer
+                des solutions techniques robustes.
+              </p>
+              <p>
+                N’ayant pas trouvé de poste en entreprise faute d’expérience,
+                j’ai fondé <strong>SethiarWorks</strong> pour créer mes propres
+                projets et m’autonomiser techniquement.
+              </p>
+            </section>
+
+            <!-- L’entreprise -->
+            <section class="information-section">
+              <div class="contact-space"></div>
+
+              <h2 class="information-subtitle">SethiarWorks</h2>
+              <p>
+                Ce portfolio renvoie mes créations 100% maison : de
+                l’architecture à l’UX/UI, en passant par le design, le
+                développement, le contenu, le référencement… tout a été pensé et
+                réalisé par mes soins.
+              </p>
+              <p>
+                Mon entreprise <strong>SethiarWorks</strong> est bien plus qu’un
+                simple projet : c’est une démarche concrète vers l’indépendance
+                professionnelle et la valorisation du savoir-faire artisanal en
+                informatique.
+              </p>
+            </section>
+
+            <!-- Philosophie & engagement -->
+            <section class="information-section">
+              <div class="contact-space"></div>
+
+              <h2 class="information-subtitle">
+                Pourquoi me faire confiance ?
+              </h2>
+              <p>
+                Je suis quelqu’un de passionné, autonome et méthodique. J’aime
+                résoudre des problèmes complexes et proposer des solutions
+                élégantes, efficaces et surtout tenables dans le temps.
+              </p>
+              <p>
+                Mon engagement : livrer du travail de qualité, respecter mes
+                promesses et construire une relation de confiance durable avec
+                mes clients.
+              </p>
+            </section>
+
+            <!-- Conclusion -->
+            <section class="information-section">
+              <div class="contact-space"></div>
+
+              <hr class="information-divider" />
+
+              <div class="contact-space"></div>
+
+              <p>
+                Merci pour votre visite sur mon portfolio. J’espère que ces
+                informations vous inspireront confiance et que nous aurons
+                l’occasion de collaborer ensemble prochainement.
+              </p>
+              <p>
+                Vous avez un projet de création, une demande d'informations, des
+                interrogations concernant la réalisation d'un projet. Vous
+                pouvez rendre une visite à mon site entreprise
+                <b>SethiarWorks</b>. Vous avez accès à une demande de devis, la
+                possibilité de prendre rendez-vous en visio avec moi.
+              </p>
+
+              <div class="contact-space"></div>
+
+              <hr class="information-divider" />
+
+              <div class="contact-space"></div>
+
+              <div class="contact-space"></div>
+            </section>
+
+            <div class="contact-site-entreprise">
+              <p class="contact-sentence">
+                Vous pouvez visiter mon site web pour découvrir mes services.
+              </p>
+              <p class="contact-link">
+                <a
+                  href="https://sethiarworks.sethiar-lefetey.com"
+                  class="btn-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  alt="Lien vers le site entreprise"
+                >
+                  Visiter le site SethiarWorks
+                </a>
+              </p>
+            </div>
+
+            <div class="contact-space"></div>
+
+            <section class="information-section">
+              <p class="salutations">Bien cordialement,</p>
+              <p class="salutations">Lefetey Arnaud</p>
+              <!-- Flèche en bas -->
+              <a href="#top" class="back-to-top">⬆</a>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Inclusion du script du retour top -->
+    <script src="{{ url_for('static', filename='javascript/widget.js') }}"></script>
+  </body>
+</html>

@@ -8,6 +8,16 @@ from flask import render_template
 from app.functional import functional_bp
 
 
+# Route renvoyant les informations de l'auteur.
+@functional_bp.route("/a-propos")
+def a_propos():
+    """
+    Fonction qui renvoie les informations de l'auteur du site.
+    :return: functional/apropos.html
+    """
+    return render_template("functional/apropos.html")
+
+
 # Route renvoyant les mentions légales.
 @functional_bp.route("/mentions-legales")
 def mentions():
